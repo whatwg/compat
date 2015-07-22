@@ -15,6 +15,13 @@ Indent: 2
 Boilerplate: omit conformance
 </pre>
 
+<h2 id='introduction'>Introduction</h2>
+<em>This section is non-normative.</em>
+
+There exists an increasingly large corpus of web content that depends on web browsers supporting a number of <code>webkit</code>-prefixed CSS properties and DOM APIs for functionality or layout. This holds especially true for mobile-optimized web content.
+
+This specification aims to describe the minimal set of <code>webkit</code>-prefixed CSS properties and DOM APIs that user agents are required to support for web compatibility.
+
 <h2 id='conformance'>Conformance</h2>
 All diagrams, examples, and notes in this specification are
 non-normative, as are all sections explicitly marked non-normative.
