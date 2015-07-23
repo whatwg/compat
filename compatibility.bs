@@ -15,6 +15,9 @@ Indent: 2
 Boilerplate: omit conformance
 </pre>
 
+<!-- Commented out until we know what the heck to put here:
+<h2 id='goals'>Goals</h2> -->
+
 <h2 id='introduction'>Introduction</h2>
 <em>This section is non-normative.</em>
 
