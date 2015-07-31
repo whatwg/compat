@@ -15,6 +15,14 @@ Indent: 2
 Boilerplate: omit conformance
 </pre>
 
+<script src=https://resources.whatwg.org/file-issue.js async></script>
+
+<pre class="anchors">
+urlPrefix: https://drafts.fxtf.org/geometry/; type: interface; spec: geometry-1
+  text: DOMMatrix; url: #dommatrix
+  text: DOMMatrixReadOnly; url: #dommatrixreadonly
+</pre>
+
 <!-- Commented out until we know what the heck to put here:
 <h2 id='goals'>Goals</h2> -->
 
@@ -47,6 +55,53 @@ may be implemented in any manner, so long as the end result is
 equivalent. (In particular, the algorithms defined in this
 specification are intended to be easy to follow, and not intended to
 be performant.)
+
+<h2 id="dom-interfaces">DOM Interfaces</h2>
+
+<h3 id="webkitcssmatrix-interface">The {{WebKitCSSMatrix}} interface</h3>
+
+The <dfn interface>WebKitCSSMatrix</dfn> interface represents a 4×4 homogeneous matrix with methods useful for 2D and 3D transform operations.
+
+The {{WebKitCSSMatrix}} interface may be implemented as a subset of the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces, defined in Geometry Interfaces Module Level 1 [[!geometry-1]].
+
+<!-- cf. https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/WebKitCSSMatrix.idl -->
+<pre class="idl">
+[Constructor,
+Constructor(DOMString cssValue)]
+interface WebKitCSSMatrix : DOMMatrix {
+    // Mutable transform methods
+    WebKitCSSMatrix setMatrixValue(DOMString transformList);
+
+    // Immutable transform methods
+    WebKitCSSMatrix multiply(WebKitCSSMatrix other);
+    WebKitCSSMatrix inverse();
+    WebKitCSSMatrix scale(optional unrestricted double scaleX,
+                          optional unrestricted double scaleY,
+                          optional unrestricted double scaleZ);
+    WebKitCSSMatrix rotate(optional unrestricted double rotX,
+                           optional unrestricted double rotY,
+                           optional unrestricted double rotZ);
+    WebKitCSSMatrix rotateAxisAngle(unrestricted double x,
+                                    unrestricted double y,
+                                    unrestricted double z,
+                                    unrestricted double angle);
+    WebKitCSSMatrix skewX(unrestricted double sx);
+    WebKitCSSMatrix skewY(unrestricted double sy);
+};
+</pre>
+
+<h4 id="webkitcssmatrix-constructors">Constructors</h4>
+TODO
+<h4 id="webkitcssmatrix-members">Object members</h4>
+TODO
+
+<!-- TODO: add note about common usage that requires support for webkitTransform, etc.
+
+      var box = document.getElementById('box');
+      var tranString = window.getComputedStyle(box).webkitTransform;
+      var m = new WebKitCSSMatrix(tranString);
+      box.style.webkitTransform = m.rotateAxisAngle(3,1,2,1);
+-->
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Jacob Rossi and {{your name here}} for feedback and contributions to this standard.
