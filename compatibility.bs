@@ -39,6 +39,8 @@ urlPrefix: https://drafts.fxtf.org/geometry/; spec: geometry-1
     text: m42 element; url: #m42-element
     text: m43 element; url: #m43-element
     text: m44 element; url: #m44-element
+  type: method;
+    text: fromString; url: #dom-dommatrixreadonly-fromstring0
 urlPrefix: https://heycam.github.io/webidl/
   type: dfn; urlPrefix: #dfn-
     text: throw
@@ -86,8 +88,8 @@ be performant.)
 <!-- cf. https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/WebKitCSSMatrix.idl -->
 <pre class="idl">
 [Constructor,
- Constructor(DOMString cssValue),
- Constructor(WebKitCSSMatrix matrix)]
+ Constructor(DOMString transformList),
+ Constructor(WebKitCSSMatrix other)]
 interface WebKitCSSMatrix : DOMMatrix {
     // Mutable transform methods
     WebKitCSSMatrix setMatrixValue(DOMString transformList);
@@ -134,7 +136,7 @@ constructor, when invoked, must run these steps:
   <li>
     Let <var>m</var> be a new {{WebKitCSSMatrix}} object.
   </li>
-  <li>Set the 
+  <li>For m, set the
     <a attribute spec="geometry-1">m11 element</a>, 
     <a attribute spec="geometry-1">m22 element</a>, 
     <a attribute spec="geometry-1">m33 element</a>, 
@@ -159,30 +161,46 @@ constructor, when invoked, must run these steps:
 <dl class=domintro>
   <dt>
     <code><var>matrix</var> = new <a constructor
-    lt="WebKitCSSMatrix()">WebKitCSSMatrix</a>(cssValue)</code>
+    lt="WebKitCSSMatrix()">WebKitCSSMatrix</a>(transformList)</code>
   </dt>
   <dd>
     Returns a new {{WebKitCSSMatrix}} object.
   </dd>
 </dl>
 
-<div class="XXX">TODO.</div>
-
-<!--
-  <li>If <var>cssValue</var> is not a valid cssValue (link me), <a>throw</a> a {{SyntaxError}}.</li>
--->
+<ol>
+  <li>
+    Let <var>m</var> be a new {{WebKitCSSMatrix}} object.
+  </li>
+  <li>Return the result of the algorithm for the static {{DOMMatrixReadOnly}} <a method for=DOMMatrixReadOnly spec="geometry-1">fromString(transformList)</a> method, as <var>m</var>.
+  </li>
+</ol>
 
 <dl class=domintro>
   <dt>
     <code><var>matrix</var> = new <a constructor
-    lt="WebKitCSSMatrix()">WebKitCSSMatrix</a>(matrix)</code>
+    lt="WebKitCSSMatrix(other)">WebKitCSSMatrix</a>(other)</code>
   </dt>
   <dd>
     Returns a new {{WebKitCSSMatrix}} object.
   </dd>
 </dl>
 
-<div class="XXX">TODO.</div>
+The
+<dfn constructor for=WebKitCSSMatrix>WebKitCSSMatrix(other)</dfn>
+constructor, when invoked, must run these steps:
+
+<ol>
+  <li>
+    Let <var>m</var> be a new {{WebKitCSSMatrix}} object.
+  </li>
+  <li>For m, set the 16 elements
+    <a attribute spec="geometry-1">m11 element</a> …
+    <a attribute spec="geometry-1">m44 element</a> to the value of the 16 elements
+    <a attribute spec="geometry-1">m11 element</a> …
+    <a attribute spec="geometry-1">m44 element</a> of <var>other</var>.
+  <li>Return <var>m</var>.</li>
+</ol>
 
 <h4 id="webkitcssmatrix-members">Object members</h4>
 
