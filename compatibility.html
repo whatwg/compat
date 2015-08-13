@@ -75,7 +75,9 @@
       <li><a href="#webkitcssmatrix-interface"><span class="secno">3.1</span> <span class="content">The <code class="idl"><span>WebKitCSSMatrix</span></code> interface</span></a>
        <ul class="toc">
         <li><a href="#webkitcssmatrix-constructors"><span class="secno">3.1.1</span> <span class="content">Constructors</span></a>
-        <li><a href="#webkitcssmatrix-members"><span class="secno">3.1.2</span> <span class="content">Object members</span></a>
+        <li><a href="#webkitcssmatrix-attributes"><span class="secno">3.1.2</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> attributes</span></a>
+        <li><a href="#webkitcssmatrix-mutable-methods"><span class="secno">3.1.3</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> mutable methods</span></a>
+        <li><a href="#webkitcssmatrix-immutable-methods"><span class="secno">3.1.4</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> immutable methods</span></a>
        </ul>
      </ul>
     <li><a href="#acknowledgements"><span class="secno"></span> <span class="content">Acknowledgements</span></a>
@@ -152,23 +154,26 @@ be performant.)</p>
  <a class="idl-code" data-link-type="constructor" href="#dom-webkitcssmatrix-webkitcssmatrix-other">Constructor</a>(<a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/WebKitCSSMatrix(other)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-webkitcssmatrix-other-other">other<a class="self-link" href="#dom-webkitcssmatrix-webkitcssmatrix-other-other"></a></dfn>)]
 interface <dfn class="idl-code" data-dfn-type="interface" data-export="" id="webkitcssmatrix">WebKitCSSMatrix<a class="self-link" href="#webkitcssmatrix"></a></dfn> : <a data-link-type="idl-name" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a> {
     // Mutable transform methods
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="setMatrixValue(transformList)" id="dom-webkitcssmatrix-setmatrixvalue">setMatrixValue<a class="self-link" href="#dom-webkitcssmatrix-setmatrixvalue"></a></dfn>(DOMString <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/setMatrixValue(transformList)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist">transformList<a class="self-link" href="#dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist"></a></dfn>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-setmatrixvalue">setMatrixValue</a>(DOMString <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/setMatrixValue(transformList)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist">transformList<a class="self-link" href="#dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist"></a></dfn>);
 
     // Immutable transform methods
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="multiply(other)" id="dom-webkitcssmatrix-multiply">multiply<a class="self-link" href="#dom-webkitcssmatrix-multiply"></a></dfn>(<a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/multiply(other)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-multiply-other-other">other<a class="self-link" href="#dom-webkitcssmatrix-multiply-other-other"></a></dfn>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="inverse()" id="dom-webkitcssmatrix-inverse">inverse<a class="self-link" href="#dom-webkitcssmatrix-inverse"></a></dfn>();
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="scale(scaleX, scaleY, scaleZ)|scale(scaleX, scaleY)|scale(scaleX)|scale()" id="dom-webkitcssmatrix-scale">scale<a class="self-link" href="#dom-webkitcssmatrix-scale"></a></dfn>(optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/scale(scaleX, scaleY, scaleZ), WebKitCSSMatrix/scale(scaleX, scaleY), WebKitCSSMatrix/scale(scaleX), WebKitCSSMatrix/scale()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex">scaleX<a class="self-link" href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex"></a></dfn>,
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-multiply">multiply</a>(<a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/multiply(other)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-multiply-other-other">other<a class="self-link" href="#dom-webkitcssmatrix-multiply-other-other"></a></dfn>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-inverse">inverse</a>();
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-translate">translate</a>(unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/translate(tx, ty, tz)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-translate-tx-ty-tz-tx">tx<a class="self-link" href="#dom-webkitcssmatrix-translate-tx-ty-tz-tx"></a></dfn>,
+                              unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/translate(tx, ty, tz)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-translate-tx-ty-tz-ty">ty<a class="self-link" href="#dom-webkitcssmatrix-translate-tx-ty-tz-ty"></a></dfn>,
+                              unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/translate(tx, ty, tz)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-translate-tx-ty-tz-tz">tz<a class="self-link" href="#dom-webkitcssmatrix-translate-tx-ty-tz-tz"></a></dfn>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-scale">scale</a>(optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/scale(scaleX, scaleY, scaleZ), WebKitCSSMatrix/scale(scaleX, scaleY), WebKitCSSMatrix/scale(scaleX), WebKitCSSMatrix/scale()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex">scaleX<a class="self-link" href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex"></a></dfn>,
                           optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/scale(scaleX, scaleY, scaleZ), WebKitCSSMatrix/scale(scaleX, scaleY), WebKitCSSMatrix/scale(scaleX), WebKitCSSMatrix/scale()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-scale-scalex-scaley-scalez-scaley">scaleY<a class="self-link" href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scaley"></a></dfn>,
                           optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/scale(scaleX, scaleY, scaleZ), WebKitCSSMatrix/scale(scaleX, scaleY), WebKitCSSMatrix/scale(scaleX), WebKitCSSMatrix/scale()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalez">scaleZ<a class="self-link" href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalez"></a></dfn>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="rotate(rotX, rotY, rotZ)|rotate(rotX, rotY)|rotate(rotX)|rotate()" id="dom-webkitcssmatrix-rotate">rotate<a class="self-link" href="#dom-webkitcssmatrix-rotate"></a></dfn>(optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotate(rotX, rotY, rotZ), WebKitCSSMatrix/rotate(rotX, rotY), WebKitCSSMatrix/rotate(rotX), WebKitCSSMatrix/rotate()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx">rotX<a class="self-link" href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx"></a></dfn>,
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-rotate">rotate</a>(optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotate(rotX, rotY, rotZ), WebKitCSSMatrix/rotate(rotX, rotY), WebKitCSSMatrix/rotate(rotX), WebKitCSSMatrix/rotate()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx">rotX<a class="self-link" href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx"></a></dfn>,
                            optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotate(rotX, rotY, rotZ), WebKitCSSMatrix/rotate(rotX, rotY), WebKitCSSMatrix/rotate(rotX), WebKitCSSMatrix/rotate()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotate-rotx-roty-rotz-roty">rotY<a class="self-link" href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-roty"></a></dfn>,
                            optional unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotate(rotX, rotY, rotZ), WebKitCSSMatrix/rotate(rotX, rotY), WebKitCSSMatrix/rotate(rotX), WebKitCSSMatrix/rotate()" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotz">rotZ<a class="self-link" href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotz"></a></dfn>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="rotateAxisAngle(x, y, z, angle)" id="dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle<a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle"></a></dfn>(unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotateAxisAngle(x, y, z, angle)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x<a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x"></a></dfn>,
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle</a>(unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotateAxisAngle(x, y, z, angle)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x<a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x"></a></dfn>,
                                     unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotateAxisAngle(x, y, z, angle)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y">y<a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y"></a></dfn>,
                                     unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotateAxisAngle(x, y, z, angle)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z<a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z"></a></dfn>,
                                     unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/rotateAxisAngle(x, y, z, angle)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle">angle<a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle"></a></dfn>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="skewX(sx)" id="dom-webkitcssmatrix-skewx">skewX<a class="self-link" href="#dom-webkitcssmatrix-skewx"></a></dfn>(unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/skewX(sx)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-skewx-sx-sx">sx<a class="self-link" href="#dom-webkitcssmatrix-skewx-sx-sx"></a></dfn>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="skewY(sy)" id="dom-webkitcssmatrix-skewy">skewY<a class="self-link" href="#dom-webkitcssmatrix-skewy"></a></dfn>(unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/skewY(sy)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-skewy-sy-sy">sy<a class="self-link" href="#dom-webkitcssmatrix-skewy-sy-sy"></a></dfn>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-skewx">skewX</a>(unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/skewX(sx)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-skewx-sx-sx">sx<a class="self-link" href="#dom-webkitcssmatrix-skewx-sx-sx"></a></dfn>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-skewy">skewY</a>(unrestricted double <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix/skewY(sy)" data-dfn-type="argument" data-export="" id="dom-webkitcssmatrix-skewy-sy-sy">sy<a class="self-link" href="#dom-webkitcssmatrix-skewy-sy-sy"></a></dfn>);
 };
 </pre>
 
@@ -290,16 +295,155 @@ constructor, when invoked, must run these steps:</p>
 </ol>
 
 
-   <h4 class="heading settled" data-level="3.1.2" id="webkitcssmatrix-members"><span class="secno">3.1.2. </span><span class="content">Object members</span><a class="self-link" href="#webkitcssmatrix-members"></a></h4>
+   <h4 class="heading settled" data-level="3.1.2" id="webkitcssmatrix-attributes"><span class="secno">3.1.2. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> attributes</span><a class="self-link" href="#webkitcssmatrix-attributes"></a></h4>
 
 
-   <div class="XXX">TODO.</div>
+   <p><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> objects must inherit the following attributes from <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code>:</p>
+
+
+   <p><a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m11">m11 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m22">m22 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m33">m33 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m44">m44 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m12">m12 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m13">m13 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m14">m14 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m21">m21 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m23">m23 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m24">m24 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m31">m31 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m32">m32 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m34">m34 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m41">m41 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m42">m42 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m43">m43 attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-a">a attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-b">b attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-c">c attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-d">d attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-e">e attribute</a>,
+<a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-f">f attribute</a>.</p>
+
+
+   <h4 class="heading settled" data-level="3.1.3" id="webkitcssmatrix-mutable-methods"><span class="secno">3.1.3. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> mutable methods</span><a class="self-link" href="#webkitcssmatrix-mutable-methods"></a></h4>
+
+
+   <p>The following method modifies the current matrix, returning the matrix it was invoked on.</p>
+
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-setmatrixvalue"><code>setMatrixValue(transformList)</code><a class="self-link" href="#dom-webkitcssmatrix-setmatrixvalue"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrix-setmatrixvalue">setMatrixValue(transformList)</a> method.</p>
+     
+</ol>
+
+   <h4 class="heading settled" data-level="3.1.4" id="webkitcssmatrix-immutable-methods"><span class="secno">3.1.4. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> immutable methods</span><a class="self-link" href="#webkitcssmatrix-immutable-methods"></a></h4>
+
+
+   <p>The following methods do not modify the current matrix and return a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-multiply"><code>multiply(other)</code><a class="self-link" href="#dom-webkitcssmatrix-multiply"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-multiply">multiply(other)</a> method as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-inverse"><code>inverse()</code><a class="self-link" href="#dom-webkitcssmatrix-inverse"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-inverse">inverse()</a> method as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-translate"><code>translate(tx, ty, tz)</code><a class="self-link" href="#dom-webkitcssmatrix-translate"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">translate(x, y, z)</a> method as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="scale(scaleX, scaleY, scaleZ)|scale(scaleX, scaleY)|scale(scaleX)|scale()" id="dom-webkitcssmatrix-scale"><code>scale(scaleX, scaleY, scaleZ)</code><a class="self-link" href="#dom-webkitcssmatrix-scale"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <div class="XXX">This method is different than <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code>'s scale().
+
+
+    <p>Need to define it based on:
+<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L117-L122">WebKitCSSMatrix.h#L117-L122</a></p>
+</div>
+
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="rotate(rotX, rotY, rotZ)|rotate(rotX, rotY)|rotate(rotX)|rotate()" id="dom-webkitcssmatrix-rotate"><code>rotate(rotX, rotY, rotZ)</code><a class="self-link" href="#dom-webkitcssmatrix-rotate"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <div class="XXX">This method is different than <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code>'s rotate().
+
+
+    <p>Need to define it based on:
+<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L124-L129">WebKitCSSMatrix.h#L124-L129</a></p>
+</div>
+
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-rotateaxisangle"><code>rotateAxisAngle(x, y, z, angle)</code><a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-rotateaxisangle">rotateAxisAngle(x, y, z, angle)</a> method as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-skewx"><code>skewX(sx)</code><a class="self-link" href="#dom-webkitcssmatrix-skewx"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-skewx">skewX(sx)</a> method as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
+
+   <p></p>
+
+
+   <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-skewy"><code>skewY(sy)</code><a class="self-link" href="#dom-webkitcssmatrix-skewy"></a></dfn>
+method is invoked, the user agent must run the following steps:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Return the result of <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-skewy">skewY(sy)</a> as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
+
+   <p></p>
 
 
 
 
    <h2 class="no-num heading settled" id="acknowledgements"><span class="content">Acknowledgements</span><a class="self-link" href="#acknowledgements"></a></h2>
 Thanks to Jacob Rossi and {{your name here}} for feedback and contributions to this standard.
+
+
+   <p>Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a></code> and <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> interfaces. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a></p>
 
 
    <p>This standard is written by
@@ -323,31 +467,31 @@ neighboring rights to this work.</p>
   <h3 class="no-num heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="indexlist">
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle">angle</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-inverse">inverse()</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-multiply">multiply(other)</a><span>, in §3.1</span>
+   <li><a href="#dom-webkitcssmatrix-inverse">inverse()</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-multiply">multiply(other)</a><span>, in §3.1.4</span>
    <li>other
     <ul>
      <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other-other">argument for WebKitCSSMatrix/WebKitCSSMatrix(other)</a><span>, in §3.1</span>
      <li><a href="#dom-webkitcssmatrix-multiply-other-other">argument for WebKitCSSMatrix/multiply(other)</a><span>, in §3.1</span>
     </ul>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate()</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle(x, y, z, angle)</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX)</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY)</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY, rotZ)</a><span>, in §3.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate()</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle(x, y, z, angle)</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX)</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY)</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY, rotZ)</a><span>, in §3.1.4</span>
    <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx">rotX</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-roty">rotY</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotz">rotZ</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale()</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX)</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY)</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY, scaleZ)</a><span>, in §3.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale()</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX)</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY)</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY, scaleZ)</a><span>, in §3.1.4</span>
    <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex">scaleX</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scaley">scaleY</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalez">scaleZ</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-setmatrixvalue">setMatrixValue(transformList)</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-skewx">skewX(sx)</a><span>, in §3.1</span>
-   <li><a href="#dom-webkitcssmatrix-skewy">skewY(sy)</a><span>, in §3.1</span>
+   <li><a href="#dom-webkitcssmatrix-setmatrixvalue">setMatrixValue(transformList)</a><span>, in §3.1.3</span>
+   <li><a href="#dom-webkitcssmatrix-skewx">skewX(sx)</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-skewy">skewY(sy)</a><span>, in §3.1.4</span>
    <li><a href="#dom-webkitcssmatrix-skewx-sx-sx">sx</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-skewy-sy-sy">sy</a><span>, in §3.1</span>
    <li>transformList
@@ -355,6 +499,10 @@ neighboring rights to this work.</p>
      <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist-transformlist">argument for WebKitCSSMatrix/WebKitCSSMatrix(transformList)</a><span>, in §3.1</span>
      <li><a href="#dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist">argument for WebKitCSSMatrix/setMatrixValue(transformList)</a><span>, in §3.1</span>
     </ul>
+   <li><a href="#dom-webkitcssmatrix-translate">translate(tx, ty, tz)</a><span>, in §3.1.4</span>
+   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tx">tx</a><span>, in §3.1</span>
+   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-ty">ty</a><span>, in §3.1</span>
+   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tz">tz</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix">WebKitCSSMatrix()</a><span>, in §3.1.1</span>
    <li><a href="#webkitcssmatrix">WebKitCSSMatrix</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other">WebKitCSSMatrix(other)</a><span>, in §3.1.1</span>
@@ -368,23 +516,52 @@ neighboring rights to this work.</p>
     <ul>
      <li><a href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-a">a attribute</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-b">b attribute</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-c">c attribute</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-d">d attribute</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-e">e attribute</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-f">f attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-fromstring0">fromString()</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-inverse">inverse()</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m11">m11 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m11-element">m11 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m12">m12 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m12-element">m12 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m13">m13 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m13-element">m13 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m14">m14 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m14-element">m14 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m21">m21 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m21-element">m21 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m22">m22 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m22-element">m22 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m23">m23 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m23-element">m23 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m24">m24 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m24-element">m24 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m31">m31 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m31-element">m31 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m32">m32 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m32-element">m32 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m33">m33 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m33-element">m33 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m34">m34 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m34-element">m34 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m41">m41 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m41-element">m41 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m42">m42 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m42-element">m42 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m43">m43 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m43-element">m43 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m44">m44 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m44-element">m44 element</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-multiply">multiply()</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-rotateaxisangle">rotateAxisAngle(x, y, z, angle)</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrix-setmatrixvalue">setMatrixValue(transformList)</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-skewx">skewX(sx)</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-skewy">skewY(sy)</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">translate(tx, ty)</a>
     </ul></ul>
   <h2 class="no-num heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
@@ -399,23 +576,26 @@ neighboring rights to this work.</p>
  <a class="idl-code" data-link-type="constructor" href="#dom-webkitcssmatrix-webkitcssmatrix-other">Constructor</a>(<a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-webkitcssmatrix-other-other">other</a>)]
 interface <a href="#webkitcssmatrix">WebKitCSSMatrix</a> : <a data-link-type="idl-name" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a> {
     // Mutable transform methods
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-setmatrixvalue">setMatrixValue</a>(DOMString <a href="#dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist">transformList</a>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-setmatrixvalue">setMatrixValue</a>(DOMString <a href="#dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist">transformList</a>);
 
     // Immutable transform methods
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-multiply">multiply</a>(<a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-multiply-other-other">other</a>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-inverse">inverse</a>();
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-scale">scale</a>(optional unrestricted double <a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex">scaleX</a>,
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-multiply">multiply</a>(<a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-multiply-other-other">other</a>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-inverse">inverse</a>();
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-translate">translate</a>(unrestricted double <a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tx">tx</a>,
+                              unrestricted double <a href="#dom-webkitcssmatrix-translate-tx-ty-tz-ty">ty</a>,
+                              unrestricted double <a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tz">tz</a>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-scale">scale</a>(optional unrestricted double <a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex">scaleX</a>,
                           optional unrestricted double <a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scaley">scaleY</a>,
                           optional unrestricted double <a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalez">scaleZ</a>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-rotate">rotate</a>(optional unrestricted double <a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx">rotX</a>,
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-rotate">rotate</a>(optional unrestricted double <a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx">rotX</a>,
                            optional unrestricted double <a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-roty">rotY</a>,
                            optional unrestricted double <a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotz">rotZ</a>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle</a>(unrestricted double <a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x</a>,
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle</a>(unrestricted double <a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x</a>,
                                     unrestricted double <a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y">y</a>,
                                     unrestricted double <a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z</a>,
                                     unrestricted double <a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle">angle</a>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-skewx">skewX</a>(unrestricted double <a href="#dom-webkitcssmatrix-skewx-sx-sx">sx</a>);
-    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a href="#dom-webkitcssmatrix-skewy">skewY</a>(unrestricted double <a href="#dom-webkitcssmatrix-skewy-sy-sy">sy</a>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-skewx">skewX</a>(unrestricted double <a href="#dom-webkitcssmatrix-skewx-sx-sx">sx</a>);
+    <a data-link-type="idl-name" href="#webkitcssmatrix">WebKitCSSMatrix</a> <a class="idl-code" data-link-type="method" href="#dom-webkitcssmatrix-skewy">skewY</a>(unrestricted double <a href="#dom-webkitcssmatrix-skewy-sy-sy">sy</a>);
 };
 
 </pre>

@@ -40,6 +40,28 @@ urlPrefix: https://drafts.fxtf.org/geometry/; spec: geometry-1
     text: m42 element; url: #m42-element
     text: m43 element; url: #m43-element
     text: m44 element; url: #m44-element
+    text: m11 attribute; url: #dom-dommatrixreadonly-m11
+    text: m12 attribute; url: #dom-dommatrixreadonly-m12
+    text: m13 attribute; url: #dom-dommatrixreadonly-m13
+    text: m14 attribute; url: #dom-dommatrixreadonly-m14
+    text: m21 attribute; url: #dom-dommatrixreadonly-m21
+    text: m22 attribute; url: #dom-dommatrixreadonly-m22
+    text: m23 attribute; url: #dom-dommatrixreadonly-m23
+    text: m24 attribute; url: #dom-dommatrixreadonly-m24
+    text: m31 attribute; url: #dom-dommatrixreadonly-m31
+    text: m32 attribute; url: #dom-dommatrixreadonly-m32
+    text: m33 attribute; url: #dom-dommatrixreadonly-m33
+    text: m34 attribute; url: #dom-dommatrixreadonly-m34
+    text: m41 attribute; url: #dom-dommatrixreadonly-m41
+    text: m42 attribute; url: #dom-dommatrixreadonly-m42
+    text: m43 attribute; url: #dom-dommatrixreadonly-m43
+    text: m44 attribute; url: #dom-dommatrixreadonly-m44
+    text: a attribute; url: #dom-dommatrixreadonly-a
+    text: b attribute; url: #dom-dommatrixreadonly-b
+    text: c attribute; url: #dom-dommatrixreadonly-c
+    text: d attribute; url: #dom-dommatrixreadonly-d
+    text: e attribute; url: #dom-dommatrixreadonly-e
+    text: f attribute; url: #dom-dommatrixreadonly-f
   type: method;
     text: fromString; url: #dom-dommatrixreadonly-fromstring0
 urlPrefix: https://heycam.github.io/webidl/
@@ -98,6 +120,9 @@ interface WebKitCSSMatrix : DOMMatrix {
     // Immutable transform methods
     WebKitCSSMatrix multiply(WebKitCSSMatrix other);
     WebKitCSSMatrix inverse();
+    WebKitCSSMatrix translate(unrestricted double tx,
+                              unrestricted double ty,
+                              unrestricted double tz);
     WebKitCSSMatrix scale(optional unrestricted double scaleX,
                           optional unrestricted double scaleY,
                           optional unrestricted double scaleZ);
@@ -207,9 +232,105 @@ constructor, when invoked, must run these steps:
   <li>Return <var>m</var>.</li>
 </ol>
 
-<h4 id="webkitcssmatrix-members">Object members</h4>
+<h4 id="webkitcssmatrix-attributes">{{WebKitCSSMatrix}} attributes</h4>
 
-<div class="XXX">TODO.</div>
+{{WebKitCSSMatrix}} objects must inherit the following attributes from {{DOMMatrixReadOnly}}:
+
+<a attribute spec="geometry-1">m11 attribute</a>,
+<a attribute spec="geometry-1">m22 attribute</a>,
+<a attribute spec="geometry-1">m33 attribute</a>,
+<a attribute spec="geometry-1">m44 attribute</a>,
+<a attribute spec="geometry-1">m12 attribute</a>,
+<a attribute spec="geometry-1">m13 attribute</a>,
+<a attribute spec="geometry-1">m14 attribute</a>,
+<a attribute spec="geometry-1">m21 attribute</a>,
+<a attribute spec="geometry-1">m23 attribute</a>,
+<a attribute spec="geometry-1">m24 attribute</a>,
+<a attribute spec="geometry-1">m31 attribute</a>,
+<a attribute spec="geometry-1">m32 attribute</a>,
+<a attribute spec="geometry-1">m34 attribute</a>,
+<a attribute spec="geometry-1">m41 attribute</a>,
+<a attribute spec="geometry-1">m42 attribute</a>,
+<a attribute spec="geometry-1">m43 attribute</a>,
+<a attribute spec="geometry-1">a attribute</a>,
+<a attribute spec="geometry-1">b attribute</a>,
+<a attribute spec="geometry-1">c attribute</a>,
+<a attribute spec="geometry-1">d attribute</a>,
+<a attribute spec="geometry-1">e attribute</a>,
+<a attribute spec="geometry-1">f attribute</a>.
+
+<h4 id="webkitcssmatrix-mutable-methods">{{WebKitCSSMatrix}} mutable methods</h4>
+
+The following method modifies the current matrix, returning the matrix it was invoked on.
+
+When the <dfn method for="WebKitCSSMatrix"><code>setMatrixValue(transformList)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+1. Return the result of the algorithm for the {{DOMMatrix}} <a method for="DOMMatrix" spec="geometry-1">setMatrixValue(transformList)</a> method.
+
+<h4 id="webkitcssmatrix-immutable-methods">{{WebKitCSSMatrix}} immutable methods</h4>
+
+The following methods do not modify the current matrix and return a new {{WebKitCSSMatrix}} object.
+
+When the <dfn method for="WebKitCSSMatrix"><code>multiply(other)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">multiply(other)</a> method as a new {{WebKitCSSMatrix}} object.
+
+When the <dfn method for="WebKitCSSMatrix"><code>inverse()</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">inverse()</a> method as a new {{WebKitCSSMatrix}} object.
+
+When the <dfn method for="WebKitCSSMatrix"><code>translate(tx, ty, tz)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">translate(x, y, z)</a> method as a new {{WebKitCSSMatrix}} object.
+
+When the <dfn method for="WebKitCSSMatrix"><code>scale(scaleX, scaleY, scaleZ)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+<div class="XXX">This method is different than {{DOMMatrixReadOnly}}'s scale().
+
+Need to define it based on:
+<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L117-L122">WebKitCSSMatrix.h#L117-L122</a>
+</div>
+
+When the <dfn method for="WebKitCSSMatrix"><code>rotate(rotX, rotY, rotZ)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+<div class="XXX">This method is different than {{DOMMatrixReadOnly}}'s rotate().
+
+Need to define it based on:
+<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L124-L129">WebKitCSSMatrix.h#L124-L129</a>
+</div>
+
+When the <dfn method for="WebKitCSSMatrix"><code>rotateAxisAngle(x, y, z, angle)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">rotateAxisAngle(x, y, z, angle)</a> method as a new {{WebKitCSSMatrix}} object.
+
+When the <dfn method for="WebKitCSSMatrix"><code>skewX(sx)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">skewX(sx)</a> method as a new {{WebKitCSSMatrix}} object.
+
+<!--
+
+open question: is https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L138 needed for compat?
+
+-->
+
+When the <dfn method for="WebKitCSSMatrix"><code>skewY(sy)</code></dfn>
+method is invoked, the user agent must run the following steps:
+
+1. Return the result of {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">skewY(sy)</a> as a new {{WebKitCSSMatrix}} object.
+
+<!--
+
+open question: is https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L144 needed for compat?
+
+-->
 
 <!-- TODO: add note about common usage that requires support for webkitTransform, etc.
 
@@ -221,6 +342,8 @@ constructor, when invoked, must run these steps:
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Jacob Rossi and {{your name here}} for feedback and contributions to this standard.
+
+Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
 
 This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
