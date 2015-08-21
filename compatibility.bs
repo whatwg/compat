@@ -290,20 +290,26 @@ method is invoked, the user agent must run the following steps:
 When the <dfn method for="WebKitCSSMatrix"><code>scale(scaleX, scaleY, scaleZ)</code></dfn>
 method is invoked, the user agent must run the following steps:
 
-<div class="XXX">This method is different than {{DOMMatrixReadOnly}}'s scale().
+1. If <var>scaleX</var> or <var>scaleZ</var> are undefined, let <var>scaleX</var> or <var>scaleZ</var> be 1, respectively.
 
-Need to define it based on:
-<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L117-L122">WebKitCSSMatrix.h#L117-L122</a>
-</div>
+2. If <var>scaleY</var> is undefined, let <var>scaleY</var> be the value of <var>scaleX</var>.
+
+3. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">scaleNonUniform(scaleX, scaleY, scaleZ)</a> method as a new {{WebKitCSSMatrix}} object.
 
 When the <dfn method for="WebKitCSSMatrix"><code>rotate(rotX, rotY, rotZ)</code></dfn>
 method is invoked, the user agent must run the following steps:
 
-<div class="XXX">This method is different than {{DOMMatrixReadOnly}}'s rotate().
+1. Let <var>result</var> be the resulting matrix initialized to the values of the current matrix.
 
-Need to define it based on:
-<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L124-L129">WebKitCSSMatrix.h#L124-L129</a>
-</div>
+2. If <var>rotY</var> and <var>rotZ</var> are undefined, let <var>rotZ</var> be the value of <var>rotX</var> and let <var>rotX</var> and <var>rotY</var> be 0.
+
+3. Else, if any of <var>rotX</var>, <var>rotY</var> or <var>rotZ</var> are undefined, let the undefined argument be 0.
+
+4. Post multiply <var>result</var> by each of its 3 rotation matrices about the major axes, first X using <var>rotX</var>, then Y using <var>rotY</var>, then Z using <var>rotZ</var>.
+
+5. Return the result as a new {{WebKitCSSMatrix}} object.
+
+The current matrix is not modified.
 
 When the <dfn method for="WebKitCSSMatrix"><code>rotateAxisAngle(x, y, z, angle)</code></dfn>
 method is invoked, the user agent must run the following steps:

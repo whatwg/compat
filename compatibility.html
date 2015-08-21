@@ -30,7 +30,7 @@
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated
-    <time class="dt-updated" datetime="2015-08-13">13 August 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-08-21">21 August 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -381,24 +381,53 @@ method is invoked, the user agent must run the following steps:</p>
 method is invoked, the user agent must run the following steps:</p>
 
 
-   <div class="XXX">This method is different than <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code>'s scale().
+   <ol>
+    <li data-md="">
+     <p>If <var>scaleX</var> or <var>scaleZ</var> are undefined, let <var>scaleX</var> or <var>scaleZ</var> be 1, respectively.</p>
+     
 
 
-    <p>Need to define it based on:
-<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L117-L122">WebKitCSSMatrix.h#L117-L122</a></p>
-</div>
+    <li data-md="">
+     <p>If <var>scaleY</var> is undefined, let <var>scaleY</var> be the value of <var>scaleX</var>.</p>
+     
 
+
+    <li data-md="">
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scalenonuniform">scaleNonUniform(scaleX, scaleY, scaleZ)</a> method as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
 
    <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" data-lt="rotate(rotX, rotY, rotZ)|rotate(rotX, rotY)|rotate(rotX)|rotate()" id="dom-webkitcssmatrix-rotate"><code>rotate(rotX, rotY, rotZ)</code><a class="self-link" href="#dom-webkitcssmatrix-rotate"></a></dfn>
 method is invoked, the user agent must run the following steps:</p>
 
 
-   <div class="XXX">This method is different than <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code>'s rotate().
+   <ol>
+    <li data-md="">
+     <p>Let <var>result</var> be the resulting matrix initialized to the values of the current matrix.</p>
+     
 
 
-    <p>Need to define it based on:
-<a href="https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b143e79258bb13c552/Source/WebCore/css/WebKitCSSMatrix.h#L124-L129">WebKitCSSMatrix.h#L124-L129</a></p>
-</div>
+    <li data-md="">
+     <p>If <var>rotY</var> and <var>rotZ</var> are undefined, let <var>rotZ</var> be the value of <var>rotX</var> and let <var>rotX</var> and <var>rotY</var> be 0.</p>
+     
+
+
+    <li data-md="">
+     <p>Else, if any of <var>rotX</var>, <var>rotY</var> or <var>rotZ</var> are undefined, let the undefined argument be 0.</p>
+     
+
+
+    <li data-md="">
+     <p>Post multiply <var>result</var> by each of its 3 rotation matrices about the major axes, first X using <var>rotX</var>, then Y using <var>rotY</var>, then Z using <var>rotZ</var>.</p>
+     
+
+
+    <li data-md="">
+     <p>Return the result as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     
+</ol>
+
+   <p>The current matrix is not modified.</p>
 
 
    <p>When the <dfn class="idl-code" data-dfn-for="WebKitCSSMatrix" data-dfn-type="method" data-export="" id="dom-webkitcssmatrix-rotateaxisangle"><code>rotateAxisAngle(x, y, z, angle)</code><a class="self-link" href="#dom-webkitcssmatrix-rotateaxisangle"></a></dfn>
@@ -558,6 +587,7 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.fxtf.org/geometry/#m44-element">m44 element</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-multiply">multiply()</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-rotateaxisangle">rotateAxisAngle(x, y, z, angle)</a>
+     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scalenonuniform">scaleNonUniform(scaleX, scaleY)</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrix-setmatrixvalue">setMatrixValue(transformList)</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-skewx">skewX(sx)</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-skewy">skewY(sy)</a>
