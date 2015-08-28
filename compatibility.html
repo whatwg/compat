@@ -80,6 +80,7 @@
         <li><a href="#webkitcssmatrix-immutable-methods"><span class="secno">3.1.4</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> immutable methods</span></a>
        </ul>
      </ul>
+    <li><a href="#events"><span class="secno">4</span> <span class="content">Event Handlers</span></a>
     <li><a href="#acknowledgements"><span class="secno"></span> <span class="content">Acknowledgements</span></a>
     <li><a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
      <ul class="toc">
@@ -473,6 +474,95 @@ method is invoked, the user agent must run the following steps:</p>
 
 
 
+   <h2 class="heading settled" data-level="4" id="events"><span class="secno">4. </span><span class="content">Event Handlers</span><a class="self-link" href="#events"></a></h2>
+
+
+   <p>The following are the event handlers and their corresponding event handler event types that must be supported on the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a></code> object as attributes.</p>
+
+
+
+
+   <table>
+  
+    <thead>
+    
+     <tr>
+     
+      <th><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers">event handler</a>
+      
+     
+      <th><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-event-type">event handler event type</a>
+      
+    
+     
+  
+  
+    <tbody>
+    
+     <tr>
+      
+      <td>
+        <dfn data-dfn-type="dfn" data-lt="onorientationchange" data-noexport="" id="handler-window-onfullscreenchange">
+          <code>onorientationchange</code>
+        <a class="self-link" href="#handler-window-onfullscreenchange"></a></dfn>
+      
+      
+      
+      <td>
+        <code><dfn data-dfn-type="dfn" data-noexport="" id="event-window-orientationchange">orientationchange<a class="self-link" href="#event-window-orientationchange"></a></dfn></code>
+      
+      
+    
+     
+  
+</table>
+
+
+
+   <p>The following are the event handlers and their corresponding event handler event types that must be supported on the <a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a> element as attributes.</p>
+
+
+   <table>
+  
+    <thead>
+    
+     <tr>
+     
+      <th><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers">event handler</a>
+      
+     
+      <th><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-event-type">event handler event type</a>
+      
+    
+     
+  
+  
+    <tbody>
+    
+     <tr>
+      
+      <td>
+        <a data-link-type="dfn" href="#handler-window-onfullscreenchange" id="handler-document-onfullscreenchange">
+          <code>onorientationchange</code>
+        </a>
+      
+      
+      
+      <td>
+        <code><a data-link-type="dfn" href="#event-window-orientationchange" id="event-document-orientationchange">orientationchange</a></code>
+      
+      
+    
+     
+  
+</table>
+
+
+   <div class="XXX">
+WebKit (allegedly?) has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>. Needed for compat?
+</div>
+
+
    <h2 class="no-num heading settled" id="acknowledgements"><span class="content">Acknowledgements</span><a class="self-link" href="#acknowledgements"></a></h2>
 Thanks to Jacob Rossi and {{your name here}} for feedback and contributions to this standard.
 
@@ -503,6 +593,8 @@ neighboring rights to this work.</p>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle">angle</a><span>, in §3.1</span>
    <li><a href="#dom-webkitcssmatrix-inverse">inverse()</a><span>, in §3.1.4</span>
    <li><a href="#dom-webkitcssmatrix-multiply">multiply(other)</a><span>, in §3.1.4</span>
+   <li><a href="#handler-window-onfullscreenchange">onorientationchange</a><span>, in §4</span>
+   <li><a href="#event-window-orientationchange">orientationchange</a><span>, in §4</span>
    <li>other
     <ul>
      <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other-other">argument for WebKitCSSMatrix/WebKitCSSMatrix(other)</a><span>, in §3.1</span>
@@ -546,6 +638,13 @@ neighboring rights to this work.</p>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z</a><span>, in §3.1</span></ul>
   <h3 class="no-num heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="indexlist">
+   <li><a data-link-type="biblio" href="#biblio-html">[HTML]</a> defines the following terms:
+    <ul>
+     <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers">event handler</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-event-type">event handler event type</a>
+    </ul>
    <li><a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a>
@@ -601,6 +700,8 @@ neighboring rights to this work.</p>
   <h2 class="no-num heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
+   <dt id="biblio-html"><a class="self-link" href="#biblio-html"></a>[HTML]
+   <dd>Ian Hickson. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
    <dt id="biblio-geometry-1"><a class="self-link" href="#biblio-geometry-1"></a>[GEOMETRY-1]
    <dd>Simon Pieters; Dirk Schulze; Rik Cabanier. <a href="http://dev.w3.org/fxtf/geometry/">Geometry Interfaces Module Level 1</a>. 25 November 2014. CR. URL: <a href="http://dev.w3.org/fxtf/geometry/">http://dev.w3.org/fxtf/geometry/</a>
    <dt id="biblio-rfc2119"><a class="self-link" href="#biblio-rfc2119"></a>[RFC2119]

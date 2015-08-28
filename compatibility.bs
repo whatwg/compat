@@ -69,6 +69,17 @@ urlPrefix: https://heycam.github.io/webidl/
     text: throw
   type: exception
     text: SyntaxError
+urlPrefix: https://html.spec.whatwg.org/multipage/; spec: HTML
+  type: interface
+    urlPrefix: browsers.html
+      text: Window; url: #window
+  type: element
+    urlPrefix: semantics.html
+      text: body; url: #the-body-element
+  type: dfn
+    urlPrefix: webappapis.html
+      text: event handler; url: #event-handlers
+      text: event handler event type; url: #event-handler-event-type
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -349,6 +360,61 @@ open question: is https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b1
       var m = new WebKitCSSMatrix(tranString);
       box.style.webkitTransform = m.rotateAxisAngle(3,1,2,1);
 -->
+
+<h2 id="events">Event Handlers</h2>
+
+The following are the event handlers and their corresponding event handler event types that must be supported on the {{Window}} object as attributes.
+
+<!-- TODO: these shouldn't really be defined here, was just getting things in place. -->
+
+<table>
+  <thead>
+    <tr>
+     <th><a dfn>event handler</a></th>
+     <th><a dfn>event handler event type</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <dfn id="handler-window-onfullscreenchange" lt="onorientationchange">
+          <code>onorientationchange</code>
+        </dfn>
+      </td>
+      <td>
+        <code><dfn id="event-window-orientationchange" lt="orientationchange">orientationchange</dfn></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+The following are the event handlers and their corresponding event handler event types that must be supported on the <a element>body</a> element as attributes.
+
+<table>
+  <thead>
+    <tr>
+     <th><a dfn>event handler</a></th>
+     <th><a dfn>event handler event type</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a dfn id="handler-document-onfullscreenchange" lt="onorientationchange">
+          <code>onorientationchange</code>
+        </a>
+      </td>
+      <td>
+        <code><a dfn id="event-document-orientationchange" lt="orientationchange">orientationchange</a></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="XXX">
+WebKit (allegedly?) has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>. Needed for compat?
+</div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Jacob Rossi and {{your name here}} for feedback and contributions to this standard.
