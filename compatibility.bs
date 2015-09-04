@@ -141,7 +141,8 @@ TODO: https://github.com/whatwg/compat/issues/7
 <pre class="idl">
 [Constructor,
  Constructor(DOMString transformList),
- Constructor(WebKitCSSMatrix other)]
+ Constructor(WebKitCSSMatrix other)
+ Exposed=Window]
 interface WebKitCSSMatrix : DOMMatrix {
     // Mutable transform methods
     WebKitCSSMatrix setMatrixValue(DOMString transformList);
