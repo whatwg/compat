@@ -121,6 +121,20 @@ be performant.)
 
 <h2 id="dom-interfaces">DOM Interfaces</h2>
 
+<h3 id="windoworientation-interface">The {{WindowOrientation}} interface</h3>
+
+<pre class="idl">
+[NoInterfaceObject,
+ Exposed=Window]
+interface WindowOrientation {
+    readonly attribute unsigned short orientation;
+};
+</pre>
+
+<div class="XXX">
+TODO: https://github.com/whatwg/compat/issues/7
+</div>
+
 <h3 id="webkitcssmatrix-interface">The {{WebKitCSSMatrix}} interface</h3>
 
 <!-- cf. https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/WebKitCSSMatrix.idl -->
