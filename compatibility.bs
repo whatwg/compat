@@ -80,6 +80,17 @@ urlPrefix: https://html.spec.whatwg.org/multipage/; spec: HTML
     urlPrefix: webappapis.html
       text: event handler; url: #event-handlers
       text: event handler event type; url: #event-handler-event-type
+    urlPrefix: browsers.html
+      text: active document; url: #active-document
+    urlPrefix: infrastructure.html; url: #concept-event-fire
+      text: fire
+urlPrefix: https://dom.spec.whatwg.org/; spec: WHATWG-DOM
+  type: interface
+    text: Document; url: #document
+  type: interface
+    text: Event; url: #event
+  type: method
+    text: createEvent; url: #dom-document-createevent
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -120,20 +131,6 @@ specification are intended to be easy to follow, and not intended to
 be performant.)
 
 <h2 id="dom-interfaces">DOM Interfaces</h2>
-
-<h3 id="windoworientation-interface">The {{WindowOrientation}} interface</h3>
-
-<pre class="idl">
-[NoInterfaceObject,
- Exposed=Window]
-interface WindowOrientation {
-    readonly attribute unsigned short orientation;
-};
-</pre>
-
-<div class="XXX">
-TODO: https://github.com/whatwg/compat/issues/7
-</div>
 
 <h3 id="webkitcssmatrix-interface">The {{WebKitCSSMatrix}} interface</h3>
 
@@ -376,7 +373,45 @@ open question: is https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b1
       box.style.webkitTransform = m.rotateAxisAngle(3,1,2,1);
 -->
 
-<h2 id="events">Event Handlers</h2>
+<h3 id="windoworientation-interface">The {{WindowOrientation}} interface</h3>
+
+<pre class="idl">
+[NoInterfaceObject,
+ Exposed=Window]
+interface WindowOrientation {
+    readonly attribute short orientation;
+};
+</pre>
+
+<div class="XXX">
+TODO: https://github.com/whatwg/compat/issues/7
+</div>
+
+<h2 id="events">Events</h2>
+
+<h3 id="events-orientationchange-event">The {{OrientationChangeEvent}} interface</h2>
+
+<pre class="idl">
+interface OrientationChangeEvent : Event {
+};
+</pre>
+
+An {{OrientationChangeEvent}} must be able to be created by calling the <code><a method>createEvent</a></code> method of the {{Document}} interface, with the {{Event}} interface as its constructor.
+
+<dl class=domintro>
+  <dt>
+    <pre><code>
+    <var>event</var> = document.createEvent("OrientationEvent");
+    event.initEvent("orientationchange", false, false);
+    window.dispatchEvent(event);
+    </code></pre>
+  </dt>
+  <dd>
+    <a dfn lt="fire">Fires</a> a new {{OrientationChangeEvent}} object on the <a dfn lt="active document">active document's</a> {{Window}} object.
+  </dd>
+</dl>
+
+<h2 id="event-handlers">Event Handlers</h2>
 
 The following are the event handlers and their corresponding event handler event types that must be supported on the {{Window}} object as attributes.
 
