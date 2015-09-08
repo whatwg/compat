@@ -503,8 +503,12 @@ TODO: https://github.com/whatwg/compat/issues/7
 
 
    <pre class="idl">interface <dfn class="idl-code" data-dfn-type="interface" data-export="" id="orientationchangeevent">OrientationChangeEvent<a class="self-link" href="#orientationchangeevent"></a></dfn> : <a data-link-type="idl-name" href="https://dom.spec.whatwg.org/#event">Event</a> {
+
 };
 </pre>
+
+
+   <p>The <code class="idl"><a data-link-type="idl" href="#orientationchangeevent">OrientationChangeEvent</a></code>'s <a class="idl-code" data-link-type="attribute" href="https://dom.spec.whatwg.org/#dom-event-type">type</a> attribute getter must return the string "<code>orientationchange</code>".</p>
 
 
    <p>An <code class="idl"><a data-link-type="idl" href="#orientationchangeevent">OrientationChangeEvent</a></code> must be able to be created by calling the <code><a class="idl-code" data-link-type="method" href="https://dom.spec.whatwg.org/#dom-document-createevent">createEvent</a></code> method of the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> interface, with the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event">Event</a></code> interface as its constructor.</p>
@@ -704,6 +708,7 @@ neighboring rights to this work.</p>
      <li><a href="https://dom.spec.whatwg.org/#document">Document</a>
      <li><a href="https://dom.spec.whatwg.org/#event">Event</a>
      <li><a href="https://dom.spec.whatwg.org/#dom-document-createevent">createEvent</a>
+     <li><a href="https://dom.spec.whatwg.org/#dom-event-type">type</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a> defines the following terms:
     <ul>
@@ -804,6 +809,7 @@ interface <a href="#windoworientation">WindowOrientation</a> {
 };
 
 interface <a href="#orientationchangeevent">OrientationChangeEvent</a> : <a data-link-type="idl-name" href="https://dom.spec.whatwg.org/#event">Event</a> {
+
 };
 
 </pre>

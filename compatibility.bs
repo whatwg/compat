@@ -91,6 +91,8 @@ urlPrefix: https://dom.spec.whatwg.org/; spec: WHATWG-DOM
     text: Event; url: #event
   type: method
     text: createEvent; url: #dom-document-createevent
+  type: attribute
+    text: type; url: #dom-event-type
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -393,8 +395,11 @@ TODO: https://github.com/whatwg/compat/issues/7
 
 <pre class="idl">
 interface OrientationChangeEvent : Event {
+
 };
 </pre>
+
+The {{OrientationChangeEvent}}'s <a attribute>type</a> attribute getter must return the string "<code>orientationchange</code>".
 
 An {{OrientationChangeEvent}} must be able to be created by calling the <code><a method>createEvent</a></code> method of the {{Document}} interface, with the {{Event}} interface as its constructor.
 
