@@ -10,4 +10,14 @@ This spec is built using [Bikeshed](https://github.com/tabatkins/bikeshed). To g
 
 Update `compatibility.bs` with your changes, run `bikeshed` in the working directory to generate `compatibility.html`, and then send a pull request describing your changes.
 
+Run the following steps to enable fancy-mode (which will run `bikeshed` every time `compatibility.bs` is changed on the filesystem).
+
+Step 0. Install Node.js and npm
+Step 1: Run the following commands
+
+```
+npm install
+npm run watch
+```
+
 Contributions are welcome, so long as you agree to the [CC0 license](LICENSE). :rainbow: :stars:
