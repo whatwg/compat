@@ -80,11 +80,9 @@ urlPrefix: https://html.spec.whatwg.org/multipage/; spec: HTML
     urlPrefix: webappapis.html
       text: event handler; url: #event-handlers
       text: event handler event type; url: #event-handler-event-type
+      text: responsible document; url: #responsible-document
     urlPrefix: browsers.html
       text: active document; url: #active-document
-      text: responsible document; url: #responsible-document
-    urlPrefix: infrastructure.html; url: #concept-event-fire
-      text: fire an event
 urlPrefix: https://dom.spec.whatwg.org/; spec: WHATWG-DOM
   type: interface
     text: Document; url: #document
@@ -94,6 +92,8 @@ urlPrefix: https://dom.spec.whatwg.org/; spec: WHATWG-DOM
     text: createEvent; url: #dom-document-createevent
   type: attribute
     text: type; url: #dom-event-type
+  type: dfn; url: #concept-event-fire
+    text: fire an event
 urlPrefix: https://w3c.github.io/screen-orientation/;
   type: interface
     text: ScreenOrientation; url: #screenorientation-interface
