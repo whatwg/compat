@@ -189,8 +189,7 @@ The {{WebKitCSSMatrix}} interface may be implemented as a subclass of the {{DOMM
   </dd>
 </dl>
 
-The
-<dfn constructor dfn-for="WebKitCSSMatrix" lt="WebKitCSSMatrix()">WebKitCSSMatrix()</dfn>
+The <dfn constructor dfn-for="WebKitCSSMatrix" lt="WebKitCSSMatrix()">WebKitCSSMatrix()</dfn>
 constructor, when invoked, must run these steps:
 
 <ol>
@@ -307,23 +306,19 @@ method is invoked, the user agent must run the following steps:
 
 The following methods do not modify the current matrix and return a new {{WebKitCSSMatrix}} object.
 
-When the <dfn method for="WebKitCSSMatrix"><code>multiply(other)</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{multiply(other)}}</code> method is invoked, the user agent must run the following steps:
 
 1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">multiply(other)</a> method as a new {{WebKitCSSMatrix}} object.
 
-When the <dfn method for="WebKitCSSMatrix"><code>inverse()</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{inverse()}}</code> method is invoked, the user agent must run the following steps:
 
 1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">inverse()</a> method as a new {{WebKitCSSMatrix}} object.
 
-When the <dfn method for="WebKitCSSMatrix"><code>translate(tx, ty, tz)</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{translate(tx, ty, tz)}}</code> method is invoked, the user agent must run the following steps:
 
 1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">translate(x, y, z)</a> method as a new {{WebKitCSSMatrix}} object.
 
-When the <dfn method for="WebKitCSSMatrix"><code>scale(scaleX, scaleY, scaleZ)</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{scale(scaleX, scaleY, scaleZ)}}</code> method is invoked, the user agent must run the following steps:
 
 1. If <var>scaleX</var> or <var>scaleZ</var> are undefined, let <var>scaleX</var> or <var>scaleZ</var> be 1, respectively.
 
@@ -331,8 +326,7 @@ method is invoked, the user agent must run the following steps:
 
 3. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">scaleNonUniform(scaleX, scaleY, scaleZ)</a> method as a new {{WebKitCSSMatrix}} object.
 
-When the <dfn method for="WebKitCSSMatrix"><code>rotate(rotX, rotY, rotZ)</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{rotate(rotX, rotY, rotZ)}}</code> method is invoked, the user agent must run the following steps:
 
 1. Let <var>result</var> be the resulting matrix initialized to the values of the current matrix.
 
@@ -346,13 +340,11 @@ method is invoked, the user agent must run the following steps:
 
 The current matrix is not modified.
 
-When the <dfn method for="WebKitCSSMatrix"><code>rotateAxisAngle(x, y, z, angle)</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{rotateAxisAngle(x, y, z, angle)}}</code> method is invoked, the user agent must run the following steps:
 
 1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">rotateAxisAngle(x, y, z, angle)</a> method as a new {{WebKitCSSMatrix}} object.
 
-When the <dfn method for="WebKitCSSMatrix"><code>skewX(sx)</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{skewX(sx)}}</code> method is invoked, the user agent must run the following steps:
 
 1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">skewX(sx)</a> method as a new {{WebKitCSSMatrix}} object.
 
@@ -362,8 +354,7 @@ open question: is https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b1
 
 -->
 
-When the <dfn method for="WebKitCSSMatrix"><code>skewY(sy)</code></dfn>
-method is invoked, the user agent must run the following steps:
+When the <code>{{skewY(sy)}}</code> method is invoked, the user agent must run the following steps:
 
 1. Return the result of {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">skewY(sy)</a> as a new {{WebKitCSSMatrix}} object.
 
@@ -400,7 +391,7 @@ When getting the <dfn attribute for="Window">orientation</dfn> attribute, the us
 
 Whenever the viewport is drawn at a different angle compared to the device's natural orientation, the user agent must run the following steps:
 
-1. <a lt="fire an event">Fire an event</a> named <code>orientationchange</code> at the {{Window}} object of the <a>active document</a>.
+1. <a lt="fire an event">Fire an event</a> named <code><dfn id="event-orientationchange" lt="orientationchange">orientationchange</dfn></code> at the {{Window}} object of the <a>active document</a>.
 
 <div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not required for compability with the web.</div>
 
@@ -438,12 +429,10 @@ The following are the event handlers and their corresponding event handler event
   <tbody>
     <tr>
       <td>
-        <dfn id="handler-onorientationchange" lt="onorientationchange">
-          <code>onorientationchange</code>
-        </dfn>
+          <code>{{onorientationchange}}</code>
       </td>
       <td>
-        <code><dfn id="event-orientationchange" lt="orientationchange">orientationchange</dfn></code>
+        <code><a lt="orientationchange">orientationchange</a></code>
       </td>
     </tr>
   </tbody>
