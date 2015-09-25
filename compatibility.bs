@@ -82,8 +82,9 @@ urlPrefix: https://html.spec.whatwg.org/multipage/; spec: HTML
       text: event handler event type; url: #event-handler-event-type
     urlPrefix: browsers.html
       text: active document; url: #active-document
+      text: responsible document; url: #responsible-document
     urlPrefix: infrastructure.html; url: #concept-event-fire
-      text: fire
+      text: fire an event
 urlPrefix: https://dom.spec.whatwg.org/; spec: WHATWG-DOM
   type: interface
     text: Document; url: #document
@@ -93,6 +94,11 @@ urlPrefix: https://dom.spec.whatwg.org/; spec: WHATWG-DOM
     text: createEvent; url: #dom-document-createevent
   type: attribute
     text: type; url: #dom-event-type
+urlPrefix: https://w3c.github.io/screen-orientation/;
+  type: interface
+    text: ScreenOrientation; url: #screenorientation-interface
+  type: dfn
+    text: update the orientation information; url: #dfn-update-the-orientation-information
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -375,106 +381,84 @@ open question: is https://github.com/WebKit/webkit/blob/d055853e59dd6cc4cfd835b1
       box.style.webkitTransform = m.rotateAxisAngle(3,1,2,1);
 -->
 
-<h3 id="windoworientation-interface">The {{WindowOrientation}} interface</h3>
+<h3 id="windoworientation-interface"><a attribute lt="orientation"><code>window.orientation</code></a> API</h3>
 
 <pre class="idl">
-[NoInterfaceObject,
- Exposed=Window]
-interface WindowOrientation {
+partial interface Window {
     readonly attribute short orientation;
+    attribute EventHandler onorientationchange;
+};
+
+partial interface HTMLBodyElement {
+    attribute EventHandler onorientationchange;
 };
 </pre>
 
-<div class="XXX">
-TODO: https://github.com/whatwg/compat/issues/7
-</div>
+When getting the <dfn attribute for="Window">orientation</dfn> attribute, the user agent must run the following steps:
 
-<h2 id="events">Events</h2>
+1. Return the <a>responsible document</a>'s current <a href="#dfn-window-orientation-angle"><code>window.orientation</code> angle</a>.
 
-<h3 id="events-orientationchange-event">The {{OrientationChangeEvent}} interface</h2>
+Whenever the viewport is drawn at a different angle compared to the device's natural orientation, the user agent must run the following steps:
 
-<pre class="idl">
-interface OrientationChangeEvent : Event {
+1. <a lt="fire an event">Fire an event</a> named <code>orientationchange</code> at the {{Window}} object of the <a>active document</a>.
 
-};
-</pre>
+<div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not required for compability with the web.</div>
 
-The {{OrientationChangeEvent}}'s <a attribute>type</a> attribute getter must return the string "<code>orientationchange</code>".
+<h4 id="dfn-window-orientation-angle"><a attribute lt="orientation"><code>window.orientation</code></a> angle</h4>
 
-An {{OrientationChangeEvent}} must be able to be created by calling the <code><a method>createEvent</a></code> method of the {{Document}} interface, with the {{Event}} interface as its constructor.
+The possible values for the <a attribute lt="orientation"><code>window.orientation</code></a> angle are: <code>-90</code>, <code>0</code>, <code>90</code>, <code>180</code>. User agents must support the <code>-90</code>, <code>0</code> and <code>90</code> values and may optionally support <code>180</code>.
 
-<dl class=domintro>
-  <dt>
-    <pre><code>
-    <var>event</var> = document.createEvent("OrientationEvent");
-    event.initEvent("orientationchange", false, false);
-    window.dispatchEvent(event);
-    </code></pre>
-  </dt>
-  <dd>
-    <a dfn lt="fire">Fires</a> a new {{OrientationChangeEvent}} object on the <a dfn lt="active document">active document's</a> {{Window}} object.
-  </dd>
-</dl>
+<p class="note"><code>0</code> represents the natural orientation. <code>-90</code> represents a rotation 90 degrees clockwise from the natural orientation. <code>90</code> represents a rotation 90 degrees counterclockwise from the natural orientation. <code>180</code> represents a rotation 180 degrees from the natural orientation.
+</p>
 
-<h2 id="event-handlers">Event Handlers</h2>
+In order to determine the current <a attribute lt="orientation"><code>window.orientation</code></a> angle, the user agent must run the following steps:
 
-The following are the event handlers and their corresponding event handler event types that must be supported on the {{Window}} object as attributes.
+<ol>
+  <li>Return the result of step 3 of the {{ScreenOrientation}}'s <a>update the orientation information</a> algorithm with the following changes:
+    <ol>
+      <li>If the orientation angle is less than or equal to 180, return the orientation angle
+      <li>If the orientation angle is greater than 180, return the orientation angle - 360.
+      <li>If the resulting orientation angle is 180 and the user agent does not support that value, return 0.
+      <!-- This is what Windows phone, some iPhones running various iOSes, and Chrome Mobile do on some of my test Androids. It's possible something else happens! -->
+    </ol>
+  </li>
+</ol>
 
-<!-- TODO: these shouldn't really be defined here, was just getting things in place. -->
+<h4 id="event-handlers">Event Handlers on {{Window}} objects and <code><{body}></code> elements</h4>
+
+The following are the event handlers and their corresponding event handler event types that must be supported on all {{Window}} objects and <code><{body}></code> elements as attributes:
 
 <table>
   <thead>
     <tr>
-     <th><a dfn>event handler</a></th>
-     <th><a dfn>event handler event type</a></th>
+     <th><a>event handler</a></th>
+     <th><a>event handler event type</a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <dfn id="handler-window-onfullscreenchange" lt="onorientationchange">
+        <dfn id="handler-onorientationchange" lt="onorientationchange">
           <code>onorientationchange</code>
         </dfn>
       </td>
       <td>
-        <code><dfn id="event-window-orientationchange" lt="orientationchange">orientationchange</dfn></code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-The following are the event handlers and their corresponding event handler event types that must be supported on the <a element>body</a> element as attributes.
-
-<table>
-  <thead>
-    <tr>
-     <th><a dfn>event handler</a></th>
-     <th><a dfn>event handler event type</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <a dfn id="handler-document-onfullscreenchange" lt="onorientationchange">
-          <code>onorientationchange</code>
-        </a>
-      </td>
-      <td>
-        <code><a dfn id="event-document-orientationchange" lt="orientationchange">orientationchange</a></code>
+        <code><dfn id="event-orientationchange" lt="orientationchange">orientationchange</dfn></code>
       </td>
     </tr>
   </tbody>
 </table>
 
 <div class="XXX">
-WebKit (allegedly?) has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>. Needed for compat?
+WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>. It's unclear if this is needed for compatibility.
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Jacob Rossi and {{your name here}} for feedback and contributions to this standard.
+Thanks to Jacob Rossi, Stanley Stuart and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
+
+Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface. [[!screen-orientation]]
 
 This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
