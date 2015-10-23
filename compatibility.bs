@@ -99,6 +99,42 @@ urlPrefix: https://w3c.github.io/screen-orientation/;
     text: ScreenOrientation; url: #screenorientation-interface
   type: dfn
     text: update the orientation information; url: #dfn-update-the-orientation-information
+urlPrefix: https://drafts.csswg.org/css2/syndata.html; spec: CSS22
+  type: dfn
+    text: vendor prefix; url: #vendor-keywords
+urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
+  type: property
+    text: background-position-x; url: #propdef-background-position-x
+    text: background-position-y; url: #propdef-background-position-y
+</pre>
+
+<pre class=biblio>
+{
+    "CSS22": {
+        "authors": [
+            "Bert Bos"
+        ],
+        "href": "https://drafts.csswg.org/css2/",
+        "title": "Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification",
+        "status": "Draft",
+        "publisher": "W3C",
+        "deliveredBy": [
+            "http://www.w3.org/Style/CSS/"
+        ]
+    },
+    "CSS3-BG4": {
+        "authors": [
+            "Bert Bos", "Elika J. Etemad", "Lea Verou"
+        ],
+        "href": "https://drafts.csswg.org/css-backgrounds-4/",
+        "title": "CSS Backgrounds and Borders Module Level 4",
+        "status": "Draft",
+        "publisher": "W3C",
+        "deliveredBy": [
+            "http://www.w3.org/Style/CSS/"
+        ]
+    }
+}
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -137,6 +173,67 @@ may be implemented in any manner, so long as the end result is
 equivalent. (In particular, the algorithms defined in this
 specification are intended to be easy to follow, and not intended to
 be performant.)
+
+<h2 id="css-properties">CSS Properties</h2>
+
+<h3 id="css-simple-aliases">Simple aliases</h3>
+
+The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed property:
+
+<table>
+  <thead>
+    <tr>
+     <th><code>-webkit-</code> prefixed property alias</th>
+     <th>unprefixed property</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>-webkit-background</code></td>
+      <td><code>'background'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-attachment</code></td>
+      <td><code>'background-attachment'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-clip</code></td>
+      <td><code>'background-clip'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-color</code></td>
+      <td><code>'background-color'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-image</code></td>
+      <td><code>'background-image'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-origin</code></td>
+      <td><code>'background-origin'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-position</code></td>
+      <td><code>'background-position'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-position-x</code></td>
+      <td><code>'background-position-x'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-position-y</code></td>
+      <td><code>'background-position-y'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-repeat</code></td>
+      <td><code>'background-repeat'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background-size</code></td>
+      <td><code>'background-size'</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="dom-interfaces">DOM Interfaces</h2>
 
