@@ -99,9 +99,9 @@ urlPrefix: https://w3c.github.io/screen-orientation/;
     text: ScreenOrientation; url: #screenorientation-interface
   type: dfn
     text: update the orientation information; url: #dfn-update-the-orientation-information
-urlPrefix: https://drafts.csswg.org/css2/syndata.html; spec: CSS22
+urlPrefix: http://www.w3.org/TR/CSS/; spec: CSS22
   type: dfn
-    text: vendor prefix; url: #vendor-keywords
+    text: vendor prefix; url: #vendor-prefix
 urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
   type: property
     text: background-position-x; url: #propdef-background-position-x
