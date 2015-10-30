@@ -287,6 +287,26 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>-webkit-background</code></td>
       <td><code>'background'</code></td>
     </tr>
+    <tr>
+      <td><code>-webkit-border-bottom-left-radius</code></td>
+      <td><code>'border-bottom-left-radius'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-border-bottom-right-radius</code></td>
+      <td><code>'border-bottom-right-radius'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-border-top-right-radius</code></td>
+      <td><code>'border-top-right-radius'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-border-top-right-radius</code></td>
+      <td><code>'border-top-right-radius'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-border-radius</code></td>
+      <td><code>'border-radius'</code></td>
+    </tr>
   </tbody>
 </table>
 
