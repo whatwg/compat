@@ -325,6 +325,26 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>-webkit-transform</code></td>
       <td><code>'transform'</code></td>
     </tr>
+    <tr>
+      <td><code>-webkit-transition-delay</code></td>
+      <td><code>'transition-delay'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-transition-duration</code></td>
+      <td><code>'transition-duration'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-transition-property</code></td>
+      <td><code>'transition-property'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-transition-timing-function</code></td>
+      <td><code>'transition-timing-function'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-transition</code></td>
+      <td><code>'transition'</code></td>
+    </tr>
   </tbody>
 </table>
 
