@@ -108,6 +108,12 @@ urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
     text: background-position-y; url: #propdef-background-position-y
 </pre>
 
+<pre class=link-defaults>
+spec:css-transforms-1; type:property; text:transform-origin
+spec:css-transforms-1; type:property; text:transform-style
+spec:css-transforms-1; type:property; text:transform
+</pre>
+
 <pre class=biblio>
 {
     "CSS22": {
@@ -306,6 +312,18 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     <tr>
       <td><code>-webkit-border-radius</code></td>
       <td><code>'border-radius'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-transform-origin</code></td>
+      <td><code>'transform-origin'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-transform-style</code></td>
+      <td><code>'transform-style'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-transform</code></td>
+      <td><code>'transform'</code></td>
     </tr>
   </tbody>
 </table>
