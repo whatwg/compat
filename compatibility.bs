@@ -189,8 +189,40 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   </thead>
   <tbody>
     <tr>
-      <td><code>-webkit-background</code></td>
-      <td><code>'background'</code></td>
+      <td><code>-webkit-animation-name</code></td>
+      <td><code>'animation-name'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-animation-duration</code></td>
+      <td><code>'animation-duration'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-animation-timing-function</code></td>
+      <td><code>'animation-timing-function'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-animation-iteration-count</code></td>
+      <td><code>'animation-iteration-count'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-direction</code></td>
+      <td><code>'animation-direction'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-animation-play-state</code></td>
+      <td><code>'animation-play-state'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-animation-delay</code></td>
+      <td><code>'animation-delay'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-animation-fill-mode</code></td>
+      <td><code>'animation-fill-mode'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-animation</code></td>
+      <td><code>'animation'</code></td>
     </tr>
     <tr>
       <td><code>-webkit-background-attachment</code></td>
@@ -231,6 +263,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     <tr>
       <td><code>-webkit-background-size</code></td>
       <td><code>'background-size'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-background</code></td>
+      <td><code>'background'</code></td>
     </tr>
   </tbody>
 </table>
