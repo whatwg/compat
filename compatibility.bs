@@ -653,7 +653,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Jacob Rossi, Stanley Stuart and Your Name Here for feedback and contributions to this standard.
+Thanks to Daniel Holbert, Jacob Rossi, Philip Jägenstedt, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
 
