@@ -109,6 +109,9 @@ urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
 </pre>
 
 <pre class=link-defaults>
+spec:css-transforms-1; type:property; text:backface-visibility
+spec:css-transforms-1; type:property; text:perspective
+spec:css-transforms-1; type:property; text:perspective-origin
 spec:css-transforms-1; type:property; text:transform-origin
 spec:css-transforms-1; type:property; text:transform-style
 spec:css-transforms-1; type:property; text:transform
@@ -250,6 +253,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'animation'</code></td>
     </tr>
     <tr>
+      <td><code>-webkit-backface-visibility</code></td>
+      <td><code>'backface-visibility'</code></td>
+    </tr>
+    <tr>
       <td><code>-webkit-background-attachment</code></td>
       <td><code>'background-attachment'</code></td>
     </tr>
@@ -312,6 +319,14 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     <tr>
       <td><code>-webkit-border-radius</code></td>
       <td><code>'border-radius'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-perspective</code></td>
+      <td><code>'perspective'</code></td>
+    </tr>
+    <tr>
+      <td><code>-webkit-perspective-origin</code></td>
+      <td><code>'perspective-origin'</code></td>
     </tr>
     <tr>
       <td><code>-webkit-transform-origin</code></td>
