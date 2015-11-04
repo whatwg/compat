@@ -348,6 +348,11 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   </tbody>
 </table>
 
+<p class="XXX">
+Note: It's unclear if <code>-webkit-background-position-x/-y</code> are more important than just supporting the unprefixed variants (although Edge does support the prefixed versions).
+To investigate.
+</p>
+
 <h2 id="dom-interfaces">DOM Interfaces</h2>
 
 <h3 id="webkitcssmatrix-interface">The {{WebKitCSSMatrix}} interface</h3>
