@@ -209,9 +209,9 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
 
 <h2 id="css-media-queries">CSS Media Queries</h2>
 
-<h3 id="css-media-queries-webkit-device-pixel-ratio"><code>-webkit-device-pixel-ratio</code></h3>
+<h3 id="css-media-queries-webkit-min-device-pixel-ratio"><code>-webkit-min-device-pixel-ratio</code></h3>
 
-The <code>-webkit-device-pixel-ratio</code> <a>media query feature</a> must be treated as an alias of the <code><a>min-resolution</a></code> <a>media query</a>, with its value interpreted as a <a>dppx</a> unit.
+The <code>-webkit-device-pixel-ratio</code> <a>media query feature</a> may be treated as an alias of the <code><a>min-resolution</a></code> <a>media query</a>, with its value interpreted as a <a>dppx</a> unit.
 
 <h2 id="css-properties">CSS Properties</h2>
 
