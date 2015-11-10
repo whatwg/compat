@@ -30,7 +30,7 @@
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated
-    <time class="dt-updated" datetime="2015-11-04">4 November 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-11-10">10 November 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -71,23 +71,27 @@
     <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
     <li><a href="#conformance"><span class="secno">2</span> <span class="content">Conformance</span></a>
     <li><a href="#css-at-rules"><span class="secno">3</span> <span class="content">CSS At-rules</span></a>
-    <li><a href="#css-properties"><span class="secno">4</span> <span class="content">CSS Properties</span></a>
+    <li><a href="#css-media-queries"><span class="secno">4</span> <span class="content">CSS Media Queries</span></a>
      <ul class="toc">
-      <li><a href="#css-simple-aliases"><span class="secno">4.1</span> <span class="content">Simple aliases</span></a>
+      <li><a href="#css-media-queries-webkit-device-pixel-ratio"><span class="secno">4.1</span> <span class="content"><code>-webkit-device-pixel-ratio</code></span></a>
      </ul>
-    <li><a href="#dom-interfaces"><span class="secno">5</span> <span class="content">DOM Interfaces</span></a>
+    <li><a href="#css-properties"><span class="secno">5</span> <span class="content">CSS Properties</span></a>
      <ul class="toc">
-      <li><a href="#webkitcssmatrix-interface"><span class="secno">5.1</span> <span class="content">The <code class="idl"><span>WebKitCSSMatrix</span></code> interface</span></a>
+      <li><a href="#css-simple-aliases"><span class="secno">5.1</span> <span class="content">Simple aliases</span></a>
+     </ul>
+    <li><a href="#dom-interfaces"><span class="secno">6</span> <span class="content">DOM Interfaces</span></a>
+     <ul class="toc">
+      <li><a href="#webkitcssmatrix-interface"><span class="secno">6.1</span> <span class="content">The <code class="idl"><span>WebKitCSSMatrix</span></code> interface</span></a>
        <ul class="toc">
-        <li><a href="#webkitcssmatrix-constructors"><span class="secno">5.1.1</span> <span class="content">Constructors</span></a>
-        <li><a href="#webkitcssmatrix-attributes"><span class="secno">5.1.2</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> attributes</span></a>
-        <li><a href="#webkitcssmatrix-mutable-methods"><span class="secno">5.1.3</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> mutable methods</span></a>
-        <li><a href="#webkitcssmatrix-immutable-methods"><span class="secno">5.1.4</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> immutable methods</span></a>
+        <li><a href="#webkitcssmatrix-constructors"><span class="secno">6.1.1</span> <span class="content">Constructors</span></a>
+        <li><a href="#webkitcssmatrix-attributes"><span class="secno">6.1.2</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> attributes</span></a>
+        <li><a href="#webkitcssmatrix-mutable-methods"><span class="secno">6.1.3</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> mutable methods</span></a>
+        <li><a href="#webkitcssmatrix-immutable-methods"><span class="secno">6.1.4</span> <span class="content"><code class="idl"><span>WebKitCSSMatrix</span></code> immutable methods</span></a>
        </ul>
-      <li><a href="#windoworientation-interface"><span class="secno">5.2</span> <span class="content"><span><code>window.orientation</code></span> API</span></a>
+      <li><a href="#windoworientation-interface"><span class="secno">6.2</span> <span class="content"><span><code>window.orientation</code></span> API</span></a>
        <ul class="toc">
-        <li><a href="#dfn-window-orientation-angle"><span class="secno">5.2.1</span> <span class="content"><span><code>window.orientation</code></span> angle</span></a>
-        <li><a href="#event-handlers"><span class="secno">5.2.2</span> <span class="content">Event Handlers on <code class="idl"><span>Window</span></code> objects and <code><code><span>body</span></code></code> elements</span></a>
+        <li><a href="#dfn-window-orientation-angle"><span class="secno">6.2.1</span> <span class="content"><span><code>window.orientation</code></span> angle</span></a>
+        <li><a href="#event-handlers"><span class="secno">6.2.2</span> <span class="content">Event Handlers on <code class="idl"><span>Window</span></code> objects and <code><code><span>body</span></code></code> elements</span></a>
        </ul>
      </ul>
     <li><a href="#acknowledgements"><span class="secno"></span> <span class="content">Acknowledgements</span></a>
@@ -197,10 +201,19 @@ be performant.)</p>
 </table>
 
 
-   <h2 class="heading settled" data-level="4" id="css-properties"><span class="secno">4. </span><span class="content">CSS Properties</span><a class="self-link" href="#css-properties"></a></h2>
+   <h2 class="heading settled" data-level="4" id="css-media-queries"><span class="secno">4. </span><span class="content">CSS Media Queries</span><a class="self-link" href="#css-media-queries"></a></h2>
 
 
-   <h3 class="heading settled" data-level="4.1" id="css-simple-aliases"><span class="secno">4.1. </span><span class="content">Simple aliases</span><a class="self-link" href="#css-simple-aliases"></a></h3>
+   <h3 class="heading settled" data-level="4.1" id="css-media-queries-webkit-device-pixel-ratio"><span class="secno">4.1. </span><span class="content"><code>-webkit-device-pixel-ratio</code></span><a class="self-link" href="#css-media-queries-webkit-device-pixel-ratio"></a></h3>
+
+
+   <p>The <code>-webkit-device-pixel-ratio</code> <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media query feature</a> must be treated as an alias of the <code><a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">min-resolution</a></code> <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#media-query">media query</a>, with its value interpreted as a <a data-link-type="dfn" href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a> unit.</p>
+
+
+   <h2 class="heading settled" data-level="5" id="css-properties"><span class="secno">5. </span><span class="content">CSS Properties</span><a class="self-link" href="#css-properties"></a></h2>
+
+
+   <h3 class="heading settled" data-level="5.1" id="css-simple-aliases"><span class="secno">5.1. </span><span class="content">Simple aliases</span><a class="self-link" href="#css-simple-aliases"></a></h3>
 
 
    <p>The following <code>-webkit-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed property:</p>
@@ -592,10 +605,10 @@ To investigate.
 </p>
 
 
-   <h2 class="heading settled" data-level="5" id="dom-interfaces"><span class="secno">5. </span><span class="content">DOM Interfaces</span><a class="self-link" href="#dom-interfaces"></a></h2>
+   <h2 class="heading settled" data-level="6" id="dom-interfaces"><span class="secno">6. </span><span class="content">DOM Interfaces</span><a class="self-link" href="#dom-interfaces"></a></h2>
 
 
-   <h3 class="heading settled" data-level="5.1" id="webkitcssmatrix-interface"><span class="secno">5.1. </span><span class="content">The <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
+   <h3 class="heading settled" data-level="6.1" id="webkitcssmatrix-interface"><span class="secno">6.1. </span><span class="content">The <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
 
 
 
@@ -635,7 +648,7 @@ interface <dfn class="idl-code" data-dfn-type="interface" data-export="" id="web
    <p>The <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> interface may be implemented as a subclass of the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a></code> and <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> interfaces, defined in Geometry Interfaces Module Level 1 <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>, with key differences noted below.</p>
 
 
-   <h4 class="heading settled" data-level="5.1.1" id="webkitcssmatrix-constructors"><span class="secno">5.1.1. </span><span class="content">Constructors</span><a class="self-link" href="#webkitcssmatrix-constructors"></a></h4>
+   <h4 class="heading settled" data-level="6.1.1" id="webkitcssmatrix-constructors"><span class="secno">6.1.1. </span><span class="content">Constructors</span><a class="self-link" href="#webkitcssmatrix-constructors"></a></h4>
 
 
    <dl class="domintro">
@@ -745,7 +758,7 @@ constructor, when invoked, must run these steps:</p>
 </ol>
 
 
-   <h4 class="heading settled" data-level="5.1.2" id="webkitcssmatrix-attributes"><span class="secno">5.1.2. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> attributes</span><a class="self-link" href="#webkitcssmatrix-attributes"></a></h4>
+   <h4 class="heading settled" data-level="6.1.2" id="webkitcssmatrix-attributes"><span class="secno">6.1.2. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> attributes</span><a class="self-link" href="#webkitcssmatrix-attributes"></a></h4>
 
 
    <p><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> objects must inherit the following attributes from <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code>:</p>
@@ -775,7 +788,7 @@ constructor, when invoked, must run these steps:</p>
 <a class="idl-code" data-link-type="attribute" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-f">f attribute</a>.</p>
 
 
-   <h4 class="heading settled" data-level="5.1.3" id="webkitcssmatrix-mutable-methods"><span class="secno">5.1.3. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> mutable methods</span><a class="self-link" href="#webkitcssmatrix-mutable-methods"></a></h4>
+   <h4 class="heading settled" data-level="6.1.3" id="webkitcssmatrix-mutable-methods"><span class="secno">6.1.3. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> mutable methods</span><a class="self-link" href="#webkitcssmatrix-mutable-methods"></a></h4>
 
 
    <p>The following method modifies the current matrix, returning the matrix it was invoked on.</p>
@@ -791,7 +804,7 @@ method is invoked, the user agent must run the following steps:</p>
      
 </ol>
 
-   <h4 class="heading settled" data-level="5.1.4" id="webkitcssmatrix-immutable-methods"><span class="secno">5.1.4. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> immutable methods</span><a class="self-link" href="#webkitcssmatrix-immutable-methods"></a></h4>
+   <h4 class="heading settled" data-level="6.1.4" id="webkitcssmatrix-immutable-methods"><span class="secno">6.1.4. </span><span class="content"><code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> immutable methods</span><a class="self-link" href="#webkitcssmatrix-immutable-methods"></a></h4>
 
 
    <p>The following methods do not modify the current matrix and return a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
@@ -910,7 +923,7 @@ method is invoked, the user agent must run the following steps:</p>
 
 
 
-   <h3 class="heading settled" data-level="5.2" id="windoworientation-interface"><span class="secno">5.2. </span><span class="content"><a class="idl-code" data-link-type="attribute" href="#dom-window-orientation"><code>window.orientation</code></a> API</span><a class="self-link" href="#windoworientation-interface"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="windoworientation-interface"><span class="secno">6.2. </span><span class="content"><a class="idl-code" data-link-type="attribute" href="#dom-window-orientation"><code>window.orientation</code></a> API</span><a class="self-link" href="#windoworientation-interface"></a></h3>
 
 
    <pre class="idl">partial interface <a class="idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a> {
@@ -945,7 +958,7 @@ partial interface <a class="idl-code" data-link-type="interface" href="https://h
    <div class="note" role="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code></code> element, but other implementations do not, suggesting it’s not required for compability with the web.</div>
 
 
-   <h4 class="heading settled" data-level="5.2.1" id="dfn-window-orientation-angle"><span class="secno">5.2.1. </span><span class="content"><a class="idl-code" data-link-type="attribute" href="#dom-window-orientation"><code>window.orientation</code></a> angle</span><a class="self-link" href="#dfn-window-orientation-angle"></a></h4>
+   <h4 class="heading settled" data-level="6.2.1" id="dfn-window-orientation-angle"><span class="secno">6.2.1. </span><span class="content"><a class="idl-code" data-link-type="attribute" href="#dom-window-orientation"><code>window.orientation</code></a> angle</span><a class="self-link" href="#dfn-window-orientation-angle"></a></h4>
 
 
    <p>The possible values for the <a class="idl-code" data-link-type="attribute" href="#dom-window-orientation"><code>window.orientation</code></a> angle are: <code>-90</code>, <code>0</code>, <code>90</code>, <code>180</code>. User agents must support the <code>-90</code>, <code>0</code> and <code>90</code> values and may optionally support <code>180</code>.</p>
@@ -977,7 +990,7 @@ partial interface <a class="idl-code" data-link-type="interface" href="https://h
 </ol>
 
 
-   <h4 class="heading settled" data-level="5.2.2" id="event-handlers"><span class="secno">5.2.2. </span><span class="content">Event Handlers on <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a></code> objects and <code><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code></code> elements</span><a class="self-link" href="#event-handlers"></a></h4>
+   <h4 class="heading settled" data-level="6.2.2" id="event-handlers"><span class="secno">6.2.2. </span><span class="content">Event Handlers on <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a></code> objects and <code><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code></code> elements</span><a class="self-link" href="#event-handlers"></a></h4>
 
 
    <p>The following are the event handlers and their corresponding event handler event types that must be supported on all <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a></code> objects and <code><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code></code> elements as attributes:</p>
@@ -1052,57 +1065,57 @@ neighboring rights to this work.</p>
   <h2 class="no-num heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="indexlist">
-   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle">angle</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-inverse">inverse()</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-multiply">multiply(other)</a><span>, in §5.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle">angle</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-inverse">inverse()</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-multiply">multiply(other)</a><span>, in §6.1</span>
    <li>onorientationchange
     <ul>
-     <li><a href="#dom-window-onorientationchange">attribute for Window</a><span>, in §5.2</span>
-     <li><a href="#dom-htmlbodyelement-onorientationchange">attribute for HTMLBodyElement</a><span>, in §5.2</span>
+     <li><a href="#dom-window-onorientationchange">attribute for Window</a><span>, in §6.2</span>
+     <li><a href="#dom-htmlbodyelement-onorientationchange">attribute for HTMLBodyElement</a><span>, in §6.2</span>
     </ul>
-   <li><a href="#dom-window-orientation">orientation</a><span>, in §5.2</span>
-   <li><a href="#event-orientationchange">orientationchange</a><span>, in §5.2</span>
+   <li><a href="#dom-window-orientation">orientation</a><span>, in §6.2</span>
+   <li><a href="#event-orientationchange">orientationchange</a><span>, in §6.2</span>
    <li>other
     <ul>
-     <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other-other">argument for WebKitCSSMatrix/WebKitCSSMatrix(other)</a><span>, in §5.1</span>
-     <li><a href="#dom-webkitcssmatrix-multiply-other-other">argument for WebKitCSSMatrix/multiply(other)</a><span>, in §5.1</span>
+     <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other-other">argument for WebKitCSSMatrix/WebKitCSSMatrix(other)</a><span>, in §6.1</span>
+     <li><a href="#dom-webkitcssmatrix-multiply-other-other">argument for WebKitCSSMatrix/multiply(other)</a><span>, in §6.1</span>
     </ul>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate()</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle(x, y, z, angle)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY, rotZ)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx">rotX</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-roty">rotY</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotz">rotZ</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale()</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY, scaleZ)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex">scaleX</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scaley">scaleY</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalez">scaleZ</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-setmatrixvalue">setMatrixValue(transformList)</a><span>, in §5.1.3</span>
-   <li><a href="#dom-webkitcssmatrix-skewx">skewX(sx)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-skewy">skewY(sy)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-skewx-sx-sx">sx</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-skewy-sy-sy">sy</a><span>, in §5.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate()</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotateaxisangle">rotateAxisAngle(x, y, z, angle)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate">rotate(rotX, rotY, rotZ)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotx">rotX</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-roty">rotY</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotate-rotx-roty-rotz-rotz">rotZ</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale()</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale">scale(scaleX, scaleY, scaleZ)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalex">scaleX</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scaley">scaleY</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-scale-scalex-scaley-scalez-scalez">scaleZ</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-setmatrixvalue">setMatrixValue(transformList)</a><span>, in §6.1.3</span>
+   <li><a href="#dom-webkitcssmatrix-skewx">skewX(sx)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-skewy">skewY(sy)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-skewx-sx-sx">sx</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-skewy-sy-sy">sy</a><span>, in §6.1</span>
    <li>transformList
     <ul>
-     <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist-transformlist">argument for WebKitCSSMatrix/WebKitCSSMatrix(transformList)</a><span>, in §5.1</span>
-     <li><a href="#dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist">argument for WebKitCSSMatrix/setMatrixValue(transformList)</a><span>, in §5.1</span>
+     <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist-transformlist">argument for WebKitCSSMatrix/WebKitCSSMatrix(transformList)</a><span>, in §6.1</span>
+     <li><a href="#dom-webkitcssmatrix-setmatrixvalue-transformlist-transformlist">argument for WebKitCSSMatrix/setMatrixValue(transformList)</a><span>, in §6.1</span>
     </ul>
-   <li><a href="#dom-webkitcssmatrix-translate">translate(tx, ty, tz)</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tx">tx</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-ty">ty</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tz">tz</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix">WebKitCSSMatrix()</a><span>, in §5.1.1</span>
-   <li><a href="#webkitcssmatrix">WebKitCSSMatrix</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other">WebKitCSSMatrix(other)</a><span>, in §5.1.1</span>
-   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist">WebKitCSSMatrix(transformList)</a><span>, in §5.1.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y">y</a><span>, in §5.1</span>
-   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z</a><span>, in §5.1</span></ul>
+   <li><a href="#dom-webkitcssmatrix-translate">translate(tx, ty, tz)</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tx">tx</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-ty">ty</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tz">tz</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix">WebKitCSSMatrix()</a><span>, in §6.1.1</span>
+   <li><a href="#webkitcssmatrix">WebKitCSSMatrix</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other">WebKitCSSMatrix(other)</a><span>, in §6.1.1</span>
+   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist">WebKitCSSMatrix(transformList)</a><span>, in §6.1.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y">y</a><span>, in §6.1</span>
+   <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z</a><span>, in §6.1</span></ul>
   <h3 class="no-num heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="indexlist">
    <li><a data-link-type="biblio" href="#biblio-css22">[CSS22]</a> defines the following terms:
@@ -1126,6 +1139,12 @@ neighboring rights to this work.</p>
    <li><a data-link-type="biblio" href="#biblio-whatwg-dom">[WHATWG-DOM]</a> defines the following terms:
     <ul>
      <li><a href="https://dom.spec.whatwg.org/#concept-event-fire">fire an event</a>
+    </ul>
+   <li><a data-link-type="biblio" href="#biblio-mediaqueries-4">[[mediaqueries-4]]</a> defines the following terms:
+    <ul>
+     <li><a href="http://www.w3.org/TR/mediaqueries-4/#media-query">media query</a>
+     <li><a href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media query feature</a>
+     <li><a href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">min-resolution</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-css-animations-1">[css-animations-1]</a> defines the following terms:
     <ul>
@@ -1172,6 +1191,10 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-transitions-1/#propdef-transition-duration">transition-duration</a>
      <li><a href="https://drafts.csswg.org/css-transitions-1/#propdef-transition-property">transition-property</a>
      <li><a href="https://drafts.csswg.org/css-transitions-1/#propdef-transition-timing-function">transition-timing-function</a>
+    </ul>
+   <li><a data-link-type="biblio" href="#biblio-css-values-3">[css-values]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a> defines the following terms:
     <ul>
@@ -1249,8 +1272,12 @@ neighboring rights to this work.</p>
    <dd>Simon Fraser; et al. <a href="http://dev.w3.org/csswg/css-transforms/">CSS Transforms Module Level 1</a>. 26 November 2013. WD. URL: <a href="http://dev.w3.org/csswg/css-transforms/">http://dev.w3.org/csswg/css-transforms/</a>
    <dt id="biblio-css-transitions-1"><a class="self-link" href="#biblio-css-transitions-1"></a>[CSS-TRANSITIONS-1]
    <dd>CSS Transitions Module Level 1 URL: <a href="https://drafts.csswg.org/css-transitions-1/">https://drafts.csswg.org/css-transitions-1/</a>
+   <dt id="biblio-css-values"><a class="self-link" href="#biblio-css-values"></a>[CSS-VALUES]
+   <dd>Tab Atkins Jr.; Elika Etemad. <a href="http://dev.w3.org/csswg/css-values/">CSS Values and Units Module Level 3</a>. 11 June 2015. CR. URL: <a href="http://dev.w3.org/csswg/css-values/">http://dev.w3.org/csswg/css-values/</a>
    <dt id="biblio-geometry-1"><a class="self-link" href="#biblio-geometry-1"></a>[GEOMETRY-1]
    <dd>Simon Pieters; Dirk Schulze; Rik Cabanier. <a href="http://dev.w3.org/fxtf/geometry/">Geometry Interfaces Module Level 1</a>. 25 November 2014. CR. URL: <a href="http://dev.w3.org/fxtf/geometry/">http://dev.w3.org/fxtf/geometry/</a>
+   <dt id="biblio-mediaqueries-4"><a class="self-link" href="#biblio-mediaqueries-4"></a>[MEDIAQUERIES-4]
+   <dd>Florian Rivoal; Tab Atkins Jr.. <a href="http://dev.w3.org/csswg/mediaqueries-4/">Media Queries Level 4</a>. 5 June 2014. WD. URL: <a href="http://dev.w3.org/csswg/mediaqueries-4/">http://dev.w3.org/csswg/mediaqueries-4/</a>
    <dt id="biblio-rfc2119"><a class="self-link" href="#biblio-rfc2119"></a>[RFC2119]
    <dd>S. Bradner. <a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
    <dt id="biblio-screen-orientation"><a class="self-link" href="#biblio-screen-orientation"></a>[SCREEN-ORIENTATION]

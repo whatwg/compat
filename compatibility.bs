@@ -106,6 +106,11 @@ urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
   type: property
     text: background-position-x; url: #propdef-background-position-x
     text: background-position-y; url: #propdef-background-position-y
+urlPrefix: http://www.w3.org/TR/mediaqueries-4/; spec: [mediaqueries-4]
+  type: dfn
+    text: media query; url: #media-query
+    text: media query feature; url: #media-feature
+    text: min-resolution; url: #descdef-resolution
 </pre>
 
 <pre class=link-defaults>
@@ -201,6 +206,12 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
     </tr>
   </tbody>
 </table>
+
+<h2 id="css-media-queries">CSS Media Queries</h2>
+
+<h3 id="css-media-queries-webkit-device-pixel-ratio"><code>-webkit-device-pixel-ratio</code></h3>
+
+The <code>-webkit-device-pixel-ratio</code> <a>media query feature</a> must be treated as an alias of the <code><a>min-resolution</a></code> <a>media query</a>, with its value interpreted as a <a>dppx</a> unit.
 
 <h2 id="css-properties">CSS Properties</h2>
 
