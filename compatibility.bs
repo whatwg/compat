@@ -109,8 +109,11 @@ urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
 urlPrefix: http://www.w3.org/TR/mediaqueries-4/; spec: [mediaqueries-4]
   type: dfn
     text: media query; url: #media-query
-    text: media query feature; url: #media-feature
+    text: media feature; url: #media-feature
+    text: resolution; url: #descdef-resolution
     text: min-resolution; url: #descdef-resolution
+    text: max-resolution; url: #descdef-resolution
+    text: prefixes on range features; url: #mq-min-max
 </pre>
 
 <pre class=link-defaults>
@@ -209,9 +212,32 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
 
 <h2 id="css-media-queries">CSS Media Queries</h2>
 
-<h3 id="css-media-queries-webkit-min-device-pixel-ratio"><code>-webkit-min-device-pixel-ratio</code></h3>
+<h3 id="css-media-queries-webkit-device-pixel-ratio">
+  <code><dfn descriptor for="@media">-webkit-device-pixel-ratio</dfn></code>
+</h3>
 
-The <code>-webkit-device-pixel-ratio</code> <a>media query feature</a> may be treated as an alias of the <code><a>min-resolution</a></code> <a>media query</a>, with its value interpreted as a <a>dppx</a> unit.
+<code>'-webkit-device-pixel-ratio'</code> must be treated as an alias of the <code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a <a>dppx</a> unit.
+
+The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> must not apply to <code>'-webkit-device-pixel-ratio'</code>, instead the following aliases must be used:
+
+<table>
+  <thead>
+    <tr>
+     <th>legacy <code>-webkit-</code> prefixed range <a>media feature</a> alias</th>
+     <th>standard prefixed range <a>media feature</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code><dfn descriptor for="@media">-webkit-min-device-pixel-ratio</dfn></code></td>
+      <td><code><a>min-resolution</a></code></td>
+    </tr>
+    <tr>
+      <td><code><dfn descriptor for="@media">-webkit-max-device-pixel-ratio</dfn></code></td>
+      <td><code><a>max-resolution</a></code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="css-properties">CSS Properties</h2>
 
@@ -684,7 +710,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Daniel Holbert, Jacob Rossi, Philip Jägenstedt, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
+Thanks to Daniel Holbert, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
 

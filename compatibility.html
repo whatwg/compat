@@ -30,7 +30,7 @@
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated
-    <time class="dt-updated" datetime="2015-11-10">10 November 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-11-13">13 November 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -73,7 +73,9 @@
     <li><a href="#css-at-rules"><span class="secno">3</span> <span class="content">CSS At-rules</span></a>
     <li><a href="#css-media-queries"><span class="secno">4</span> <span class="content">CSS Media Queries</span></a>
      <ul class="toc">
-      <li><a href="#css-media-queries-webkit-min-device-pixel-ratio"><span class="secno">4.1</span> <span class="content"><code>-webkit-min-device-pixel-ratio</code></span></a>
+      <li><a href="#css-media-queries-webkit-device-pixel-ratio"><span class="secno">4.1</span> <span class="content">
+  <code><span>-webkit-device-pixel-ratio</span></code>
+</span></a>
      </ul>
     <li><a href="#css-properties"><span class="secno">5</span> <span class="content">CSS Properties</span></a>
      <ul class="toc">
@@ -204,10 +206,55 @@ be performant.)</p>
    <h2 class="heading settled" data-level="4" id="css-media-queries"><span class="secno">4. </span><span class="content">CSS Media Queries</span><a class="self-link" href="#css-media-queries"></a></h2>
 
 
-   <h3 class="heading settled" data-level="4.1" id="css-media-queries-webkit-min-device-pixel-ratio"><span class="secno">4.1. </span><span class="content"><code>-webkit-min-device-pixel-ratio</code></span><a class="self-link" href="#css-media-queries-webkit-min-device-pixel-ratio"></a></h3>
+   <h3 class="heading settled" data-level="4.1" id="css-media-queries-webkit-device-pixel-ratio"><span class="secno">4.1. </span><span class="content">
+  <code><dfn class="css" data-dfn-for="@media" data-dfn-type="descriptor" data-export="" id="descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio<a class="self-link" href="#descdef-media--webkit-device-pixel-ratio"></a></dfn></code>
+</span><a class="self-link" href="#css-media-queries-webkit-device-pixel-ratio"></a></h3>
 
 
-   <p>The <code>-webkit-device-pixel-ratio</code> <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media query feature</a> may be treated as an alias of the <code><a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">min-resolution</a></code> <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#media-query">media query</a>, with its value interpreted as a <a data-link-type="dfn" href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a> unit.</p>
+   <p><code><a class="property" data-link-type="propdesc" href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a></code> must be treated as an alias of the <code><a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">resolution</a></code> range type <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media feature</a>, with its value interpreted as a <a data-link-type="dfn" href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a> unit.</p>
+
+
+   <p>The <code>min-</code> or <code>max-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#mq-min-max">prefixes on range features</a> must not apply to <code><a class="property" data-link-type="propdesc" href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a></code>, instead the following aliases must be used:</p>
+
+
+   <table>
+  
+    <thead>
+    
+     <tr>
+     
+      <th>legacy <code>-webkit-</code> prefixed range <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media feature</a> alias
+      
+     
+      <th>standard prefixed range <a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media feature</a>
+      
+    
+     
+  
+  
+    <tbody>
+    
+     <tr>
+      
+      <td><code><dfn class="css" data-dfn-for="@media" data-dfn-type="descriptor" data-export="" id="descdef-media--webkit-min-device-pixel-ratio">-webkit-min-device-pixel-ratio<a class="self-link" href="#descdef-media--webkit-min-device-pixel-ratio"></a></dfn></code>
+      
+      
+      <td><code><a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">min-resolution</a></code>
+      
+    
+     
+    
+     <tr>
+      
+      <td><code><dfn class="css" data-dfn-for="@media" data-dfn-type="descriptor" data-export="" id="descdef-media--webkit-max-device-pixel-ratio">-webkit-max-device-pixel-ratio<a class="self-link" href="#descdef-media--webkit-max-device-pixel-ratio"></a></dfn></code>
+      
+      
+      <td><code><a data-link-type="dfn" href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">max-resolution</a></code>
+      
+    
+     
+  
+</table>
 
 
    <h2 class="heading settled" data-level="5" id="css-properties"><span class="secno">5. </span><span class="content">CSS Properties</span><a class="self-link" href="#css-properties"></a></h2>
@@ -1036,7 +1083,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 
 
    <h2 class="no-num heading settled" id="acknowledgements"><span class="content">Acknowledgements</span><a class="self-link" href="#acknowledgements"></a></h2>
-Thanks to Daniel Holbert, Jacob Rossi, Philip Jägenstedt, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
+Thanks to Daniel Holbert, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
 
 
    <p>Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a></code> and <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> interfaces. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a></p>
@@ -1113,6 +1160,9 @@ neighboring rights to this work.</p>
    <li><a href="#webkitcssmatrix">WebKitCSSMatrix</a><span>, in §6.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other">WebKitCSSMatrix(other)</a><span>, in §6.1.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist">WebKitCSSMatrix(transformList)</a><span>, in §6.1.1</span>
+   <li><a href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a><span>, in §4.1</span>
+   <li><a href="#descdef-media--webkit-max-device-pixel-ratio">-webkit-max-device-pixel-ratio</a><span>, in §4.1</span>
+   <li><a href="#descdef-media--webkit-min-device-pixel-ratio">-webkit-min-device-pixel-ratio</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x</a><span>, in §6.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y">y</a><span>, in §6.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z</a><span>, in §6.1</span></ul>
@@ -1142,9 +1192,11 @@ neighboring rights to this work.</p>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-mediaqueries-4">[[mediaqueries-4]]</a> defines the following terms:
     <ul>
-     <li><a href="http://www.w3.org/TR/mediaqueries-4/#media-query">media query</a>
-     <li><a href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media query feature</a>
+     <li><a href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">max-resolution</a>
+     <li><a href="http://www.w3.org/TR/mediaqueries-4/#media-feature">media feature</a>
      <li><a href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">min-resolution</a>
+     <li><a href="http://www.w3.org/TR/mediaqueries-4/#mq-min-max">prefixes on range features</a>
+     <li><a href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">resolution</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-css-animations-1">[css-animations-1]</a> defines the following terms:
     <ul>
