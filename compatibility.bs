@@ -213,8 +213,15 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
 <h2 id="css-media-queries">CSS Media Queries</h2>
 
 <h3 id="css-media-queries-webkit-device-pixel-ratio">
-  <code><dfn descriptor for="@media">-webkit-device-pixel-ratio</dfn></code>
+  <code>'-webkit-device-pixel-ratio'</code>
 </h3>
+
+<pre class='descdef mq'>
+Name: -webkit-device-pixel-ratio
+Value: <<number>>
+For: @media
+Type: range
+</pre>
 
 <code>'-webkit-device-pixel-ratio'</code> must be treated as an alias of the <code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a <a>dppx</a> unit.
 
