@@ -204,7 +204,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
   </thead>
   <tbody>
     <tr>
-      <td><code>@-webkit-keyframes</code></td>
+      <td><code><dfn type=at-rule>@-webkit-keyframes</dfn></code></td>
       <td><code><a>@keyframes</a></code></td>
     </tr>
   </tbody>
@@ -261,151 +261,151 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   </thead>
   <tbody>
     <tr>
-      <td><code>-webkit-animation-name</code></td>
+      <td><code><dfn type=property>-webkit-animation-name</dfn></code></td>
       <td><code>'animation-name'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-animation-duration</code></td>
+      <td><code><dfn type=property>-webkit-animation-duration</dfn></code></td>
       <td><code>'animation-duration'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-animation-timing-function</code></td>
+      <td><code><dfn type=property>-webkit-animation-timing-function</dfn></code></td>
       <td><code>'animation-timing-function'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-animation-iteration-count</code></td>
+      <td><code><dfn type=property>-webkit-animation-iteration-count</dfn></code></td>
       <td><code>'animation-iteration-count'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-direction</code></td>
+      <td><code><dfn type=property>-webkit-direction</dfn></code></td>
       <td><code>'animation-direction'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-animation-play-state</code></td>
+      <td><code><dfn type=property>-webkit-animation-play-state</dfn></code></td>
       <td><code>'animation-play-state'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-animation-delay</code></td>
+      <td><code><dfn type=property>-webkit-animation-delay</dfn></code></td>
       <td><code>'animation-delay'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-animation-fill-mode</code></td>
+      <td><code><dfn type=property>-webkit-animation-fill-mode</dfn></code></td>
       <td><code>'animation-fill-mode'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-animation</code></td>
+      <td><code><dfn type=property>-webkit-animation</dfn></code></td>
       <td><code>'animation'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-backface-visibility</code></td>
+      <td><code><dfn type=property>-webkit-backface-visibility</dfn></code></td>
       <td><code>'backface-visibility'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-attachment</code></td>
+      <td><code><dfn type=property>-webkit-background-attachment</dfn></code></td>
       <td><code>'background-attachment'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-clip</code></td>
+      <td><code><dfn type=property>-webkit-background-clip</dfn></code></td>
       <td><code>'background-clip'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-color</code></td>
+      <td><code><dfn type=property>-webkit-background-color</dfn></code></td>
       <td><code>'background-color'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-image</code></td>
+      <td><code><dfn type=property>-webkit-background-image</dfn></code></td>
       <td><code>'background-image'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-origin</code></td>
+      <td><code><dfn type=property>-webkit-background-origin</dfn></code></td>
       <td><code>'background-origin'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-position</code></td>
+      <td><code><dfn type=property>-webkit-background-position</dfn></code></td>
       <td><code>'background-position'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-position-x</code></td>
+      <td><code><dfn type=property>-webkit-background-position-x</dfn></code></td>
       <td><code>'background-position-x'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-position-y</code></td>
+      <td><code><dfn type=property>-webkit-background-position-y</dfn></code></td>
       <td><code>'background-position-y'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-repeat</code></td>
+      <td><code><dfn type=property>-webkit-background-repeat</dfn></code></td>
       <td><code>'background-repeat'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background-size</code></td>
+      <td><code><dfn type=property>-webkit-background-size</dfn></code></td>
       <td><code>'background-size'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-background</code></td>
+      <td><code><dfn type=property>-webkit-background</dfn></code></td>
       <td><code>'background'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-border-bottom-left-radius</code></td>
+      <td><code><dfn type=property>-webkit-border-bottom-left-radius</dfn></code></td>
       <td><code>'border-bottom-left-radius'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-border-bottom-right-radius</code></td>
+      <td><code><dfn type=property>-webkit-border-bottom-right-radius</dfn></code></td>
       <td><code>'border-bottom-right-radius'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-border-top-right-radius</code></td>
+      <td><code><dfn type=property>-webkit-border-top-left-radius</dfn></code></td>
       <td><code>'border-top-right-radius'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-border-top-right-radius</code></td>
+      <td><code><dfn type=property>-webkit-border-top-right-radius</dfn></code></td>
       <td><code>'border-top-right-radius'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-border-radius</code></td>
+      <td><code><dfn type=property>-webkit-border-radius</dfn></code></td>
       <td><code>'border-radius'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-box-sizing</code></td>
+      <td><code><dfn type=property>-webkit-box-sizing</dfn></code></td>
       <td><code>'box-sizing'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-perspective</code></td>
+      <td><code><dfn type=property>-webkit-perspective</dfn></code></td>
       <td><code>'perspective'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-perspective-origin</code></td>
+      <td><code><dfn type=property>-webkit-perspective-origin</dfn></code></td>
       <td><code>'perspective-origin'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transform-origin</code></td>
+      <td><code><dfn type=property>-webkit-transform-origin</dfn></code></td>
       <td><code>'transform-origin'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transform-style</code></td>
+      <td><code><dfn type=property>-webkit-transform-style</dfn></code></td>
       <td><code>'transform-style'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transform</code></td>
+      <td><code><dfn type=property>-webkit-transform</dfn></code></td>
       <td><code>'transform'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transition-delay</code></td>
+      <td><code><dfn type=property>-webkit-transition-delay</dfn></code></td>
       <td><code>'transition-delay'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transition-duration</code></td>
+      <td><code><dfn type=property>-webkit-transition-duration</dfn></code></td>
       <td><code>'transition-duration'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transition-property</code></td>
+      <td><code><dfn type=property>-webkit-transition-property</dfn></code></td>
       <td><code>'transition-property'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transition-timing-function</code></td>
+      <td><code><dfn type=property>-webkit-transition-timing-function</dfn></code></td>
       <td><code>'transition-timing-function'</code></td>
     </tr>
     <tr>
-      <td><code>-webkit-transition</code></td>
+      <td><code><dfn type=property>-webkit-transition</dfn></code></td>
       <td><code>'transition'</code></td>
     </tr>
   </tbody>
