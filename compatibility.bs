@@ -365,6 +365,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'border-radius'</code></td>
     </tr>
     <tr>
+      <td><code><dfn type=property>-webkit-box-shadow</dfn></code></td>
+      <td><code>'box-shadow'</code></td>
+    </tr>
+    <tr>
       <td><code><dfn type=property>-webkit-box-sizing</dfn></code></td>
       <td><code>'box-sizing'</code></td>
     </tr>
