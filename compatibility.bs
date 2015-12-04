@@ -191,7 +191,9 @@ equivalent. (In particular, the algorithms defined in this
 specification are intended to be easy to follow, and not intended to
 be performant.)
 
-<h2 id="css-at-rules">CSS At-rules</h2>
+<h2 id="css-compat-section">CSS Compatibility</h2>
+
+<h3 id="css-at-rules">CSS At-rules</h3>
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supported as aliases of the corresponding unprefixed at-rules:
 
@@ -210,11 +212,11 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
   </tbody>
 </table>
 
-<h2 id="css-media-queries">CSS Media Queries</h2>
+<h3 id="css-media-queries">CSS Media Queries</h3>
 
-<h3 id="css-media-queries-webkit-device-pixel-ratio">
+<h4 id="css-media-queries-webkit-device-pixel-ratio">
   <code>'-webkit-device-pixel-ratio'</code>
-</h3>
+</h4>
 
 <pre class='descdef mq'>
 Name: -webkit-device-pixel-ratio
@@ -246,9 +248,9 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
   </tbody>
 </table>
 
-<h2 id="css-properties">CSS Properties</h2>
+<h3 id="css-properties">CSS Properties</h3>
 
-<h3 id="css-simple-aliases">Simple aliases</h3>
+<h4 id="css-simple-aliases">Simple aliases</h4>
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed property:
 
@@ -420,7 +422,7 @@ Note: It's unclear if <code>-webkit-background-position-x/-y</code> are more imp
 To investigate.
 </p>
 
-<h2 id="dom-interfaces">DOM Interfaces</h2>
+<h2 id="dom-compat-section">DOM Compatibility</h2>
 
 <h3 id="webkitcssmatrix-interface">The {{WebKitCSSMatrix}} interface</h3>
 
