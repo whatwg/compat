@@ -72,31 +72,32 @@
     <li><a href="#conformance"><span class="secno">2</span> <span class="content">Conformance</span></a>
     <li><a href="#css-compat-section"><span class="secno">3</span> <span class="content">CSS Compatibility</span></a>
      <ul class="toc">
-      <li><a href="#css-at-rules"><span class="secno">3.1</span> <span class="content">CSS At-rules</span></a>
-      <li><a href="#css-media-queries"><span class="secno">3.2</span> <span class="content">CSS Media Queries</span></a>
+      <li><a href="#css-cssom-compat"><span class="secno">3.1</span> <span class="content">CSS Object Model</span></a>
+      <li><a href="#css-at-rules"><span class="secno">3.2</span> <span class="content">CSS At-rules</span></a>
+      <li><a href="#css-media-queries"><span class="secno">3.3</span> <span class="content">CSS Media Queries</span></a>
        <ul class="toc">
-        <li><a href="#css-media-queries-webkit-device-pixel-ratio"><span class="secno">3.2.1</span> <span class="content">
+        <li><a href="#css-media-queries-webkit-device-pixel-ratio"><span class="secno">3.3.1</span> <span class="content">
   <code><span class="property">-webkit-device-pixel-ratio</span></code>
 </span></a>
        </ul>
-      <li><a href="#css-<image>-type"><span class="secno">3.3</span> <span class="content">CSS Gradients</span></a>
+      <li><a href="#css-<image>-type"><span class="secno">3.4</span> <span class="content">CSS Gradients</span></a>
        <ul class="toc">
-        <li><a href="#css-gradients-webkit-linear-gradient"><span class="secno">3.3.1</span> <span class="content">
+        <li><a href="#css-gradients-webkit-linear-gradient"><span class="secno">3.4.1</span> <span class="content">
   <code><span class="css">-webkit-linear-gradient()</span></code>
 </span></a>
-        <li><a href="#css-gradients-webkit-radial-gradient"><span class="secno">3.3.2</span> <span class="content">
+        <li><a href="#css-gradients-webkit-radial-gradient"><span class="secno">3.4.2</span> <span class="content">
   <code><span class="css">-webkit-radial-gradient()</span></code>
 </span></a>
-        <li><a href="#css-gradients-repeating-webkit-linear-gradient"><span class="secno">3.3.3</span> <span class="content">
+        <li><a href="#css-gradients-repeating-webkit-linear-gradient"><span class="secno">3.4.3</span> <span class="content">
   <code><span class="css">-webkit-repeating-linear-gradient()</span></code>
 </span></a>
-        <li><a href="#css-gradients-repeating-webkit-radial-gradient"><span class="secno">3.3.4</span> <span class="content">
+        <li><a href="#css-gradients-repeating-webkit-radial-gradient"><span class="secno">3.4.4</span> <span class="content">
   <code><span class="css">-webkit-repeating-radial-gradient()</span></code>
 </span></a>
        </ul>
-      <li><a href="#css-properties"><span class="secno">3.4</span> <span class="content">CSS Properties</span></a>
+      <li><a href="#css-properties"><span class="secno">3.5</span> <span class="content">CSS Properties</span></a>
        <ul class="toc">
-        <li><a href="#css-simple-aliases"><span class="secno">3.4.1</span> <span class="content">Simple aliases</span></a>
+        <li><a href="#css-simple-aliases"><span class="secno">3.5.1</span> <span class="content">Simple aliases</span></a>
        </ul>
      </ul>
     <li><a href="#dom-compat-section"><span class="secno">4</span> <span class="content">DOM Compatibility</span></a>
@@ -192,7 +193,31 @@ be performant.)</p>
    <h2 class="heading settled" data-level="3" id="css-compat-section"><span class="secno">3. </span><span class="content">CSS Compatibility</span><a class="self-link" href="#css-compat-section"></a></h2>
 
 
-   <h3 class="heading settled" data-level="3.1" id="css-at-rules"><span class="secno">3.1. </span><span class="content">CSS At-rules</span><a class="self-link" href="#css-at-rules"></a></h3>
+   <h3 class="heading settled" data-level="3.1" id="css-cssom-compat"><span class="secno">3.1. </span><span class="content">CSS Object Model</span><a class="self-link" href="#css-cssom-compat"></a></h3>
+
+
+   <p><code>-webkit-</code> prefixed CSS properties must be available for getting and setting as <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-camel-cased-attribute">camel-cased attribute</a> attributes of the <code class="idl"><a data-link-type="idl" href="https://drafts.csswg.org/cssom-1/#cssstyledeclaration">CSSStyleDeclaration</a></code> interface.</p>
+
+
+   <div class="example" id="example-36e8ddd8"><a class="self-link" href="#example-36e8ddd8"></a>
+For example, it must be possible to get and set a <code>-webkit-transform</code> property value for a reference to a given element <code>elm</code> via <code>elm.style.webkitTransform</code>.
+</div>
+
+
+   <p><code>-webkit-</code> prefixed CSS properties must be available for getting and setting as <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-dashed-attribute">dashed attribute</a> attributes of the <code class="idl"><a data-link-type="idl" href="https://drafts.csswg.org/cssom-1/#cssstyledeclaration">CSSStyleDeclaration</a></code> interface.</p>
+
+
+   <div class="example" id="example-c453da69"><a class="self-link" href="#example-c453da69"></a>
+For example, it must be possible to get and set a <code>-webkit-transform</code> property value for a reference to a given element <code>elm</code> via <code>elm.style[-webkit-transform]</code>.
+</div>
+
+
+   <div class="XXX">
+TODO: Determine if sites use and rely on <code>window.CSSRule.WEBKIT_KEYFRAME_RULE</code> and/or <code>window.CSSRule.WEBKIT_KEYFRAMES_RULE</code>. If so, spec it.
+</div>
+
+
+   <h3 class="heading settled" data-level="3.2" id="css-at-rules"><span class="secno">3.2. </span><span class="content">CSS At-rules</span><a class="self-link" href="#css-at-rules"></a></h3>
 
 
    <p>The following <code>-webkit-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefixed</a> at-rules must be supported as aliases of the corresponding unprefixed at-rules:</p>
@@ -228,10 +253,10 @@ be performant.)</p>
 </table>
 
 
-   <h3 class="heading settled" data-level="3.2" id="css-media-queries"><span class="secno">3.2. </span><span class="content">CSS Media Queries</span><a class="self-link" href="#css-media-queries"></a></h3>
+   <h3 class="heading settled" data-level="3.3" id="css-media-queries"><span class="secno">3.3. </span><span class="content">CSS Media Queries</span><a class="self-link" href="#css-media-queries"></a></h3>
 
 
-   <h4 class="heading settled" data-level="3.2.1" id="css-media-queries-webkit-device-pixel-ratio"><span class="secno">3.2.1. </span><span class="content">
+   <h4 class="heading settled" data-level="3.3.1" id="css-media-queries-webkit-device-pixel-ratio"><span class="secno">3.3.1. </span><span class="content">
   <code><a class="property" data-link-type="propdesc" href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a></code>
 </span><a class="self-link" href="#css-media-queries-webkit-device-pixel-ratio"></a></h4>
 
@@ -298,12 +323,12 @@ be performant.)</p>
 </table>
 
 
-   <h3 class="heading settled" data-level="3.3" id="css-<image>-type"><span class="secno">3.3. </span><span class="content">CSS Gradients</span><a class="self-link" href="#css-%3Cimage%3E-type"></a></h3>
+   <h3 class="heading settled" data-level="3.4" id="css-<image>-type"><span class="secno">3.4. </span><span class="content">CSS Gradients</span><a class="self-link" href="#css-%3Cimage%3E-type"></a></h3>
 
 
 
 
-   <h4 class="heading settled" data-level="3.3.1" id="css-gradients-webkit-linear-gradient"><span class="secno">3.3.1. </span><span class="content">
+   <h4 class="heading settled" data-level="3.4.1" id="css-gradients-webkit-linear-gradient"><span class="secno">3.4.1. </span><span class="content">
   <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-linear-gradient">-webkit-linear-gradient()</a></code>
 </span><a class="self-link" href="#css-gradients-webkit-linear-gradient"></a></h4>
 
@@ -312,7 +337,7 @@ be performant.)</p>
 
 
 
-   <h4 class="heading settled" data-level="3.3.2" id="css-gradients-webkit-radial-gradient"><span class="secno">3.3.2. </span><span class="content">
+   <h4 class="heading settled" data-level="3.4.2" id="css-gradients-webkit-radial-gradient"><span class="secno">3.4.2. </span><span class="content">
   <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a></code>
 </span><a class="self-link" href="#css-gradients-webkit-radial-gradient"></a></h4>
 
@@ -320,7 +345,7 @@ be performant.)</p>
    <p><code><dfn class="css" data-dfn-type="function" data-export="" id="funcdef--webkit-radial-gradient">-webkit-radial-gradient()<a class="self-link" href="#funcdef--webkit-radial-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltradial-gradient">radial-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
 
 
-   <h4 class="heading settled" data-level="3.3.3" id="css-gradients-repeating-webkit-linear-gradient"><span class="secno">3.3.3. </span><span class="content">
+   <h4 class="heading settled" data-level="3.4.3" id="css-gradients-repeating-webkit-linear-gradient"><span class="secno">3.4.3. </span><span class="content">
   <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a></code>
 </span><a class="self-link" href="#css-gradients-repeating-webkit-linear-gradient"></a></h4>
 
@@ -328,7 +353,7 @@ be performant.)</p>
    <p><code><dfn class="css" data-dfn-type="function" data-export="" id="funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()<a class="self-link" href="#funcdef--webkit-repeating-linear-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-linear-gradient">repeating-linear-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
 
 
-   <h4 class="heading settled" data-level="3.3.4" id="css-gradients-repeating-webkit-radial-gradient"><span class="secno">3.3.4. </span><span class="content">
+   <h4 class="heading settled" data-level="3.4.4" id="css-gradients-repeating-webkit-radial-gradient"><span class="secno">3.4.4. </span><span class="content">
   <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a></code>
 </span><a class="self-link" href="#css-gradients-repeating-webkit-radial-gradient"></a></h4>
 
@@ -338,10 +363,10 @@ be performant.)</p>
 
 
 
-   <h3 class="heading settled" data-level="3.4" id="css-properties"><span class="secno">3.4. </span><span class="content">CSS Properties</span><a class="self-link" href="#css-properties"></a></h3>
+   <h3 class="heading settled" data-level="3.5" id="css-properties"><span class="secno">3.5. </span><span class="content">CSS Properties</span><a class="self-link" href="#css-properties"></a></h3>
 
 
-   <h4 class="heading settled" data-level="3.4.1" id="css-simple-aliases"><span class="secno">3.4.1. </span><span class="content">Simple aliases</span><a class="self-link" href="#css-simple-aliases"></a></h4>
+   <h4 class="heading settled" data-level="3.5.1" id="css-simple-aliases"><span class="secno">3.5.1. </span><span class="content">Simple aliases</span><a class="self-link" href="#css-simple-aliases"></a></h4>
 
 
    <p>The following <code>-webkit-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed property:</p>
@@ -1260,56 +1285,56 @@ neighboring rights to this work.</p>
    <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tx">tx</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-ty">ty</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-translate-tx-ty-tz-tz">tz</a><span>, in §4.1</span>
-   <li><a href="#_webkit_animation">-webkit-animation</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_animation_delay">-webkit-animation-delay</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_animation_duration">-webkit-animation-duration</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_animation_fill_mode">-webkit-animation-fill-mode</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_animation_iteration_count">-webkit-animation-iteration-count</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_animation_name">-webkit-animation-name</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_animation_play_state">-webkit-animation-play-state</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_animation_timing_function">-webkit-animation-timing-function</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_backface_visibility">-webkit-backface-visibility</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background">-webkit-background</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_attachment">-webkit-background-attachment</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_clip">-webkit-background-clip</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_color">-webkit-background-color</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_image">-webkit-background-image</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_origin">-webkit-background-origin</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_position">-webkit-background-position</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_position_x">-webkit-background-position-x</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_position_y">-webkit-background-position-y</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_repeat">-webkit-background-repeat</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_background_size">-webkit-background-size</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_border_bottom_left_radius">-webkit-border-bottom-left-radius</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_border_bottom_right_radius">-webkit-border-bottom-right-radius</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_border_radius">-webkit-border-radius</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_border_top_left_radius">-webkit-border-top-left-radius</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_border_top_right_radius">-webkit-border-top-right-radius</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_box_shadow">-webkit-box-shadow</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_box_sizing">-webkit-box-sizing</a><span>, in §3.4.1</span>
+   <li><a href="#_webkit_animation">-webkit-animation</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_animation_delay">-webkit-animation-delay</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_animation_duration">-webkit-animation-duration</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_animation_fill_mode">-webkit-animation-fill-mode</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_animation_iteration_count">-webkit-animation-iteration-count</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_animation_name">-webkit-animation-name</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_animation_play_state">-webkit-animation-play-state</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_animation_timing_function">-webkit-animation-timing-function</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_backface_visibility">-webkit-backface-visibility</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background">-webkit-background</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_attachment">-webkit-background-attachment</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_clip">-webkit-background-clip</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_color">-webkit-background-color</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_image">-webkit-background-image</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_origin">-webkit-background-origin</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_position">-webkit-background-position</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_position_x">-webkit-background-position-x</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_position_y">-webkit-background-position-y</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_repeat">-webkit-background-repeat</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_background_size">-webkit-background-size</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_border_bottom_left_radius">-webkit-border-bottom-left-radius</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_border_bottom_right_radius">-webkit-border-bottom-right-radius</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_border_radius">-webkit-border-radius</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_border_top_left_radius">-webkit-border-top-left-radius</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_border_top_right_radius">-webkit-border-top-right-radius</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_box_shadow">-webkit-box-shadow</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_box_sizing">-webkit-box-sizing</a><span>, in §3.5.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix">WebKitCSSMatrix()</a><span>, in §4.1.1</span>
    <li><a href="#webkitcssmatrix">WebKitCSSMatrix</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other">WebKitCSSMatrix(other)</a><span>, in §4.1.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist">WebKitCSSMatrix(transformList)</a><span>, in §4.1.1</span>
-   <li><a href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a><span>, in §3.2.1</span>
-   <li><a href="#_webkit_direction">-webkit-direction</a><span>, in §3.4.1</span>
-   <li><a href="#at-ruledef--webkit-keyframes">@-webkit-keyframes</a><span>, in §3.1</span>
-   <li><a href="#funcdef--webkit-linear-gradient">-webkit-linear-gradient()</a><span>, in §3.3.1</span>
-   <li><a href="#descdef-media--webkit-max-device-pixel-ratio">-webkit-max-device-pixel-ratio</a><span>, in §3.2.1</span>
-   <li><a href="#descdef-media--webkit-min-device-pixel-ratio">-webkit-min-device-pixel-ratio</a><span>, in §3.2.1</span>
-   <li><a href="#_webkit_perspective">-webkit-perspective</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_perspective_origin">-webkit-perspective-origin</a><span>, in §3.4.1</span>
-   <li><a href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a><span>, in §3.3.2</span>
-   <li><a href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a><span>, in §3.3.3</span>
-   <li><a href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.3.4</span>
-   <li><a href="#_webkit_transform">-webkit-transform</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_transform_origin">-webkit-transform-origin</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_transform_style">-webkit-transform-style</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_transition">-webkit-transition</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_transition_delay">-webkit-transition-delay</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_transition_duration">-webkit-transition-duration</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_transition_property">-webkit-transition-property</a><span>, in §3.4.1</span>
-   <li><a href="#_webkit_transition_timing_function">-webkit-transition-timing-function</a><span>, in §3.4.1</span>
+   <li><a href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a><span>, in §3.3.1</span>
+   <li><a href="#_webkit_direction">-webkit-direction</a><span>, in §3.5.1</span>
+   <li><a href="#at-ruledef--webkit-keyframes">@-webkit-keyframes</a><span>, in §3.2</span>
+   <li><a href="#funcdef--webkit-linear-gradient">-webkit-linear-gradient()</a><span>, in §3.4.1</span>
+   <li><a href="#descdef-media--webkit-max-device-pixel-ratio">-webkit-max-device-pixel-ratio</a><span>, in §3.3.1</span>
+   <li><a href="#descdef-media--webkit-min-device-pixel-ratio">-webkit-min-device-pixel-ratio</a><span>, in §3.3.1</span>
+   <li><a href="#_webkit_perspective">-webkit-perspective</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_perspective_origin">-webkit-perspective-origin</a><span>, in §3.5.1</span>
+   <li><a href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a><span>, in §3.4.2</span>
+   <li><a href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a><span>, in §3.4.3</span>
+   <li><a href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.4.4</span>
+   <li><a href="#_webkit_transform">-webkit-transform</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_transform_origin">-webkit-transform-origin</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_transform_style">-webkit-transform-style</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_transition">-webkit-transition</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_transition_delay">-webkit-transition-delay</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_transition_duration">-webkit-transition-duration</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_transition_property">-webkit-transition-property</a><span>, in §3.5.1</span>
+   <li><a href="#_webkit_transition_timing_function">-webkit-transition-timing-function</a><span>, in §3.5.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y">y</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z</a><span>, in §4.1</span></ul>
@@ -1336,6 +1361,11 @@ neighboring rights to this work.</p>
    <li><a data-link-type="biblio" href="#biblio-whatwg-dom">[WHATWG-DOM]</a> defines the following terms:
     <ul>
      <li><a href="https://dom.spec.whatwg.org/#concept-event-fire">fire an event</a>
+    </ul>
+   <li><a data-link-type="biblio" href="#biblio-cssom">[[cssom]]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-camel-cased-attribute">camel-cased attribute</a>
+     <li><a href="https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-dashed-attribute">dashed attribute</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-css-animations-1">[css-animations-1]</a> defines the following terms:
     <ul>
@@ -1403,6 +1433,10 @@ neighboring rights to this work.</p>
      <li><a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltradial-gradient">radial-gradient</a>
      <li><a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-linear-gradient">repeating-linear-gradient</a>
      <li><a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-radial-gradient">repeating-radial-gradient</a>
+    </ul>
+   <li><a data-link-type="biblio" href="#biblio-cssom-1">[cssom]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/cssom-1/#cssstyledeclaration">CSSStyleDeclaration</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a> defines the following terms:
     <ul>
@@ -1496,6 +1530,8 @@ neighboring rights to this work.</p>
    <dd>Tab Atkins Jr.; Elika Etemad. <a href="http://dev.w3.org/csswg/css-values/">CSS Values and Units Module Level 3</a>. 11 June 2015. CR. URL: <a href="http://dev.w3.org/csswg/css-values/">http://dev.w3.org/csswg/css-values/</a>
    <dt id="biblio-css3-images-20110217"><a class="self-link" href="#biblio-css3-images-20110217"></a>[CSS3-IMAGES-20110217]
    <dd>Elika Etemad; Tab Atkins Jr.. <a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/">CSS Image Values and Replaced Content Module Level 3</a>. 17 February 2011. WD. URL: <a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/">http://www.w3.org/TR/2011/WD-css3-images-20110217/</a>
+   <dt id="biblio-cssom"><a class="self-link" href="#biblio-cssom"></a>[CSSOM]
+   <dd>Simon Pieters; Glenn Adams. <a href="http://dev.w3.org/csswg/cssom/">CSS Object Model (CSSOM)</a>. 5 December 2013. WD. URL: <a href="http://dev.w3.org/csswg/cssom/">http://dev.w3.org/csswg/cssom/</a>
    <dt id="biblio-geometry-1"><a class="self-link" href="#biblio-geometry-1"></a>[GEOMETRY-1]
    <dd>Simon Pieters; Dirk Schulze; Rik Cabanier. <a href="http://dev.w3.org/fxtf/geometry/">Geometry Interfaces Module Level 1</a>. 25 November 2014. CR. URL: <a href="http://dev.w3.org/fxtf/geometry/">http://dev.w3.org/fxtf/geometry/</a>
    <dt id="biblio-mediaqueries-4"><a class="self-link" href="#biblio-mediaqueries-4"></a>[MEDIAQUERIES-4]
