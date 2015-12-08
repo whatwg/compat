@@ -106,7 +106,7 @@ urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
   type: property
     text: background-position-x; url: #propdef-background-position-x
     text: background-position-y; url: #propdef-background-position-y
-urlPrefix: http://www.w3.org/TR/mediaqueries-4/; spec: [mediaqueries-4]
+urlPrefix: http://www.w3.org/TR/mediaqueries-4/; spec: mediaqueries-4
   type: dfn
     text: media query; url: #media-query
     text: media feature; url: #media-feature
@@ -114,6 +114,12 @@ urlPrefix: http://www.w3.org/TR/mediaqueries-4/; spec: [mediaqueries-4]
     text: min-resolution; url: #descdef-resolution
     text: max-resolution; url: #descdef-resolution
     text: prefixes on range features; url: #mq-min-max
+urlPrefix: http://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images-20110217
+  type: dfn
+    text: linear-gradient; url: #ltlinear-gradient
+    text: radial-gradient; url: #ltradial-gradient
+    text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
+    text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
 </pre>
 
 <pre class=link-defaults>
@@ -247,6 +253,44 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
     </tr>
   </tbody>
 </table>
+
+<h3 id="css-<image>-type">CSS Gradients</h3>
+
+<!-- Uncomment when I add -webkit-gradient()
+Both the [[css3-images-20110217]] draft <code>-webkit-</code> prefixed <<image>> gradient functions and the 2008 <code>-webkit-gradient()</code> (<a href="https://webkit.org/blog/175/introducing-css-gradients/">blog post</a>, <a href="https://developer.apple.com/library/safari/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html#//apple_ref/doc/uid/TP40008032-CH10-SW34">Safari developer documentation</a>) must be supported for compatibility.
+-->
+
+<h4 id="css-gradients-webkit-linear-gradient">
+  <code>''-webkit-linear-gradient()''</code>
+</h4>
+
+<code><dfn>-webkit-linear-gradient()</dfn></code> must be treated as an alias of <a>linear-gradient</a> as defined in [[css3-images-20110217]].
+<!-- The stupid parens outside of the ref link are a hack because bikeshed hates me and my attempts to link to http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient. Pull requests welcome? -->
+
+<h4 id="css-gradients-webkit-radial-gradient">
+  <code>''-webkit-radial-gradient()''</code>
+</h4>
+
+<code><dfn>-webkit-radial-gradient()</dfn></code> must be treated as an alias of <a>radial-gradient</a> as defined in [[css3-images-20110217]].
+
+<h4 id="css-gradients-repeating-webkit-linear-gradient">
+  <code>''-webkit-repeating-linear-gradient()''</code>
+</h4>
+
+<code><dfn>-webkit-repeating-linear-gradient()</dfn></code> must be treated as an alias of <a>repeating-linear-gradient</a> as defined in [[css3-images-20110217]].
+
+<h4 id="css-gradients-repeating-webkit-radial-gradient">
+  <code>''-webkit-repeating-radial-gradient()''</code>
+</h4>
+
+<code><dfn>-webkit-repeating-radial-gradient()</dfn></code> must be treated as an alias of <a>repeating-radial-gradient</a> as defined in [[css3-images-20110217]].
+
+<!--
+<h4 id="css-gradients-webkit-gradient">
+  <code>-webkit-gradient()</code>
+</h4>
+
+<div class="XXX">TODO</div> -->
 
 <h3 id="css-properties">CSS Properties</h3>
 
