@@ -217,9 +217,10 @@ For example, it must be possible to get and set a <code>-webkit-transform</code>
 For example, it must be possible to get and set a <code>-webkit-transform</code> property value for a reference to a given element <code>elm</code> via <code>elm.style[-webkit-transform]</code>.
 </div>
 
-<div class="XXX">
+<!--
 TODO: Determine if sites use and rely on <code>window.CSSRule.WEBKIT_KEYFRAME_RULE</code> and/or <code>window.CSSRule.WEBKIT_KEYFRAMES_RULE</code>. If so, spec it.
-</div>
+NOTE: Edge doesn't implement it.
+-->
 
 <h3 id="css-at-rules">CSS At-rules</h3>
 
