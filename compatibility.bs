@@ -120,6 +120,10 @@ urlPrefix: http://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
+urlPrefix: https://drafts.csswg.org/cssom/; spec: [cssom]
+  type: dfn
+    text: camel-cased attribute; url: #dom-cssstyledeclaration-camel-cased-attribute
+    text: dashed attribute; url: #dom-cssstyledeclaration-dashed-attribute
 </pre>
 
 <pre class=link-defaults>
@@ -198,6 +202,25 @@ specification are intended to be easy to follow, and not intended to
 be performant.)
 
 <h2 id="css-compat-section">CSS Compatibility</h2>
+
+<h3 id="css-cssom-compat">CSS Object Model</h3>
+
+<code>-webkit-</code> prefixed CSS properties must be available for getting and setting as <a>camel-cased attribute</a> attributes of the {{CSSStyleDeclaration}} interface.
+
+<div class="example">
+For example, it must be possible to get and set a <code>-webkit-transform</code> property value for a reference to a given element <code>elm</code> via <code>elm.style.webkitTransform</code>.
+</div>
+
+<code>-webkit-</code> prefixed CSS properties must be available for getting and setting as <a>dashed attribute</a> attributes of the {{CSSStyleDeclaration}} interface.
+
+<div class="example">
+For example, it must be possible to get and set a <code>-webkit-transform</code> property value for a reference to a given element <code>elm</code> via <code>elm.style[-webkit-transform]</code>.
+</div>
+
+<!--
+TODO: Determine if sites use and rely on <code>window.CSSRule.WEBKIT_KEYFRAME_RULE</code> and/or <code>window.CSSRule.WEBKIT_KEYFRAMES_RULE</code>. If so, spec it.
+NOTE: Edge doesn't implement it.
+-->
 
 <h3 id="css-at-rules">CSS At-rules</h3>
 
