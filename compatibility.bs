@@ -721,7 +721,7 @@ Whenever the viewport is drawn at a different angle compared to the device's nat
 
 1. <a lt="fire an event">Fire an event</a> named <code><dfn id="event-orientationchange" lt="orientationchange">orientationchange</dfn></code> at the {{Window}} object of the <a>active document</a>.
 
-User agents implementing the <a attribute lt="orientation"><code>window.orientation</code></a> attribute and its associated <a>orientationchange</a> event must not expose them on non-Desktop platforms.
+User agents implementing the <a attribute lt="orientation"><code>window.orientation</code></a> attribute and its associated <a>orientationchange</a> event must not expose them on Desktop platforms.
 
 <div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not required for compability with the web.</div>
 
@@ -773,7 +773,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Daniel Holbert, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
+Thanks to Daniel Holbert, hexalys, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
 
