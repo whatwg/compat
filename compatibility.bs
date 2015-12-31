@@ -482,6 +482,34 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   </tbody>
 </table>
 
+<h4 id="css-property-mappings">Property mappings</h4>
+
+The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as mappings to the corresponding unprefixed property:
+
+<table>
+  <thead>
+    <tr>
+     <th><code>-webkit-</code> prefixed property</th>
+     <th>unprefixed property mapping</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code><dfn type=property>-webkit-box-flex</dfn></code></td>
+      <td><code>'flex-grow'</code></td>
+    </tr>
+      <td><code><dfn type=property>-webkit-box-ordinal-group</dfn></code></td>
+      <td><code>'order'</code></td>
+    </tr>
+      <td><code><dfn type=property>-webkit-box-align</dfn></code></td>
+      <td><code>'align-items'</code></td>
+    </tr>
+      <td><code><dfn type=property>-webkit-box-pack</dfn></code></td>
+      <td><code>'justify-content'</code></td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 
 <h3 id="webkitcssmatrix-interface">The {{WebKitCSSMatrix}} interface</h3>

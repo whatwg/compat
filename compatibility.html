@@ -98,6 +98,7 @@
        <ul class="toc">
         <li><a href="#css-simple-aliases"><span class="secno">3.4.1</span> <span class="content">Simple property aliases</span></a>
         <li><a href="#css-prefixed-aliases"><span class="secno">3.4.2</span> <span class="content">Prefixed property aliases</span></a>
+        <li><a href="#css-property-mappings"><span class="secno">3.4.3</span> <span class="content">Property mappings</span></a>
        </ul>
      </ul>
     <li><a href="#dom-compat-section"><span class="secno">4</span> <span class="content">DOM Compatibility</span></a>
@@ -786,6 +787,69 @@ be performant.)</p>
 </table>
 
 
+   <h4 class="heading settled" data-level="3.4.3" id="css-property-mappings"><span class="secno">3.4.3. </span><span class="content">Property mappings</span><a class="self-link" href="#css-property-mappings"></a></h4>
+
+
+   <p>The following <code>-webkit-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefixed</a> properties must be supported as mappings to the corresponding unprefixed property:</p>
+
+
+   <table>
+  
+    <thead>
+    
+     <tr>
+     
+      <th><code>-webkit-</code> prefixed property
+      
+     
+      <th>unprefixed property mapping
+      
+    
+     
+  
+  
+    <tbody>
+    
+     <tr>
+      
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="_webkit_box_flex" type="property">-webkit-box-flex<a class="self-link" href="#_webkit_box_flex"></a></dfn></code>
+      
+      
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-flexbox-1/#propdef-flex-grow">flex-grow</a></code>
+      
+    
+     
+      
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="_webkit_box_ordinal_group" type="property">-webkit-box-ordinal-group<a class="self-link" href="#_webkit_box_ordinal_group"></a></dfn></code>
+      
+      
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-flexbox-1/#propdef-order">order</a></code>
+      
+    
+     
+      
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="_webkit_box_align" type="property">-webkit-box-align<a class="self-link" href="#_webkit_box_align"></a></dfn></code>
+      
+      
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-align-3/#propdef-align-items">align-items</a></code>
+      
+    
+     
+      
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="_webkit_box_pack" type="property">-webkit-box-pack<a class="self-link" href="#_webkit_box_pack"></a></dfn></code>
+      
+      
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-align-3/#propdef-justify-content">justify-content</a></code>
+      
+    
+     
+  
+</table>
+
+
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
 
 
@@ -1318,6 +1382,10 @@ neighboring rights to this work.</p>
    <li><a href="#_webkit_border_radius">-webkit-border-radius</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_border_top_left_radius">-webkit-border-top-left-radius</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_border_top_right_radius">-webkit-border-top-right-radius</a><span>, in §3.4.1</span>
+   <li><a href="#_webkit_box_align">-webkit-box-align</a><span>, in §3.4.3</span>
+   <li><a href="#_webkit_box_flex">-webkit-box-flex</a><span>, in §3.4.3</span>
+   <li><a href="#_webkit_box_ordinal_group">-webkit-box-ordinal-group</a><span>, in §3.4.3</span>
+   <li><a href="#_webkit_box_pack">-webkit-box-pack</a><span>, in §3.4.3</span>
    <li><a href="#_webkit_box_shadow">-webkit-box-shadow</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_box_sizing">-webkit-box-sizing</a><span>, in §3.4.1</span>
    <li><a href="#webkitcssmatrix">WebKitCSSMatrix</a><span>, in §4.1</span>
@@ -1371,6 +1439,11 @@ neighboring rights to this work.</p>
     <ul>
      <li><a href="https://dom.spec.whatwg.org/#concept-event-fire">fire an event</a>
     </ul>
+   <li><a data-link-type="biblio" href="#biblio-css-align-3">[css-align-3]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-align-3/#propdef-align-items">align-items</a>
+     <li><a href="https://drafts.csswg.org/css-align-3/#propdef-justify-content">justify-content</a>
+    </ul>
    <li><a data-link-type="biblio" href="#biblio-css-animations-1">[css-animations-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-animations-1/#at-ruledef-keyframes">@keyframes</a>
@@ -1404,6 +1477,11 @@ neighboring rights to this work.</p>
    <li><a data-link-type="biblio" href="#biblio-css-conditional-3">[css-conditional-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a>
+    </ul>
+   <li><a data-link-type="biblio" href="#biblio-css-flexbox-1">[css-flexbox-1]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-flexbox-1/#propdef-flex-grow">flex-grow</a>
+     <li><a href="https://drafts.csswg.org/css-flexbox-1/#propdef-order">order</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-css-size-adjust-1">[css-size-adjust-1]</a> defines the following terms:
     <ul>
@@ -1518,12 +1596,16 @@ neighboring rights to this work.</p>
    <dd>Ian Hickson. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
    <dt id="biblio-whatwg-dom"><a class="self-link" href="#biblio-whatwg-dom"></a>[WHATWG-DOM]
    <dd>Anne van Kesteren. <a href="https://dom.spec.whatwg.org/">DOM Standard</a>. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a>
+   <dt id="biblio-css-align-3"><a class="self-link" href="#biblio-css-align-3"></a>[CSS-ALIGN-3]
+   <dd>Elika Etemad; Tab Atkins Jr.. <a href="http://dev.w3.org/csswg/css-align/">CSS Box Alignment Module Level 3</a>. 18 December 2014. WD. URL: <a href="http://dev.w3.org/csswg/css-align/">http://dev.w3.org/csswg/css-align/</a>
    <dt id="biblio-css-animations-1"><a class="self-link" href="#biblio-css-animations-1"></a>[CSS-ANIMATIONS-1]
    <dd>CSS Animations Module Level 1 URL: <a href="https://drafts.csswg.org/css-animations-1/">https://drafts.csswg.org/css-animations-1/</a>
    <dt id="biblio-css-backgrounds-3"><a class="self-link" href="#biblio-css-backgrounds-3"></a>[CSS-BACKGROUNDS-3]
    <dd>CSS Backgrounds and Borders Module Level 3 URL: <a href="https://drafts.csswg.org/css-backgrounds-3/">https://drafts.csswg.org/css-backgrounds-3/</a>
    <dt id="biblio-css-conditional-3"><a class="self-link" href="#biblio-css-conditional-3"></a>[CSS-CONDITIONAL-3]
    <dd>CSS Conditional Rules Module Level 3 URL: <a href="https://drafts.csswg.org/css-conditional-3/">https://drafts.csswg.org/css-conditional-3/</a>
+   <dt id="biblio-css-flexbox-1"><a class="self-link" href="#biblio-css-flexbox-1"></a>[CSS-FLEXBOX-1]
+   <dd>Tab Atkins Jr.; Elika Etemad; Rossen Atanassov. <a href="http://dev.w3.org/csswg/css-flexbox/">CSS Flexible Box Layout Module Level 1</a>. 14 May 2015. LCWD. URL: <a href="http://dev.w3.org/csswg/css-flexbox/">http://dev.w3.org/csswg/css-flexbox/</a>
    <dt id="biblio-css-size-adjust-1"><a class="self-link" href="#biblio-css-size-adjust-1"></a>[CSS-SIZE-ADJUST-1]
    <dd>CSS Mobile Text Size Adjustment Module Level 1 URL: <a href="https://drafts.csswg.org/css-size-adjust/">https://drafts.csswg.org/css-size-adjust/</a>
    <dt id="biblio-css-transforms-1"><a class="self-link" href="#biblio-css-transforms-1"></a>[CSS-TRANSFORMS-1]
