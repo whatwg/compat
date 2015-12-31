@@ -294,7 +294,7 @@ Both the [[css3-images-20110217]] draft <code>-webkit-</code> prefixed <<image>>
 
 <h3 id="css-properties">CSS Properties</h3>
 
-<h4 id="css-simple-aliases">Simple aliases</h4>
+<h4 id="css-simple-aliases">Simple property aliases</h4>
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed property:
 
@@ -461,10 +461,26 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   </tbody>
 </table>
 
-<p class="XXX">
-Note: It's unclear if <code>-webkit-background-position-x/-y</code> are more important than just supporting the unprefixed variants (although Edge does support the prefixed versions).
-To investigate.
-</p>
+<h4 id="css-prefixed-aliases">Prefixed property aliases</h4>
+
+The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed properties. If the user agent does not ship the unprefixed equivalent, the <code>-webkit-</code> prefixed property must be treated as an alias of the user agent's own vendor prefixed property.
+
+<!-- Yeah, this is kind of weird. As soon as https://drafts.csswg.org/css-size-adjust/#text-size-adjust is unprefixable it can be moved to be a "simple" alias -->
+
+<table>
+  <thead>
+    <tr>
+     <th><code>-webkit-</code> prefixed property alias</th>
+     <th>(vendor prefixed) property</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code><dfn type=property>-webkit-text-size-adjust</dfn></code></td>
+      <td><code>(-prefix-)'text-size-adjust'</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 

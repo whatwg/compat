@@ -30,7 +30,7 @@
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated
-    <time class="dt-updated" datetime="2015-12-14">14 December 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-12-31">31 December 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -96,7 +96,8 @@
        </ul>
       <li><a href="#css-properties"><span class="secno">3.4</span> <span class="content">CSS Properties</span></a>
        <ul class="toc">
-        <li><a href="#css-simple-aliases"><span class="secno">3.4.1</span> <span class="content">Simple aliases</span></a>
+        <li><a href="#css-simple-aliases"><span class="secno">3.4.1</span> <span class="content">Simple property aliases</span></a>
+        <li><a href="#css-prefixed-aliases"><span class="secno">3.4.2</span> <span class="content">Prefixed property aliases</span></a>
        </ul>
      </ul>
     <li><a href="#dom-compat-section"><span class="secno">4</span> <span class="content">DOM Compatibility</span></a>
@@ -341,7 +342,7 @@ be performant.)</p>
    <h3 class="heading settled" data-level="3.4" id="css-properties"><span class="secno">3.4. </span><span class="content">CSS Properties</span><a class="self-link" href="#css-properties"></a></h3>
 
 
-   <h4 class="heading settled" data-level="3.4.1" id="css-simple-aliases"><span class="secno">3.4.1. </span><span class="content">Simple aliases</span><a class="self-link" href="#css-simple-aliases"></a></h4>
+   <h4 class="heading settled" data-level="3.4.1" id="css-simple-aliases"><span class="secno">3.4.1. </span><span class="content">Simple property aliases</span><a class="self-link" href="#css-simple-aliases"></a></h4>
 
 
    <p>The following <code>-webkit-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed property:</p>
@@ -747,10 +748,42 @@ be performant.)</p>
 </table>
 
 
-   <p class="XXX">
-Note: It’s unclear if <code>-webkit-background-position-x/-y</code> are more important than just supporting the unprefixed variants (although Edge does support the prefixed versions).
-To investigate.
-</p>
+   <h4 class="heading settled" data-level="3.4.2" id="css-prefixed-aliases"><span class="secno">3.4.2. </span><span class="content">Prefixed property aliases</span><a class="self-link" href="#css-prefixed-aliases"></a></h4>
+
+
+   <p>The following <code>-webkit-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed properties. If the user agent does not ship the unprefixed equivalent, the <code>-webkit-</code> prefixed property must be treated as an alias of the user agent’s own vendor prefixed property.</p>
+
+
+
+
+   <table>
+  
+    <thead>
+    
+     <tr>
+     
+      <th><code>-webkit-</code> prefixed property alias
+      
+     
+      <th>(vendor prefixed) property
+      
+    
+     
+  
+  
+    <tbody>
+    
+     <tr>
+      
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="_webkit_text_size_adjust" type="property">-webkit-text-size-adjust<a class="self-link" href="#_webkit_text_size_adjust"></a></dfn></code>
+      
+      
+      <td><code>(-prefix-)<a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-size-adjust/#text-size-adjust">text-size-adjust</a></code>
+      
+    
+     
+  
+</table>
 
 
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
@@ -1287,8 +1320,8 @@ neighboring rights to this work.</p>
    <li><a href="#_webkit_border_top_right_radius">-webkit-border-top-right-radius</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_box_shadow">-webkit-box-shadow</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_box_sizing">-webkit-box-sizing</a><span>, in §3.4.1</span>
-   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix">WebKitCSSMatrix()</a><span>, in §4.1.1</span>
    <li><a href="#webkitcssmatrix">WebKitCSSMatrix</a><span>, in §4.1</span>
+   <li><a href="#dom-webkitcssmatrix-webkitcssmatrix">WebKitCSSMatrix()</a><span>, in §4.1.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-other">WebKitCSSMatrix(other)</a><span>, in §4.1.1</span>
    <li><a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist">WebKitCSSMatrix(transformList)</a><span>, in §4.1.1</span>
    <li><a href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a><span>, in §3.2.1</span>
@@ -1302,6 +1335,7 @@ neighboring rights to this work.</p>
    <li><a href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a><span>, in §3.3.2</span>
    <li><a href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a><span>, in §3.3.3</span>
    <li><a href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.3.4</span>
+   <li><a href="#_webkit_text_size_adjust">-webkit-text-size-adjust</a><span>, in §3.4.2</span>
    <li><a href="#_webkit_transform">-webkit-transform</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_transform_origin">-webkit-transform-origin</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_transform_style">-webkit-transform-style</a><span>, in §3.4.1</span>
@@ -1370,6 +1404,10 @@ neighboring rights to this work.</p>
    <li><a data-link-type="biblio" href="#biblio-css-conditional-3">[css-conditional-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a>
+    </ul>
+   <li><a data-link-type="biblio" href="#biblio-css-size-adjust-1">[css-size-adjust-1]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-size-adjust/#text-size-adjust">text-size-adjust</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-css-transforms-1">[css-transforms-1]</a> defines the following terms:
     <ul>
@@ -1486,6 +1524,8 @@ neighboring rights to this work.</p>
    <dd>CSS Backgrounds and Borders Module Level 3 URL: <a href="https://drafts.csswg.org/css-backgrounds-3/">https://drafts.csswg.org/css-backgrounds-3/</a>
    <dt id="biblio-css-conditional-3"><a class="self-link" href="#biblio-css-conditional-3"></a>[CSS-CONDITIONAL-3]
    <dd>CSS Conditional Rules Module Level 3 URL: <a href="https://drafts.csswg.org/css-conditional-3/">https://drafts.csswg.org/css-conditional-3/</a>
+   <dt id="biblio-css-size-adjust-1"><a class="self-link" href="#biblio-css-size-adjust-1"></a>[CSS-SIZE-ADJUST-1]
+   <dd>CSS Mobile Text Size Adjustment Module Level 1 URL: <a href="https://drafts.csswg.org/css-size-adjust/">https://drafts.csswg.org/css-size-adjust/</a>
    <dt id="biblio-css-transforms-1"><a class="self-link" href="#biblio-css-transforms-1"></a>[CSS-TRANSFORMS-1]
    <dd>Simon Fraser; et al. <a href="http://dev.w3.org/csswg/css-transforms/">CSS Transforms Module Level 1</a>. 26 November 2013. WD. URL: <a href="http://dev.w3.org/csswg/css-transforms/">http://dev.w3.org/csswg/css-transforms/</a>
    <dt id="biblio-css-transitions-1"><a class="self-link" href="#biblio-css-transitions-1"></a>[CSS-TRANSITIONS-1]
