@@ -490,7 +490,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   <thead>
     <tr>
      <th><code>-webkit-</code> prefixed property</th>
-     <th>unprefixed property mapping</th>
+     <th>unprefixed property</th>
     </tr>
   </thead>
   <tbody>
@@ -506,6 +506,25 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     </tr>
       <td><code><dfn type=property>-webkit-box-pack</dfn></code></td>
       <td><code>'justify-content'</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="css-keyword-mappings">Keyword mappings</h4>
+
+The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supported as mappings to the corresponding unprefixed keyword:
+
+<table>
+  <thead>
+    <tr>
+     <th><code>-webkit-</code> prefixed keyword</th>
+     <th>unprefixed property keyword</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code><dfn type=property>-webkit-box</dfn></code></td>
+      <td><code>''flex''</code></td>
     </tr>
   </tbody>
 </table>
