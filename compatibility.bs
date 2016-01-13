@@ -419,6 +419,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'box-sizing'</code></td>
     </tr>
     <tr>
+      <td><code><dfn type=property>-webkit-filter</dfn></code></td>
+      <td><code>'filter'</code></td>
+    </tr>
+    <tr>
       <td><code><dfn type=property>-webkit-perspective</dfn></code></td>
       <td><code>'perspective'</code></td>
     </tr>
