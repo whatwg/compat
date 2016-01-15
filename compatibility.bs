@@ -323,7 +323,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'animation-iteration-count'</code></td>
     </tr>
     <tr>
-      <td><code><dfn type=property>-webkit-direction</dfn></code></td>
+      <td><code><dfn type=property>-webkit-animation-direction</dfn></code></td>
       <td><code>'animation-direction'</code></td>
     </tr>
     <tr>
@@ -840,7 +840,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Daniel Holbert, hexalys, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
+Thanks to Alan Cutter, Daniel Holbert, hexalys, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
 
