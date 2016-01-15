@@ -553,9 +553,9 @@ interface WebKitCSSMatrix : DOMMatrix {
     WebKitCSSMatrix translate(unrestricted double tx,
                               unrestricted double ty,
                               unrestricted double tz);
-    WebKitCSSMatrix scale(optional unrestricted double scaleX,
+    WebKitCSSMatrix scale(optional unrestricted double scaleX = 1,
                           optional unrestricted double scaleY,
-                          optional unrestricted double scaleZ);
+                          optional unrestricted double scaleZ = 1);
     WebKitCSSMatrix rotate(optional unrestricted double rotX,
                            optional unrestricted double rotY,
                            optional unrestricted double rotZ);
@@ -840,7 +840,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Alan Cutter, Daniel Holbert, hexalys, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, and Your Name Here for feedback and contributions to this standard.
+Thanks to Alan Cutter, Daniel Holbert, hexalys, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
 
