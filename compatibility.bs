@@ -715,11 +715,9 @@ When the <code>{{translate(tx, ty, tz)}}</code> method is invoked, the user agen
 
 When the <code>{{scale(scaleX, scaleY, scaleZ)}}</code> method is invoked, the user agent must run the following steps:
 
-1. If <var>scaleX</var> or <var>scaleZ</var> are undefined, let <var>scaleX</var> or <var>scaleZ</var> be 1, respectively.
+1. If <var>scaleY</var> is undefined, let <var>scaleY</var> be the value of <var>scaleX</var>.
 
-2. If <var>scaleY</var> is undefined, let <var>scaleY</var> be the value of <var>scaleX</var>.
-
-3. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">scaleNonUniform(scaleX, scaleY, scaleZ)</a> method as a new {{WebKitCSSMatrix}} object.
+2. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">scaleNonUniform(scaleX, scaleY, scaleZ)</a> method as a new {{WebKitCSSMatrix}} object.
 
 When the <code>{{rotate(rotX, rotY, rotZ)}}</code> method is invoked, the user agent must run the following steps:
 
