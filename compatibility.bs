@@ -351,7 +351,12 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'background-origin'</code></td>
     </tr>
     <tr>
-      <td><code><dfn type=property>-webkit-background-size</dfn></code></td>
+      <td>
+        <code><dfn type=property>-webkit-background-size</dfn></code>
+        <p class="XXX">
+          Not simple. See <a href="https://github.com/whatwg/compat/issues/28">issue #28</a>.
+        </p>
+      </td>
       <td><code>'background-size'</code></td>
     </tr>
     <tr>
