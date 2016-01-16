@@ -727,7 +727,7 @@ When the <code>{{rotate(rotX, rotY, rotZ)}}</code> method is invoked, the user a
 
 3. Else, if any of <var>rotX</var>, <var>rotY</var> or <var>rotZ</var> are undefined, let the undefined argument be 0.
 
-4. Post multiply <var>result</var> by each of its 3 rotation matrices about the major axes, first X using <var>rotX</var>, then Y using <var>rotY</var>, then Z using <var>rotZ</var>.
+4. Post-multiply <var>result</var> by each of its 3 rotation matrices about the major axes, first Z using <var>rotZ</var>, then Y using <var>rotY</var>, then X using <var>rotX</var>.
 
 5. Return the result as a new {{WebKitCSSMatrix}} object.
 
