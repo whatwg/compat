@@ -102,10 +102,6 @@ urlPrefix: https://w3c.github.io/screen-orientation/;
 urlPrefix: http://www.w3.org/TR/CSS/; spec: CSS22
   type: dfn
     text: vendor prefix; url: #vendor-prefix
-urlPrefix: https://drafts.csswg.org/css-backgrounds-4/; spec: CSS3-BG4
-  type: property
-    text: background-position-x; url: #propdef-background-position-x
-    text: background-position-y; url: #propdef-background-position-y
 urlPrefix: http://www.w3.org/TR/mediaqueries-4/; spec: mediaqueries-4
   type: dfn
     text: media query; url: #media-query
@@ -347,48 +343,16 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'backface-visibility'</code></td>
     </tr>
     <tr>
-      <td><code><dfn type=property>-webkit-background-attachment</dfn></code></td>
-      <td><code>'background-attachment'</code></td>
-    </tr>
-    <tr>
       <td><code><dfn type=property>-webkit-background-clip</dfn></code></td>
       <td><code>'background-clip'</code></td>
-    </tr>
-    <tr>
-      <td><code><dfn type=property>-webkit-background-color</dfn></code></td>
-      <td><code>'background-color'</code></td>
-    </tr>
-    <tr>
-      <td><code><dfn type=property>-webkit-background-image</dfn></code></td>
-      <td><code>'background-image'</code></td>
     </tr>
     <tr>
       <td><code><dfn type=property>-webkit-background-origin</dfn></code></td>
       <td><code>'background-origin'</code></td>
     </tr>
     <tr>
-      <td><code><dfn type=property>-webkit-background-position</dfn></code></td>
-      <td><code>'background-position'</code></td>
-    </tr>
-    <tr>
-      <td><code><dfn type=property>-webkit-background-position-x</dfn></code></td>
-      <td><code>'background-position-x'</code></td>
-    </tr>
-    <tr>
-      <td><code><dfn type=property>-webkit-background-position-y</dfn></code></td>
-      <td><code>'background-position-y'</code></td>
-    </tr>
-    <tr>
-      <td><code><dfn type=property>-webkit-background-repeat</dfn></code></td>
-      <td><code>'background-repeat'</code></td>
-    </tr>
-    <tr>
       <td><code><dfn type=property>-webkit-background-size</dfn></code></td>
       <td><code>'background-size'</code></td>
-    </tr>
-    <tr>
-      <td><code><dfn type=property>-webkit-background</dfn></code></td>
-      <td><code>'background'</code></td>
     </tr>
     <tr>
       <td><code><dfn type=property>-webkit-border-bottom-left-radius</dfn></code></td>
