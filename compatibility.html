@@ -30,7 +30,7 @@
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated
-    <time class="dt-updated" datetime="2016-01-15">15 January 2016</time></span></h2>
+    <time class="dt-updated" datetime="2016-01-20">20 January 2016</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -77,6 +77,9 @@
        <ul class="toc">
         <li><a href="#css-media-queries-webkit-device-pixel-ratio"><span class="secno">3.2.1</span> <span class="content">
   <code><span class="property">-webkit-device-pixel-ratio</span></code>
+</span></a>
+        <li><a href="#css-media-queries-webkit-transform-3d"><span class="secno">3.2.2</span> <span class="content">
+  <code><span class="property">-webkit-transform-3d</span></code>
 </span></a>
        </ul>
       <li><a href="#css-<image>-type"><span class="secno">3.3</span> <span class="content">CSS Gradients</span></a>
@@ -299,6 +302,33 @@ be performant.)</p>
      
   
 </table>
+
+
+   <h4 class="heading settled" data-level="3.2.2" id="css-media-queries-webkit-transform-3d"><span class="secno">3.2.2. </span><span class="content">
+  <code><a class="property" data-link-type="propdesc" href="#descdef-media--webkit-transform-3d">-webkit-transform-3d</a></code>
+</span><a class="self-link" href="#css-media-queries-webkit-transform-3d"></a></h4>
+
+
+   <table class="definition descdef mq">
+    <tbody>
+     <tr>
+      <th>Name:
+      <td><dfn class="css" data-dfn-for="@media" data-dfn-type="descriptor" data-export="" id="descdef-media--webkit-transform-3d">-webkit-transform-3d<a class="self-link" href="#descdef-media--webkit-transform-3d"></a></dfn>
+     <tr>
+      <th>For:
+      <td><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a>
+     <tr>
+      <th>Value:
+      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-values-3/#integer-value">&lt;integer></a>
+     <tr>
+      <th>Accepts min/max prefixes:
+      <td>no</table>
+
+
+   <p>The <code><a class="property" data-link-type="propdesc" href="#descdef-media--webkit-transform-3d">-webkit-transform-3d</a></code> media feature is used to query whether the user agent supports CSS 3D transforms. <a data-link-type="biblio" href="#biblio-css-transforms-1">[css-transforms-1]</a></p>
+
+
+   <p>If the user agent supports 3D transforms, the value will be 1. Otherwise the value is 0. Only 0 and 1 are valid values.</p>
 
 
    <h3 class="heading settled" data-level="3.3" id="css-<image>-type"><span class="secno">3.3. </span><span class="content">CSS Gradients</span><a class="self-link" href="#css-%3Cimage%3E-type"></a></h3>
@@ -1368,6 +1398,7 @@ neighboring rights to this work.</p>
    <li><a href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.3.4</span>
    <li><a href="#_webkit_text_size_adjust">-webkit-text-size-adjust</a><span>, in §3.4.2</span>
    <li><a href="#_webkit_transform">-webkit-transform</a><span>, in §3.4.1</span>
+   <li><a href="#descdef-media--webkit-transform-3d">-webkit-transform-3d</a><span>, in §3.2.2</span>
    <li><a href="#_webkit_transform_origin">-webkit-transform-origin</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_transform_style">-webkit-transform-style</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_transition">-webkit-transition</a><span>, in §3.4.1</span>
@@ -1466,6 +1497,7 @@ neighboring rights to this work.</p>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-css-values-3">[css-values]</a> defines the following terms:
     <ul>
+     <li><a href="https://drafts.csswg.org/css-values-3/#integer-value">&lt;integer></a>
      <li><a href="https://drafts.csswg.org/css-values-3/#number-value">&lt;number></a>
      <li><a href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a>
     </ul>
@@ -1597,13 +1629,21 @@ neighboring rights to this work.</p>
      <th scope="col">Name
      <th scope="col">Value
      <th scope="col">Initial
+     <th scope="col">Accepts min/max prefixes
      <th scope="col">Type
    <tbody>
    <tr>
     <th scope="row"><a class="css" data-link-type="descriptor" href="#descdef-media--webkit-device-pixel-ratio">-webkit-device-pixel-ratio</a>
     <td>&lt;number>
     <td>
-    <td>range</table>
+    <td>
+    <td>range
+   <tr>
+    <th scope="row"><a class="css" data-link-type="descriptor" href="#descdef-media--webkit-transform-3d">-webkit-transform-3d</a>
+    <td>&lt;integer>
+    <td>
+    <td>no
+    <td></table>
   <h2 class="no-num heading settled" id="idl-index"><span class="content">IDL Index</span><a class="self-link" href="#idl-index"></a></h2>
   <pre class="idl">[<a class="idl-code" data-link-type="constructor" href="#dom-webkitcssmatrix-webkitcssmatrix">Constructor</a>,
  <a class="idl-code" data-link-type="constructor" href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist">Constructor</a>(DOMString <a href="#dom-webkitcssmatrix-webkitcssmatrix-transformlist-transformlist">transformList</a>),
