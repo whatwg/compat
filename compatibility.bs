@@ -256,14 +256,14 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
 
 <pre class='descdef mq'>
 Name: -webkit-transform-3d
-Value: <<integer>>
+Value: <<mq-boolean>>
 For: @media
 Accepts min/max prefixes: no
 </pre>
 
 The <code>'-webkit-transform-3d'</code> media feature is used to query whether the user agent supports CSS 3D transforms. [[css-transforms-1]]
 
-If the user agent supports 3D transforms, the value will be 1. Otherwise the value is 0. Only 0 and 1 are valid values.
+If the user agent supports 3D transforms, the value will be 1. Otherwise the value is 0.
 
 <h3 id="css-<image>-type">CSS Gradients</h3>
 
@@ -822,7 +822,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Alan Cutter, Daniel Holbert, hexalys, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
+Thanks to Alan Cutter, Chris Rebert, Daniel Holbert, hexalys, Jacob Rossi, Philip Jägenstedt, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Simon Pieters, Dirk Schulze and Rik Cabanier for defining the {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces. [[!geometry-1]]
 
