@@ -65,10 +65,9 @@ urlPrefix: https://drafts.fxtf.org/geometry/; spec: geometry-1
   type: method;
     text: fromString; url: #dom-dommatrixreadonly-fromstring0
 urlPrefix: https://heycam.github.io/webidl/
-  type: dfn; urlPrefix: #dfn-
-    text: throw
-  type: exception
-    text: SyntaxError
+  type: dfn
+    text: NotSupportedError; url: #notsupportederror
+    text: DOMException; url: #idl-DOMException
 urlPrefix: https://html.spec.whatwg.org/multipage/; spec: HTML
   type: interface
     urlPrefix: browsers.html
@@ -691,7 +690,13 @@ When the <code>{{multiply(other)}}</code> method is invoked, the user agent must
 
 When the <code>{{inverse()}}</code> method is invoked, the user agent must run the following steps:
 
-1. Return the result of the algorithm for the {{DOMMatrixReadOnly}} <a method for="DOMMatrixReadOnly" spec="geometry-1">inverse()</a> method as a new {{WebKitCSSMatrix}} object.
+1. Let <var>result</var> be the resulting matrix initialized to the value of the current matrix.
+
+2. Invert the matrix <var>result</var>.
+
+3. If the matrix <var>result</var> is not invertable, throw a <a>NotSupportedError</a> <a>DOMException</a>.
+
+4. Return <var>result</var> as a new {{WebKitCSSMatrix}} object.
 
 When the <code>{{translate(tx, ty, tz)}}</code> method is invoked, the user agent must run the following steps:
 

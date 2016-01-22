@@ -1073,7 +1073,22 @@ method is invoked, the user agent must run the following steps:</p>
 
    <ol>
     <li data-md="">
-     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-inverse">inverse()</a> method as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
+     <p>Let <var>result</var> be the resulting matrix initialized to the value of the current matrix.</p>
+     
+
+
+    <li data-md="">
+     <p>Invert the matrix <var>result</var>.</p>
+     
+
+
+    <li data-md="">
+     <p>If the matrix <var>result</var> is not invertable, throw a <a data-link-type="dfn" href="https://heycam.github.io/webidl/#notsupportederror">NotSupportedError</a> <a data-link-type="dfn" href="https://heycam.github.io/webidl/#idl-DOMException">DOMException</a>.</p>
+     
+
+
+    <li data-md="">
+     <p>Return <var>result</var> as a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.</p>
      
 </ol>
 
@@ -1531,7 +1546,6 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-e">e attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-f">f attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-fromstring0">fromString()</a>
-     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-inverse">inverse()</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m11">m11 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m11-element">m11 element</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m12">m12 attribute</a>
