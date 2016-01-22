@@ -543,10 +543,10 @@ interface WebKitCSSMatrix : DOMMatrix {
     WebKitCSSMatrix rotate(optional unrestricted double rotX = 0,
                            optional unrestricted double rotY,
                            optional unrestricted double rotZ);
-    WebKitCSSMatrix rotateAxisAngle(unrestricted double x,
-                                    unrestricted double y,
-                                    unrestricted double z,
-                                    unrestricted double angle);
+    WebKitCSSMatrix rotateAxisAngle(optional unrestricted double x = 0,
+                                    optional unrestricted double y = 0,
+                                    optional unrestricted double z = 0,
+                                    optional unrestricted double angle = 0);
     WebKitCSSMatrix skewX(unrestricted double sx);
     WebKitCSSMatrix skewY(unrestricted double sy);
 };
