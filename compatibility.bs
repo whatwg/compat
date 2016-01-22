@@ -62,6 +62,7 @@ urlPrefix: https://drafts.fxtf.org/geometry/; spec: geometry-1
     text: d attribute; url: #dom-dommatrixreadonly-d
     text: e attribute; url: #dom-dommatrixreadonly-e
     text: f attribute; url: #dom-dommatrixreadonly-f
+    text:  is2d; url: #dommatrixreadonly-is2d
   type: method;
     text: fromString; url: #dom-dommatrixreadonly-fromstring0
 urlPrefix: https://heycam.github.io/webidl/
@@ -716,9 +717,11 @@ When the <code>{{rotate(rotX, rotY, rotZ)}}</code> method is invoked, the user a
 
 3. Else, if any of <var>rotX</var>, <var>rotY</var> or <var>rotZ</var> are undefined, let the undefined argument be 0.
 
-4. Post-multiply <var>result</var> by each of its 3 rotation matrices about the major axes, first Z using <var>rotZ</var>, then Y using <var>rotY</var>, then X using <var>rotX</var>.
+4. If <var>rotX</var> or <var>rotY</var> are non-zero, set the <a attribute spec="geometry-1">is2d</a> flag to true.
 
-5. Return the result as a new {{WebKitCSSMatrix}} object.
+5. Post-multiply <var>result</var> by each of its 3 rotation matrices about the major axes, first Z using <var>rotZ</var>, then Y using <var>rotY</var>, then X using <var>rotX</var>.
+
+6. Return the result as a new {{WebKitCSSMatrix}} object.
 
 The current matrix is not modified.
 
