@@ -534,9 +534,9 @@ interface WebKitCSSMatrix : DOMMatrix {
     // Immutable transform methods
     WebKitCSSMatrix multiply(WebKitCSSMatrix other);
     WebKitCSSMatrix inverse();
-    WebKitCSSMatrix translate(unrestricted double tx,
-                              unrestricted double ty,
-                              unrestricted double tz);
+    WebKitCSSMatrix translate(optional unrestricted double tx = 0,
+                              optional unrestricted double ty = 0,
+                              optional unrestricted double tz = 0);
     WebKitCSSMatrix scale(optional unrestricted double scaleX = 1,
                           optional unrestricted double scaleY,
                           optional unrestricted double scaleZ = 1);
