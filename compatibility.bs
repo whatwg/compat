@@ -547,8 +547,8 @@ interface WebKitCSSMatrix : DOMMatrix {
                                     optional unrestricted double y = 0,
                                     optional unrestricted double z = 0,
                                     optional unrestricted double angle = 0);
-    WebKitCSSMatrix skewX(unrestricted double sx);
-    WebKitCSSMatrix skewY(unrestricted double sy);
+    WebKitCSSMatrix skewX(optional unrestricted double sx = 0);
+    WebKitCSSMatrix skewY(optional unrestricted double sy = 0);
 };
 </pre>
 
