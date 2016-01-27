@@ -63,10 +63,11 @@ urlPrefix: https://drafts.fxtf.org/geometry/; spec: geometry-1
     text: e attribute; url: #dom-dommatrixreadonly-e
     text: f attribute; url: #dom-dommatrixreadonly-f
     text:  is2d; url: #dommatrixreadonly-is2d
-  type: method;
-    text: fromString; url: #dom-dommatrixreadonly-fromstring0
+  type: constructor;
+    text: DOMMatrixReadOnly; url: #dom-dommatrixreadonly-dommatrixreadonly-transformlist
 urlPrefix: https://heycam.github.io/webidl/
   type: dfn
+    text: SyntaxError; url: #syntaxerror
     text: NotSupportedError; url: #notsupportederror
     text: DOMException; url: #idl-DOMException
 urlPrefix: https://html.spec.whatwg.org/multipage/; spec: HTML
@@ -116,6 +117,16 @@ urlPrefix: http://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
+urlPrefix: https://drafts.csswg.org/css-transforms/;
+  type: type
+    text: transform-list; url: #typedef-transform-list
+urlPrefix: https://www.w3.org/TR/css3-values/
+  type: dfn
+    text: calculated values; url: #funcdef-calc
+    text: absolute lengths; url: #absolute-lengths
+urlPrefix: https://encoding.spec.whatwg.org/
+  type: dfn
+    text: whitespace; url: #ascii-whitespace
 </pre>
 
 <pre class=link-defaults>
@@ -615,7 +626,17 @@ constructor, when invoked, must run these steps:
   <li>
     Let <var>m</var> be a new {{WebKitCSSMatrix}} object.
   </li>
-  <li>Return the result of the algorithm for the static {{DOMMatrixReadOnly}} <a method for=DOMMatrixReadOnly spec="geometry-1">fromString(transformList)</a> method, as <var>m</var>.
+
+  <li>Return the result of the algorithm for the <a constructor
+    lt="DOMMatrixReadOnly">DOMMatrixReadOnly(transformList)</a> constructor, as <var>m</var>, parsing <var>transformList</var> according to the <dfn>legacy transformList parse quirks</dfn>:
+
+    <ul>
+      <li>Parse <var>transformList</var> to a <a lt="transform-list">&lt;transform-list&gt;</a> using 'transform' property syntax [[css-transforms-1]].
+      </li>
+      <li>Treat the values <var>"none"</var> and the empty string as the 2d identity matrix.</li>
+      <li>Treat the values <var>"auto"</var>, <var>"inherit"</var>, <var>"initial"</var>or a value containing only <a>whitespace</a> as a <a>SyntaxError</a>.</li>
+      <li>Treat transform functions that contain non-<a>absolute lengths</a> as a <a>SyntaxError</a></li>
+    </ul>
   </li>
 </ol>
 
@@ -653,7 +674,7 @@ The following method modifies the current matrix, returning the matrix it was in
 When the <dfn method for="WebKitCSSMatrix"><code>setMatrixValue(transformList)</code></dfn>
 method is invoked, the user agent must run the following steps:
 
-1. Return the result of the algorithm for the {{DOMMatrix}} <a method for="DOMMatrix" spec="geometry-1">setMatrixValue(transformList)</a> method.
+1. Return the result of the algorithm for the {{DOMMatrix}} <a method for="DOMMatrix" spec="geometry-1">setMatrixValue(transformList)</a> method, parsing <var>transformList</var> according to the <a>legacy transformList parse quirks</a>.
 
 <h4 id="webkitcssmatrix-immutable-methods">{{WebKitCSSMatrix}} immutable methods</h4>
 

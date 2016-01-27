@@ -970,8 +970,28 @@ constructor, when invoked, must run these steps:</p>
     <li>
     Let <var>m</var> be a new <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> object.
   
+
   
-    <li>Return the result of the algorithm for the static <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-fromstring0">fromString(transformList)</a> method, as <var>m</var>.
+    <li>Return the result of the algorithm for the <a class="idl-code" data-link-type="constructor" href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly-transformlist">DOMMatrixReadOnly(transformList)</a> constructor, as <var>m</var>, parsing <var>transformList</var> according to the <dfn data-dfn-type="dfn" data-noexport="" id="legacy-transformlist-parse-quirks">legacy transformList parse quirks<a class="self-link" href="#legacy-transformlist-parse-quirks"></a></dfn>:
+
+    
+     <ul>
+      
+      <li>Parse <var>transformList</var> to a <a class="css" data-link-type="type" href="https://drafts.csswg.org/css-transforms/#typedef-transform-list">&lt;transform-list></a> using <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-1/#propdef-transform">transform</a> property syntax <a data-link-type="biblio" href="#biblio-css-transforms-1">[css-transforms-1]</a>.
+      
+      
+      
+      <li>Treat the values <var>"none"</var> and the empty string as the 2d identity matrix.
+      
+      
+      <li>Treat the values <var>"auto"</var>, <var>"inherit"</var>, <var>"initial"</var>or a value containing only <a data-link-type="dfn" href="https://encoding.spec.whatwg.org/#ascii-whitespace">whitespace</a> as a <a data-link-type="dfn" href="https://heycam.github.io/webidl/#syntaxerror">SyntaxError</a>.
+      
+      
+      <li>Treat transform functions that contain non-<a data-link-type="dfn" href="https://www.w3.org/TR/css3-values/#absolute-lengths">absolute lengths</a> as a <a data-link-type="dfn" href="https://heycam.github.io/webidl/#syntaxerror">SyntaxError</a>
+      
+    
+     </ul>
+     
   
 </ol>
 
@@ -1018,7 +1038,7 @@ method is invoked, the user agent must run the following steps:</p>
 
    <ol>
     <li data-md="">
-     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrix-setmatrixvalue">setMatrixValue(transformList)</a> method.</p>
+     <p>Return the result of the algorithm for the <code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry/#dommatrix">DOMMatrix</a></code> <a class="idl-code" data-link-type="method" href="https://drafts.fxtf.org/geometry/#dom-dommatrix-setmatrixvalue">setMatrixValue(transformList)</a> method, parsing <var>transformList</var> according to the <a data-link-type="dfn" href="#legacy-transformlist-parse-quirks">legacy transformList parse quirks</a>.</p>
      
 </ol>
 
@@ -1303,6 +1323,7 @@ neighboring rights to this work.</p>
   <ul class="indexlist">
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-angle">angle</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-inverse">inverse()</a><span>, in §4.1</span>
+   <li><a href="#legacy-transformlist-parse-quirks">legacy transformList parse quirks</a><span>, in §4.1.1</span>
    <li><a href="#dom-webkitcssmatrix-multiply">multiply(other)</a><span>, in §4.1</span>
    <li>onorientationchange
     <ul>
@@ -1514,7 +1535,6 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-d">d attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-e">e attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-f">f attribute</a>
-     <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-fromstring0">fromString()</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dommatrixreadonly-is2d">is2d</a>
      <li><a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-m11">m11 attribute</a>
      <li><a href="https://drafts.fxtf.org/geometry/#m11-element">m11 element</a>
