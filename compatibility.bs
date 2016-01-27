@@ -453,8 +453,6 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed properties. If the user agent does not ship the unprefixed equivalent, the <code>-webkit-</code> prefixed property must be treated as an alias of the user agent's own vendor prefixed property.
 
-<!-- Yeah, this is kind of weird. As soon as https://drafts.csswg.org/css-size-adjust/#text-size-adjust is unprefixable it can be moved to be a "simple" alias -->
-
 <table>
   <thead>
     <tr>
@@ -469,6 +467,9 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     </tr>
   </tbody>
 </table>
+
+<br>
+<div class="note"> As soon as https://drafts.csswg.org/css-size-adjust/#text-size-adjust is unprefixable it can be defined as a "simple" alias.</div>
 
 <h4 id="css-property-mappings">Property mappings</h4>
 
