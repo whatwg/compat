@@ -634,7 +634,7 @@ constructor, when invoked, must run these steps:
       <li>Parse <var>transformList</var> to a <a lt="transform-list">&lt;transform-list&gt;</a> using 'transform' property syntax [[css-transforms-1]].
       </li>
       <li>Treat the values <var>"none"</var> and the empty string as the 2d identity matrix.</li>
-      <li>Treat the values <var>"auto"</var>, <var>"inherit"</var>, <var>"initial"</var>or a value containing only <a>whitespace</a> as a <a>SyntaxError</a>.</li>
+      <li>Treat the values <var>"auto"</var>, <var>"inherit"</var>, <var>"initial"</var> or a value containing only <a>whitespace</a> as a <a>SyntaxError</a>.</li>
       <li>Treat transform functions that contain non-<a>absolute lengths</a> as a <a>SyntaxError</a></li>
     </ul>
   </li>
