@@ -525,7 +525,6 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
 <pre class="idl">
 [Constructor,
  Constructor(DOMString transformList),
- Constructor(WebKitCSSMatrix other),
  Exposed=Window]
 interface WebKitCSSMatrix : DOMMatrix {
     // Mutable transform methods
@@ -617,32 +616,6 @@ constructor, when invoked, must run these steps:
   </li>
   <li>Return the result of the algorithm for the static {{DOMMatrixReadOnly}} <a method for=DOMMatrixReadOnly spec="geometry-1">fromString(transformList)</a> method, as <var>m</var>.
   </li>
-</ol>
-
-<dl class=domintro>
-  <dt>
-    <code><var>matrix</var> = new <a constructor
-    lt="WebKitCSSMatrix(other)">WebKitCSSMatrix</a>(other)</code>
-  </dt>
-  <dd>
-    Returns a new {{WebKitCSSMatrix}} object.
-  </dd>
-</dl>
-
-The
-<dfn constructor for="WebKitCSSMatrix" lt="WebKitCSSMatrix(other)">WebKitCSSMatrix(other)</dfn>
-constructor, when invoked, must run these steps:
-
-<ol>
-  <li>
-    Let <var>m</var> be a new {{WebKitCSSMatrix}} object.
-  </li>
-  <li>For m, set the 16 elements
-    <a attribute spec="geometry-1">m11 element</a> …
-    <a attribute spec="geometry-1">m44 element</a> to the value of the 16 elements
-    <a attribute spec="geometry-1">m11 element</a> …
-    <a attribute spec="geometry-1">m44 element</a> of <var>other</var>.
-  <li>Return <var>m</var>.</li>
 </ol>
 
 <h4 id="webkitcssmatrix-attributes">{{WebKitCSSMatrix}} attributes</h4>
