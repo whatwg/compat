@@ -423,6 +423,42 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'filter'</code></td>
     </tr>
     <tr>
+      <td><code><dfn type=property>-webkit-mask</dfn></code></td>
+      <td><code>'mask'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-clip</dfn></code></td>
+      <td><code>'mask-clip'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-composite</dfn></code></td>
+      <td><code>'mask-composite'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-image</dfn></code></td>
+      <td><code>'mask-image'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-origin</dfn></code></td>
+      <td><code>'mask-origin'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-position</dfn></code></td>
+      <td><code>'mask-position'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-repeat</dfn></code></td>
+      <td><code>'mask-repeat'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-size</dfn></code></td>
+      <td><code>'mask-size'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-source-type</dfn></code></td>
+      <td><code>'mask-type'</code></td>
+    </tr>
+    <tr>
       <td><code><dfn type=property>-webkit-perspective</dfn></code></td>
       <td><code>'perspective'</code></td>
     </tr>
