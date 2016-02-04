@@ -481,11 +481,15 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code><dfn type=property>-webkit-text-size-adjust</dfn></code></td>
       <td><code>(-prefix-)'text-size-adjust'</code></td>
     </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-user-select</dfn></code></td>
+      <td><code>(-prefix-)'user-select'</code></td>
+    </tr>
   </tbody>
 </table>
 
 <br>
-<div class="note"> As soon as https://drafts.csswg.org/css-size-adjust/#text-size-adjust is unprefixable it can be defined as a "simple" alias.</div>
+<div class="note">As soon as each property is unprefixable it can be defined as a "simple" alias.</div>
 
 <h4 id="css-property-mappings">Property mappings</h4>
 
@@ -537,6 +541,8 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 
 <h3 id="webkitcssmatrix-interface">The {{WebKitCSSMatrix}} interface</h3>
+
+<div class="warning">The WebKitCSSMatrix interface has been moved to the DOM Geometry specification. [[!geometry-1]]. Implementers should refer to that. This will be removed in the future.</div>
 
 <!-- cf. https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/WebKitCSSMatrix.idl -->
 <pre class="idl">

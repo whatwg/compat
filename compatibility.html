@@ -30,7 +30,7 @@
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated
-    <time class="dt-updated" datetime="2016-01-28">28 January 2016</time></span></h2>
+    <time class="dt-updated" datetime="2016-02-04">4 February 2016</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -756,13 +756,23 @@ be performant.)</p>
       
     
      
+    
+     <tr>
+      
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="_webkit_user_select" type="property">-webkit-user-select<a class="self-link" href="#_webkit_user_select"></a></dfn></code>
+      
+      
+      <td><code>(-prefix-)<a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-ui-4/#propdef-user-select">user-select</a></code>
+      
+    
+     
   
 </table>
 
 
    <p><br></p>
 
-   <div class="note" role="note"> As soon as https://drafts.csswg.org/css-size-adjust/#text-size-adjust is unprefixable it can be defined as a "simple" alias.</div>
+   <div class="note" role="note">As soon as each property is unprefixable it can be defined as a "simple" alias.</div>
 
 
    <h4 class="heading settled" data-level="3.4.3" id="css-property-mappings"><span class="secno">3.4.3. </span><span class="content">Property mappings</span><a class="self-link" href="#css-property-mappings"></a></h4>
@@ -868,6 +878,9 @@ be performant.)</p>
 
 
    <h3 class="heading settled" data-level="4.1" id="webkitcssmatrix-interface"><span class="secno">4.1. </span><span class="content">The <code class="idl"><a data-link-type="idl" href="#webkitcssmatrix">WebKitCSSMatrix</a></code> interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
+
+
+   <div class="warning">The WebKitCSSMatrix interface has been moved to the DOM Geometry specification. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>. Implementers should refer to that. This will be removed in the future.</div>
 
 
 
@@ -1427,6 +1440,7 @@ neighboring rights to this work.</p>
    <li><a href="#_webkit_transition_duration">-webkit-transition-duration</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_transition_property">-webkit-transition-property</a><span>, in §3.4.1</span>
    <li><a href="#_webkit_transition_timing_function">-webkit-transition-timing-function</a><span>, in §3.4.1</span>
+   <li><a href="#_webkit_user_select">-webkit-user-select</a><span>, in §3.4.2</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-x">x</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-y">y</a><span>, in §4.1</span>
    <li><a href="#dom-webkitcssmatrix-rotateaxisangle-x-y-z-angle-z">z</a><span>, in §4.1</span></ul>
@@ -1515,6 +1529,10 @@ neighboring rights to this work.</p>
    <li><a data-link-type="biblio" href="#biblio-css-ui-3">[css-ui-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-ui-3/#propdef-box-sizing">box-sizing</a>
+    </ul>
+   <li><a data-link-type="biblio" href="#biblio-css-ui-4">[css-ui-4]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-ui-4/#propdef-user-select">user-select</a>
     </ul>
    <li><a data-link-type="biblio" href="#biblio-css-values-3">[css-values]</a> defines the following terms:
     <ul>
@@ -1626,6 +1644,8 @@ neighboring rights to this work.</p>
    <dd>CSS Transitions Module Level 1 URL: <a href="https://drafts.csswg.org/css-transitions-1/">https://drafts.csswg.org/css-transitions-1/</a>
    <dt id="biblio-css-ui-3"><a class="self-link" href="#biblio-css-ui-3"></a>[CSS-UI-3]
    <dd>Tantek Çelik; Florian Rivoal. <a href="http://dev.w3.org/csswg/css-ui/">CSS Basic User Interface Module Level 3 (CSS3 UI)</a>. 7 July 2015. CR. URL: <a href="http://dev.w3.org/csswg/css-ui/">http://dev.w3.org/csswg/css-ui/</a>
+   <dt id="biblio-css-ui-4"><a class="self-link" href="#biblio-css-ui-4"></a>[CSS-UI-4]
+   <dd>CSS Basic User Interface Module Level 4 URL: <a href="https://drafts.csswg.org/css-ui-4/">https://drafts.csswg.org/css-ui-4/</a>
    <dt id="biblio-css-values"><a class="self-link" href="#biblio-css-values"></a>[CSS-VALUES]
    <dd>Tab Atkins Jr.; Elika Etemad. <a href="http://dev.w3.org/csswg/css-values/">CSS Values and Units Module Level 3</a>. 11 June 2015. CR. URL: <a href="http://dev.w3.org/csswg/css-values/">http://dev.w3.org/csswg/css-values/</a>
    <dt id="biblio-css3-images-20110217"><a class="self-link" href="#biblio-css3-images-20110217"></a>[CSS3-IMAGES-20110217]
