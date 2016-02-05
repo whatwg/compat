@@ -455,10 +455,6 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'mask-size'</code></td>
     </tr>
     <tr>
-      <td><code><dfn type=property>-webkit-mask-source-type</dfn></code></td>
-      <td><code>'mask-type'</code></td>
-    </tr>
-    <tr>
       <td><code><dfn type=property>-webkit-perspective</dfn></code></td>
       <td><code>'perspective'</code></td>
     </tr>
