@@ -644,6 +644,8 @@ Thanks to Alan Cutter, Chris Rebert, Daniel Holbert, hexalys, Jacob Rossi, Phili
 
 Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface. [[!screen-orientation]]
 
+Special thanks to Apple and the WebKit.org blog authors for providing initial descriptions of much of the content defined in this specification.
+
 This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
 (<a href="https://www.mozilla.org/">Mozilla</a>,
