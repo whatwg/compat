@@ -6,6 +6,64 @@
   <link href="https://resources.whatwg.org/bikeshed.css" rel="stylesheet">
   <link href="https://resources.whatwg.org/logo-compat.svg" rel="icon">
   <meta content="Bikeshed 1.0.0" name="generator">
+<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #ffffff; }
+.highlight .c { color: #708090 } /* Comment */
+.highlight .k { color: #990055 } /* Keyword */
+.highlight .l { color: #000000 } /* Literal */
+.highlight .n { color: #0077aa } /* Name */
+.highlight .o { color: #999999 } /* Operator */
+.highlight .p { color: #999999 } /* Punctuation */
+.highlight .cm { color: #708090 } /* Comment.Multiline */
+.highlight .cp { color: #708090 } /* Comment.Preproc */
+.highlight .c1 { color: #708090 } /* Comment.Single */
+.highlight .cs { color: #708090 } /* Comment.Special */
+.highlight .kc { color: #990055 } /* Keyword.Constant */
+.highlight .kd { color: #990055 } /* Keyword.Declaration */
+.highlight .kn { color: #990055 } /* Keyword.Namespace */
+.highlight .kp { color: #990055 } /* Keyword.Pseudo */
+.highlight .kr { color: #990055 } /* Keyword.Reserved */
+.highlight .kt { color: #990055 } /* Keyword.Type */
+.highlight .ld { color: #000000 } /* Literal.Date */
+.highlight .m { color: #000000 } /* Literal.Number */
+.highlight .s { color: #a67f59 } /* Literal.String */
+.highlight .na { color: #0077aa } /* Name.Attribute */
+.highlight .nc { color: #0077aa } /* Name.Class */
+.highlight .no { color: #0077aa } /* Name.Constant */
+.highlight .nd { color: #0077aa } /* Name.Decorator */
+.highlight .ni { color: #0077aa } /* Name.Entity */
+.highlight .ne { color: #0077aa } /* Name.Exception */
+.highlight .nf { color: #0077aa } /* Name.Function */
+.highlight .nl { color: #0077aa } /* Name.Label */
+.highlight .nn { color: #0077aa } /* Name.Namespace */
+.highlight .py { color: #0077aa } /* Name.Property */
+.highlight .nt { color: #669900 } /* Name.Tag */
+.highlight .nv { color: #0077aa } /* Name.Variable */
+.highlight .ow { color: #999999 } /* Operator.Word */
+.highlight .mb { color: #000000 } /* Literal.Number.Bin */
+.highlight .mf { color: #000000 } /* Literal.Number.Float */
+.highlight .mh { color: #000000 } /* Literal.Number.Hex */
+.highlight .mi { color: #000000 } /* Literal.Number.Integer */
+.highlight .mo { color: #000000 } /* Literal.Number.Oct */
+.highlight .sb { color: #a67f59 } /* Literal.String.Backtick */
+.highlight .sc { color: #a67f59 } /* Literal.String.Char */
+.highlight .sd { color: #a67f59 } /* Literal.String.Doc */
+.highlight .s2 { color: #a67f59 } /* Literal.String.Double */
+.highlight .se { color: #a67f59 } /* Literal.String.Escape */
+.highlight .sh { color: #a67f59 } /* Literal.String.Heredoc */
+.highlight .si { color: #a67f59 } /* Literal.String.Interpol */
+.highlight .sx { color: #a67f59 } /* Literal.String.Other */
+.highlight .sr { color: #a67f59 } /* Literal.String.Regex */
+.highlight .s1 { color: #a67f59 } /* Literal.String.Single */
+.highlight .ss { color: #a67f59 } /* Literal.String.Symbol */
+.highlight .vc { color: #0077aa } /* Name.Variable.Class */
+.highlight .vg { color: #0077aa } /* Name.Variable.Global */
+.highlight .vi { color: #0077aa } /* Name.Variable.Instance */
+.highlight .il { color: #000000 } /* Literal.Number.Integer.Long */
+        .highlight { background: hsl(24, 20%, 95%); }
+        code.highlight { padding: .1em; border-radius: .3em; }
+        pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+        </style>
  </head>
  <body class="h-entry status-LS">
   <div class="head">
@@ -61,6 +119,7 @@
         <li><a href="#css-prefixed-aliases"><span class="secno">3.4.2</span> <span class="content">Prefixed property aliases</span></a>
         <li><a href="#css-property-mappings"><span class="secno">3.4.3</span> <span class="content">Property mappings</span></a>
         <li><a href="#css-keyword-mappings"><span class="secno">3.4.4</span> <span class="content">Keyword mappings</span></a>
+        <li><a href="#the-webkit-background-clip-property"><span class="secno">3.4.5</span> <span class="content">Foreground Text Clipping: the <code> <span class="property">-webkit-background-clip</span></code> property</span></a>
        </ol>
      </ol>
     <li>
@@ -233,7 +292,7 @@ be performant.)</p>
       <td><code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-1/#propdef-backface-visibility">backface-visibility</a></code>
      <tr>
       <td>
-       <code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-background-clip" type="property">-webkit-background-clip<a class="self-link" href="#-webkit-background-clip"></a></dfn></code> 
+       <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> 
        <p class="XXX"> See <a href="https://github.com/whatwg/compat/issues/26">issue #26</a> for speccing <code>text</code> value. </p>
       <td><code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a></code> 
      <tr>
@@ -373,6 +432,50 @@ be performant.)</p>
       <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-box" type="property">-webkit-box<a class="self-link" href="#-webkit-box"></a></dfn></code>
       <td><code><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-display-3/#valdef-display-flex">flex</a></code>
    </table>
+   <h4 class="heading settled" data-level="3.4.5" id="the-webkit-background-clip-property"><span class="secno">3.4.5. </span><span class="content">Foreground Text Clipping: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property</span><a class="self-link" href="#the-webkit-background-clip-property"></a></h4>
+   <table class="def propdef" data-link-for-hint="-webkit-background-clip">
+    <tbody>
+     <tr>
+      <th>Name:
+      <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-background-clip">-webkit-background-clip<a class="self-link" href="#propdef--webkit-background-clip"></a></dfn>
+     <tr class="value">
+      <th>Value:
+      <td class="prod">text
+     <tr>
+      <th>Initial:
+      <td>none
+     <tr>
+      <th>Applies to:
+      <td>all elements (Maybe? See <a href="https://github.com/whatwg/compat/issues/39">Issue #39</a>)
+     <tr>
+      <th>Inherited:
+      <td>yes
+     <tr>
+      <th>Percentages:
+      <td>N/A
+     <tr>
+      <th>Media:
+      <td>visual
+     <tr>
+      <th>Computed value:
+      <td>"text"
+     <tr>
+      <th>Animatable:
+      <td>no
+   </table>
+   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) is applied as a mask to clip background drawing for the box.</p>
+   <div class="example" id="example-2372b7f3">
+    <a class="self-link" href="#example-2372b7f3"></a> Here’s an example showing how to use <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a>: text</code> together with <code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect. 
+<pre class="lang-css highlight"><span class="nt">p </span><span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">90</span><span class="l">deg</span><span class="p">,</span> red<span class="p">,</span> blue<span class="p">);</span>
+  <span class="k">-webkit-background-clip</span><span class="p">:</span> text<span class="p">;</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> transparent<span class="p">;</span>
+<span class="p">}</span></pre>
+   </div>
+   <dl>
+    <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-text">text<a class="self-link" href="#valdef--webkit-background-clip-text"></a></dfn> 
+    <dd>Indicates that the background image should clip to the foreground text 
+   </dl>
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="webkitcssmatrix-interface"><span class="secno">4.1. </span><span class="content">The WebKitCSSMatrix interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
    <div class="note" role="note"><a data-link-type="dfn" href="https://drafts.fxtf.org/geometry/#webkitcssmatrix">WebKitCSSMatrix</a> is now defined by the DOM Geometry specification. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>.</div>
@@ -445,6 +548,7 @@ neighboring rights to this work.</p>
     </ul>
    <li><a href="#dom-window-orientation">orientation</a><span>, in §4.2</span>
    <li><a href="#event-orientationchange">orientationchange</a><span>, in §4.2</span>
+   <li><a href="#valdef--webkit-background-clip-text">text</a><span>, in §3.4.5</span>
    <li><a href="#-webkit-animation">-webkit-animation</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-animation-delay">-webkit-animation-delay</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-animation-direction">-webkit-animation-direction</a><span>, in §3.4.1</span>
@@ -455,7 +559,7 @@ neighboring rights to this work.</p>
    <li><a href="#-webkit-animation-play-state">-webkit-animation-play-state</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-animation-timing-function">-webkit-animation-timing-function</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-backface-visibility">-webkit-backface-visibility</a><span>, in §3.4.1</span>
-   <li><a href="#-webkit-background-clip">-webkit-background-clip</a><span>, in §3.4.1</span>
+   <li><a href="#propdef--webkit-background-clip">-webkit-background-clip</a><span>, in §3.4.5</span>
    <li><a href="#-webkit-background-origin">-webkit-background-origin</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-background-size">-webkit-background-size</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-border-bottom-left-radius">-webkit-border-bottom-left-radius</a><span>, in §3.4.1</span>
@@ -709,7 +813,32 @@ neighboring rights to this work.</p>
    <dd>Mounir Lamouri; Marcos Caceres. <a href="https://w3c.github.io/screen-orientation/">The Screen Orientation API</a>. 15 December 2015. WD. URL: <a href="https://w3c.github.io/screen-orientation/">https://w3c.github.io/screen-orientation/</a>
   </dl>
   <h2 class="no-num heading settled" id="property-index"><span class="content">Property Index</span><a class="self-link" href="#property-index"></a></h2>
-  <p>No properties defined.</p>
+  <div class="big-element-wrapper">
+   <table class="index">
+    <thead>
+     <tr>
+      <th scope="col">Name
+      <th scope="col">Value
+      <th scope="col">Initial
+      <th scope="col">Applies to
+      <th scope="col">Inh.
+      <th scope="col">%ages
+      <th scope="col">Media
+      <th scope="col">Ani­mat­able
+      <th scope="col">Com­puted value
+    <tbody>
+     <tr>
+      <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-background-clip">-webkit-background-clip</a>
+      <td>text
+      <td>none
+      <td>all elements (Maybe? See Issue #39)
+      <td>yes
+      <td>N/A
+      <td>visual
+      <td>no
+      <td>"text"
+   </table>
+  </div>
   <h3 class="no-num heading settled" id="media-descriptor-table"><span class="content"><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a> Descriptors</span><a class="self-link" href="#media-descriptor-table"></a></h3>
   <div class="big-element-wrapper">
    <table class="index">

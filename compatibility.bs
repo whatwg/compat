@@ -326,7 +326,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'backface-visibility'</code></td>
     </tr>
     <tr>
-      <td><code><dfn type=property>-webkit-background-clip</dfn></code>
+      <td><code>'-webkit-background-clip'</code>
       <p class="XXX">
         See <a href="https://github.com/whatwg/compat/issues/26">issue #26</a> for speccing <code>text</code> value.
       </p>
@@ -526,6 +526,40 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
     </tr>
   </tbody>
 </table>
+
+<h4 id="the-webkit-background-clip-property">Foreground Text Clipping: the <code>
+'-webkit-background-clip'</code> property</h4>
+
+<pre class='propdef'>
+Name: -webkit-background-clip
+Value: text
+Initial: none
+Applies to: all elements (Maybe? See <a href="https://github.com/whatwg/compat/issues/39">Issue #39</a>)
+Inherited: yes
+Computed value: "text"
+Percentages: N/A
+Media: visual
+Animatable: no
+</pre>
+
+The <code>'-webkit-background-clip'</code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) is applied as a mask to clip background drawing for the box.
+
+<div class="example">
+Here's an example showing how to use <code>'-webkit-background-clip': text</code> together with
+<code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect.
+<pre class="lang-css">
+p {
+  background: linear-gradient(90deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</pre>
+</div>
+
+<dl>
+  <dt><dfn value for='-webkit-background-clip'>text</dfn>
+  <dd>Indicates that the background image should clip to the foreground text
+</dl>
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 
