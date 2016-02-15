@@ -465,13 +465,15 @@ be performant.)</p>
       <td>no
    </table>
    <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) is applied as a mask to clip background drawing for the box.</p>
-   <div class="example" id="example-2372b7f3">
-    <a class="self-link" href="#example-2372b7f3"></a> Here’s an example showing how to use <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a>: text</code> together with <code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect. 
+   <div class="example" id="example-f30f2a17">
+    <a class="self-link" href="#example-f30f2a17"></a> Here’s an example showing how to use <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a>: text</code> together with <code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect. 
 <pre class="lang-css highlight"><span class="nt">p </span><span class="p">{</span>
   <span class="k">background</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">90</span><span class="l">deg</span><span class="p">,</span> red<span class="p">,</span> blue<span class="p">);</span>
+  <span class="k">color</span><span class="p">:</span> #fff<span class="p">;</span>
   <span class="k">-webkit-background-clip</span><span class="p">:</span> text<span class="p">;</span>
   <span class="k">-webkit-text-fill-color</span><span class="p">:</span> transparent<span class="p">;</span>
 <span class="p">}</span></pre>
+    <p>Browsers that don’t support <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> or <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will use the <code>color</code> declaration as a fallback color.</p>
    </div>
    <dl>
     <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-text">text<a class="self-link" href="#valdef--webkit-background-clip-text"></a></dfn> 

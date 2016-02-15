@@ -553,10 +553,12 @@ Here's an example showing how to use <code>'-webkit-background-clip': text</code
 <pre class="lang-css">
 p {
   background: linear-gradient(90deg, red, blue);
+  color: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 </pre>
+Browsers that don't support <code>'-webkit-background-clip'</code> or <code>'-webkit-text-fill-color'</code> will use the <code>color</code> declaration as a fallback color.
 </div>
 
 <dl>
