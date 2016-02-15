@@ -447,7 +447,7 @@ be performant.)</p>
       <td>none
      <tr>
       <th>Applies to:
-      <td>all elements (Maybe? See <a href="https://github.com/whatwg/compat/issues/39">Issue #39</a>)
+      <td>all elements
      <tr>
       <th>Inherited:
       <td>yes
@@ -465,6 +465,12 @@ be performant.)</p>
       <td>no
    </table>
    <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) is applied as a mask to clip background drawing for the box.</p>
+   <div class="note" role="note"> Note that the root element has a different background painting area, and thus the <a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a> property has no effect when specified on it. See <a data-link-type="dfn" href="https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds">the backgrounds of special elements</a>. </div>
+   <dl>
+    <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-text">text<a class="self-link" href="#valdef--webkit-background-clip-text"></a></dfn> 
+    <dd>Indicates that the background image should clip to the foreground text 
+   </dl>
+   <br> 
    <div class="example" id="example-f30f2a17">
     <a class="self-link" href="#example-f30f2a17"></a> Here’s an example showing how to use <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a>: text</code> together with <code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect. 
 <pre class="lang-css highlight"><span class="nt">p </span><span class="p">{</span>
@@ -475,10 +481,6 @@ be performant.)</p>
 <span class="p">}</span></pre>
     <p>Browsers that don’t support <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> or <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will use the <code>color</code> declaration as a fallback color.</p>
    </div>
-   <dl>
-    <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-text">text<a class="self-link" href="#valdef--webkit-background-clip-text"></a></dfn> 
-    <dd>Indicates that the background image should clip to the foreground text 
-   </dl>
    <h4 class="heading settled" data-level="3.4.6" id="the-webkit-text-fill-color"><span class="secno">3.4.6. </span><span class="content">Foreground Color: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> property</span><a class="self-link" href="#the-webkit-text-fill-color"></a></h4>
    <table class="def propdef" data-link-for-hint="-webkit-text-fill-color">
     <tbody>
@@ -888,7 +890,7 @@ neighboring rights to this work.</p>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-background-clip">-webkit-background-clip</a>
       <td>text
       <td>none
-      <td>all elements (Maybe? See Issue #39)
+      <td>all elements
       <td>yes
       <td>N/A
       <td>visual

@@ -87,6 +87,9 @@ urlPrefix: https://encoding.spec.whatwg.org/
 urlPrefix: https://drafts.csswg.org/css-cascade-3/
   type: dfn
     text: important; url: #important
+urlPrefix: https://drafts.csswg.org/css-backgrounds-3/
+  type: dfn
+    text: the backgrounds of special elements;url: #special-backgrounds
 </pre>
 
 <pre class=link-defaults>
@@ -537,7 +540,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
 Name: -webkit-background-clip
 Value: text
 Initial: none
-Applies to: all elements (Maybe? See <a href="https://github.com/whatwg/compat/issues/39">Issue #39</a>)
+Applies to: all elements
 Inherited: yes
 Computed value: "text"
 Percentages: N/A
@@ -546,6 +549,15 @@ Animatable: no
 </pre>
 
 The <code>'-webkit-background-clip'</code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) is applied as a mask to clip background drawing for the box.
+
+<div class="note">
+Note that the root element has a different background painting area, and thus the '-webkit-background-clip' property has no effect when specified on it. See <a>the backgrounds of special elements</a>.
+</div>
+
+<dl>
+  <dt><dfn value for='-webkit-background-clip'>text</dfn>
+  <dd>Indicates that the background image should clip to the foreground text
+</dl><br>
 
 <div class="example">
 Here's an example showing how to use <code>'-webkit-background-clip': text</code> together with
@@ -560,11 +572,6 @@ p {
 </pre>
 Browsers that don't support <code>'-webkit-background-clip'</code> or <code>'-webkit-text-fill-color'</code> will use the <code>color</code> declaration as a fallback color.
 </div>
-
-<dl>
-  <dt><dfn value for='-webkit-background-clip'>text</dfn>
-  <dd>Indicates that the background image should clip to the foreground text
-</dl>
 
 <h4 id="the-webkit-text-fill-color">Foreground Color: the <code>
 '-webkit-text-fill-color'</code> property</h4>
