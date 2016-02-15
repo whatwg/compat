@@ -69,7 +69,7 @@
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-compat.svg"> </a> </p>
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-02-10">10 February 2016</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-02-15">15 February 2016</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -120,6 +120,7 @@
         <li><a href="#css-property-mappings"><span class="secno">3.4.3</span> <span class="content">Property mappings</span></a>
         <li><a href="#css-keyword-mappings"><span class="secno">3.4.4</span> <span class="content">Keyword mappings</span></a>
         <li><a href="#the-webkit-background-clip-property"><span class="secno">3.4.5</span> <span class="content">Foreground Text Clipping: the <code> <span class="property">-webkit-background-clip</span></code> property</span></a>
+        <li><a href="#the-webkit-text-fill-color"><span class="secno">3.4.6</span> <span class="content">Foreground Color: the <code> <span class="property">-webkit-text-fill-color</span></code> property</span></a>
        </ol>
      </ol>
     <li>
@@ -476,6 +477,53 @@ be performant.)</p>
     <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-text">text<a class="self-link" href="#valdef--webkit-background-clip-text"></a></dfn> 
     <dd>Indicates that the background image should clip to the foreground text 
    </dl>
+   <h4 class="heading settled" data-level="3.4.6" id="the-webkit-text-fill-color"><span class="secno">3.4.6. </span><span class="content">Foreground Color: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> property</span><a class="self-link" href="#the-webkit-text-fill-color"></a></h4>
+   <table class="def propdef" data-link-for-hint="-webkit-text-fill-color">
+    <tbody>
+     <tr>
+      <th>Name:
+      <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-fill-color">-webkit-text-fill-color<a class="self-link" href="#propdef--webkit-text-fill-color"></a></dfn>
+     <tr class="value">
+      <th>Value:
+      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
+     <tr>
+      <th>Initial:
+      <td>none
+     <tr>
+      <th>Applies to:
+      <td>all elements
+     <tr>
+      <th>Inherited:
+      <td>yes
+     <tr>
+      <th>Percentages:
+      <td>N/A
+     <tr>
+      <th>Media:
+      <td>visual
+     <tr>
+      <th>Computed value:
+      <td>an RGBA color
+     <tr>
+      <th>Animatable:
+      <td>yes
+   </table>
+   <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a> property defines the foreground fill color of an element’s text
+content. It must be treated as an alias of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-color-3/#color0">color</a> property whose declarations are always <a data-link-type="dfn" href="https://drafts.csswg.org/css-cascade-3/#important">important</a>.</p>
+   <div class="example" id="example-c73dbf88">
+    <a class="self-link" href="#example-c73dbf88"></a> Here’s an example showing how <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will always determine the foreground fill color of an element’s text. 
+<pre class="lang-css highlight"><span class="nt">.one </span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> red<span class="p">;</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> blue<span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">.two </span><span class="p">{</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> green<span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> red<span class="p">;</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> blue<span class="p">;</span>
+<span class="p">}</span></pre>
+    <p>Elements with the <code>one</code> or <code>two</code> classes will have blue text.</p>
+   </div>
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="webkitcssmatrix-interface"><span class="secno">4.1. </span><span class="content">The WebKitCSSMatrix interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
    <div class="note" role="note"><a data-link-type="dfn" href="https://drafts.fxtf.org/geometry/#webkitcssmatrix">WebKitCSSMatrix</a> is now defined by the DOM Geometry specification. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>.</div>
@@ -593,6 +641,7 @@ neighboring rights to this work.</p>
    <li><a href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a><span>, in §3.3.2</span>
    <li><a href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a><span>, in §3.3.3</span>
    <li><a href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.3.4</span>
+   <li><a href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a><span>, in §3.4.6</span>
    <li><a href="#-webkit-text-size-adjust">-webkit-text-size-adjust</a><span>, in §3.4.2</span>
    <li><a href="#-webkit-transform">-webkit-transform</a><span>, in §3.4.1</span>
    <li><a href="#descdef-media--webkit-transform-3d">-webkit-transform-3d</a><span>, in §3.2.2</span>
@@ -658,6 +707,12 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#border-radius">border-radius</a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#border-top-right-radius">border-top-right-radius</a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#box-shadow">box-shadow</a>
+    </ul>
+   <li>
+    <a data-link-type="biblio" href="#biblio-css-color-3">[css-color-3]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-color-3/#valuea-def-color">&lt;color></a>
+     <li><a href="https://drafts.csswg.org/css-color-3/#color0">color</a>
     </ul>
    <li>
     <a data-link-type="biblio" href="#biblio-css-conditional-3">[css-conditional-3]</a> defines the following terms:
@@ -777,6 +832,8 @@ neighboring rights to this work.</p>
    <dd>CSS Animations Module Level 1 URL: <a href="https://drafts.csswg.org/css-animations-1/">https://drafts.csswg.org/css-animations-1/</a>
    <dt id="biblio-css-backgrounds-3"><a class="self-link" href="#biblio-css-backgrounds-3"></a>[CSS-BACKGROUNDS-3]
    <dd>CSS Backgrounds and Borders Module Level 3 URL: <a href="https://drafts.csswg.org/css-backgrounds-3/">https://drafts.csswg.org/css-backgrounds-3/</a>
+   <dt id="biblio-css-color-3"><a class="self-link" href="#biblio-css-color-3"></a>[CSS-COLOR-3]
+   <dd>CSS Color Module Level 3 URL: <a href="https://drafts.csswg.org/css-color-3/">https://drafts.csswg.org/css-color-3/</a>
    <dt id="biblio-css-conditional-3"><a class="self-link" href="#biblio-css-conditional-3"></a>[CSS-CONDITIONAL-3]
    <dd>CSS Conditional Rules Module Level 3 URL: <a href="https://drafts.csswg.org/css-conditional-3/">https://drafts.csswg.org/css-conditional-3/</a>
    <dt id="biblio-css-display-3"><a class="self-link" href="#biblio-css-display-3"></a>[CSS-DISPLAY-3]
@@ -835,6 +892,16 @@ neighboring rights to this work.</p>
       <td>visual
       <td>no
       <td>"text"
+     <tr>
+      <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a>
+      <td>&lt;color>
+      <td>none
+      <td>all elements
+      <td>yes
+      <td>N/A
+      <td>visual
+      <td>yes
+      <td>an RGBA color
    </table>
   </div>
   <h3 class="no-num heading settled" id="media-descriptor-table"><span class="content"><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a> Descriptors</span><a class="self-link" href="#media-descriptor-table"></a></h3>

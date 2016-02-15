@@ -84,6 +84,9 @@ urlPrefix: https://www.w3.org/TR/css3-values/
 urlPrefix: https://encoding.spec.whatwg.org/
   type: dfn
     text: whitespace; url: #ascii-whitespace
+urlPrefix: https://drafts.csswg.org/css-cascade-3/
+  type: dfn
+    text: important; url: #important
 </pre>
 
 <pre class=link-defaults>
@@ -560,6 +563,42 @@ p {
   <dt><dfn value for='-webkit-background-clip'>text</dfn>
   <dd>Indicates that the background image should clip to the foreground text
 </dl>
+
+<h4 id="the-webkit-text-fill-color">Foreground Color: the <code>
+'-webkit-text-fill-color'</code> property</h4>
+
+<pre class='propdef'>
+Name: -webkit-text-fill-color
+Value: <<color>>
+Initial: none
+Applies to: all elements
+Inherited: yes
+Computed value: an RGBA color
+Percentages: N/A
+Media: visual
+Animatable: yes
+</pre>
+
+The '-webkit-text-fill-color' property defines the foreground fill color of an element's text
+content. It must be treated as an alias of the 'color' property whose declarations are always <a>important</a>.
+
+<div class="example">
+Here's an example showing how <code>'-webkit-text-fill-color'</code> will always determine the foreground fill color of an element's text.
+<pre class="lang-css">
+.one {
+  color: red;
+  -webkit-text-fill-color: blue;
+}
+
+.two {
+  -webkit-text-fill-color: green;
+  color: red;
+  -webkit-text-fill-color: blue;
+}
+</pre>
+
+Elements with the <code>one</code> or <code>two</code> classes will have blue text.
+</div>
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 
