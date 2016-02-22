@@ -579,7 +579,7 @@ Browsers that don't support <code>'-webkit-background-clip'</code> or <code>'-we
 <pre class='propdef'>
 Name: -webkit-text-fill-color
 Value: <<color>>
-Initial: none
+Initial: ''currentcolor''
 Applies to: all elements
 Inherited: yes
 Computed value: an RGBA color

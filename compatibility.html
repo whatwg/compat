@@ -1,6 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <title>Compatibility Standard</title>
   <link href="https://resources.whatwg.org/standard.css" rel="stylesheet">
   <link href="https://resources.whatwg.org/bikeshed.css" rel="stylesheet">
@@ -64,12 +65,11 @@
         code.highlight { padding: .1em; border-radius: .3em; }
         pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
         </style>
- </head>
  <body class="h-entry status-LS">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-compat.svg"> </a> </p>
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-02-15">15 February 2016</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-02-22">22 February 2016</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -492,7 +492,7 @@ be performant.)</p>
       <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
      <tr>
       <th>Initial:
-      <td>none
+      <td><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a>
      <tr>
       <th>Applies to:
       <td>all elements
@@ -719,6 +719,11 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-color-3/#color0">color</a>
     </ul>
    <li>
+    <a data-link-type="biblio" href="#biblio-css-color-4">[css-color-4]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a>
+    </ul>
+   <li>
     <a data-link-type="biblio" href="#biblio-css-conditional-3">[css-conditional-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a>
@@ -838,6 +843,8 @@ neighboring rights to this work.</p>
    <dd>CSS Backgrounds and Borders Module Level 3 URL: <a href="https://drafts.csswg.org/css-backgrounds-3/">https://drafts.csswg.org/css-backgrounds-3/</a>
    <dt id="biblio-css-color-3"><a class="self-link" href="#biblio-css-color-3"></a>[CSS-COLOR-3]
    <dd>CSS Color Module Level 3 URL: <a href="https://drafts.csswg.org/css-color-3/">https://drafts.csswg.org/css-color-3/</a>
+   <dt id="biblio-css-color-4"><a class="self-link" href="#biblio-css-color-4"></a>[CSS-COLOR-4]
+   <dd>CSS Color Module Level 4 URL: <a href="https://drafts.csswg.org/css-color-4/">https://drafts.csswg.org/css-color-4/</a>
    <dt id="biblio-css-conditional-3"><a class="self-link" href="#biblio-css-conditional-3"></a>[CSS-CONDITIONAL-3]
    <dd>CSS Conditional Rules Module Level 3 URL: <a href="https://drafts.csswg.org/css-conditional-3/">https://drafts.csswg.org/css-conditional-3/</a>
    <dt id="biblio-css-display-3"><a class="self-link" href="#biblio-css-display-3"></a>[CSS-DISPLAY-3]
@@ -899,7 +906,7 @@ neighboring rights to this work.</p>
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a>
       <td>&lt;color>
-      <td>none
+      <td>currentcolor
       <td>all elements
       <td>yes
       <td>N/A
@@ -944,5 +951,3 @@ partial interface <a class="idl-code" data-link-type="interface" href="https://h
 };
 
 </pre>
- </body>
-</html>
