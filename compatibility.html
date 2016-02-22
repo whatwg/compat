@@ -514,19 +514,19 @@ be performant.)</p>
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a> property defines the foreground fill color of an element’s text
 content.</p>
-   <div class="example" id="example-b2fc74a5">
-    <a class="self-link" href="#example-b2fc74a5"></a> Here’s an example showing <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will always determine the
+   <div class="example" id="example-b315811f">
+    <a class="self-link" href="#example-b315811f"></a> Here’s an example showing <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will always determine the
 foreground fill color of an element’s text. 
 <pre class="lang-css highlight"><span class="nt">.one </span><span class="p">{</span>
   <span class="k">color</span><span class="p">:</span> blue<span class="p">;</span>
-  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> red<span class="p">;</span>
-  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> currentcolor<span class="p">;</span>
-<span class="p">}</span>
+  <span class="p">/</span>* the following can be omitted because it’s the initial value:
+  -webkit-text-fill-color: currentcolor; */
+}
 
-<span class="nt">.two </span><span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> red<span class="p">;</span>
-  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> blue<span class="p">;</span>
-<span class="p">}</span></pre>
+.two {
+  color: red;
+  -webkit-text-fill-color: blue;
+}</pre>
     <p>Elements with the <code>one</code> or <code>two</code> classes will have blue text.</p>
    </div>
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>

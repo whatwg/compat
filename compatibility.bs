@@ -597,8 +597,8 @@ foreground fill color of an element's text.
 <pre class="lang-css">
 .one {
   color: blue;
-  -webkit-text-fill-color: red;
-  -webkit-text-fill-color: currentcolor;
+  /* the following can be omitted because it's the initial value:
+  -webkit-text-fill-color: currentcolor; */
 }
 
 .two {
