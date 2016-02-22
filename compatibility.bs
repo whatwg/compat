@@ -578,7 +578,7 @@ Browsers that don't support <code>'-webkit-background-clip'</code> or <code>'-we
 
 <pre class='propdef'>
 Name: -webkit-text-fill-color
-Value: <<color>>
+Value: ''currentcolor'' | <<color>>
 Initial: ''currentcolor''
 Applies to: all elements
 Inherited: yes
@@ -589,18 +589,19 @@ Animatable: yes
 </pre>
 
 The '-webkit-text-fill-color' property defines the foreground fill color of an element's text
-content. It must be treated as an alias of the 'color' property whose declarations are always <a>important</a>.
+content.
 
 <div class="example">
-Here's an example showing how <code>'-webkit-text-fill-color'</code> will always determine the foreground fill color of an element's text.
+Here's an example showing <code>'-webkit-text-fill-color'</code> will always determine the
+foreground fill color of an element's text.
 <pre class="lang-css">
 .one {
-  color: red;
-  -webkit-text-fill-color: blue;
+  color: blue;
+  -webkit-text-fill-color: red;
+  -webkit-text-fill-color: currentcolor;
 }
 
 .two {
-  -webkit-text-fill-color: green;
   color: red;
   -webkit-text-fill-color: blue;
 }

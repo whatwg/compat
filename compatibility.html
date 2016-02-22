@@ -489,7 +489,7 @@ be performant.)</p>
       <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-fill-color">-webkit-text-fill-color<a class="self-link" href="#propdef--webkit-text-fill-color"></a></dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
+      <td class="prod"><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
      <tr>
       <th>Initial:
       <td><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a>
@@ -513,16 +513,17 @@ be performant.)</p>
       <td>yes
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a> property defines the foreground fill color of an element’s text
-content. It must be treated as an alias of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-color-3/#color0">color</a> property whose declarations are always <a data-link-type="dfn" href="https://drafts.csswg.org/css-cascade-3/#important">important</a>.</p>
-   <div class="example" id="example-c73dbf88">
-    <a class="self-link" href="#example-c73dbf88"></a> Here’s an example showing how <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will always determine the foreground fill color of an element’s text. 
+content.</p>
+   <div class="example" id="example-b2fc74a5">
+    <a class="self-link" href="#example-b2fc74a5"></a> Here’s an example showing <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will always determine the
+foreground fill color of an element’s text. 
 <pre class="lang-css highlight"><span class="nt">.one </span><span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> red<span class="p">;</span>
-  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> blue<span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> blue<span class="p">;</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> red<span class="p">;</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> currentcolor<span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">.two </span><span class="p">{</span>
-  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> green<span class="p">;</span>
   <span class="k">color</span><span class="p">:</span> red<span class="p">;</span>
   <span class="k">-webkit-text-fill-color</span><span class="p">:</span> blue<span class="p">;</span>
 <span class="p">}</span></pre>
@@ -716,7 +717,6 @@ neighboring rights to this work.</p>
     <a data-link-type="biblio" href="#biblio-css-color-3">[css-color-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-color-3/#valuea-def-color">&lt;color></a>
-     <li><a href="https://drafts.csswg.org/css-color-3/#color0">color</a>
     </ul>
    <li>
     <a data-link-type="biblio" href="#biblio-css-color-4">[css-color-4]</a> defines the following terms:
@@ -790,6 +790,7 @@ neighboring rights to this work.</p>
     <ul>
      <li><a href="https://drafts.csswg.org/css-values-3/#number-value">&lt;number></a>
      <li><a href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a>
+     <li><a href="https://drafts.csswg.org/css-values-3/#comb-one">|</a>
     </ul>
    <li>
     <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a> defines the following terms:
@@ -905,7 +906,7 @@ neighboring rights to this work.</p>
       <td>"text"
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a>
-      <td>&lt;color>
+      <td>currentcolor | &lt;color>
       <td>currentcolor
       <td>all elements
       <td>yes
