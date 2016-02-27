@@ -688,7 +688,7 @@ properties to achieve white text with a black stroked text effect.
 The element <pre>&ltp class="stroked-text-longhand"&gt;Serious typography&lt;/p&gt;</pre> would be
 rendered as follows:
 
-<img style="width: 381px;height: 116px;" src="images/stroked-text.png" alt="image of stroked text">
+<img style="width: 381px;height: 116px;" src="https://miketaylr.com/post/stroked-text.png" alt="image of stroked text">
 </div>
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
