@@ -90,6 +90,9 @@ urlPrefix: https://drafts.csswg.org/css-cascade-3/
 urlPrefix: https://drafts.csswg.org/css-backgrounds-3/
   type: dfn
     text: the backgrounds of special elements;url: #special-backgrounds
+urlPrefix: https://www.w3.org/TR/css3-transitions/
+  type: dfn
+    text: color; url: #animtype-color
 </pre>
 
 <pre class=link-defaults>
@@ -573,8 +576,10 @@ p {
 Browsers that don't support <code>'-webkit-background-clip'</code> or <code>'-webkit-text-fill-color'</code> will use the <code>color</code> declaration as a fallback color.
 </div>
 
-<h4 id="the-webkit-text-fill-color">Foreground Color: the <code>
-'-webkit-text-fill-color'</code> property</h4>
+<h4 id="text-fill-and-stroking">Text Fill and Stroking</h4>
+
+<h5 id="the-webkit-text-fill-color">Foreground Text Color: the <code>
+'-webkit-text-fill-color'</code> property</h5>
 
 <pre class='propdef'>
 Name: -webkit-text-fill-color
@@ -585,7 +590,7 @@ Inherited: yes
 Computed value: an RGBA color
 Percentages: N/A
 Media: visual
-Animatable: yes
+Animatable: as <a>color</a>
 </pre>
 
 The '-webkit-text-fill-color' property defines the foreground fill color of an element's text
@@ -609,6 +614,60 @@ foreground fill color of an element's text.
 
 Elements with the <code>one</code> or <code>two</code> classes will have blue text.
 </div>
+
+<h5 id="the-webkit-text-stroke-color">Text Stroke Color: the <code>
+'-webkit-text-stroke-color'</code> property</h5>
+
+<pre class='propdef'>
+Name: -webkit-text-stroke-color
+Value: ''currentcolor'' | <<color>>
+Initial: ''currentcolor''
+Applies to: all elements
+Inherited: yes
+Computed value: an RGBA color
+Percentages: N/A
+Media: visual
+Animatable: as <a>color</a>
+</pre>
+
+The '-webkit-text-stroke-color' property specifies a stroke color for an element's text.
+
+<h5 id="the-webkit-text-stroke-width">Text Stroke Thickness: the <code>
+'-webkit-text-stroke-width'</code> property</h5>
+
+<pre class='propdef'>
+Name: -webkit-text-stroke-width
+Value: <<line-width>>
+Initial: 0
+Applies to: all elements
+Inherited: yes
+Computed value: absolute width
+Percentages: N/A
+Media: visual
+Animatable: no
+</pre>
+
+The '-webkit-text-stroke-width' property specifies the width of the stroke drawn at the edge of each
+glyph of an element's text. A zero value causes no stroke to be painted. A negative value is
+invalid.
+
+<h5 id="the-webkit-text-stroke">Text Stroke Shorthand: the <code>
+'-webkit-text-stroke'</code> property</h5>
+
+<pre class='propdef'>
+Name: -webkit-text-stroke
+Value: <<line-width>> || [ ''currentcolor'' | <<color>> ]
+Initial: See individual properties
+Applies to: See individual properties
+Inherited: yes
+Computed value: See individual properties
+Percentages: N/A
+Media: visual
+Animatable: See individual properties
+</pre>
+
+The '-webkit-text-stroke' property is a shorthand peroperty for setting the stroke width and stroke
+color of an element's text.
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 

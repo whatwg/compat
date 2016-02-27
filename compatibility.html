@@ -69,7 +69,7 @@
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-compat.svg"> </a> </p>
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-02-22">22 February 2016</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-02-27">27 February 2016</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -120,7 +120,14 @@
         <li><a href="#css-property-mappings"><span class="secno">3.4.3</span> <span class="content">Property mappings</span></a>
         <li><a href="#css-keyword-mappings"><span class="secno">3.4.4</span> <span class="content">Keyword mappings</span></a>
         <li><a href="#the-webkit-background-clip-property"><span class="secno">3.4.5</span> <span class="content">Foreground Text Clipping: the <code> <span class="property">-webkit-background-clip</span></code> property</span></a>
-        <li><a href="#the-webkit-text-fill-color"><span class="secno">3.4.6</span> <span class="content">Foreground Color: the <code> <span class="property">-webkit-text-fill-color</span></code> property</span></a>
+        <li>
+         <a href="#text-fill-and-stroking"><span class="secno">3.4.6</span> <span class="content">Text Fill and Stroking</span></a>
+         <ol class="toc">
+          <li><a href="#the-webkit-text-fill-color"><span class="secno">3.4.6.1</span> <span class="content">Foreground Text Color: the <code> <span class="property">-webkit-text-fill-color</span></code> property</span></a>
+          <li><a href="#the-webkit-text-stroke-color"><span class="secno">3.4.6.2</span> <span class="content">Text Stroke Color: the <code> <span class="property">-webkit-text-stroke-color</span></code> property</span></a>
+          <li><a href="#the-webkit-text-stroke-width"><span class="secno">3.4.6.3</span> <span class="content">Text Stroke Thickness: the <code> <span class="property">-webkit-text-stroke-width</span></code> property</span></a>
+          <li><a href="#the-webkit-text-stroke"><span class="secno">3.4.6.4</span> <span class="content">Text Stroke Shorthand: the <code> <span class="property">-webkit-text-stroke</span></code> property</span></a>
+         </ol>
        </ol>
      </ol>
     <li>
@@ -481,7 +488,8 @@ be performant.)</p>
 <span class="p">}</span></pre>
     <p>Browsers that don’t support <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> or <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will use the <code>color</code> declaration as a fallback color.</p>
    </div>
-   <h4 class="heading settled" data-level="3.4.6" id="the-webkit-text-fill-color"><span class="secno">3.4.6. </span><span class="content">Foreground Color: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> property</span><a class="self-link" href="#the-webkit-text-fill-color"></a></h4>
+   <h4 class="heading settled" data-level="3.4.6" id="text-fill-and-stroking"><span class="secno">3.4.6. </span><span class="content">Text Fill and Stroking</span><a class="self-link" href="#text-fill-and-stroking"></a></h4>
+   <h5 class="heading settled" data-level="3.4.6.1" id="the-webkit-text-fill-color"><span class="secno">3.4.6.1. </span><span class="content">Foreground Text Color: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> property</span><a class="self-link" href="#the-webkit-text-fill-color"></a></h5>
    <table class="def propdef" data-link-for-hint="-webkit-text-fill-color">
     <tbody>
      <tr>
@@ -510,7 +518,7 @@ be performant.)</p>
       <td>an RGBA color
      <tr>
       <th>Animatable:
-      <td>yes
+      <td>as <a data-link-type="dfn" href="https://www.w3.org/TR/css3-transitions/#animtype-color">color</a>
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a> property defines the foreground fill color of an element’s text
 content.</p>
@@ -529,6 +537,105 @@ foreground fill color of an element’s text.
 }</pre>
     <p>Elements with the <code>one</code> or <code>two</code> classes will have blue text.</p>
    </div>
+   <h5 class="heading settled" data-level="3.4.6.2" id="the-webkit-text-stroke-color"><span class="secno">3.4.6.2. </span><span class="content">Text Stroke Color: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-color">-webkit-text-stroke-color</a></code> property</span><a class="self-link" href="#the-webkit-text-stroke-color"></a></h5>
+   <table class="def propdef" data-link-for-hint="-webkit-text-stroke-color">
+    <tbody>
+     <tr>
+      <th>Name:
+      <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-stroke-color">-webkit-text-stroke-color<a class="self-link" href="#propdef--webkit-text-stroke-color"></a></dfn>
+     <tr class="value">
+      <th>Value:
+      <td class="prod"><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
+     <tr>
+      <th>Initial:
+      <td><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a>
+     <tr>
+      <th>Applies to:
+      <td>all elements
+     <tr>
+      <th>Inherited:
+      <td>yes
+     <tr>
+      <th>Percentages:
+      <td>N/A
+     <tr>
+      <th>Media:
+      <td>visual
+     <tr>
+      <th>Computed value:
+      <td>an RGBA color
+     <tr>
+      <th>Animatable:
+      <td>as <a data-link-type="dfn" href="https://www.w3.org/TR/css3-transitions/#animtype-color">color</a>
+   </table>
+   <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-color">-webkit-text-stroke-color</a> property specifies a stroke color for an element’s text.</p>
+   <h5 class="heading settled" data-level="3.4.6.3" id="the-webkit-text-stroke-width"><span class="secno">3.4.6.3. </span><span class="content">Text Stroke Thickness: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-width">-webkit-text-stroke-width</a></code> property</span><a class="self-link" href="#the-webkit-text-stroke-width"></a></h5>
+   <table class="def propdef" data-link-for-hint="-webkit-text-stroke-width">
+    <tbody>
+     <tr>
+      <th>Name:
+      <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-stroke-width">-webkit-text-stroke-width<a class="self-link" href="#propdef--webkit-text-stroke-width"></a></dfn>
+     <tr class="value">
+      <th>Value:
+      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#line-width">&lt;line-width></a>
+     <tr>
+      <th>Initial:
+      <td>0
+     <tr>
+      <th>Applies to:
+      <td>all elements
+     <tr>
+      <th>Inherited:
+      <td>yes
+     <tr>
+      <th>Percentages:
+      <td>N/A
+     <tr>
+      <th>Media:
+      <td>visual
+     <tr>
+      <th>Computed value:
+      <td>absolute width
+     <tr>
+      <th>Animatable:
+      <td>no
+   </table>
+   <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-width">-webkit-text-stroke-width</a> property specifies the width of the stroke drawn at the edge of each
+glyph of an element’s text. A zero value causes no stroke to be painted. A negative value is
+invalid.</p>
+   <h5 class="heading settled" data-level="3.4.6.4" id="the-webkit-text-stroke"><span class="secno">3.4.6.4. </span><span class="content">Text Stroke Shorthand: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a></code> property</span><a class="self-link" href="#the-webkit-text-stroke"></a></h5>
+   <table class="def propdef" data-link-for-hint="-webkit-text-stroke">
+    <tbody>
+     <tr>
+      <th>Name:
+      <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-stroke">-webkit-text-stroke<a class="self-link" href="#propdef--webkit-text-stroke"></a></dfn>
+     <tr class="value">
+      <th>Value:
+      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#line-width">&lt;line-width></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-any">||</a> [ <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a> ]
+     <tr>
+      <th>Initial:
+      <td>See individual properties
+     <tr>
+      <th>Applies to:
+      <td>See individual properties
+     <tr>
+      <th>Inherited:
+      <td>yes
+     <tr>
+      <th>Percentages:
+      <td>N/A
+     <tr>
+      <th>Media:
+      <td>visual
+     <tr>
+      <th>Computed value:
+      <td>See individual properties
+     <tr>
+      <th>Animatable:
+      <td>See individual properties
+   </table>
+   <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a> property is a shorthand peroperty for setting the stroke width and stroke
+color of an element’s text.</p>
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="webkitcssmatrix-interface"><span class="secno">4.1. </span><span class="content">The WebKitCSSMatrix interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
    <div class="note" role="note"><a data-link-type="dfn" href="https://drafts.fxtf.org/geometry/#webkitcssmatrix">WebKitCSSMatrix</a> is now defined by the DOM Geometry specification. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>.</div>
@@ -646,8 +753,11 @@ neighboring rights to this work.</p>
    <li><a href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a><span>, in §3.3.2</span>
    <li><a href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a><span>, in §3.3.3</span>
    <li><a href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.3.4</span>
-   <li><a href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a><span>, in §3.4.6</span>
+   <li><a href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a><span>, in §3.4.6.1</span>
    <li><a href="#-webkit-text-size-adjust">-webkit-text-size-adjust</a><span>, in §3.4.2</span>
+   <li><a href="#propdef--webkit-text-stroke">-webkit-text-stroke</a><span>, in §3.4.6.4</span>
+   <li><a href="#propdef--webkit-text-stroke-color">-webkit-text-stroke-color</a><span>, in §3.4.6.2</span>
+   <li><a href="#propdef--webkit-text-stroke-width">-webkit-text-stroke-width</a><span>, in §3.4.6.3</span>
    <li><a href="#-webkit-transform">-webkit-transform</a><span>, in §3.4.1</span>
    <li><a href="#descdef-media--webkit-transform-3d">-webkit-transform-3d</a><span>, in §3.2.2</span>
    <li><a href="#-webkit-transform-origin">-webkit-transform-origin</a><span>, in §3.4.1</span>
@@ -704,6 +814,7 @@ neighboring rights to this work.</p>
    <li>
     <a data-link-type="biblio" href="#biblio-css-backgrounds-3">[css-backgrounds-3]</a> defines the following terms:
     <ul>
+     <li><a href="https://drafts.csswg.org/css-backgrounds-3/#line-width">&lt;line-width></a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#background-origin">background-origin</a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#background-size">background-size</a>
@@ -791,6 +902,7 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-values-3/#number-value">&lt;number></a>
      <li><a href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a>
      <li><a href="https://drafts.csswg.org/css-values-3/#comb-one">|</a>
+     <li><a href="https://drafts.csswg.org/css-values-3/#comb-any">||</a>
     </ul>
    <li>
     <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a> defines the following terms:
@@ -912,8 +1024,38 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
-      <td>yes
+      <td>as color
       <td>an RGBA color
+     <tr>
+      <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-stroke-color">-webkit-text-stroke-color</a>
+      <td>currentcolor | &lt;color>
+      <td>currentcolor
+      <td>all elements
+      <td>yes
+      <td>N/A
+      <td>visual
+      <td>as color
+      <td>an RGBA color
+     <tr>
+      <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-stroke-width">-webkit-text-stroke-width</a>
+      <td>&lt;line-width>
+      <td>0
+      <td>all elements
+      <td>yes
+      <td>N/A
+      <td>visual
+      <td>no
+      <td>absolute width
+     <tr>
+      <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a>
+      <td>&lt;line-width> || [ currentcolor | &lt;color> ]
+      <td>See individual properties
+      <td>See individual properties
+      <td>yes
+      <td>N/A
+      <td>visual
+      <td>See individual properties
+      <td>See individual properties
    </table>
   </div>
   <h3 class="no-num heading settled" id="media-descriptor-table"><span class="content"><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a> Descriptors</span><a class="self-link" href="#media-descriptor-table"></a></h3>
