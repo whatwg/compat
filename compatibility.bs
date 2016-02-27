@@ -648,7 +648,7 @@ Animatable: no
 </pre>
 
 The '-webkit-text-stroke-width' property specifies the width of the stroke drawn at the edge of each
-glyph of an element's text. A zero value causes no stroke to be painted. A negative value is
+glyph of an element's text. A zero value results in no stroke being painted. A negative value is
 invalid.
 
 <h5 id="the-webkit-text-stroke">Text Stroke Shorthand: the <code>
@@ -668,6 +668,23 @@ Animatable: See individual properties
 
 The '-webkit-text-stroke' property is a shorthand peroperty for setting the stroke width and stroke
 color of an element's text.
+
+<div class="example">
+Here are two examples showing how to use the longhand and shorthand <code>'-webkit-text-stroke'</code>
+properties to achieve white text with a black stroked text effect.
+<pre class="lang-css">
+.stroked-text-longhand {
+  color: #fff;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-width: 1px;
+}
+
+.stroked-text-shorthand {
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: thin #000;
+}
+</pre>
+</div>
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 

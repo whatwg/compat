@@ -601,7 +601,7 @@ foreground fill color of an element’s text.
       <td>no
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-width">-webkit-text-stroke-width</a> property specifies the width of the stroke drawn at the edge of each
-glyph of an element’s text. A zero value causes no stroke to be painted. A negative value is
+glyph of an element’s text. A zero value results in no stroke being painted. A negative value is
 invalid.</p>
    <h5 class="heading settled" data-level="3.4.6.4" id="the-webkit-text-stroke"><span class="secno">3.4.6.4. </span><span class="content">Text Stroke Shorthand: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a></code> property</span><a class="self-link" href="#the-webkit-text-stroke"></a></h5>
    <table class="def propdef" data-link-for-hint="-webkit-text-stroke">
@@ -636,6 +636,19 @@ invalid.</p>
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a> property is a shorthand peroperty for setting the stroke width and stroke
 color of an element’s text.</p>
+   <div class="example" id="example-7cde305c">
+    <a class="self-link" href="#example-7cde305c"></a> Here are two examples showing how to use the longhand and shorthand <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a></code> properties to achieve white text with a black stroked text effect. 
+<pre class="lang-css highlight"><span class="nt">.stroked-text-longhand </span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> #fff<span class="p">;</span>
+  <span class="k">-webkit-text-stroke-color</span><span class="p">:</span> #000<span class="p">;</span>
+  <span class="k">-webkit-text-stroke-width</span><span class="p">:</span> <span class="m">1</span><span class="l">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">.stroked-text-shorthand </span><span class="p">{</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> #fff<span class="p">;</span>
+  <span class="k">-webkit-text-stroke</span><span class="p">:</span> thin #000<span class="p">;</span>
+<span class="p">}</span></pre>
+   </div>
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="webkitcssmatrix-interface"><span class="secno">4.1. </span><span class="content">The WebKitCSSMatrix interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
    <div class="note" role="note"><a data-link-type="dfn" href="https://drafts.fxtf.org/geometry/#webkitcssmatrix">WebKitCSSMatrix</a> is now defined by the DOM Geometry specification. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>.</div>
