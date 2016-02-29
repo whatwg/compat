@@ -583,7 +583,7 @@ Browsers that don't support <code>'-webkit-background-clip'</code> or <code>'-we
 
 <pre class='propdef'>
 Name: -webkit-text-fill-color
-Value: ''currentcolor'' | <<color>>
+Value: <<color>>
 Initial: ''currentcolor''
 Applies to: all elements
 Inherited: yes
@@ -620,7 +620,7 @@ Elements with the <code>one</code> or <code>two</code> classes will have blue te
 
 <pre class='propdef'>
 Name: -webkit-text-stroke-color
-Value: ''currentcolor'' | <<color>>
+Value: <<color>>
 Initial: ''currentcolor''
 Applies to: all elements
 Inherited: yes
@@ -656,7 +656,7 @@ invalid.
 
 <pre class='propdef'>
 Name: -webkit-text-stroke
-Value: <<line-width>> || [ ''currentcolor'' | <<color>> ]
+Value: <<line-width>> || <<color>>
 Initial: See individual properties
 Applies to: See individual properties
 Inherited: yes
