@@ -93,6 +93,9 @@ urlPrefix: https://drafts.csswg.org/css-backgrounds-3/
 urlPrefix: https://www.w3.org/TR/css3-transitions/
   type: dfn
     text: color; url: #animtype-color
+urlPrefix: https://drafts.fxtf.org/css-masking-1/
+  type: dfn
+    text: clipping path; url: #clipping-path
 </pre>
 
 <pre class=link-defaults>
@@ -338,8 +341,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     </tr>
     <tr>
       <td><code>'-webkit-background-clip'</code>
-      <p class="XXX">
-        See <a href="https://github.com/whatwg/compat/issues/26">issue #26</a> for speccing <code>text</code> value.
+      <p class="note">
+        This property is a simple alias for <<box>> values.
+
+        See '-webkit-background-clip' for the definition of the <code>text</code> value.
       </p>
       </td>
       <td><code>'background-clip'</code>
@@ -577,7 +582,7 @@ Media: visual
 Animatable: no
 </pre>
 
-The <code>'-webkit-background-clip'</code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) is applied as a mask to clip background drawing for the box.
+The <code>'-webkit-background-clip'</code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) creates a <a>clipping path</a> on the background drawing for the box.
 
 <div class="note">
 Note that the root element has a different background painting area, and thus the '-webkit-background-clip' property has no effect when specified on it. See <a>the backgrounds of special elements</a>.

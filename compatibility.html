@@ -301,7 +301,9 @@ be performant.)</p>
      <tr>
       <td>
        <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> 
-       <p class="XXX"> See <a href="https://github.com/whatwg/compat/issues/26">issue #26</a> for speccing <code>text</code> value. </p>
+       <p class="note" role="note"> This property is a simple alias for <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#box">&lt;box></a> values. </p>
+       <p>See <a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a> for the definition of the <code>text</code> value.</p>
+       <p></p>
       <td><code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a></code> 
      <tr>
       <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-background-origin" type="property">-webkit-background-origin<a class="self-link" href="#-webkit-background-origin"></a></dfn></code>
@@ -489,7 +491,7 @@ be performant.)</p>
       <th>Animatable:
       <td>no
    </table>
-   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) is applied as a mask to clip background drawing for the box.</p>
+   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) creates a <a data-link-type="dfn" href="https://drafts.fxtf.org/css-masking-1/#clipping-path">clipping path</a> on the background drawing for the box.</p>
    <div class="note" role="note"> Note that the root element has a different background painting area, and thus the <a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a> property has no effect when specified on it. See <a data-link-type="dfn" href="https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds">the backgrounds of special elements</a>. </div>
    <dl>
     <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-text">text<a class="self-link" href="#valdef--webkit-background-clip-text"></a></dfn> 
@@ -856,6 +858,7 @@ neighboring rights to this work.</p>
    <li>
     <a data-link-type="biblio" href="#biblio-css-backgrounds-3">[css-backgrounds-3]</a> defines the following terms:
     <ul>
+     <li><a href="https://drafts.csswg.org/css-backgrounds-3/#box">&lt;box></a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#line-width">&lt;line-width></a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#background-origin">background-origin</a>
