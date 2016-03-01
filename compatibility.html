@@ -69,7 +69,7 @@
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-compat.svg"> </a> </p>
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-02-29">29 February 2016</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-03-01">1 March 2016</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -338,6 +338,24 @@ be performant.)</p>
      <tr>
       <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask" type="property">-webkit-mask<a class="self-link" href="#-webkit-mask"></a></dfn></code>
       <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask">mask</a></code>
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask-box-image" type="property">-webkit-mask-box-image<a class="self-link" href="#-webkit-mask-box-image"></a></dfn></code>
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border">mask-border</a></code>
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask-box-image-outset" type="property">-webkit-mask-box-image-outset<a class="self-link" href="#-webkit-mask-box-image-outset"></a></dfn></code>
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-outset">mask-border-outset</a></code>
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask-box-image-repeat" type="property">-webkit-mask-box-image-repeat<a class="self-link" href="#-webkit-mask-box-image-repeat"></a></dfn></code>
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-repeat">mask-border-repeat</a></code>
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask-box-image-slice" type="property">-webkit-mask-box-image-slice<a class="self-link" href="#-webkit-mask-box-image-slice"></a></dfn></code>
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-slice">mask-border-slice</a></code>
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask-box-image-source" type="property">-webkit-mask-box-image-source<a class="self-link" href="#-webkit-mask-box-image-source"></a></dfn></code>
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-source">mask-border-source</a></code>
+     <tr>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask-box-image-width" type="property">-webkit-mask-box-image-width<a class="self-link" href="#-webkit-mask-box-image-width"></a></dfn></code>
+      <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-width">mask-border-width</a></code>
      <tr>
       <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-mask-clip" type="property">-webkit-mask-clip<a class="self-link" href="#-webkit-mask-clip"></a></dfn></code>
       <td><code><a class="property" data-link-type="propdesc" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-clip">mask-clip</a></code>
@@ -757,6 +775,12 @@ neighboring rights to this work.</p>
    <li><a href="#at-ruledef--webkit-keyframes">@-webkit-keyframes</a><span>, in §3.1</span>
    <li><a href="#funcdef--webkit-linear-gradient">-webkit-linear-gradient()</a><span>, in §3.3.1</span>
    <li><a href="#-webkit-mask">-webkit-mask</a><span>, in §3.4.1</span>
+   <li><a href="#-webkit-mask-box-image">-webkit-mask-box-image</a><span>, in §3.4.1</span>
+   <li><a href="#-webkit-mask-box-image-outset">-webkit-mask-box-image-outset</a><span>, in §3.4.1</span>
+   <li><a href="#-webkit-mask-box-image-repeat">-webkit-mask-box-image-repeat</a><span>, in §3.4.1</span>
+   <li><a href="#-webkit-mask-box-image-slice">-webkit-mask-box-image-slice</a><span>, in §3.4.1</span>
+   <li><a href="#-webkit-mask-box-image-source">-webkit-mask-box-image-source</a><span>, in §3.4.1</span>
+   <li><a href="#-webkit-mask-box-image-width">-webkit-mask-box-image-width</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-mask-clip">-webkit-mask-clip</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-mask-composite">-webkit-mask-composite</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-mask-image">-webkit-mask-image</a><span>, in §3.4.1</span>
@@ -872,6 +896,12 @@ neighboring rights to this work.</p>
     <a data-link-type="biblio" href="#biblio-css-masking-1">[css-masking-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask">mask</a>
+     <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border">mask-border</a>
+     <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-outset">mask-border-outset</a>
+     <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-repeat">mask-border-repeat</a>
+     <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-slice">mask-border-slice</a>
+     <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-source">mask-border-source</a>
+     <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-width">mask-border-width</a>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-clip">mask-clip</a>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-composite">mask-composite</a>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-image">mask-image</a>

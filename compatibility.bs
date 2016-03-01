@@ -102,6 +102,8 @@ spec:css-transforms-1; type:property; text:perspective-origin
 spec:css-transforms-1; type:property; text:transform-origin
 spec:css-transforms-1; type:property; text:transform-style
 spec:css-transforms-1; type:property; text:transform
+spec:css-color-4; type:value; text:currentcolor
+spec:css-display-3; type:value; for:display; text:flex
 </pre>
 
 <pre class=biblio>
@@ -391,6 +393,30 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     <tr>
       <td><code><dfn type=property>-webkit-mask</dfn></code></td>
       <td><code>'mask'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-box-image</dfn></code></td>
+      <td><code>'mask-border'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-box-image-outset</dfn></code></td>
+      <td><code>'mask-border-outset'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-box-image-repeat</dfn></code></td>
+      <td><code>'mask-border-repeat'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-box-image-slice</dfn></code></td>
+      <td><code>'mask-border-slice'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-box-image-source</dfn></code></td>
+      <td><code>'mask-border-source'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-mask-box-image-width</dfn></code></td>
+      <td><code>'mask-border-width'</code></td>
     </tr>
     <tr>
       <td><code><dfn type=property>-webkit-mask-clip</dfn></code></td>
