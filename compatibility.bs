@@ -561,7 +561,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
 
 <pre class='propdef'>
 Name: -webkit-background-clip
-Value: text
+Value:  border-box | padding-box | content-box | text
 Initial: none
 Applies to: all elements
 Inherited: no
@@ -571,13 +571,24 @@ Media: visual
 Animatable: no
 </pre>
 
-The <code>'-webkit-background-clip'</code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) creates a <a>clipping path</a> on the background drawing for the box.
+The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) creates a <a>clipping path</a> on the background drawing for the box.
+
+The <code>'-webkit-background-clip'</code> property is a simple alias of the 'background-clip' property for all <<box>> values.
 
 <div class="note">
 Note that the root element has a different background painting area, and thus the '-webkit-background-clip' property has no effect when specified on it. See <a>the backgrounds of special elements</a>.
 </div>
 
 <dl>
+  <dt><dfn value for='-webkit-background-clip'>border-box</dfn>
+  <dd>The background is painted within (clipped to) the border box.
+
+  <dt><dfn value for='-webkit-background-clip'>padding-box</dfn>
+  <dd>The background is painted within (clipped to) the padding box.
+
+  <dt><dfn value for='-webkit-background-clip'>content-box</dfn>
+  <dd>The background is painted within (clipped to) the content box.
+
   <dt><dfn value for='-webkit-background-clip'>text</dfn>
   <dd>Indicates that the background image should clip to the foreground text
 </dl><br>

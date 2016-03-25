@@ -461,7 +461,7 @@ be performant.)</p>
       <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-background-clip">-webkit-background-clip<a class="self-link" href="#propdef--webkit-background-clip"></a></dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod">text
+      <td class="prod">border-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> padding-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> content-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> text
      <tr>
       <th>Initial:
       <td>none
@@ -484,9 +484,16 @@ be performant.)</p>
       <th>Animatable:
       <td>no
    </table>
-   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) creates a <a data-link-type="dfn" href="https://drafts.fxtf.org/css-masking-1/#clipping-path">clipping path</a> on the background drawing for the box.</p>
+   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property—when its value is <a class="css" data-link-type="maybe" href="#valdef--webkit-background-clip-text">text</a>—causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) creates a <a data-link-type="dfn" href="https://drafts.fxtf.org/css-masking-1/#clipping-path">clipping path</a> on the background drawing for the box.</p>
+   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property is a simple alias of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a> property for all <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#box">&lt;box></a> values.</p>
    <div class="note" role="note"> Note that the root element has a different background painting area, and thus the <a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a> property has no effect when specified on it. See <a data-link-type="dfn" href="https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds">the backgrounds of special elements</a>. </div>
    <dl>
+    <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-border-box">border-box<a class="self-link" href="#valdef--webkit-background-clip-border-box"></a></dfn> 
+    <dd>The background is painted within (clipped to) the border box. 
+    <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-padding-box">padding-box<a class="self-link" href="#valdef--webkit-background-clip-padding-box"></a></dfn> 
+    <dd>The background is painted within (clipped to) the padding box. 
+    <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-content-box">content-box<a class="self-link" href="#valdef--webkit-background-clip-content-box"></a></dfn> 
+    <dd>The background is painted within (clipped to) the content box. 
     <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-text">text<a class="self-link" href="#valdef--webkit-background-clip-text"></a></dfn> 
     <dd>Indicates that the background image should clip to the foreground text 
    </dl>
@@ -731,6 +738,8 @@ neighboring rights to this work.</p>
   <h2 class="no-num heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
+   <li><a href="#valdef--webkit-background-clip-border-box">border-box</a><span>, in §3.4.5</span>
+   <li><a href="#valdef--webkit-background-clip-content-box">content-box</a><span>, in §3.4.5</span>
    <li>
     onorientationchange
     <ul>
@@ -739,6 +748,7 @@ neighboring rights to this work.</p>
     </ul>
    <li><a href="#dom-window-orientation">orientation</a><span>, in §4.2</span>
    <li><a href="#event-orientationchange">orientationchange</a><span>, in §4.2</span>
+   <li><a href="#valdef--webkit-background-clip-padding-box">padding-box</a><span>, in §3.4.5</span>
    <li><a href="#valdef--webkit-background-clip-text">text</a><span>, in §3.4.5</span>
    <li><a href="#-webkit-animation">-webkit-animation</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-animation-delay">-webkit-animation-delay</a><span>, in §3.4.1</span>
@@ -945,6 +955,7 @@ neighboring rights to this work.</p>
     <ul>
      <li><a href="https://drafts.csswg.org/css-values-3/#number-value">&lt;number></a>
      <li><a href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a>
+     <li><a href="https://drafts.csswg.org/css-values-3/#comb-one">|</a>
      <li><a href="https://drafts.csswg.org/css-values-3/#comb-any">||</a>
     </ul>
    <li>
@@ -1051,7 +1062,7 @@ neighboring rights to this work.</p>
     <tbody>
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-background-clip">-webkit-background-clip</a>
-      <td>text
+      <td>border-box | padding-box | content-box | text
       <td>none
       <td>all elements
       <td>no
