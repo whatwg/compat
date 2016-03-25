@@ -340,17 +340,6 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'backface-visibility'</code></td>
     </tr>
     <tr>
-      <td><code>'-webkit-background-clip'</code>
-      <p class="note">
-        This property is a simple alias for <<box>> values.
-
-        See '-webkit-background-clip' for the definition of the <code>text</code> value.
-      </p>
-      </td>
-      <td><code>'background-clip'</code>
-    </td>
-    </tr>
-    <tr>
       <td><code><dfn type=property>-webkit-background-origin</dfn></code></td>
       <td><code>'background-origin'</code></td>
     </tr>
