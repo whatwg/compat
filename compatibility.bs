@@ -571,7 +571,7 @@ Media: visual
 Animatable: no
 </pre>
 
-The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;causes the background image to clip to foreground text (including decorations and shadows). The shape of the foreground content (including alpha transparency in the content) creates a <a>clipping path</a> on the background drawing for the box.
+The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;causes the background image to clip to foreground text (including decorations). The shape of the foreground content (including alpha transparency in the content) creates a <a>clipping path</a> on the background drawing for the box.
 
 The <code>'-webkit-background-clip'</code> property is a simple alias of the 'background-clip' property for all <<box>> values.
 
