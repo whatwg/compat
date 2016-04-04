@@ -499,10 +499,6 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code><dfn type=property>-webkit-text-size-adjust</dfn></code></td>
       <td><code>(-prefix-)'text-size-adjust'</code></td>
     </tr>
-    <tr>
-      <td><code><dfn type=property>-webkit-user-select</dfn></code></td>
-      <td><code>(-prefix-)'user-select'</code></td>
-    </tr>
   </tbody>
 </table>
 
