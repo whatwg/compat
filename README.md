@@ -4,6 +4,11 @@
 
 The [Compatibility Standard](https://compat.spec.whatwg.org/) describes a collection of non-standard (and often vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility with the de facto web.
 
+## Code of conduct
+
+We are committed to providing a friendly, safe and welcoming environment for all. Please read and
+respect the [WHATWG Code of Conduct](https://wiki.whatwg.org/wiki/Code_of_Conduct).
+
 ## Contribute
 
 This spec is built using [Bikeshed](https://github.com/tabatkins/bikeshed). To get Bikeshed installed locally, head over to the Bikeshed [docs](https://github.com/tabatkins/bikeshed/blob/prespec/docs/install.md)
