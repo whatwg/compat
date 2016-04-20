@@ -747,7 +747,7 @@ Whenever the viewport is drawn at a different angle compared to the device's nat
 
 User agents implementing the <a attribute lt="orientation"><code>window.orientation</code></a> attribute and its associated <a>orientationchange</a> event must not expose them on Desktop platforms.
 
-<div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not required for compability with the web.</div>
+<div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not required for compatibility with the web.</div>
 
 <h4 id="dfn-window-orientation-angle"><a attribute lt="orientation"><code>window.orientation</code></a> angle</h4>
 
