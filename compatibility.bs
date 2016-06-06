@@ -107,6 +107,7 @@ spec:css-transforms-1; type:property; text:transform-style
 spec:css-transforms-1; type:property; text:transform
 spec:css-color-4; type:value; text:currentcolor
 spec:css-display-3; type:value; for:display; text:flex
+spec:css-flexbox-1; type:value; text:inline-flex
 </pre>
 
 <pre class=biblio>
@@ -393,7 +394,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'box-sizing'</code></td>
     </tr>
     <tr>
-      <td><code><dfn type=property>-webkit-flex</dfn></code></td>
+      <td><code><dfn type=property lt="-webkit-flex-propdef">-webkit-flex</dfn></code></td>
       <td><code>'flex'</code></td>
     </tr>
     <tr>
@@ -594,8 +595,16 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
   </thead>
   <tbody>
     <tr>
-      <td><code><dfn type=property>-webkit-box</dfn></code></td>
+      <td><code><dfn type=value>-webkit-box</dfn></code></td>
       <td><code>''flex''</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=value lt="-webkit-flex-valdef">-webkit-flex</dfn></code></td>
+      <td><code>''flex''</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=value>-webkit-inline-flex</dfn></code></td>
+      <td><code>''inline-flex''</code></td>
     </tr>
   </tbody>
 </table>
