@@ -300,6 +300,18 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   </thead>
   <tbody>
     <tr>
+      <td><code><dfn type=property>-webkit-align-items</dfn></code></td>
+      <td><code>'align-items'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-align-content</dfn></code></td>
+      <td><code>'align-content'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-align-self</dfn></code></td>
+      <td><code>'align-self'</code></td>
+    </tr>
+    <tr>
       <td><code><dfn type=property>-webkit-animation-name</dfn></code></td>
       <td><code>'animation-name'</code></td>
     </tr>
@@ -381,8 +393,40 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'box-sizing'</code></td>
     </tr>
     <tr>
+      <td><code><dfn type=property>-webkit-flex</dfn></code></td>
+      <td><code>'flex'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-flex-basis</dfn></code></td>
+      <td><code>'flex-basis'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-flex-direction</dfn></code></td>
+      <td><code>'flex-direction'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-flex-flow</dfn></code></td>
+      <td><code>'flex-flow'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-flex-grow</dfn></code></td>
+      <td><code>'flex-grow'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-flex-shrink</dfn></code></td>
+      <td><code>'flex-shrink'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-flex-wrap</dfn></code></td>
+      <td><code>'flex-wrap'</code></td>
+    </tr>
+    <tr>
       <td><code><dfn type=property>-webkit-filter</dfn></code></td>
       <td><code>'filter'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-justify-content</dfn></code></td>
+      <td><code>'justify-content'</code></td>
     </tr>
     <tr>
       <td><code><dfn type=property>-webkit-mask</dfn></code></td>
@@ -439,6 +483,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     <tr>
       <td><code><dfn type=property>-webkit-mask-size</dfn></code></td>
       <td><code>'mask-size'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn type=property>-webkit-order</dfn></code></td>
+      <td><code>'order'</code></td>
     </tr>
     <tr>
       <td><code><dfn type=property>-webkit-perspective</dfn></code></td>
