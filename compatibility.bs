@@ -603,6 +603,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
       <td><code>''flex''</code></td>
     </tr>
     <tr>
+      <td><code><dfn type=value>-webkit-inline-box</dfn></code></td>
+      <td><code>''inline-flex''</code></td>
+    </tr>
+    <tr>
       <td><code><dfn type=value>-webkit-inline-flex</dfn></code></td>
       <td><code>''inline-flex''</code></td>
     </tr>
