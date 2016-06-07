@@ -628,9 +628,9 @@ Media: visual
 Animatable: no
 </pre>
 
-The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;causes the background image to clip to foreground text (including decorations). The shape of the foreground content (including alpha transparency in the content) creates a <a>clipping path</a> on the background drawing for the box.
+The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;creates a background <a>clipping region</a> from the outer text stroke of the foreground text (including alpha transparency).
 
-The <code>'-webkit-background-clip'</code> property is a simple alias of the 'background-clip' property for all <<box>> values.
+The <code>'-webkit-background-clip'</code> property is a simple alias of the 'background-clip' property for all other <<box>> values.
 
 <div class="note">
 Note that the root element has a different background painting area, and thus the '-webkit-background-clip' property has no effect when specified on it. See <a>the backgrounds of special elements</a>.

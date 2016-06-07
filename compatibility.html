@@ -526,8 +526,8 @@ be performant.)</p>
       <th>Animatable:
       <td>no
    </table>
-   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property—when its value is <a class="css" data-link-type="maybe" href="#valdef--webkit-background-clip-text">text</a>—causes the background image to clip to foreground text (including decorations). The shape of the foreground content (including alpha transparency in the content) creates a <a data-link-type="dfn" href="https://drafts.fxtf.org/css-masking-1/#clipping-path">clipping path</a> on the background drawing for the box.</p>
-   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property is a simple alias of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a> property for all <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#box">&lt;box></a> values.</p>
+   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property—when its value is <a class="css" data-link-type="maybe" href="#valdef--webkit-background-clip-text">text</a>—creates a background <a data-link-type="dfn" href="https://drafts.fxtf.org/css-masking-1/#clipping-region">clipping region</a> from the outer text stroke of the foreground text (including alpha transparency).</p>
+   <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property is a simple alias of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a> property for all other <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#box">&lt;box></a> values.</p>
    <div class="note" role="note"> Note that the root element has a different background painting area, and thus the <a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a> property has no effect when specified on it. See <a data-link-type="dfn" href="https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds">the backgrounds of special elements</a>. </div>
    <dl>
     <dt><dfn class="css" data-dfn-for="-webkit-background-clip" data-dfn-type="value" data-export="" id="valdef--webkit-background-clip-border-box">border-box<a class="self-link" href="#valdef--webkit-background-clip-border-box"></a></dfn> 
@@ -966,6 +966,7 @@ neighboring rights to this work.</p>
    <li>
     <a data-link-type="biblio" href="#biblio-css-masking-1">[css-masking-1]</a> defines the following terms:
     <ul>
+     <li><a href="https://drafts.fxtf.org/css-masking-1/#clipping-region">clipping region</a>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask">mask</a>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border">mask-border</a>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-border-outset">mask-border-outset</a>
