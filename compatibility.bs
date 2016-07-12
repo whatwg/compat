@@ -375,7 +375,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     </tr>
     <tr>
       <td><code><dfn type=property>-webkit-border-top-left-radius</dfn></code></td>
-      <td><code>'border-top-right-radius'</code></td>
+      <td><code>'border-top-left-radius'</code></td>
     </tr>
     <tr>
       <td><code><dfn type=property>-webkit-border-top-right-radius</dfn></code></td>
