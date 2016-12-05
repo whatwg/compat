@@ -69,7 +69,7 @@
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-compat.svg"> </a> </p>
    <h1 class="p-name no-ref" id="title">Compatibility</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-09-07">7 September 2016</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-12-05">5 December 2016</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -527,6 +527,9 @@ be performant.)</p>
      <tr>
       <th>Animatable:
       <td>no
+     <tr>
+      <th>Animation type:
+      <td>discrete
    </table>
    <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property—when its value is <a class="css" data-link-type="maybe" href="#valdef--webkit-background-clip-text">text</a>—creates a background <a data-link-type="dfn" href="https://drafts.fxtf.org/css-masking-1/#clipping-region">clipping region</a> from the outer text stroke of the foreground text (including alpha transparency).</p>
    <p>The <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> property is a simple alias of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-backgrounds-3/#background-clip">background-clip</a> property for all other <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#box">&lt;box></a> values.</p>
@@ -582,6 +585,9 @@ be performant.)</p>
       <td>an RGBA color
      <tr>
       <th>Animatable:
+      <td>no
+     <tr>
+      <th>Animation type:
       <td>as <a data-link-type="dfn" href="https://www.w3.org/TR/css3-transitions/#animtype-color">color</a>
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a> property defines the foreground fill color of an element’s text
@@ -630,6 +636,9 @@ foreground fill color of an element’s text.
       <td>an RGBA color
      <tr>
       <th>Animatable:
+      <td>no
+     <tr>
+      <th>Animation type:
       <td>as <a data-link-type="dfn" href="https://www.w3.org/TR/css3-transitions/#animtype-color">color</a>
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-color">-webkit-text-stroke-color</a> property specifies a stroke color for an element’s text.</p>
@@ -663,6 +672,9 @@ foreground fill color of an element’s text.
      <tr>
       <th>Animatable:
       <td>no
+     <tr>
+      <th>Animation type:
+      <td>discrete
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-width">-webkit-text-stroke-width</a> property specifies the width of the stroke drawn at the edge of each
 glyph of an element’s text. A zero value results in no stroke being painted. A negative value is
@@ -696,6 +708,9 @@ invalid.</p>
       <td>See individual properties
      <tr>
       <th>Animatable:
+      <td>no
+     <tr>
+      <th>Animation type:
       <td>See individual properties
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a> property is a shorthand property for setting the stroke width and stroke
@@ -1120,6 +1135,7 @@ neighboring rights to this work.</p>
       <th scope="col">%ages
       <th scope="col">Media
       <th scope="col">Ani­mat­able
+      <th scope="col">Animation type
       <th scope="col">Com­puted value
     <tbody>
      <tr>
@@ -1131,6 +1147,7 @@ neighboring rights to this work.</p>
       <td>N/A
       <td>visual
       <td>no
+      <td>discrete
       <td>"text"
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a>
@@ -1140,6 +1157,7 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
+      <td>no
       <td>as color
       <td>an RGBA color
      <tr>
@@ -1150,6 +1168,7 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
+      <td>no
       <td>as color
       <td>an RGBA color
      <tr>
@@ -1161,6 +1180,7 @@ neighboring rights to this work.</p>
       <td>N/A
       <td>visual
       <td>no
+      <td>discrete
       <td>absolute width
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a>
@@ -1170,6 +1190,7 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
+      <td>no
       <td>See individual properties
       <td>See individual properties
    </table>

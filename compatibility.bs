@@ -626,7 +626,7 @@ Inherited: no
 Computed value: "text"
 Percentages: N/A
 Media: visual
-Animatable: no
+Animation type: discrete
 </pre>
 
 The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;creates a background <a>clipping region</a> from the outer text stroke of the foreground text (including alpha transparency).
@@ -679,7 +679,7 @@ Inherited: yes
 Computed value: an RGBA color
 Percentages: N/A
 Media: visual
-Animatable: as <a>color</a>
+Animation type: as <a>color</a>
 </pre>
 
 The '-webkit-text-fill-color' property defines the foreground fill color of an element's text
@@ -716,7 +716,7 @@ Inherited: yes
 Computed value: an RGBA color
 Percentages: N/A
 Media: visual
-Animatable: as <a>color</a>
+Animation type: as <a>color</a>
 </pre>
 
 The '-webkit-text-stroke-color' property specifies a stroke color for an element's text.
@@ -733,7 +733,7 @@ Inherited: yes
 Computed value: absolute width
 Percentages: N/A
 Media: visual
-Animatable: no
+Animation type: discrete
 </pre>
 
 The '-webkit-text-stroke-width' property specifies the width of the stroke drawn at the edge of each
@@ -752,7 +752,7 @@ Inherited: yes
 Computed value: See individual properties
 Percentages: N/A
 Media: visual
-Animatable: See individual properties
+Animation type: See individual properties
 </pre>
 
 The '-webkit-text-stroke' property is a shorthand property for setting the stroke width and stroke
