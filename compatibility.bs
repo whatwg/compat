@@ -651,7 +651,7 @@ Note that the root element has a different background painting area, and thus th
   <dd>Indicates that the background image should clip to the foreground text
 </dl><br>
 
-<div class="example">
+<div class="example" id="example-webkit-background-clip">
 Here's an example showing how to use <code>'-webkit-background-clip': text</code> together with
 <code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect.
 <pre class="lang-css">
@@ -685,7 +685,7 @@ Animation type: as <a>color</a>
 The '-webkit-text-fill-color' property defines the foreground fill color of an element's text
 content.
 
-<div class="example">
+<div class="example" id="example-webkit-text-fill-color">
 Here's an example showing <code>'-webkit-text-fill-color'</code> will always determine the
 foreground fill color of an element's text.
 <pre class="lang-css">
@@ -758,7 +758,7 @@ Animation type: See individual properties
 The '-webkit-text-stroke' property is a shorthand property for setting the stroke width and stroke
 color of an element's text.
 
-<div class="example">
+<div class="example" id="example-webkit-text-stroke">
 Here are two examples showing how to use the longhand and shorthand <code>'-webkit-text-stroke'</code>
 properties to achieve white text with a black stroked text effect.
 <pre class="lang-css">
