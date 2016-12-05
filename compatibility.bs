@@ -82,7 +82,6 @@ urlPrefix: https://drafts.csswg.org/css-transforms/;
 urlPrefix: https://www.w3.org/TR/css3-values/
   type: dfn
     text: calculated values; url: #funcdef-calc
-    text: absolute lengths; url: #absolute-lengths
 urlPrefix: https://encoding.spec.whatwg.org/
   type: dfn
     text: whitespace; url: #ascii-whitespace
@@ -734,7 +733,7 @@ Value: <<line-width>>
 Initial: 0
 Applies to: all elements
 Inherited: yes
-Computed value: absolute width
+Computed value: absolute length
 Percentages: N/A
 Media: visual
 Animation type: discrete
