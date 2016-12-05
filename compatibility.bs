@@ -97,6 +97,9 @@ urlPrefix: https://www.w3.org/TR/css3-transitions/
 urlPrefix: https://drafts.fxtf.org/css-masking-1/
   type: dfn
     text: clipping path; url: #clipping-path
+urlPrefix: https://drafts.csswg.org/css-values-3/
+  type: dfn
+    text: dppx; url: #dppx
 </pre>
 
 <pre class=link-defaults>
@@ -845,7 +848,7 @@ The following are the event handlers and their corresponding event handler event
   <tbody>
     <tr>
       <td>
-          <code>{{onorientationchange}}</code>
+          <code>{{Window/onorientationchange}}</code>
       </td>
       <td>
         <code><a lt="orientationchange">orientationchange</a></code>
