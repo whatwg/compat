@@ -2,74 +2,77 @@
  <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta content="#3c790a" name="theme-color">
   <title>Compatibility Standard</title>
   <link href="https://resources.whatwg.org/standard.css" rel="stylesheet">
   <link href="https://resources.whatwg.org/bikeshed.css" rel="stylesheet">
   <link href="https://resources.whatwg.org/logo-compat.svg" rel="icon">
-  <meta content="Bikeshed 1.0.0" name="generator">
-<style>.highlight .hll { background-color: #ffffcc }
-.highlight  { background: #ffffff; }
-.highlight .c { color: #708090 } /* Comment */
-.highlight .k { color: #990055 } /* Keyword */
-.highlight .l { color: #000000 } /* Literal */
-.highlight .n { color: #0077aa } /* Name */
-.highlight .o { color: #999999 } /* Operator */
-.highlight .p { color: #999999 } /* Punctuation */
-.highlight .cm { color: #708090 } /* Comment.Multiline */
-.highlight .cp { color: #708090 } /* Comment.Preproc */
-.highlight .c1 { color: #708090 } /* Comment.Single */
-.highlight .cs { color: #708090 } /* Comment.Special */
-.highlight .kc { color: #990055 } /* Keyword.Constant */
-.highlight .kd { color: #990055 } /* Keyword.Declaration */
-.highlight .kn { color: #990055 } /* Keyword.Namespace */
-.highlight .kp { color: #990055 } /* Keyword.Pseudo */
-.highlight .kr { color: #990055 } /* Keyword.Reserved */
-.highlight .kt { color: #990055 } /* Keyword.Type */
-.highlight .ld { color: #000000 } /* Literal.Date */
-.highlight .m { color: #000000 } /* Literal.Number */
-.highlight .s { color: #a67f59 } /* Literal.String */
-.highlight .na { color: #0077aa } /* Name.Attribute */
-.highlight .nc { color: #0077aa } /* Name.Class */
-.highlight .no { color: #0077aa } /* Name.Constant */
-.highlight .nd { color: #0077aa } /* Name.Decorator */
-.highlight .ni { color: #0077aa } /* Name.Entity */
-.highlight .ne { color: #0077aa } /* Name.Exception */
-.highlight .nf { color: #0077aa } /* Name.Function */
-.highlight .nl { color: #0077aa } /* Name.Label */
-.highlight .nn { color: #0077aa } /* Name.Namespace */
-.highlight .py { color: #0077aa } /* Name.Property */
-.highlight .nt { color: #669900 } /* Name.Tag */
-.highlight .nv { color: #0077aa } /* Name.Variable */
-.highlight .ow { color: #999999 } /* Operator.Word */
-.highlight .mb { color: #000000 } /* Literal.Number.Bin */
-.highlight .mf { color: #000000 } /* Literal.Number.Float */
-.highlight .mh { color: #000000 } /* Literal.Number.Hex */
-.highlight .mi { color: #000000 } /* Literal.Number.Integer */
-.highlight .mo { color: #000000 } /* Literal.Number.Oct */
-.highlight .sb { color: #a67f59 } /* Literal.String.Backtick */
-.highlight .sc { color: #a67f59 } /* Literal.String.Char */
-.highlight .sd { color: #a67f59 } /* Literal.String.Doc */
-.highlight .s2 { color: #a67f59 } /* Literal.String.Double */
-.highlight .se { color: #a67f59 } /* Literal.String.Escape */
-.highlight .sh { color: #a67f59 } /* Literal.String.Heredoc */
-.highlight .si { color: #a67f59 } /* Literal.String.Interpol */
-.highlight .sx { color: #a67f59 } /* Literal.String.Other */
-.highlight .sr { color: #a67f59 } /* Literal.String.Regex */
-.highlight .s1 { color: #a67f59 } /* Literal.String.Single */
-.highlight .ss { color: #a67f59 } /* Literal.String.Symbol */
-.highlight .vc { color: #0077aa } /* Name.Variable.Class */
-.highlight .vg { color: #0077aa } /* Name.Variable.Global */
-.highlight .vi { color: #0077aa } /* Name.Variable.Instance */
-.highlight .il { color: #000000 } /* Literal.Number.Integer.Long */
-        .highlight { background: hsl(24, 20%, 95%); }
+  <meta content="Bikeshed version 1d4d2b1d1fc168e39cb7f99218de7951c5736ec7" name="generator">
+<style>/* style-syntax-highlighting */
+pre.idl.highlight { color: #708090; }
+        .highlight:not(.idl) { background: hsl(24, 20%, 95%); }
         code.highlight { padding: .1em; border-radius: .3em; }
         pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+        .highlight .c { color: #708090 } /* Comment */
+        .highlight .k { color: #990055 } /* Keyword */
+        .highlight .l { color: #000000 } /* Literal */
+        .highlight .n { color: #0077aa } /* Name */
+        .highlight .o { color: #999999 } /* Operator */
+        .highlight .p { color: #999999 } /* Punctuation */
+        .highlight .cm { color: #708090 } /* Comment.Multiline */
+        .highlight .cp { color: #708090 } /* Comment.Preproc */
+        .highlight .c1 { color: #708090 } /* Comment.Single */
+        .highlight .cs { color: #708090 } /* Comment.Special */
+        .highlight .kc { color: #990055 } /* Keyword.Constant */
+        .highlight .kd { color: #990055 } /* Keyword.Declaration */
+        .highlight .kn { color: #990055 } /* Keyword.Namespace */
+        .highlight .kp { color: #990055 } /* Keyword.Pseudo */
+        .highlight .kr { color: #990055 } /* Keyword.Reserved */
+        .highlight .kt { color: #990055 } /* Keyword.Type */
+        .highlight .ld { color: #000000 } /* Literal.Date */
+        .highlight .m { color: #000000 } /* Literal.Number */
+        .highlight .s { color: #a67f59 } /* Literal.String */
+        .highlight .na { color: #0077aa } /* Name.Attribute */
+        .highlight .nc { color: #0077aa } /* Name.Class */
+        .highlight .no { color: #0077aa } /* Name.Constant */
+        .highlight .nd { color: #0077aa } /* Name.Decorator */
+        .highlight .ni { color: #0077aa } /* Name.Entity */
+        .highlight .ne { color: #0077aa } /* Name.Exception */
+        .highlight .nf { color: #0077aa } /* Name.Function */
+        .highlight .nl { color: #0077aa } /* Name.Label */
+        .highlight .nn { color: #0077aa } /* Name.Namespace */
+        .highlight .py { color: #0077aa } /* Name.Property */
+        .highlight .nt { color: #669900 } /* Name.Tag */
+        .highlight .nv { color: #222222 } /* Name.Variable */
+        .highlight .ow { color: #999999 } /* Operator.Word */
+        .highlight .mb { color: #000000 } /* Literal.Number.Bin */
+        .highlight .mf { color: #000000 } /* Literal.Number.Float */
+        .highlight .mh { color: #000000 } /* Literal.Number.Hex */
+        .highlight .mi { color: #000000 } /* Literal.Number.Integer */
+        .highlight .mo { color: #000000 } /* Literal.Number.Oct */
+        .highlight .sb { color: #a67f59 } /* Literal.String.Backtick */
+        .highlight .sc { color: #a67f59 } /* Literal.String.Char */
+        .highlight .sd { color: #a67f59 } /* Literal.String.Doc */
+        .highlight .s2 { color: #a67f59 } /* Literal.String.Double */
+        .highlight .se { color: #a67f59 } /* Literal.String.Escape */
+        .highlight .sh { color: #a67f59 } /* Literal.String.Heredoc */
+        .highlight .si { color: #a67f59 } /* Literal.String.Interpol */
+        .highlight .sx { color: #a67f59 } /* Literal.String.Other */
+        .highlight .sr { color: #a67f59 } /* Literal.String.Regex */
+        .highlight .s1 { color: #a67f59 } /* Literal.String.Single */
+        .highlight .ss { color: #a67f59 } /* Literal.String.Symbol */
+        .highlight .vc { color: #0077aa } /* Name.Variable.Class */
+        .highlight .vg { color: #0077aa } /* Name.Variable.Global */
+        .highlight .vi { color: #0077aa } /* Name.Variable.Instance */
+        .highlight .il { color: #000000 } /* Literal.Number.Integer.Long */
         </style>
  <body class="h-entry status-LS">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-compat.svg"> </a> </p>
-   <h1 class="p-name no-ref" id="title">Compatibility</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-12-05">5 December 2016</time></span></h2>
+   <hgroup>
+    <h1 class="p-name no-ref" id="title">Compatibility</h1>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-12-05">5 December 2016</time></span></h2>
+   </hgroup>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -90,7 +93,6 @@
   <div class="p-summary" data-fill-with="abstract">
    <p>This standard describes a collection of non-standard (and often vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility with the de facto web.</p>
   </div>
-  <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
@@ -199,7 +201,7 @@ be performant.)</p>
       <th>unprefixed at-rule
     <tbody>
      <tr>
-      <td><code><dfn class="css" data-dfn-type="at-rule" data-export="" id="at-ruledef--webkit-keyframes" type="at-rule">@-webkit-keyframes<a class="self-link" href="#at-ruledef--webkit-keyframes"></a></dfn></code>
+      <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-keyframes" type="at-rule">@-webkit-keyframes<a class="self-link" href="#-webkit-keyframes"></a></dfn></code>
       <td><code><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-animations-1/#at-ruledef-keyframes">@keyframes</a></code>
    </table>
    <h3 class="heading settled" data-level="3.2" id="css-media-queries"><span class="secno">3.2. </span><span class="content">CSS Media Queries</span><a class="self-link" href="#css-media-queries"></a></h3>
@@ -253,14 +255,14 @@ be performant.)</p>
    <p>The <code><a class="property" data-link-type="propdesc" href="#descdef-media--webkit-transform-3d">-webkit-transform-3d</a></code> media feature is used to query whether the user agent supports CSS 3D transforms. <a data-link-type="biblio" href="#biblio-css-transforms-1">[css-transforms-1]</a></p>
    <p>If the user agent supports 3D transforms, the value will be 1. Otherwise the value is 0.</p>
    <h3 class="heading settled" data-level="3.3" id="css-<image>-type"><span class="secno">3.3. </span><span class="content">CSS Gradients</span><a class="self-link" href="#css-%3Cimage%3E-type"></a></h3>
-   <h4 class="heading settled" data-level="3.3.1" id="css-gradients-webkit-linear-gradient"><span class="secno">3.3.1. </span><span class="content"> <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-linear-gradient">-webkit-linear-gradient()</a></code> </span><a class="self-link" href="#css-gradients-webkit-linear-gradient"></a></h4>
-   <p><code><dfn class="css" data-dfn-type="function" data-export="" id="funcdef--webkit-linear-gradient">-webkit-linear-gradient()<a class="self-link" href="#funcdef--webkit-linear-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient">linear-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
-   <h4 class="heading settled" data-level="3.3.2" id="css-gradients-webkit-radial-gradient"><span class="secno">3.3.2. </span><span class="content"> <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a></code> </span><a class="self-link" href="#css-gradients-webkit-radial-gradient"></a></h4>
-   <p><code><dfn class="css" data-dfn-type="function" data-export="" id="funcdef--webkit-radial-gradient">-webkit-radial-gradient()<a class="self-link" href="#funcdef--webkit-radial-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltradial-gradient">radial-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
-   <h4 class="heading settled" data-level="3.3.3" id="css-gradients-repeating-webkit-linear-gradient"><span class="secno">3.3.3. </span><span class="content"> <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a></code> </span><a class="self-link" href="#css-gradients-repeating-webkit-linear-gradient"></a></h4>
-   <p><code><dfn class="css" data-dfn-type="function" data-export="" id="funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()<a class="self-link" href="#funcdef--webkit-repeating-linear-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-linear-gradient">repeating-linear-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
-   <h4 class="heading settled" data-level="3.3.4" id="css-gradients-repeating-webkit-radial-gradient"><span class="secno">3.3.4. </span><span class="content"> <code><a class="css" data-link-type="maybe" href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a></code> </span><a class="self-link" href="#css-gradients-repeating-webkit-radial-gradient"></a></h4>
-   <p><code><dfn class="css" data-dfn-type="function" data-export="" id="funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()<a class="self-link" href="#funcdef--webkit-repeating-radial-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-radial-gradient">repeating-radial-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
+   <h4 class="heading settled" data-level="3.3.1" id="css-gradients-webkit-linear-gradient"><span class="secno">3.3.1. </span><span class="content"> <code><span class="css">-webkit-linear-gradient()</span></code> </span><a class="self-link" href="#css-gradients-webkit-linear-gradient"></a></h4>
+   <p><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-linear-gradient">-webkit-linear-gradient()<a class="self-link" href="#-webkit-linear-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient">linear-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
+   <h4 class="heading settled" data-level="3.3.2" id="css-gradients-webkit-radial-gradient"><span class="secno">3.3.2. </span><span class="content"> <code><span class="css">-webkit-radial-gradient()</span></code> </span><a class="self-link" href="#css-gradients-webkit-radial-gradient"></a></h4>
+   <p><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-radial-gradient">-webkit-radial-gradient()<a class="self-link" href="#-webkit-radial-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltradial-gradient">radial-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
+   <h4 class="heading settled" data-level="3.3.3" id="css-gradients-repeating-webkit-linear-gradient"><span class="secno">3.3.3. </span><span class="content"> <code><span class="css">-webkit-repeating-linear-gradient()</span></code> </span><a class="self-link" href="#css-gradients-repeating-webkit-linear-gradient"></a></h4>
+   <p><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()<a class="self-link" href="#-webkit-repeating-linear-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-linear-gradient">repeating-linear-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
+   <h4 class="heading settled" data-level="3.3.4" id="css-gradients-repeating-webkit-radial-gradient"><span class="secno">3.3.4. </span><span class="content"> <code><span class="css">-webkit-repeating-radial-gradient()</span></code> </span><a class="self-link" href="#css-gradients-repeating-webkit-radial-gradient"></a></h4>
+   <p><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()<a class="self-link" href="#-webkit-repeating-radial-gradient"></a></dfn></code> must be treated as an alias of <a data-link-type="dfn" href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-radial-gradient">repeating-radial-gradient</a> as defined in <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a>.</p>
    <h3 class="heading settled" data-level="3.4" id="css-properties"><span class="secno">3.4. </span><span class="content">CSS Properties</span><a class="self-link" href="#css-properties"></a></h3>
    <h4 class="heading settled" data-level="3.4.1" id="css-simple-aliases"><span class="secno">3.4.1. </span><span class="content">Simple property aliases</span><a class="self-link" href="#css-simple-aliases"></a></h4>
    <p>The following <code>-webkit-</code> <a data-link-type="dfn" href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefixed</a> properties must be supported as aliases of the corresponding unprefixed property:</p>
@@ -451,7 +453,7 @@ be performant.)</p>
     <tbody>
      <tr>
       <td><code><dfn data-dfn-type="dfn" data-noexport="" id="-webkit-text-size-adjust" type="property">-webkit-text-size-adjust<a class="self-link" href="#-webkit-text-size-adjust"></a></dfn></code>
-      <td><code>(-prefix-)<a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-size-adjust-1/#text-size-adjust">text-size-adjust</a></code>
+      <td><code>(-prefix-)<a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-size-adjust-1/#propdef-text-size-adjust">text-size-adjust</a></code>
    </table>
    <p><br></p>
    <div class="note" role="note">As soon as each property is unprefixable it can be defined as a "simple" alias.</div>
@@ -505,13 +507,13 @@ be performant.)</p>
       <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-background-clip">-webkit-background-clip<a class="self-link" href="#propdef--webkit-background-clip"></a></dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod">border-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> padding-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> content-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-one">|</a> text
+      <td class="prod">border-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> padding-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> content-box <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> text
      <tr>
       <th>Initial:
       <td>none
      <tr>
       <th>Applies to:
-      <td>all elements
+      <td><a href="https://drafts.csswg.org/css-pseudo/#generated-content" title="Includes ::before and ::after pseudo-elements.">all elements</a>
      <tr>
       <th>Inherited:
       <td>no
@@ -525,8 +527,8 @@ be performant.)</p>
       <th>Computed value:
       <td>"text"
      <tr>
-      <th>Animatable:
-      <td>no
+      <th>Canonical order:
+      <td>per grammar
      <tr>
       <th>Animation type:
       <td>discrete
@@ -545,14 +547,15 @@ be performant.)</p>
     <dd>Indicates that the background image should clip to the foreground text 
    </dl>
    <br> 
-   <div class="example" id="example-f30f2a17">
-    <a class="self-link" href="#example-f30f2a17"></a> Here’s an example showing how to use <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a>: text</code> together with <code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect. 
+   <div class="example" id="example-webkit-background-clip">
+    <a class="self-link" href="#example-webkit-background-clip"></a> Here’s an example showing how to use <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a>: text</code> together with <code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect. 
 <pre class="lang-css highlight"><span class="nt">p </span><span class="p">{</span>
-  <span class="k">background</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">90</span><span class="l">deg</span><span class="p">,</span> red<span class="p">,</span> blue<span class="p">);</span>
+  <span class="k">background</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">90</span><span class="l">deg</span><span class="p">,</span> red<span class="p">,</span> blue<span class="p">)</span><span class="p">;</span>
   <span class="k">color</span><span class="p">:</span> #fff<span class="p">;</span>
   <span class="k">-webkit-background-clip</span><span class="p">:</span> text<span class="p">;</span>
   <span class="k">-webkit-text-fill-color</span><span class="p">:</span> transparent<span class="p">;</span>
-<span class="p">}</span></pre>
+<span class="p">}</span>
+</pre>
     <p>Browsers that don’t support <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-background-clip">-webkit-background-clip</a></code> or <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will use the <code>color</code> declaration as a fallback color.</p>
    </div>
    <h4 class="heading settled" data-level="3.4.6" id="text-fill-and-stroking"><span class="secno">3.4.6. </span><span class="content">Text Fill and Stroking</span><a class="self-link" href="#text-fill-and-stroking"></a></h4>
@@ -564,13 +567,13 @@ be performant.)</p>
       <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-fill-color">-webkit-text-fill-color<a class="self-link" href="#propdef--webkit-text-fill-color"></a></dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
+      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | indigo | gold | gold | firebrick | firebrick | indianred | indianred | yellow | yellow | darkolivegreen | darkolivegreen | darkseagreen | darkseagreen | slategrey | slategrey | darkslategrey | darkslategrey | greenyellow | greenyellow | mediumorchid | mediumorchid | silver | silver | papayawhip | papayawhip | dimgray | dimgray | black | black | springgreen | springgreen | crimson | crimson | lightsalmon | lightsalmon | brown | brown | turquoise | turquoise | lightseagreen | lightseagreen | cyan | cyan | transparent | transparent | skyblue | skyblue | gray | gray | darkturquoise | darkturquoise | goldenrod | goldenrod | darkgreen | darkgreen | darkviolet | darkviolet | darkgray | darkgray | lime | lime | lightpink | lightpink | teal | teal | darkmagenta | darkmagenta | lightgoldenrodyellow | lightgoldenrodyellow | lavender | lavender | yellowgreen | yellowgreen | thistle | thistle | violet | violet | navy | navy | dimgrey | dimgrey | orchid | orchid | blue | blue | ghostwhite | ghostwhite | honeydew | honeydew | cornflowerblue | cornflowerblue | maroon | maroon | purple | purple | darkkhaki | darkkhaki | mediumpurple | mediumpurple | cornsilk | cornsilk | red | red | bisque | bisque | burlywood | burlywood | darkcyan | darkcyan | khaki | khaki | wheat | wheat | deepskyblue | deepskyblue | rebeccapurple | rebeccapurple | darkred | darkred | steelblue | steelblue | aliceblue | aliceblue | lightslategrey | lightslategrey | gainsboro | gainsboro | mediumturquoise | mediumturquoise | floralwhite | floralwhite | coral | coral | aqua | aqua | mediumslateblue | mediumslateblue | lightcyan | lightcyan | darksalmon | darksalmon | beige | beige | azure | azure | lightsteelblue | lightsteelblue | oldlace | oldlace | mediumvioletred | mediumvioletred | royalblue | royalblue | olivedrab | olivedrab | sienna | sienna | lightcoral | lightcoral | orangered | orangered | navajowhite | navajowhite | slategray | slategray | palegreen | palegreen | mistyrose | mistyrose | seashell | seashell | mediumspringgreen | mediumspringgreen | fuchsia | fuchsia | chartreuse | chartreuse | blanchedalmond | blanchedalmond | peru | peru | aquamarine | aquamarine | white | white | darkslategray | darkslategray | tomato | tomato | ivory | ivory | dodgerblue | dodgerblue | currentcolor | currentcolor | lemonchiffon | lemonchiffon | lightgreen | lightgreen | orange | orange | forestgreen | forestgreen | darkgrey | darkgrey | olive | olive | mintcream | mintcream | antiquewhite | antiquewhite | cadetblue | cadetblue | moccasin | moccasin | limegreen | limegreen | saddlebrown | saddlebrown | grey | grey | darkslateblue | darkslateblue | lightskyblue | lightskyblue | deeppink | deeppink | plum | plum | lightgrey | lightgrey | darkgoldenrod | darkgoldenrod | slateblue | slateblue | sandybrown | sandybrown | magenta | magenta | tan | tan | rosybrown | rosybrown | pink | pink | lightblue | lightblue | palevioletred | palevioletred | mediumseagreen | mediumseagreen | linen | linen | darkorange | darkorange | powderblue | powderblue | seagreen | seagreen | snow | snow | mediumblue | mediumblue | midnightblue | midnightblue | paleturquoise | paleturquoise | palegoldenrod | palegoldenrod | whitesmoke | whitesmoke | darkorchid | darkorchid | salmon | salmon | lightslategray | lightslategray | lawngreen | lawngreen | chocolate | chocolate | lightgray | lightgray | hotpink | hotpink | lightyellow | lightyellow | lavenderblush | lavenderblush | darkblue | darkblue | mediumaquamarine | mediumaquamarine | green | green | blueviolet | blueviolet | peachpuff | peachpuff">&lt;color></a>
      <tr>
       <th>Initial:
       <td><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a>
      <tr>
       <th>Applies to:
-      <td>all elements
+      <td><a href="https://drafts.csswg.org/css-pseudo/#generated-content" title="Includes ::before and ::after pseudo-elements.">all elements</a>
      <tr>
       <th>Inherited:
       <td>yes
@@ -584,27 +587,28 @@ be performant.)</p>
       <th>Computed value:
       <td>an RGBA color
      <tr>
-      <th>Animatable:
-      <td>no
+      <th>Canonical order:
+      <td>per grammar
      <tr>
       <th>Animation type:
       <td>as <a data-link-type="dfn" href="https://www.w3.org/TR/css3-transitions/#animtype-color">color</a>
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a> property defines the foreground fill color of an element’s text
 content.</p>
-   <div class="example" id="example-b315811f">
-    <a class="self-link" href="#example-b315811f"></a> Here’s an example showing <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will always determine the
+   <div class="example" id="example-webkit-text-fill-color">
+    <a class="self-link" href="#example-webkit-text-fill-color"></a> Here’s an example showing <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a></code> will always determine the
 foreground fill color of an element’s text. 
 <pre class="lang-css highlight"><span class="nt">.one </span><span class="p">{</span>
   <span class="k">color</span><span class="p">:</span> blue<span class="p">;</span>
-  <span class="p">/</span>* the following can be omitted because it’s the initial value:
-  -webkit-text-fill-color: currentcolor; */
-}
+  <span class="c">/*</span><span class="c"> </span><span class="c">t</span><span class="c">h</span><span class="c">e</span><span class="c"> </span><span class="c">f</span><span class="c">o</span><span class="c">l</span><span class="c">l</span><span class="c">o</span><span class="c">w</span><span class="c">i</span><span class="c">n</span><span class="c">g</span><span class="c"> </span><span class="c">c</span><span class="c">a</span><span class="c">n</span><span class="c"> </span><span class="c">b</span><span class="c">e</span><span class="c"> </span><span class="c">o</span><span class="c">m</span><span class="c">i</span><span class="c">t</span><span class="c">t</span><span class="c">e</span><span class="c">d</span><span class="c"> </span><span class="c">b</span><span class="c">e</span><span class="c">c</span><span class="c">a</span><span class="c">u</span><span class="c">s</span><span class="c">e</span><span class="c"> </span><span class="c">i</span><span class="c">t</span><span class="c">’</span><span class="c">s</span><span class="c"> </span><span class="c">t</span><span class="c">h</span><span class="c">e</span><span class="c"> </span><span class="c">i</span><span class="c">n</span><span class="c">i</span><span class="c">t</span><span class="c">i</span><span class="c">a</span><span class="c">l</span><span class="c"> </span><span class="c">v</span><span class="c">a</span><span class="c">l</span><span class="c">u</span><span class="c">e</span><span class="c">:</span><span class="c">
+</span><span class="c"> </span><span class="c"> </span><span class="c">-</span><span class="c">w</span><span class="c">e</span><span class="c">b</span><span class="c">k</span><span class="c">i</span><span class="c">t</span><span class="c">-</span><span class="c">t</span><span class="c">e</span><span class="c">x</span><span class="c">t</span><span class="c">-</span><span class="c">f</span><span class="c">i</span><span class="c">l</span><span class="c">l</span><span class="c">-</span><span class="c">c</span><span class="c">o</span><span class="c">l</span><span class="c">o</span><span class="c">r</span><span class="c">:</span><span class="c"> </span><span class="c">c</span><span class="c">u</span><span class="c">r</span><span class="c">r</span><span class="c">e</span><span class="c">n</span><span class="c">t</span><span class="c">c</span><span class="c">o</span><span class="c">l</span><span class="c">o</span><span class="c">r</span><span class="c">;</span><span class="c"> </span><span class="c">*/</span>
+<span class="p">}</span>
 
-.two {
-  color: red;
-  -webkit-text-fill-color: blue;
-}</pre>
+<span class="nt">.two </span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> red<span class="p">;</span>
+  <span class="k">-webkit-text-fill-color</span><span class="p">:</span> blue<span class="p">;</span>
+<span class="p">}</span>
+</pre>
     <p>Elements with the <code>one</code> or <code>two</code> classes will have blue text.</p>
    </div>
    <h5 class="heading settled" data-level="3.4.6.2" id="the-webkit-text-stroke-color"><span class="secno">3.4.6.2. </span><span class="content">Text Stroke Color: the <code> <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke-color">-webkit-text-stroke-color</a></code> property</span><a class="self-link" href="#the-webkit-text-stroke-color"></a></h5>
@@ -615,13 +619,13 @@ foreground fill color of an element’s text.
       <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-stroke-color">-webkit-text-stroke-color<a class="self-link" href="#propdef--webkit-text-stroke-color"></a></dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
+      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | indigo | gold | gold | firebrick | firebrick | indianred | indianred | yellow | yellow | darkolivegreen | darkolivegreen | darkseagreen | darkseagreen | slategrey | slategrey | darkslategrey | darkslategrey | greenyellow | greenyellow | mediumorchid | mediumorchid | silver | silver | papayawhip | papayawhip | dimgray | dimgray | black | black | springgreen | springgreen | crimson | crimson | lightsalmon | lightsalmon | brown | brown | turquoise | turquoise | lightseagreen | lightseagreen | cyan | cyan | transparent | transparent | skyblue | skyblue | gray | gray | darkturquoise | darkturquoise | goldenrod | goldenrod | darkgreen | darkgreen | darkviolet | darkviolet | darkgray | darkgray | lime | lime | lightpink | lightpink | teal | teal | darkmagenta | darkmagenta | lightgoldenrodyellow | lightgoldenrodyellow | lavender | lavender | yellowgreen | yellowgreen | thistle | thistle | violet | violet | navy | navy | dimgrey | dimgrey | orchid | orchid | blue | blue | ghostwhite | ghostwhite | honeydew | honeydew | cornflowerblue | cornflowerblue | maroon | maroon | purple | purple | darkkhaki | darkkhaki | mediumpurple | mediumpurple | cornsilk | cornsilk | red | red | bisque | bisque | burlywood | burlywood | darkcyan | darkcyan | khaki | khaki | wheat | wheat | deepskyblue | deepskyblue | rebeccapurple | rebeccapurple | darkred | darkred | steelblue | steelblue | aliceblue | aliceblue | lightslategrey | lightslategrey | gainsboro | gainsboro | mediumturquoise | mediumturquoise | floralwhite | floralwhite | coral | coral | aqua | aqua | mediumslateblue | mediumslateblue | lightcyan | lightcyan | darksalmon | darksalmon | beige | beige | azure | azure | lightsteelblue | lightsteelblue | oldlace | oldlace | mediumvioletred | mediumvioletred | royalblue | royalblue | olivedrab | olivedrab | sienna | sienna | lightcoral | lightcoral | orangered | orangered | navajowhite | navajowhite | slategray | slategray | palegreen | palegreen | mistyrose | mistyrose | seashell | seashell | mediumspringgreen | mediumspringgreen | fuchsia | fuchsia | chartreuse | chartreuse | blanchedalmond | blanchedalmond | peru | peru | aquamarine | aquamarine | white | white | darkslategray | darkslategray | tomato | tomato | ivory | ivory | dodgerblue | dodgerblue | currentcolor | currentcolor | lemonchiffon | lemonchiffon | lightgreen | lightgreen | orange | orange | forestgreen | forestgreen | darkgrey | darkgrey | olive | olive | mintcream | mintcream | antiquewhite | antiquewhite | cadetblue | cadetblue | moccasin | moccasin | limegreen | limegreen | saddlebrown | saddlebrown | grey | grey | darkslateblue | darkslateblue | lightskyblue | lightskyblue | deeppink | deeppink | plum | plum | lightgrey | lightgrey | darkgoldenrod | darkgoldenrod | slateblue | slateblue | sandybrown | sandybrown | magenta | magenta | tan | tan | rosybrown | rosybrown | pink | pink | lightblue | lightblue | palevioletred | palevioletred | mediumseagreen | mediumseagreen | linen | linen | darkorange | darkorange | powderblue | powderblue | seagreen | seagreen | snow | snow | mediumblue | mediumblue | midnightblue | midnightblue | paleturquoise | paleturquoise | palegoldenrod | palegoldenrod | whitesmoke | whitesmoke | darkorchid | darkorchid | salmon | salmon | lightslategray | lightslategray | lawngreen | lawngreen | chocolate | chocolate | lightgray | lightgray | hotpink | hotpink | lightyellow | lightyellow | lavenderblush | lavenderblush | darkblue | darkblue | mediumaquamarine | mediumaquamarine | green | green | blueviolet | blueviolet | peachpuff | peachpuff">&lt;color></a>
      <tr>
       <th>Initial:
       <td><a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a>
      <tr>
       <th>Applies to:
-      <td>all elements
+      <td><a href="https://drafts.csswg.org/css-pseudo/#generated-content" title="Includes ::before and ::after pseudo-elements.">all elements</a>
      <tr>
       <th>Inherited:
       <td>yes
@@ -635,8 +639,8 @@ foreground fill color of an element’s text.
       <th>Computed value:
       <td>an RGBA color
      <tr>
-      <th>Animatable:
-      <td>no
+      <th>Canonical order:
+      <td>per grammar
      <tr>
       <th>Animation type:
       <td>as <a data-link-type="dfn" href="https://www.w3.org/TR/css3-transitions/#animtype-color">color</a>
@@ -656,7 +660,7 @@ foreground fill color of an element’s text.
       <td>0
      <tr>
       <th>Applies to:
-      <td>all elements
+      <td><a href="https://drafts.csswg.org/css-pseudo/#generated-content" title="Includes ::before and ::after pseudo-elements.">all elements</a>
      <tr>
       <th>Inherited:
       <td>yes
@@ -670,8 +674,8 @@ foreground fill color of an element’s text.
       <th>Computed value:
       <td>absolute width
      <tr>
-      <th>Animatable:
-      <td>no
+      <th>Canonical order:
+      <td>per grammar
      <tr>
       <th>Animation type:
       <td>discrete
@@ -687,7 +691,7 @@ invalid.</p>
       <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef--webkit-text-stroke">-webkit-text-stroke<a class="self-link" href="#propdef--webkit-text-stroke"></a></dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#line-width">&lt;line-width></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-3/#comb-any">||</a> <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | gold | firebrick | indianred | yellow | darkolivegreen | darkseagreen | slategrey | darkslategrey | greenyellow | mediumorchid | silver | papayawhip | dimgray | black | springgreen | crimson | lightsalmon | brown | turquoise | lightseagreen | cyan | transparent | skyblue | gray | darkturquoise | goldenrod | darkgreen | darkviolet | darkgray | lime | lightpink | teal | darkmagenta | lightgoldenrodyellow | lavender | yellowgreen | thistle | violet | navy | dimgrey | orchid | blue | ghostwhite | honeydew | cornflowerblue | maroon | purple | darkkhaki | mediumpurple | cornsilk | red | bisque | burlywood | darkcyan | khaki | wheat | deepskyblue | rebeccapurple | darkred | steelblue | aliceblue | lightslategrey | gainsboro | mediumturquoise | floralwhite | coral | aqua | mediumslateblue | lightcyan | darksalmon | beige | azure | lightsteelblue | oldlace | mediumvioletred | royalblue | olivedrab | sienna | lightcoral | orangered | navajowhite | slategray | palegreen | mistyrose | seashell | mediumspringgreen | fuchsia | chartreuse | blanchedalmond | peru | aquamarine | white | darkslategray | tomato | ivory | dodgerblue | currentcolor | lemonchiffon | lightgreen | orange | forestgreen | darkgrey | olive | mintcream | antiquewhite | cadetblue | moccasin | limegreen | saddlebrown | grey | darkslateblue | lightskyblue | deeppink | plum | lightgrey | darkgoldenrod | slateblue | sandybrown | magenta | tan | rosybrown | pink | lightblue | palevioletred | mediumseagreen | linen | darkorange | powderblue | seagreen | snow | mediumblue | midnightblue | paleturquoise | palegoldenrod | whitesmoke | darkorchid | salmon | lightslategray | lawngreen | chocolate | lightgray | hotpink | lightyellow | lavenderblush | darkblue | mediumaquamarine | green | blueviolet | peachpuff">&lt;color></a>
+      <td class="prod"><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-backgrounds-3/#line-width">&lt;line-width></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-any">||</a> <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-color-3/#valuea-def-color" title="Expands to: indigo | indigo | gold | gold | firebrick | firebrick | indianred | indianred | yellow | yellow | darkolivegreen | darkolivegreen | darkseagreen | darkseagreen | slategrey | slategrey | darkslategrey | darkslategrey | greenyellow | greenyellow | mediumorchid | mediumorchid | silver | silver | papayawhip | papayawhip | dimgray | dimgray | black | black | springgreen | springgreen | crimson | crimson | lightsalmon | lightsalmon | brown | brown | turquoise | turquoise | lightseagreen | lightseagreen | cyan | cyan | transparent | transparent | skyblue | skyblue | gray | gray | darkturquoise | darkturquoise | goldenrod | goldenrod | darkgreen | darkgreen | darkviolet | darkviolet | darkgray | darkgray | lime | lime | lightpink | lightpink | teal | teal | darkmagenta | darkmagenta | lightgoldenrodyellow | lightgoldenrodyellow | lavender | lavender | yellowgreen | yellowgreen | thistle | thistle | violet | violet | navy | navy | dimgrey | dimgrey | orchid | orchid | blue | blue | ghostwhite | ghostwhite | honeydew | honeydew | cornflowerblue | cornflowerblue | maroon | maroon | purple | purple | darkkhaki | darkkhaki | mediumpurple | mediumpurple | cornsilk | cornsilk | red | red | bisque | bisque | burlywood | burlywood | darkcyan | darkcyan | khaki | khaki | wheat | wheat | deepskyblue | deepskyblue | rebeccapurple | rebeccapurple | darkred | darkred | steelblue | steelblue | aliceblue | aliceblue | lightslategrey | lightslategrey | gainsboro | gainsboro | mediumturquoise | mediumturquoise | floralwhite | floralwhite | coral | coral | aqua | aqua | mediumslateblue | mediumslateblue | lightcyan | lightcyan | darksalmon | darksalmon | beige | beige | azure | azure | lightsteelblue | lightsteelblue | oldlace | oldlace | mediumvioletred | mediumvioletred | royalblue | royalblue | olivedrab | olivedrab | sienna | sienna | lightcoral | lightcoral | orangered | orangered | navajowhite | navajowhite | slategray | slategray | palegreen | palegreen | mistyrose | mistyrose | seashell | seashell | mediumspringgreen | mediumspringgreen | fuchsia | fuchsia | chartreuse | chartreuse | blanchedalmond | blanchedalmond | peru | peru | aquamarine | aquamarine | white | white | darkslategray | darkslategray | tomato | tomato | ivory | ivory | dodgerblue | dodgerblue | currentcolor | currentcolor | lemonchiffon | lemonchiffon | lightgreen | lightgreen | orange | orange | forestgreen | forestgreen | darkgrey | darkgrey | olive | olive | mintcream | mintcream | antiquewhite | antiquewhite | cadetblue | cadetblue | moccasin | moccasin | limegreen | limegreen | saddlebrown | saddlebrown | grey | grey | darkslateblue | darkslateblue | lightskyblue | lightskyblue | deeppink | deeppink | plum | plum | lightgrey | lightgrey | darkgoldenrod | darkgoldenrod | slateblue | slateblue | sandybrown | sandybrown | magenta | magenta | tan | tan | rosybrown | rosybrown | pink | pink | lightblue | lightblue | palevioletred | palevioletred | mediumseagreen | mediumseagreen | linen | linen | darkorange | darkorange | powderblue | powderblue | seagreen | seagreen | snow | snow | mediumblue | mediumblue | midnightblue | midnightblue | paleturquoise | paleturquoise | palegoldenrod | palegoldenrod | whitesmoke | whitesmoke | darkorchid | darkorchid | salmon | salmon | lightslategray | lightslategray | lawngreen | lawngreen | chocolate | chocolate | lightgray | lightgray | hotpink | hotpink | lightyellow | lightyellow | lavenderblush | lavenderblush | darkblue | darkblue | mediumaquamarine | mediumaquamarine | green | green | blueviolet | blueviolet | peachpuff | peachpuff">&lt;color></a>
      <tr>
       <th>Initial:
       <td>See individual properties
@@ -707,16 +711,16 @@ invalid.</p>
       <th>Computed value:
       <td>See individual properties
      <tr>
-      <th>Animatable:
-      <td>no
+      <th>Canonical order:
+      <td>per grammar
      <tr>
       <th>Animation type:
       <td>See individual properties
    </table>
    <p>The <a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a> property is a shorthand property for setting the stroke width and stroke
 color of an element’s text.</p>
-   <div class="example" id="example-55bc95ba">
-    <a class="self-link" href="#example-55bc95ba"></a> Here are two examples showing how to use the longhand and shorthand <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a></code> properties to achieve white text with a black stroked text effect. 
+   <div class="example" id="example-webkit-text-stroke">
+    <a class="self-link" href="#example-webkit-text-stroke"></a> Here are two examples showing how to use the longhand and shorthand <code><a class="property" data-link-type="propdesc" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a></code> properties to achieve white text with a black stroked text effect. 
 <pre class="lang-css highlight"><span class="nt">.stroked-text-longhand </span><span class="p">{</span>
   <span class="k">color</span><span class="p">:</span> #fff<span class="p">;</span>
   <span class="k">-webkit-text-stroke-color</span><span class="p">:</span> #000<span class="p">;</span>
@@ -726,24 +730,26 @@ color of an element’s text.</p>
 <span class="nt">.stroked-text-shorthand </span><span class="p">{</span>
   <span class="k">-webkit-text-fill-color</span><span class="p">:</span> #fff<span class="p">;</span>
   <span class="k">-webkit-text-stroke</span><span class="p">:</span> thin #000<span class="p">;</span>
-<span class="p">}</span></pre>
-     The element 
+<span class="p">}</span>
+</pre>
+    <p>The element </p>
 <pre>&lt;p class="stroked-text-longhand">Serious typography&lt;/p></pre>
      would be
-rendered as follows: 
+rendered as follows:
+    <p></p>
     <p><img alt="image of stroked text" src="https://miketaylr.com/post/stroked-text.png" style="width: 381px;height: 116px;"></p>
    </div>
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="webkitcssmatrix-interface"><span class="secno">4.1. </span><span class="content">The WebKitCSSMatrix interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
    <div class="note" role="note"><a data-link-type="dfn" href="https://drafts.fxtf.org/geometry/#webkitcssmatrix">WebKitCSSMatrix</a> is now defined by the DOM Geometry specification. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>.</div>
    <h3 class="heading settled" data-level="4.2" id="windoworientation-interface"><span class="secno">4.2. </span><span class="content"><a class="idl-code" data-link-type="attribute" href="#dom-window-orientation"><code>window.orientation</code></a> API</span><a class="self-link" href="#windoworientation-interface"></a></h3>
-<pre class="idl">partial interface <a class="idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a> {
-    readonly attribute short <a class="idl-code" data-link-type="attribute" data-readonly="" data-type="short " href="#dom-window-orientation">orientation</a>;
-    attribute <a data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <dfn class="idl-code" data-dfn-for="Window" data-dfn-type="attribute" data-export="" data-type="EventHandler " id="dom-window-onorientationchange">onorientationchange<a class="self-link" href="#dom-window-onorientationchange"></a></dfn>;
+<pre class="idl highlight def"><span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a> {
+    <span class="kt">readonly</span> <span class="kt">attribute</span> <span class="kt">short</span> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="short" href="#dom-window-orientation">orientation</a>;
+    <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <dfn class="nv idl-code" data-dfn-for="Window" data-dfn-type="attribute" data-export="" data-type="EventHandler" id="dom-window-onorientationchange">onorientationchange<a class="self-link" href="#dom-window-onorientationchange"></a></dfn>;
 };
 
-partial interface <a class="idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/semantics.html#htmlbodyelement">HTMLBodyElement</a> {
-    attribute <a data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <dfn class="idl-code" data-dfn-for="HTMLBodyElement" data-dfn-type="attribute" data-export="" data-type="EventHandler " id="dom-htmlbodyelement-onorientationchange">onorientationchange<a class="self-link" href="#dom-htmlbodyelement-onorientationchange"></a></dfn>;
+<span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/semantics.html#htmlbodyelement">HTMLBodyElement</a> {
+    <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <dfn class="nv idl-code" data-dfn-for="HTMLBodyElement" data-dfn-type="attribute" data-export="" data-type="EventHandler" id="dom-htmlbodyelement-onorientationchange">onorientationchange<a class="self-link" href="#dom-htmlbodyelement-onorientationchange"></a></dfn>;
 };
 </pre>
    <p>When getting the <dfn class="idl-code" data-dfn-for="Window" data-dfn-type="attribute" data-export="" id="dom-window-orientation">orientation<a class="self-link" href="#dom-window-orientation"></a></dfn> attribute, the user agent must run the following steps:</p>
@@ -794,8 +800,8 @@ the extent possible under law, the editors have waived all copyright and related
 neighboring rights to this work.</p>
 <script id="head" src="https://resources.whatwg.org/dfn.js"></script>
   </main>
-  <h2 class="no-num heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
-  <h3 class="no-num heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
+  <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
    <li><a href="#valdef--webkit-background-clip-border-box">border-box</a><span>, in §3.4.5</span>
    <li><a href="#valdef--webkit-background-clip-content-box">content-box</a><span>, in §3.4.5</span>
@@ -850,8 +856,8 @@ neighboring rights to this work.</p>
    <li><a href="#-webkit-inline-box">-webkit-inline-box</a><span>, in §3.4.4</span>
    <li><a href="#-webkit-inline-flex">-webkit-inline-flex</a><span>, in §3.4.4</span>
    <li><a href="#-webkit-justify-content">-webkit-justify-content</a><span>, in §3.4.1</span>
-   <li><a href="#at-ruledef--webkit-keyframes">@-webkit-keyframes</a><span>, in §3.1</span>
-   <li><a href="#funcdef--webkit-linear-gradient">-webkit-linear-gradient()</a><span>, in §3.3.1</span>
+   <li><a href="#-webkit-keyframes">@-webkit-keyframes</a><span>, in §3.1</span>
+   <li><a href="#-webkit-linear-gradient">-webkit-linear-gradient()</a><span>, in §3.3.1</span>
    <li><a href="#-webkit-mask">-webkit-mask</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-mask-box-image">-webkit-mask-box-image</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-mask-box-image-outset">-webkit-mask-box-image-outset</a><span>, in §3.4.1</span>
@@ -871,9 +877,9 @@ neighboring rights to this work.</p>
    <li><a href="#-webkit-order">-webkit-order</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-perspective">-webkit-perspective</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-perspective-origin">-webkit-perspective-origin</a><span>, in §3.4.1</span>
-   <li><a href="#funcdef--webkit-radial-gradient">-webkit-radial-gradient()</a><span>, in §3.3.2</span>
-   <li><a href="#funcdef--webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a><span>, in §3.3.3</span>
-   <li><a href="#funcdef--webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.3.4</span>
+   <li><a href="#-webkit-radial-gradient">-webkit-radial-gradient()</a><span>, in §3.3.2</span>
+   <li><a href="#-webkit-repeating-linear-gradient">-webkit-repeating-linear-gradient()</a><span>, in §3.3.3</span>
+   <li><a href="#-webkit-repeating-radial-gradient">-webkit-repeating-radial-gradient()</a><span>, in §3.3.4</span>
    <li><a href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a><span>, in §3.4.6.1</span>
    <li><a href="#-webkit-text-size-adjust">-webkit-text-size-adjust</a><span>, in §3.4.2</span>
    <li><a href="#propdef--webkit-text-stroke">-webkit-text-stroke</a><span>, in §3.4.6.4</span>
@@ -889,30 +895,10 @@ neighboring rights to this work.</p>
    <li><a href="#-webkit-transition-property">-webkit-transition-property</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-transition-timing-function">-webkit-transition-timing-function</a><span>, in §3.4.1</span>
   </ul>
-  <h3 class="no-num heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
+  <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="index">
    <li>
-    <a data-link-type="biblio" href="#biblio-css22">[CSS22]</a> defines the following terms:
-    <ul>
-     <li><a href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefix</a>
-    </ul>
-   <li>
-    <a data-link-type="biblio" href="#biblio-html">[HTML]</a> defines the following terms:
-    <ul>
-     <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#active-document">active document</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers">event handler</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-event-type">event handler event type</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#responsible-document">responsible document</a>
-    </ul>
-   <li>
-    <a data-link-type="biblio" href="#biblio-whatwg-dom">[WHATWG-DOM]</a> defines the following terms:
-    <ul>
-     <li><a href="https://dom.spec.whatwg.org/#concept-event-fire">fire an event</a>
-    </ul>
-   <li>
-    <a data-link-type="biblio" href="#biblio-css-align-3">[css-align-3]</a> defines the following terms:
+    <a data-link-type="biblio">[css-align-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-align-3/#propdef-align-content">align-content</a>
      <li><a href="https://drafts.csswg.org/css-align-3/#propdef-align-items">align-items</a>
@@ -920,7 +906,7 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-align-3/#propdef-justify-content">justify-content</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-animations-1">[css-animations-1]</a> defines the following terms:
+    <a data-link-type="biblio">[css-animations-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-animations-1/#at-ruledef-keyframes">@keyframes</a>
      <li><a href="https://drafts.csswg.org/css-animations-1/#propdef-animation">animation</a>
@@ -934,7 +920,7 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-animations-1/#propdef-animation-timing-function">animation-timing-function</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-backgrounds-3">[css-backgrounds-3]</a> defines the following terms:
+    <a data-link-type="biblio">[css-backgrounds-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#box">&lt;box></a>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#line-width">&lt;line-width></a>
@@ -949,27 +935,27 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-backgrounds-3/#box-shadow">box-shadow</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-color-3">[css-color-3]</a> defines the following terms:
+    <a data-link-type="biblio">[css-color-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-color-3/#valuea-def-color">&lt;color></a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-color-4">[css-color-4]</a> defines the following terms:
+    <a data-link-type="biblio">[css-color-4]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-color-4/#valdef-color-currentcolor">currentcolor</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-conditional-3">[css-conditional-3]</a> defines the following terms:
+    <a data-link-type="biblio">[css-conditional-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-display-3">[css-display-3]</a> defines the following terms:
+    <a data-link-type="biblio">[css-display-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-display-3/#valdef-display-flex">flex</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-flexbox-1">[css-flexbox-1]</a> defines the following terms:
+    <a data-link-type="biblio">[css-flexbox-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-flexbox-1/#propdef-flex">flex</a>
      <li><a href="https://drafts.csswg.org/css-flexbox-1/#propdef-flex-basis">flex-basis</a>
@@ -982,7 +968,7 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-flexbox-1/#propdef-order">order</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-masking-1">[css-masking-1]</a> defines the following terms:
+    <a data-link-type="biblio">[css-masking-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#clipping-region">clipping region</a>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask">mask</a>
@@ -1001,12 +987,12 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-size">mask-size</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-size-adjust-1">[css-size-adjust-1]</a> defines the following terms:
+    <a data-link-type="biblio">[css-size-adjust-1]</a> defines the following terms:
     <ul>
-     <li><a href="https://drafts.csswg.org/css-size-adjust-1/#text-size-adjust">text-size-adjust</a>
+     <li><a href="https://drafts.csswg.org/css-size-adjust-1/#propdef-text-size-adjust">text-size-adjust</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-transforms-1">[css-transforms-1]</a> defines the following terms:
+    <a data-link-type="biblio">[css-transforms-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-transforms-1/#propdef-backface-visibility">backface-visibility</a>
      <li><a href="https://drafts.csswg.org/css-transforms-1/#propdef-perspective">perspective</a>
@@ -1016,7 +1002,7 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-transforms-1/#propdef-transform-style">transform-style</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-transitions-1">[css-transitions-1]</a> defines the following terms:
+    <a data-link-type="biblio">[css-transitions-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-transitions-1/#propdef-transition">transition</a>
      <li><a href="https://drafts.csswg.org/css-transitions-1/#propdef-transition-delay">transition-delay</a>
@@ -1025,20 +1011,28 @@ neighboring rights to this work.</p>
      <li><a href="https://drafts.csswg.org/css-transitions-1/#propdef-transition-timing-function">transition-timing-function</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-ui-3">[css-ui-3]</a> defines the following terms:
+    <a data-link-type="biblio">[css-ui-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-ui-3/#propdef-box-sizing">box-sizing</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css-values-3">[css-values]</a> defines the following terms:
+    <a data-link-type="biblio">[css-values-3]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-values-3/#number-value">&lt;number></a>
-     <li><a href="https://drafts.csswg.org/css-values-3/#dppx">dppx</a>
-     <li><a href="https://drafts.csswg.org/css-values-3/#comb-one">|</a>
-     <li><a href="https://drafts.csswg.org/css-values-3/#comb-any">||</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-css3-images-20110217">[css3-images-20110217]</a> defines the following terms:
+    <a data-link-type="biblio">[css-values-3]</a> defines the following terms:
+    <ul>
+     <li><a href="https://drafts.csswg.org/css-values-4/#comb-one">|</a>
+     <li><a href="https://drafts.csswg.org/css-values-4/#comb-any">||</a>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[CSS22]</a> defines the following terms:
+    <ul>
+     <li><a href="http://www.w3.org/TR/CSS/#vendor-prefix">vendor prefix</a>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[css3-images-20110217]</a> defines the following terms:
     <ul>
      <li><a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient">linear-gradient</a>
      <li><a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltradial-gradient">radial-gradient</a>
@@ -1046,23 +1040,29 @@ neighboring rights to this work.</p>
      <li><a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltrepeating-radial-gradient">repeating-radial-gradient</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-filters-1">[filters-1]</a> defines the following terms:
+    <a data-link-type="biblio">[filters-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.fxtf.org/filters-1/#propdef-filter">filter</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a> defines the following terms:
+    <a data-link-type="biblio">[geometry-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.fxtf.org/geometry/#webkitcssmatrix">webkitcssmatrix</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-html">[HTML]</a> defines the following terms:
+    <a data-link-type="biblio">[HTML]</a> defines the following terms:
     <ul>
      <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a>
      <li><a href="https://html.spec.whatwg.org/multipage/semantics.html#htmlbodyelement">HTMLBodyElement</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#active-document">active document</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers">event handler</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-event-type">event handler event type</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#responsible-document">responsible document</a>
     </ul>
    <li>
-    <a data-link-type="biblio" href="#biblio-mediaqueries-4">[mediaqueries-4]</a> defines the following terms:
+    <a data-link-type="biblio">[mediaqueries-4]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/mediaqueries-4/#typedef-mq-boolean">&lt;mq-boolean></a>
      <li><a href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">max-resolution</a>
@@ -1071,58 +1071,63 @@ neighboring rights to this work.</p>
      <li><a href="http://www.w3.org/TR/mediaqueries-4/#mq-min-max">prefixes on range features</a>
      <li><a href="http://www.w3.org/TR/mediaqueries-4/#descdef-resolution">resolution</a>
     </ul>
+   <li>
+    <a data-link-type="biblio">[WHATWG-DOM]</a> defines the following terms:
+    <ul>
+     <li><a href="https://dom.spec.whatwg.org/#concept-event-fire">fire an event</a>
+    </ul>
   </ul>
-  <h2 class="no-num heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="no-num heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
-   <dt id="biblio-css22"><a class="self-link" href="#biblio-css22"></a>[CSS22]
-   <dd>Bert Bos. <a href="https://drafts.csswg.org/css2/">Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification</a>. Draft. URL: <a href="https://drafts.csswg.org/css2/">https://drafts.csswg.org/css2/</a>
-   <dt id="biblio-html"><a class="self-link" href="#biblio-html"></a>[HTML]
-   <dd>Ian Hickson. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
-   <dt id="biblio-whatwg-dom"><a class="self-link" href="#biblio-whatwg-dom"></a>[WHATWG-DOM]
-   <dd>Anne van Kesteren. <a href="https://dom.spec.whatwg.org/">DOM Standard</a>. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a>
-   <dt id="biblio-css-align-3"><a class="self-link" href="#biblio-css-align-3"></a>[CSS-ALIGN-3]
-   <dd>Elika Etemad; Tab Atkins Jr.. <a href="http://dev.w3.org/csswg/css-align/">CSS Box Alignment Module Level 3</a>. 18 December 2014. WD. URL: <a href="http://dev.w3.org/csswg/css-align/">http://dev.w3.org/csswg/css-align/</a>
-   <dt id="biblio-css-animations-1"><a class="self-link" href="#biblio-css-animations-1"></a>[CSS-ANIMATIONS-1]
+   <dt id="biblio-css-align-3">[CSS-ALIGN-3]
+   <dd>Elika Etemad; Tab Atkins Jr.. <a href="https://drafts.csswg.org/css-align/">CSS Box Alignment Module Level 3</a>. URL: <a href="https://drafts.csswg.org/css-align/">https://drafts.csswg.org/css-align/</a>
+   <dt id="biblio-css-animations-1">[CSS-ANIMATIONS-1]
    <dd>CSS Animations Module Level 1 URL: <a href="https://drafts.csswg.org/css-animations-1/">https://drafts.csswg.org/css-animations-1/</a>
-   <dt id="biblio-css-backgrounds-3"><a class="self-link" href="#biblio-css-backgrounds-3"></a>[CSS-BACKGROUNDS-3]
+   <dt id="biblio-css-backgrounds-3">[CSS-BACKGROUNDS-3]
    <dd>CSS Backgrounds and Borders Module Level 3 URL: <a href="https://drafts.csswg.org/css-backgrounds-3/">https://drafts.csswg.org/css-backgrounds-3/</a>
-   <dt id="biblio-css-color-3"><a class="self-link" href="#biblio-css-color-3"></a>[CSS-COLOR-3]
+   <dt id="biblio-css-color-3">[CSS-COLOR-3]
    <dd>CSS Color Module Level 3 URL: <a href="https://drafts.csswg.org/css-color-3/">https://drafts.csswg.org/css-color-3/</a>
-   <dt id="biblio-css-color-4"><a class="self-link" href="#biblio-css-color-4"></a>[CSS-COLOR-4]
-   <dd>CSS Color Module Level 4 URL: <a href="https://drafts.csswg.org/css-color-4/">https://drafts.csswg.org/css-color-4/</a>
-   <dt id="biblio-css-conditional-3"><a class="self-link" href="#biblio-css-conditional-3"></a>[CSS-CONDITIONAL-3]
+   <dt id="biblio-css-color-4">[CSS-COLOR-4]
+   <dd>Tab Atkins Jr.; Chris Lilley. <a href="https://drafts.csswg.org/css-color/">CSS Color Module Level 4</a>. URL: <a href="https://drafts.csswg.org/css-color/">https://drafts.csswg.org/css-color/</a>
+   <dt id="biblio-css-conditional-3">[CSS-CONDITIONAL-3]
    <dd>CSS Conditional Rules Module Level 3 URL: <a href="https://drafts.csswg.org/css-conditional-3/">https://drafts.csswg.org/css-conditional-3/</a>
-   <dt id="biblio-css-display-3"><a class="self-link" href="#biblio-css-display-3"></a>[CSS-DISPLAY-3]
-   <dd>Tab Atkins Jr.; Elika Etemad. <a href="http://dev.w3.org/csswg/css-display/">CSS Display Module Level 3</a>. 15 October 2015. WD. URL: <a href="http://dev.w3.org/csswg/css-display/">http://dev.w3.org/csswg/css-display/</a>
-   <dt id="biblio-css-flexbox-1"><a class="self-link" href="#biblio-css-flexbox-1"></a>[CSS-FLEXBOX-1]
-   <dd>Tab Atkins Jr.; Elika Etemad; Rossen Atanassov. <a href="http://dev.w3.org/csswg/css-flexbox/">CSS Flexible Box Layout Module Level 1</a>. 14 May 2015. LCWD. URL: <a href="http://dev.w3.org/csswg/css-flexbox/">http://dev.w3.org/csswg/css-flexbox/</a>
-   <dt id="biblio-css-masking-1"><a class="self-link" href="#biblio-css-masking-1"></a>[CSS-MASKING-1]
-   <dd>Dirk Schulze; Brian Birtles; Tab Atkins Jr.. <a href="http://dev.w3.org/fxtf/css-masking-1/">CSS Masking Module Level 1</a>. 26 August 2014. CR. URL: <a href="http://dev.w3.org/fxtf/css-masking-1/">http://dev.w3.org/fxtf/css-masking-1/</a>
-   <dt id="biblio-css-size-adjust-1"><a class="self-link" href="#biblio-css-size-adjust-1"></a>[CSS-SIZE-ADJUST-1]
+   <dt id="biblio-css-display-3">[CSS-DISPLAY-3]
+   <dd>Tab Atkins Jr.; Elika Etemad. <a href="http://dev.w3.org/csswg/css-display/">CSS Display Module Level 3</a>. URL: <a href="http://dev.w3.org/csswg/css-display/">http://dev.w3.org/csswg/css-display/</a>
+   <dt id="biblio-css-flexbox-1">[CSS-FLEXBOX-1]
+   <dd>Tab Atkins Jr.; Elika Etemad; Rossen Atanassov. <a href="https://drafts.csswg.org/css-flexbox/">CSS Flexible Box Layout Module Level 1</a>. URL: <a href="https://drafts.csswg.org/css-flexbox/">https://drafts.csswg.org/css-flexbox/</a>
+   <dt id="biblio-css-masking-1">[CSS-MASKING-1]
+   <dd>Dirk Schulze; Brian Birtles; Tab Atkins Jr.. <a href="http://dev.w3.org/fxtf/css-masking-1/">CSS Masking Module Level 1</a>. URL: <a href="http://dev.w3.org/fxtf/css-masking-1/">http://dev.w3.org/fxtf/css-masking-1/</a>
+   <dt id="biblio-css-size-adjust-1">[CSS-SIZE-ADJUST-1]
    <dd>CSS Mobile Text Size Adjustment Module Level 1 URL: <a href="https://drafts.csswg.org/css-size-adjust-1/">https://drafts.csswg.org/css-size-adjust-1/</a>
-   <dt id="biblio-css-transforms-1"><a class="self-link" href="#biblio-css-transforms-1"></a>[CSS-TRANSFORMS-1]
-   <dd>Simon Fraser; et al. <a href="http://dev.w3.org/csswg/css-transforms/">CSS Transforms Module Level 1</a>. 26 November 2013. WD. URL: <a href="http://dev.w3.org/csswg/css-transforms/">http://dev.w3.org/csswg/css-transforms/</a>
-   <dt id="biblio-css-transitions-1"><a class="self-link" href="#biblio-css-transitions-1"></a>[CSS-TRANSITIONS-1]
+   <dt id="biblio-css-transforms-1">[CSS-TRANSFORMS-1]
+   <dd>Simon Fraser; et al. <a href="http://dev.w3.org/csswg/css-transforms/">CSS Transforms Module Level 1</a>. URL: <a href="http://dev.w3.org/csswg/css-transforms/">http://dev.w3.org/csswg/css-transforms/</a>
+   <dt id="biblio-css-transitions-1">[CSS-TRANSITIONS-1]
    <dd>CSS Transitions Module Level 1 URL: <a href="https://drafts.csswg.org/css-transitions-1/">https://drafts.csswg.org/css-transitions-1/</a>
-   <dt id="biblio-css-ui-3"><a class="self-link" href="#biblio-css-ui-3"></a>[CSS-UI-3]
-   <dd>Tantek Çelik; Florian Rivoal. <a href="http://dev.w3.org/csswg/css-ui/">CSS Basic User Interface Module Level 3 (CSS3 UI)</a>. 7 July 2015. CR. URL: <a href="http://dev.w3.org/csswg/css-ui/">http://dev.w3.org/csswg/css-ui/</a>
-   <dt id="biblio-css-values"><a class="self-link" href="#biblio-css-values"></a>[CSS-VALUES]
-   <dd>Tab Atkins Jr.; Elika Etemad. <a href="http://dev.w3.org/csswg/css-values/">CSS Values and Units Module Level 3</a>. 11 June 2015. CR. URL: <a href="http://dev.w3.org/csswg/css-values/">http://dev.w3.org/csswg/css-values/</a>
-   <dt id="biblio-css3-images-20110217"><a class="self-link" href="#biblio-css3-images-20110217"></a>[CSS3-IMAGES-20110217]
-   <dd>Elika Etemad; Tab Atkins Jr.. <a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/">CSS Image Values and Replaced Content Module Level 3</a>. 17 February 2011. WD. URL: <a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/">http://www.w3.org/TR/2011/WD-css3-images-20110217/</a>
-   <dt id="biblio-filters-1"><a class="self-link" href="#biblio-filters-1"></a>[FILTERS-1]
+   <dt id="biblio-css-ui-3">[CSS-UI-3]
+   <dd>Tantek Çelik; Florian Rivoal. <a href="http://dev.w3.org/csswg/css-ui/">CSS Basic User Interface Module Level 3 (CSS3 UI)</a>. URL: <a href="http://dev.w3.org/csswg/css-ui/">http://dev.w3.org/csswg/css-ui/</a>
+   <dt id="biblio-css-values-3">[CSS-VALUES-3]
+   <dd>Tab Atkins Jr.; Elika Etemad. <a href="https://www.w3.org/TR/css-values-3/">CSS Values and Units Module Level 3</a>. 29 September 2016. CR. URL: <a href="https://www.w3.org/TR/css-values-3/">https://www.w3.org/TR/css-values-3/</a>
+   <dt id="biblio-css22">[CSS22]
+   <dd>Bert Bos. <a href="https://drafts.csswg.org/css2/">Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification</a>. Draft. URL: <a href="https://drafts.csswg.org/css2/">https://drafts.csswg.org/css2/</a>
+   <dt id="biblio-css3-images-20110217">[CSS3-IMAGES-20110217]
+   <dd>Elika Etemad; Tab Atkins Jr.. <a href="https://www.w3.org/TR/2011/WD-css3-images-20110217/">CSS Image Values and Replaced Content Module Level 3</a>. URL: <a href="https://www.w3.org/TR/2011/WD-css3-images-20110217/">https://www.w3.org/TR/2011/WD-css3-images-20110217/</a>
+   <dt id="biblio-filters-1">[FILTERS-1]
    <dd>Filter Effects Level 1 URL: <a href="https://drafts.fxtf.org/filters-1/">https://drafts.fxtf.org/filters-1/</a>
-   <dt id="biblio-geometry-1"><a class="self-link" href="#biblio-geometry-1"></a>[GEOMETRY-1]
-   <dd>Simon Pieters; Dirk Schulze; Rik Cabanier. <a href="http://dev.w3.org/fxtf/geometry/">Geometry Interfaces Module Level 1</a>. 25 November 2014. CR. URL: <a href="http://dev.w3.org/fxtf/geometry/">http://dev.w3.org/fxtf/geometry/</a>
-   <dt id="biblio-mediaqueries-4"><a class="self-link" href="#biblio-mediaqueries-4"></a>[MEDIAQUERIES-4]
-   <dd>Florian Rivoal; Tab Atkins Jr.. <a href="http://dev.w3.org/csswg/mediaqueries-4/">Media Queries Level 4</a>. 5 June 2014. WD. URL: <a href="http://dev.w3.org/csswg/mediaqueries-4/">http://dev.w3.org/csswg/mediaqueries-4/</a>
-   <dt id="biblio-rfc2119"><a class="self-link" href="#biblio-rfc2119"></a>[RFC2119]
+   <dt id="biblio-geometry-1">[GEOMETRY-1]
+   <dd>Simon Pieters; Dirk Schulze; Rik Cabanier. <a href="http://dev.w3.org/fxtf/geometry/">Geometry Interfaces Module Level 1</a>. URL: <a href="http://dev.w3.org/fxtf/geometry/">http://dev.w3.org/fxtf/geometry/</a>
+   <dt id="biblio-html">[HTML]
+   <dd>Ian Hickson. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
+   <dt id="biblio-mediaqueries-4">[MEDIAQUERIES-4]
+   <dd>Florian Rivoal; Tab Atkins Jr.. <a href="https://drafts.csswg.org/mediaqueries-4/">Media Queries Level 4</a>. URL: <a href="https://drafts.csswg.org/mediaqueries-4/">https://drafts.csswg.org/mediaqueries-4/</a>
+   <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
-   <dt id="biblio-screen-orientation"><a class="self-link" href="#biblio-screen-orientation"></a>[SCREEN-ORIENTATION]
-   <dd>Mounir Lamouri; Marcos Caceres. <a href="https://w3c.github.io/screen-orientation/">The Screen Orientation API</a>. 15 December 2015. WD. URL: <a href="https://w3c.github.io/screen-orientation/">https://w3c.github.io/screen-orientation/</a>
+   <dt id="biblio-screen-orientation">[SCREEN-ORIENTATION]
+   <dd>Mounir Lamouri; Marcos Caceres. <a href="https://w3c.github.io/screen-orientation/">The Screen Orientation API</a>. URL: <a href="https://w3c.github.io/screen-orientation/">https://w3c.github.io/screen-orientation/</a>
+   <dt id="biblio-whatwg-dom">[WHATWG-DOM]
+   <dd>Anne van Kesteren. <a href="https://dom.spec.whatwg.org/">DOM Standard</a>. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a>
   </dl>
-  <h2 class="no-num heading settled" id="property-index"><span class="content">Property Index</span><a class="self-link" href="#property-index"></a></h2>
+  <h2 class="no-num no-ref heading settled" id="property-index"><span class="content">Property Index</span><a class="self-link" href="#property-index"></a></h2>
   <div class="big-element-wrapper">
    <table class="index">
     <thead>
@@ -1134,8 +1139,8 @@ neighboring rights to this work.</p>
       <th scope="col">Inh.
       <th scope="col">%ages
       <th scope="col">Media
-      <th scope="col">Ani­mat­able
-      <th scope="col">Animation type
+      <th scope="col">Anim­ation type
+      <th scope="col">Canonical order
       <th scope="col">Com­puted value
     <tbody>
      <tr>
@@ -1146,8 +1151,8 @@ neighboring rights to this work.</p>
       <td>no
       <td>N/A
       <td>visual
-      <td>no
       <td>discrete
+      <td>per grammar
       <td>"text"
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-fill-color">-webkit-text-fill-color</a>
@@ -1157,8 +1162,8 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
-      <td>no
       <td>as color
+      <td>per grammar
       <td>an RGBA color
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-stroke-color">-webkit-text-stroke-color</a>
@@ -1168,8 +1173,8 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
-      <td>no
       <td>as color
+      <td>per grammar
       <td>an RGBA color
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-stroke-width">-webkit-text-stroke-width</a>
@@ -1179,8 +1184,8 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
-      <td>no
       <td>discrete
+      <td>per grammar
       <td>absolute width
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef--webkit-text-stroke">-webkit-text-stroke</a>
@@ -1190,12 +1195,12 @@ neighboring rights to this work.</p>
       <td>yes
       <td>N/A
       <td>visual
-      <td>no
       <td>See individual properties
+      <td>per grammar
       <td>See individual properties
    </table>
   </div>
-  <h3 class="no-num heading settled" id="media-descriptor-table"><span class="content"><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a> Descriptors</span><a class="self-link" href="#media-descriptor-table"></a></h3>
+  <h3 class="no-num no-ref heading settled" id="media-descriptor-table"><span class="content"><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a> Descriptors</span><a class="self-link" href="#media-descriptor-table"></a></h3>
   <div class="big-element-wrapper">
    <table class="index">
     <thead>
@@ -1220,14 +1225,14 @@ neighboring rights to this work.</p>
       <td>
    </table>
   </div>
-  <h2 class="no-num heading settled" id="idl-index"><span class="content">IDL Index</span><a class="self-link" href="#idl-index"></a></h2>
-<pre class="idl">partial interface <a class="idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a> {
-    readonly attribute short <a class="idl-code" data-link-type="attribute" data-readonly="" data-type="short " href="#dom-window-orientation">orientation</a>;
-    attribute <a data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <a data-type="EventHandler " href="#dom-window-onorientationchange">onorientationchange</a>;
+  <h2 class="no-num no-ref heading settled" id="idl-index"><span class="content">IDL Index</span><a class="self-link" href="#idl-index"></a></h2>
+<pre class="idl def"><span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a> {
+    <span class="kt">readonly</span> <span class="kt">attribute</span> <span class="kt">short</span> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="short" href="#dom-window-orientation">orientation</a>;
+    <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <a class="nv" data-type="EventHandler" href="#dom-window-onorientationchange">onorientationchange</a>;
 };
 
-partial interface <a class="idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/semantics.html#htmlbodyelement">HTMLBodyElement</a> {
-    attribute <a data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <a data-type="EventHandler " href="#dom-htmlbodyelement-onorientationchange">onorientationchange</a>;
+<span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/semantics.html#htmlbodyelement">HTMLBodyElement</a> {
+    <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a> <a class="nv" data-type="EventHandler" href="#dom-htmlbodyelement-onorientationchange">onorientationchange</a>;
 };
 
 </pre>
