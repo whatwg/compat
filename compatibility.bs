@@ -15,6 +15,7 @@ Logo: https://resources.whatwg.org/logo-compat.svg
 !Translation (non-normative): <a href="https://triple-underscore.github.io/compat-ja.html">日本語</a>
 Indent: 2
 Boilerplate: omit conformance
+Boilerplate: omit issues-index
 </pre>
 
 <script src=https://resources.whatwg.org/file-issue.js async></script>
