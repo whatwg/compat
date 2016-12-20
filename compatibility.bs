@@ -802,8 +802,8 @@ Percentages: N/A
 Media: visual
 </pre>
 
-When specified, the <code>pinch-zoom</code> token enables two-finger panning and zooming of the page.
-For zooming to occur, both fingers must start on an element that has the pinch-zoom behavior enabled
+When specified, the <code>pinch-zoom</code> token enables multi-finger panning and zooming of the page.
+For zooming to occur, all fingers must start on an element that has the pinch-zoom behavior enabled
 (via one of the <code>pinch-zoom</code>, <code>manipulation</code>, or <code>auto</code> values on itself
 or an ancestor).
 
