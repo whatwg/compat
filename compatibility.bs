@@ -783,6 +783,35 @@ rendered as follows:
 <img style="width: 381px;height: 116px;" src="https://miketaylr.com/post/stroked-text.png" alt="image of stroked text">
 </div>
 
+<h3 id="css-property-values">CSS Property values</h3>
+
+<h4 id="touch-action">Additional <code>touch-action</code> values</h4>
+
+This section augments the <a href="https://w3c.github.io/pointerevents/#the-touch-action-css-property">
+definition of <code>touch-action</code></a> from [[!pointerevents2]] to
+<a href="https://github.com/whatwg/compat/issues/68">add</a> the <code>pinch-zoom</code> value.
+
+<pre class='propdef'>
+Name: touch-action
+Value: auto | none | [ [ pan-x | pan-left | pan-right ] || [ pan-y | pan-up | pan-down ] || pinch-zoom ] | manipulation
+Initial: auto
+Applies to: all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.
+Inherited: no
+Computed value: Same as specified value
+Percentages: N/A
+Media: visual
+</pre>
+
+When specified, the <code>pinch-zoom</code> token enables multi-finger panning and zooming of the page.
+For zooming to occur, all fingers must start on an element that has the pinch-zoom behavior enabled
+(via one of the <code>pinch-zoom</code>, <code>manipulation</code>, or <code>auto</code> values on itself
+or an ancestor).
+
+<div class="note">Scenarios like image carousels which wish to disable only horizontal panning should use "<code>touch-action: pan-y pinch-zoom</code>"
+to avoid disabling zooming unnecessarily.</div>
+
+<code>manipulation</code> is an alias for "<code>pan-x pan-y pinch-zoom</code>".
+
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 
 <h3 id="webkitcssmatrix-interface">The WebKitCSSMatrix interface</h3>
