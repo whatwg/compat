@@ -11,7 +11,7 @@ respect the [WHATWG Code of Conduct](https://wiki.whatwg.org/wiki/Code_of_Conduc
 
 ## Contribute
 
-This spec is built using [Bikeshed](https://github.com/tabatkins/bikeshed). To get Bikeshed installed locally, head over to the Bikeshed [docs](https://github.com/tabatkins/bikeshed/blob/prespec/docs/install.md)
+This spec is built using [Bikeshed](https://github.com/tabatkins/bikeshed). To get Bikeshed installed locally, head over to the Bikeshed [docs](https://github.com/tabatkins/bikeshed/blob/master/docs/install.md)
 
 Update `compatibility.bs` with your changes, run `bikeshed` in the working directory to generate `compatibility.html`, and then send a pull request describing your changes.
 
