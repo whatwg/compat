@@ -7,7 +7,7 @@
   <link href="https://resources.whatwg.org/standard.css" rel="stylesheet">
   <link href="https://resources.whatwg.org/bikeshed.css" rel="stylesheet">
   <link href="https://resources.whatwg.org/logo-compat.svg" rel="icon">
-  <meta content="Bikeshed version 1d4d2b1d1fc168e39cb7f99218de7951c5736ec7" name="generator">
+  <meta content="Bikeshed version af155f2e5c3bb772c32f7c8fe6857fd648994d60" name="generator">
 <style>/* style-syntax-highlighting */
 pre.idl.highlight { color: #708090; }
         .highlight:not(.idl) { background: hsl(24, 20%, 95%); }
@@ -71,7 +71,7 @@ pre.idl.highlight { color: #708090; }
    <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-compat.svg"> </a> </p>
    <hgroup>
     <h1 class="p-name no-ref" id="title">Compatibility</h1>
-    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-12-06">6 December 2016</time></span></h2>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard — Last Updated <time class="dt-updated" datetime="2016-12-20">20 December 2016</time></span></h2>
    </hgroup>
    <div data-fill-with="spec-metadata">
     <dl>
@@ -132,6 +132,11 @@ pre.idl.highlight { color: #708090; }
           <li><a href="#the-webkit-text-stroke-width"><span class="secno">3.4.6.3</span> <span class="content">Text Stroke Thickness: the <code> <span class="property">-webkit-text-stroke-width</span></code> property</span></a>
           <li><a href="#the-webkit-text-stroke"><span class="secno">3.4.6.4</span> <span class="content">Text Stroke Shorthand: the <code> <span class="property">-webkit-text-stroke</span></code> property</span></a>
          </ol>
+       </ol>
+      <li>
+       <a href="#css-property-values"><span class="secno">3.5</span> <span class="content">CSS Property values</span></a>
+       <ol class="toc">
+        <li><a href="#touch-action"><span class="secno">3.5.1</span> <span class="content">Additional <code>touch-action</code> values</span></a>
        </ol>
      </ol>
     <li>
@@ -739,6 +744,49 @@ rendered as follows:
     <p></p>
     <p><img alt="image of stroked text" src="https://miketaylr.com/post/stroked-text.png" style="width: 381px;height: 116px;"></p>
    </div>
+   <h3 class="heading settled" data-level="3.5" id="css-property-values"><span class="secno">3.5. </span><span class="content">CSS Property values</span><a class="self-link" href="#css-property-values"></a></h3>
+   <h4 class="heading settled" data-level="3.5.1" id="touch-action"><span class="secno">3.5.1. </span><span class="content">Additional <code>touch-action</code> values</span><a class="self-link" href="#touch-action"></a></h4>
+   <p>This section augments the <a href="https://w3c.github.io/pointerevents/#the-touch-action-css-property"> definition of <code>touch-action</code></a> from <a data-link-type="biblio" href="#biblio-pointerevents2">[pointerevents2]</a> to <a href="https://github.com/whatwg/compat/issues/68">add</a> the <code>pinch-zoom</code> value.</p>
+   <table class="def propdef" data-link-for-hint="touch-action">
+    <tbody>
+     <tr>
+      <th>Name:
+      <td><dfn class="css" data-dfn-type="property" data-export="" id="propdef-touch-action">touch-action<a class="self-link" href="#propdef-touch-action"></a></dfn>
+     <tr class="value">
+      <th>Value:
+      <td class="prod">auto <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> none <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> [ [ pan-x <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> pan-left <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> pan-right ] <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-any">||</a> [ pan-y <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> pan-up <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> pan-down ] <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-any">||</a> pinch-zoom ] <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> manipulation
+     <tr>
+      <th>Initial:
+      <td>auto
+     <tr>
+      <th>Applies to:
+      <td>all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.
+     <tr>
+      <th>Inherited:
+      <td>no
+     <tr>
+      <th>Percentages:
+      <td>N/A
+     <tr>
+      <th>Media:
+      <td>visual
+     <tr>
+      <th>Computed value:
+      <td>Same as specified value
+     <tr>
+      <th>Canonical order:
+      <td>per grammar
+     <tr>
+      <th>Animation type:
+      <td>discrete
+   </table>
+   <p>When specified, the <code>pinch-zoom</code> token enables two-finger panning and zooming of the page.
+For zooming to occur, both fingers must start on an element that has the pinch-zoom behavior enabled
+(via one of the <code>pinch-zoom</code>, <code>manipulation</code>, or <code>auto</code> values on itself
+or an ancestor).</p>
+   <div class="note" role="note">Scenarios like image carousels which wish to disable only horizontal panning should use "<code>touch-action: pan-y pinch-zoom</code>"
+to avoid disabling zooming unnecessarily.</div>
+   <p><code>manipulation</code> is an alias for "<code>pan-x pan-y pinch-zoom</code>".</p>
    <h2 class="heading settled" data-level="4" id="dom-compat-section"><span class="secno">4. </span><span class="content">DOM Compatibility</span><a class="self-link" href="#dom-compat-section"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="webkitcssmatrix-interface"><span class="secno">4.1. </span><span class="content">The WebKitCSSMatrix interface</span><a class="self-link" href="#webkitcssmatrix-interface"></a></h3>
    <div class="note" role="note"><a data-link-type="dfn" href="https://drafts.fxtf.org/geometry/#webkitcssmatrix">WebKitCSSMatrix</a> is now defined by the DOM Geometry specification. <a data-link-type="biblio" href="#biblio-geometry-1">[geometry-1]</a>.</div>
@@ -815,6 +863,7 @@ neighboring rights to this work.</p>
    <li><a href="#event-orientationchange">orientationchange</a><span>, in §4.2</span>
    <li><a href="#valdef--webkit-background-clip-padding-box">padding-box</a><span>, in §3.4.5</span>
    <li><a href="#valdef--webkit-background-clip-text">text</a><span>, in §3.4.5</span>
+   <li><a href="#propdef-touch-action">touch-action</a><span>, in §3.5.1</span>
    <li><a href="#-webkit-align-content">-webkit-align-content</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-align-items">-webkit-align-items</a><span>, in §3.4.1</span>
    <li><a href="#-webkit-align-self">-webkit-align-self</a><span>, in §3.4.1</span>
@@ -1107,7 +1156,7 @@ neighboring rights to this work.</p>
    <dt id="biblio-css-ui-3">[CSS-UI-3]
    <dd>Tantek Çelik; Florian Rivoal. <a href="http://dev.w3.org/csswg/css-ui/">CSS Basic User Interface Module Level 3 (CSS3 UI)</a>. URL: <a href="http://dev.w3.org/csswg/css-ui/">http://dev.w3.org/csswg/css-ui/</a>
    <dt id="biblio-css-values-3">[CSS-VALUES-3]
-   <dd>Tab Atkins Jr.; Elika Etemad. <a href="https://www.w3.org/TR/css-values-3/">CSS Values and Units Module Level 3</a>. 29 September 2016. CR. URL: <a href="https://www.w3.org/TR/css-values-3/">https://www.w3.org/TR/css-values-3/</a>
+   <dd>Tab Atkins Jr.; Elika Etemad. <a href="https://drafts.csswg.org/css-values/">CSS Values and Units Module Level 3</a>. URL: <a href="https://drafts.csswg.org/css-values/">https://drafts.csswg.org/css-values/</a>
    <dt id="biblio-css22">[CSS22]
    <dd>Bert Bos. <a href="https://drafts.csswg.org/css2/">Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification</a>. Draft. URL: <a href="https://drafts.csswg.org/css2/">https://drafts.csswg.org/css2/</a>
    <dt id="biblio-css3-images-20110217">[CSS3-IMAGES-20110217]
@@ -1117,9 +1166,11 @@ neighboring rights to this work.</p>
    <dt id="biblio-geometry-1">[GEOMETRY-1]
    <dd>Simon Pieters; Dirk Schulze; Rik Cabanier. <a href="http://dev.w3.org/fxtf/geometry/">Geometry Interfaces Module Level 1</a>. URL: <a href="http://dev.w3.org/fxtf/geometry/">http://dev.w3.org/fxtf/geometry/</a>
    <dt id="biblio-html">[HTML]
-   <dd>Ian Hickson. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
+   <dd>Anne van Kesteren; et al. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
    <dt id="biblio-mediaqueries-4">[MEDIAQUERIES-4]
    <dd>Florian Rivoal; Tab Atkins Jr.. <a href="https://drafts.csswg.org/mediaqueries-4/">Media Queries Level 4</a>. URL: <a href="https://drafts.csswg.org/mediaqueries-4/">https://drafts.csswg.org/mediaqueries-4/</a>
+   <dt id="biblio-pointerevents2">[POINTEREVENTS2]
+   <dd>Jacob Rossi; et al. <a href="https://w3c.github.io/pointerevents/">Pointer Events - Level 2</a>. URL: <a href="https://w3c.github.io/pointerevents/">https://w3c.github.io/pointerevents/</a>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
    <dt id="biblio-screen-orientation">[SCREEN-ORIENTATION]
@@ -1198,6 +1249,17 @@ neighboring rights to this work.</p>
       <td>See individual properties
       <td>per grammar
       <td>See individual properties
+     <tr>
+      <th scope="row"><a class="css" data-link-type="property" href="#propdef-touch-action">touch-action</a>
+      <td>auto | none | [ [ pan-x | pan-left | pan-right ] || [ pan-y | pan-up | pan-down ] || pinch-zoom ] | manipulation
+      <td>auto
+      <td>all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.
+      <td>no
+      <td>N/A
+      <td>visual
+      <td>discrete
+      <td>per grammar
+      <td>Same as specified value
    </table>
   </div>
   <h3 class="no-num no-ref heading settled" id="media-descriptor-table"><span class="content"><a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-conditional-3/#at-ruledef-media">@media</a> Descriptors</span><a class="self-link" href="#media-descriptor-table"></a></h3>
