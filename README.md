@@ -11,11 +11,24 @@ respect the [WHATWG Code of Conduct](https://wiki.whatwg.org/wiki/Code_of_Conduc
 
 ## Contribute
 
-This spec is built using [Bikeshed](https://github.com/tabatkins/bikeshed). To get Bikeshed installed locally, head over to the Bikeshed [docs](https://github.com/tabatkins/bikeshed/blob/master/docs/install.md)
+In short, change `compatibility.bs` and submit your patch, with a
+[good commit message](https://github.com/erlang/otp/wiki/Writing-good-commit-messages). Consider
+reading through the [WHATWG FAQ](https://wiki.whatwg.org/wiki/FAQ) if you are new here.
 
-Update `compatibility.bs` with your changes, run `bikeshed` in the working directory to generate `compatibility.html`, and then send a pull request describing your changes.
+Please add your name to the Acknowledgments section in your first pull request, even for trivial
+fixes. The names are sorted lexicographically.
 
-Run the following steps to enable fancy-mode (which will run `bikeshed` every time `compatibility.bs` is changed on the filesystem).
+If you want to preview the spec locally, you can either use a locally installed copy of
+[Bikeshed](https://github.com/tabatkins/bikeshed) by running `make` or use the HTTP API version by
+running `make remote`.
+
+If you want to do a complete "local deploy" including commit and/or branch snapshots, run
+
+```
+./deploy.sh --local
+```
+
+Run the following steps to enable fancy-mode (which will run `make` every time `compatibility.bs` is changed on the filesystem).
 
 Step 0. Install Node.js and npm
 Step 1: Run the following commands

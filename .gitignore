@@ -1,2 +1,6 @@
 node_modules
 .DS_Store
+/compat.spec.whatwg.org/
+deploy_key
+deploy_key.pub
+compatbility.html
