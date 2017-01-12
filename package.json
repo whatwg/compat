@@ -17,6 +17,6 @@
     "onchange": "2.0.0"
   },
   "scripts": {
-    "watch": "open compatibility.html && onchange '*.bs' -v -- bikeshed"
+    "watch": "open compatibility.html && onchange '*.bs' -v -- make"
   }
 }
