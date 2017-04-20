@@ -13,6 +13,7 @@ Logo: https://resources.whatwg.org/logo-compat.svg
 !Commits: <a href="https://github.com/whatwg/compat/commits">GitHub whatwg/compat/commits</a>
 !Commits: [SNAPSHOT-LINK]
 !Commits: <a href="https://twitter.com/compatstandard">@compatstandard</a>
+!Tests: <a href=https://github.com/w3c/web-platform-tests/tree/master/compat>web-platform-tests compat/</a>
 !Translation (non-normative): <a href="https://triple-underscore.github.io/compat-ja.html">日本語</a>
 Indent: 2
 Boilerplate: omit conformance
