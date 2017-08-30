@@ -3,3 +3,6 @@ local: compatibility.bs
 
 remote: compatibility.bs
 	curl https://api.csswg.org/bikeshed/ -f -F file=@compatibility.bs > compatibility.html -F md-Text-Macro="SNAPSHOT-LINK LOCAL COPY"
+
+deploy: compatibility.bs
+	curl --remote-name --fail https://raw.githubusercontent.com/whatwg/common-build/master/deploy.sh && bash ./deploy.sh

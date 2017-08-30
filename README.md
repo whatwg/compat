@@ -25,7 +25,7 @@ running `make remote`.
 If you want to do a complete "local deploy" including commit and/or branch snapshots, run
 
 ```
-./deploy.sh --local
+make deploy
 ```
 
 Run the following steps to enable fancy-mode (which will run `make` every time `compatibility.bs` is changed on the filesystem).
