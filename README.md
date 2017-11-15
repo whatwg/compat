@@ -28,6 +28,8 @@ If you want to do a complete "local deploy" including commit and/or branch snaps
 make deploy
 ```
 
+Note that this still requires access to the network.
+
 Run the following steps to enable fancy-mode (which will run `make` every time `compatibility.bs` is changed on the filesystem).
 
 Step 0. Install Node.js and npm
