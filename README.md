@@ -32,8 +32,8 @@ Note that this still requires access to the network.
 
 Run the following steps to enable fancy-mode (which will run `make` every time `compatibility.bs` is changed on the filesystem).
 
-Step 0. Install Node.js and npm
-Step 1: Run the following commands
+* Step 0. Install Node.js and npm
+* Step 1: Run the following commands
 
 ```
 npm install
