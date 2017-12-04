@@ -63,18 +63,18 @@ urlPrefix: https://w3c.github.io/screen-orientation/;
     text: ScreenOrientation; url: #screenorientation-interface
   type: dfn
     text: update the orientation information; url: #dfn-update-the-orientation-information
-urlPrefix: http://www.w3.org/TR/CSS/; spec: CSS22
+urlPrefix: https://www.w3.org/TR/CSS/; spec: CSS22
   type: dfn
     text: vendor prefix; url: #vendor-prefix
-urlPrefix: http://www.w3.org/TR/mediaqueries-4/; spec: mediaqueries-4
+urlPrefix: https://drafts.csswg.org/mediaqueries-4/; spec: mediaqueries-4
   type: dfn
     text: media query; url: #media-query
     text: media feature; url: #media-feature
-    text: resolution; url: #descdef-resolution
-    text: min-resolution; url: #descdef-resolution
-    text: max-resolution; url: #descdef-resolution
+    text: resolution; url: #descdef-media-resolution
+    text: min-resolution; url: #descdef-media-resolution
+    text: max-resolution; url: #descdef-media-resolution
     text: prefixes on range features; url: #mq-min-max
-urlPrefix: http://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images-20110217
+urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images-20110217
   type: dfn
     text: linear-gradient; url: #ltlinear-gradient
     text: radial-gradient; url: #ltradial-gradient
@@ -83,9 +83,6 @@ urlPrefix: http://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images
 urlPrefix: https://drafts.csswg.org/css-transforms/;
   type: type
     text: transform-list; url: #typedef-transform-list
-urlPrefix: https://www.w3.org/TR/css3-values/
-  type: dfn
-    text: calculated values; url: #funcdef-calc
 urlPrefix: https://encoding.spec.whatwg.org/
   type: dfn
     text: whitespace; url: #ascii-whitespace
@@ -95,7 +92,7 @@ urlPrefix: https://drafts.csswg.org/css-cascade-3/
 urlPrefix: https://drafts.csswg.org/css-backgrounds-3/
   type: dfn
     text: the backgrounds of special elements;url: #special-backgrounds
-urlPrefix: https://www.w3.org/TR/css3-transitions/
+urlPrefix: https://drafts.csswg.org/css-transitions/
   type: dfn
     text: color; url: #animtype-color
 urlPrefix: https://drafts.fxtf.org/css-masking-1/
@@ -129,7 +126,7 @@ spec:css-flexbox-1; type:value; text:inline-flex
         "status": "Draft",
         "publisher": "W3C",
         "deliveredBy": [
-            "http://www.w3.org/Style/CSS/"
+            "https://www.w3.org/Style/CSS/"
         ]
     },
     "CSS3-BG4": {
@@ -141,7 +138,7 @@ spec:css-flexbox-1; type:value; text:inline-flex
         "status": "Draft",
         "publisher": "W3C",
         "deliveredBy": [
-            "http://www.w3.org/Style/CSS/"
+            "https://www.w3.org/Style/CSS/"
         ]
     }
 }
