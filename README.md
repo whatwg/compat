@@ -1,5 +1,7 @@
 # Compatibility Standard
 
+[![Travis Build Status](https://travis-ci.org/whatwg/compat.svg?branch=master)](https://travis-ci.org/whatwg/compat)
+
 ## Abstract
 
 The [Compatibility Standard](https://compat.spec.whatwg.org/) describes a collection of non-standard (and often vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility with the de facto web.
