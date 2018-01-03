@@ -1,63 +1,14 @@
 <pre class="metadata">
-Title: Compatibility Standard
 Group: WHATWG
 H1: Compatibility
 Shortname: compat
-Repository: whatwg/compat
-Status: LS
-No Editor: true
+Text Macro: TWITTER compatstandard
 Abstract: This standard describes a collection of non-standard (and often vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility with the de facto web.
-Logo: https://resources.whatwg.org/logo-compat.svg
-!Participate: <a href=https://github.com/whatwg/compat>GitHub whatwg/compat</a> (<a href=https://github.com/whatwg/compat/issues/new>new issue</a>, <a href=https://github.com/whatwg/compat/issues>open issues</a>)
-!Participate: <a href=https://wiki.whatwg.org/wiki/IRC>IRC: #whatwg on Freenode</a>
-!Commits: <a href="https://github.com/whatwg/compat/commits">GitHub whatwg/compat/commits</a>
-!Commits: [SNAPSHOT-LINK]
-!Commits: <a href="https://twitter.com/compatstandard">@compatstandard</a>
-!Tests: <a href=https://github.com/w3c/web-platform-tests/tree/master/compat>web-platform-tests compat/</a>
-!Translation (non-normative): <a href="https://triple-underscore.github.io/compat-ja.html">日本語</a>
+Translation: ja https://triple-underscore.github.io/compat-ja.html
 Indent: 2
-Boilerplate: omit conformance
-Boilerplate: omit issues-index
 </pre>
 
-<script src=https://resources.whatwg.org/file-issue.js async></script>
-<script src=https://resources.whatwg.org/commit-snapshot-shortcut-key.js async></script>
-<script src=https://resources.whatwg.org/dfn.js defer></script>
-
 <pre class="anchors">
-urlPrefix: https://drafts.fxtf.org/geometry/; spec: geometry-1
-  type: dfn;
-    text: WebKitCSSMatrix; url: #webkitcssmatrix
-urlPrefix: https://heycam.github.io/webidl/
-  type: dfn
-    text: SyntaxError; url: #syntaxerror
-    text: NotSupportedError; url: #notsupportederror
-    text: DOMException; url: #idl-DOMException
-urlPrefix: https://html.spec.whatwg.org/multipage/; spec: HTML
-  type: interface
-    urlPrefix: browsers.html
-      text: Window; url: #window
-  type: element
-    urlPrefix: semantics.html
-      text: body; url: #the-body-element
-  type: dfn
-    urlPrefix: webappapis.html
-      text: event handler; url: #event-handlers
-      text: event handler event type; url: #event-handler-event-type
-      text: responsible document; url: #responsible-document
-    urlPrefix: browsers.html
-      text: active document; url: #active-document
-urlPrefix: https://dom.spec.whatwg.org/; spec: WHATWG-DOM
-  type: interface
-    text: Document; url: #document
-  type: interface
-    text: Event; url: #event
-  type: method
-    text: createEvent; url: #dom-document-createevent
-  type: attribute
-    text: type; url: #dom-event-type
-  type: dfn; url: #concept-event-fire
-    text: fire an event
 urlPrefix: https://w3c.github.io/screen-orientation/;
   type: interface
     text: ScreenOrientation; url: #screenorientation-interface
@@ -80,15 +31,6 @@ urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-image
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
-urlPrefix: https://drafts.csswg.org/css-transforms/;
-  type: type
-    text: transform-list; url: #typedef-transform-list
-urlPrefix: https://encoding.spec.whatwg.org/
-  type: dfn
-    text: whitespace; url: #ascii-whitespace
-urlPrefix: https://drafts.csswg.org/css-cascade-3/
-  type: dfn
-    text: important; url: #important
 urlPrefix: https://drafts.csswg.org/css-backgrounds-3/
   type: dfn
     text: the backgrounds of special elements;url: #special-backgrounds
@@ -113,6 +55,7 @@ spec:css-transforms-1; type:property; text:transform
 spec:css-color-4; type:value; text:currentcolor
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
+spec:filter-effects-1; type:property; text:filter
 </pre>
 
 <pre class=biblio>
@@ -808,7 +751,7 @@ For zooming to occur, all fingers must start on an element that has the pinch-zo
 (via one of the <code>pinch-zoom</code>, <code>manipulation</code>, or <code>auto</code> values on itself
 or an ancestor).
 
-<div class="note">Scenarios like image carousels which wish to disable only horizontal panning should use "<code>touch-action: pan-y pinch-zoom</code>"
+<div class="note">Scenarios like image carousels which wish to disable only horizontal panning can use "<code>touch-action: pan-y pinch-zoom</code>"
 to avoid disabling zooming unnecessarily.</div>
 
 <code>manipulation</code> is an alias for "<code>pan-x pan-y pinch-zoom</code>".
@@ -817,7 +760,7 @@ to avoid disabling zooming unnecessarily.</div>
 
 <h3 id="webkitcssmatrix-interface">The WebKitCSSMatrix interface</h3>
 
-<div class="note"><a>WebKitCSSMatrix</a> is now defined by the DOM Geometry specification. [[!geometry-1]].</div>
+<div class="note">{{WebKitCSSMatrix}} is now defined by the DOM Geometry specification. [[!geometry-1]].</div>
 
 <h3 id="windoworientation-interface"><a attribute lt="orientation"><code>window.orientation</code></a> API</h3>
 
@@ -842,7 +785,7 @@ Whenever the viewport is drawn at a different angle compared to the device's nat
 
 User agents implementing the <a attribute lt="orientation"><code>window.orientation</code></a> attribute and its associated <a>orientationchange</a> event must not expose them on Desktop platforms.
 
-<div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not required for compatibility with the web.</div>
+<div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not necessary for compatibility with the web.</div>
 
 <h4 id="dfn-window-orientation-angle"><a attribute lt="orientation"><code>window.orientation</code></a> angle</h4>
 
@@ -892,7 +835,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Alan Cutter, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert, David Håsäther, hexalys, Jean-Yves Perrier, Jacob Rossi, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
+Thanks to Alan Cutter, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert, David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
 
 Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface. [[!screen-orientation]]
 
@@ -902,7 +845,3 @@ This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
 (<a href="https://www.mozilla.org/">Mozilla</a>,
 <a href=mailto:miket@mozilla.com>miket@mozilla.com</a>).
-
-Per <a rel="license" href="//creativecommons.org/publicdomain/zero/1.0/">CC0</a>, to
-the extent possible under law, the editors have waived all copyright and related or
-neighboring rights to this work.
