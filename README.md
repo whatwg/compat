@@ -32,14 +32,6 @@ make deploy
 
 Note that this still requires access to the network.
 
-Run the following steps to enable fancy-mode (which will run `make` every time `compatibility.bs` is changed on the filesystem).
-
-* Step 0. Install Node.js and npm
-* Step 1: Run the following commands
-
-```
-npm install
-npm run watch
-```
+Run `bikeshed watch` to enable fancy-mode (which sets up a watcher and auto-rebuilds the spec every time it changes).
 
 Contributions are welcome, so long as you agree to the [CC0 license](LICENSE). :rainbow: :stars:
