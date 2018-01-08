@@ -6,7 +6,7 @@ env:
     - EXTRA_FILES="*.png"
 
 script:
-  - curl --remote-name --fail https://resources.whatwg.org/build/deploy.sh && bash ./deploy.sh
+  - make deploy
 
 branches:
   only:

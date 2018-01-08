@@ -14,8 +14,8 @@ respect the [WHATWG Code of Conduct](https://whatwg.org/code-of-conduct).
 ## Contribute
 
 In short, change `compatibility.bs` and submit your patch, with a
-[good commit message](https://github.com/erlang/otp/wiki/Writing-good-commit-messages). Consider
-reading through the [WHATWG FAQ](https://wiki.whatwg.org/wiki/FAQ) if you are new here.
+[good commit message](https://github.com/whatwg/meta/blob/master/COMMITTING.md). Consider
+reading through the [WHATWG FAQ](https://whatwg.org/faq) if you are new here.
 
 Please add your name to the Acknowledgments section in your first pull request, even for trivial
 fixes. The names are sorted lexicographically.
@@ -33,5 +33,3 @@ make deploy
 Note that this still requires access to the network.
 
 Run `bikeshed watch` to enable fancy-mode (which sets up a watcher and auto-rebuilds the spec every time it changes).
-
-Contributions are welcome, so long as you agree to the [CC0 license](LICENSE). :rainbow: :stars:
