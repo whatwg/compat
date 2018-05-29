@@ -2,16 +2,18 @@
 
 [![Travis Build Status](https://travis-ci.org/whatwg/compat.svg?branch=master)](https://travis-ci.org/whatwg/compat)
 
-## Abstract
+### Abstract
 
-The [Compatibility Standard](https://compat.spec.whatwg.org/) describes a collection of non-standard (and often vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility with the de facto web.
+The [Compatibility Standard](https://compat.spec.whatwg.org/) standardizes a number of (often
+vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility
+with the web.
 
-## Code of conduct
+### Code of conduct
 
-We are committed to providing a friendly, safe and welcoming environment for all. Please read and
+We are committed to providing a friendly, safe, and welcoming environment for all. Please read and
 respect the [WHATWG Code of Conduct](https://whatwg.org/code-of-conduct).
 
-## Contribute
+### Pull requests
 
 In short, change `compatibility.bs` and submit your patch, with a
 [good commit message](https://github.com/whatwg/meta/blob/master/COMMITTING.md). Consider
@@ -20,16 +22,18 @@ reading through the [WHATWG FAQ](https://whatwg.org/faq) if you are new here.
 Please add your name to the Acknowledgments section in your first pull request, even for trivial
 fixes. The names are sorted lexicographically.
 
-If you want to preview the spec locally, you can either use a locally installed copy of
-[Bikeshed](https://github.com/tabatkins/bikeshed) by running `make` or use the HTTP API version by
-running `make remote`.
+### Building "locally"
 
-If you want to do a complete "local deploy" including commit and/or branch snapshots, run
+For quick local iteration, run `make`. To verify your changes locally, run `make deploy`. See more
+in the
+[WHATWG Contributor Guidelines](https://github.com/whatwg/meta/blob/master/CONTRIBUTING.md#building).
 
-```
-make deploy
-```
+### Merge policy
 
-Note that this still requires access to the network.
+If you can commit to this repository, see the
+[WHATWG Maintainer Guidelines](https://github.com/whatwg/meta/blob/master/MAINTAINERS.md).
 
-Run `bikeshed watch` to enable fancy-mode (which sets up a watcher and auto-rebuilds the spec every time it changes).
+### Tests
+
+Tests can be found in the `compat/` directory of
+[web-platform-tests/wpt](https://github.com/web-platform-tests/wpt).
