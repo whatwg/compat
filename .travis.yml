@@ -3,7 +3,6 @@ language: generic
 env:
   global:
     - ENCRYPTION_LABEL="34ab45136e05"
-    - EXTRA_FILES="*.png"
 
 script:
   - make deploy
