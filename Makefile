@@ -5,7 +5,10 @@ local: compatibility.bs
 	bikeshed spec compatibility.bs compatibility.html --md-Text-Macro="SNAPSHOT-LINK LOCAL COPY"
 
 deploy: compatibility.bs
-	curl --remote-name --fail https://resources.whatwg.org/build/deploy.sh && bash ./deploy.sh
+	curl --remote-name --fail https://resources.whatwg.org/build/deploy.sh
+	EXTRA_FILES="*.png" \
+	bash ./deploy.sh
 
 review: compatibility.bs
-	curl --remote-name --fail https://resources.whatwg.org/build/review.sh && bash ./review.sh
+	curl --remote-name --fail https://resources.whatwg.org/build/review.sh
+	bash ./review.sh
