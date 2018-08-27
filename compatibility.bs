@@ -502,6 +502,12 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
 <br>
 <div class="note">As soon as each property is unprefixable it can be defined as a "simple" alias.</div>
 
+<h4 id="css-non-alias">Non-alias vendor prefixed properties</h4>
+
+The following <code><dfn property>-webkit-appearance</dfn></code> property must be supported. It is not yet defined how this property works. See <a href="https://github.com/w3c/csswg-drafts/issues/3024">w3c/csswg-drafts issue #3024</a>.
+
+The 'appearance' property must not be supported, since it is not web-compatible as currently defined. See <a href="https://github.com/w3c/csswg-drafts/issues/1250">w3c/csswg-drafts issue #1250</a>.
+
 <h4 id="css-property-mappings">Property mappings</h4>
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as mappings to the corresponding unprefixed property:
