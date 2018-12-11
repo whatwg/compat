@@ -14,9 +14,6 @@ urlPrefix: https://w3c.github.io/screen-orientation/;
     text: ScreenOrientation; url: #screenorientation-interface
   type: dfn
     text: update the orientation information; url: #dfn-update-the-orientation-information
-urlPrefix: https://www.w3.org/TR/CSS/; spec: CSS2
-  type: dfn
-    text: vendor prefix; url: #vendor-prefix
 urlPrefix: https://drafts.csswg.org/mediaqueries-4/; spec: mediaqueries-4
   type: dfn
     text: media query; url: #media-query
