@@ -472,7 +472,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
 
 The <code><dfn property>-webkit-appearance</dfn></code> property must be supported. It is not yet defined how this property works. See <a href="https://github.com/w3c/csswg-drafts/issues/3024">w3c/csswg-drafts issue #3024</a>.
 
-The initial value must be 'none'. The user agent style sheet may set the value to something else on specific elements.
+The initial value must be ''-webkit-appearance/none''. The user agent style sheet may set the value to something else on specific elements.
 
 These values must be supported. More values may be supported, but implementers are encouraged to only support values that are necessary for web compatibility.
 
