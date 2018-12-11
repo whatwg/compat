@@ -46,6 +46,7 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 </pre>
 
 <pre class=link-defaults>
+spec:css-sizing-3; type:property; text:box-sizing
 spec:css-transforms-1; type:property; text:perspective
 spec:css-transforms-1; type:property; text:perspective-origin
 spec:css-transforms-1; type:property; text:transform-origin
