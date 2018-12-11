@@ -172,26 +172,26 @@ Both the [[css3-images-20110217]] draft <code>-webkit-</code> prefixed <<image>>
   <code>''-webkit-linear-gradient()''</code>
 </h4>
 
-<code><dfn>-webkit-linear-gradient()</dfn></code> must be treated as an alias of <a>linear-gradient</a> as defined in [[css3-images-20110217]].
+<code><dfn export>-webkit-linear-gradient()</dfn></code> must be treated as an alias of <a>linear-gradient</a> as defined in [[css3-images-20110217]].
 <!-- The stupid parens outside of the ref link are a hack because bikeshed hates me and my attempts to link to http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient. Pull requests welcome? -->
 
 <h4 id="css-gradients-webkit-radial-gradient">
   <code>''-webkit-radial-gradient()''</code>
 </h4>
 
-<code><dfn>-webkit-radial-gradient()</dfn></code> must be treated as an alias of <a>radial-gradient</a> as defined in [[css3-images-20110217]].
+<code><dfn export>-webkit-radial-gradient()</dfn></code> must be treated as an alias of <a>radial-gradient</a> as defined in [[css3-images-20110217]].
 
 <h4 id="css-gradients-repeating-webkit-linear-gradient">
   <code>''-webkit-repeating-linear-gradient()''</code>
 </h4>
 
-<code><dfn>-webkit-repeating-linear-gradient()</dfn></code> must be treated as an alias of <a>repeating-linear-gradient</a> as defined in [[css3-images-20110217]].
+<code><dfn export>-webkit-repeating-linear-gradient()</dfn></code> must be treated as an alias of <a>repeating-linear-gradient</a> as defined in [[css3-images-20110217]].
 
 <h4 id="css-gradients-repeating-webkit-radial-gradient">
   <code>''-webkit-repeating-radial-gradient()''</code>
 </h4>
 
-<code><dfn>-webkit-repeating-radial-gradient()</dfn></code> must be treated as an alias of <a>repeating-radial-gradient</a> as defined in [[css3-images-20110217]].
+<code><dfn export>-webkit-repeating-radial-gradient()</dfn></code> must be treated as an alias of <a>repeating-radial-gradient</a> as defined in [[css3-images-20110217]].
 
 <!--
 <h4 id="css-gradients-webkit-gradient">
