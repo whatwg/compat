@@ -14,7 +14,7 @@ urlPrefix: https://w3c.github.io/screen-orientation/;
     text: ScreenOrientation; url: #screenorientation-interface
   type: dfn
     text: update the orientation information; url: #dfn-update-the-orientation-information
-urlPrefix: https://www.w3.org/TR/CSS/; spec: CSS22
+urlPrefix: https://www.w3.org/TR/CSS/; spec: CSS2
   type: dfn
     text: vendor prefix; url: #vendor-prefix
 urlPrefix: https://drafts.csswg.org/mediaqueries-4/; spec: mediaqueries-4
@@ -56,35 +56,6 @@ spec:css-color-4; type:value; text:currentcolor
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:filter-effects-1; type:property; text:filter
-</pre>
-
-<pre class=biblio>
-{
-    "CSS22": {
-        "authors": [
-            "Bert Bos"
-        ],
-        "href": "https://drafts.csswg.org/css2/",
-        "title": "Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification",
-        "status": "Draft",
-        "publisher": "W3C",
-        "deliveredBy": [
-            "https://www.w3.org/Style/CSS/"
-        ]
-    },
-    "CSS3-BG4": {
-        "authors": [
-            "Bert Bos", "Elika J. Etemad", "Lea Verou"
-        ],
-        "href": "https://drafts.csswg.org/css-backgrounds-4/",
-        "title": "CSS Backgrounds and Borders Module Level 4",
-        "status": "Draft",
-        "publisher": "W3C",
-        "deliveredBy": [
-            "https://www.w3.org/Style/CSS/"
-        ]
-    }
-}
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
