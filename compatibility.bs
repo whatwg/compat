@@ -47,11 +47,6 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 
 <pre class=link-defaults>
 spec:css-sizing-3; type:property; text:box-sizing
-spec:css-transforms-1; type:property; text:perspective
-spec:css-transforms-1; type:property; text:perspective-origin
-spec:css-transforms-1; type:property; text:transform-origin
-spec:css-transforms-1; type:property; text:transform-style
-spec:css-transforms-1; type:property; text:transform
 spec:css-color-4; type:value; text:currentcolor
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
