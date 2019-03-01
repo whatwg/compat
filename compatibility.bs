@@ -498,6 +498,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td><code>'order'</code></td>
     </tr>
     <tr>
+      <td><code><dfn property>-webkit-box-orient</dfn></code></td>
+      <td><code>'flex-direction'</code></td>
+    </tr>
+    <tr>
       <td><code><dfn property>-webkit-box-pack</dfn></code></td>
       <td><code>'justify-content'</code></td>
     </tr>
