@@ -812,6 +812,84 @@ The following are the event handlers and their corresponding event handler event
 WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>. It's unclear if this is needed for compatibility.
 </div>
 
+<h3 id="animation-event-handlers">Animation Events</h3>
+
+<h4 id="prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
+
+The following are the <a>event handlers</a> (and their corresponding <a>event
+handler types</a> that must be supported by all <a>HTML elements</a>, as both
+<a>event handler content attributes</a> and <a>event handler IDL
+attributes</a>; and that must be supported by all {{Document}} and {{Window}}
+objects, as event handler IDL attributes:
+
+<table class="event-handlers" dfn-type=attribute dfn-for="Document, Window">
+  <tr>
+    <th><a>Event handler</a></th>
+    <th><a>Event handler event type</a></th>
+  </tr>
+  <tr>
+    <td><dfn>onwebkitanimationstart</dfn></td>
+    <td>{{animationstart}}</td>
+  </tr>
+  <tr>
+    <td><dfn>onwebkitanimationiteration</dfn></td>
+    <td>{{animationiteration}}</td>
+  </tr>
+  <tr>
+    <td><dfn>onwebkitanimationend</dfn></td>
+    <td>{{animationend}}</td>
+  </tr>
+</table>
+
+These should be added to the {{GlobalEventHandlers}} interface mixin:
+
+<pre class="idl">
+partial interface mixin GlobalEventHandlers {
+  attribute EventHandler onwebkitanimationstart;
+  attribute EventHandler onwebkitanimationiteration;
+  attribute EventHandler onwebkitanimationend;
+};
+</pre>
+
+If a listener is registered both via the unprefixed and prefixed versions of an
+Animation {{EventHandler}} (e.g. {{onwebkitanimationstart}} and
+{{animationstart}}), and the underlying event triggers, only the unprefixed
+handler should be called.
+
+<h3 id="transition-event-handlers">Transition Events</h3>
+
+<h4 id="prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
+
+The following are the <a>event handlers</a> (and their corresponding <a>event
+handler types</a> that must be supported by all <a>HTML elements</a>, as both
+<a>event handler content attributes</a> and <a>event handler IDL
+attributes</a>; and that must be supported by all {{Document}} and {{Window}}
+objects, as event handler IDL attributes:
+
+<table class="event-handlers" dfn-type=attribute dfn-for="Document, Window">
+  <tr>
+    <th><a>Event handler</a></th>
+    <th><a>Event handler event type</a></th>
+  </tr>
+  <tr>
+    <td><dfn>onwebkittransitionend</dfn></td>
+    <td>{{transitionend}}</td>
+  </tr>
+</table>
+
+These should be added to the {{GlobalEventHandlers}} interface mixin:
+
+<pre class="idl">
+partial interface mixin GlobalEventHandlers {
+  attribute EventHandler onwebkittransitionend;
+};
+</pre>
+
+If a listener is registered both via the unprefixed and prefixed versions of a
+Transition {{EventHandler}} (e.g. {{onwebkittransitionend}} and
+{{transitionend}}), and the underlying event triggers, only the unprefixed
+handler should be called.
+
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert, David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
 
