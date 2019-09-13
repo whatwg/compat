@@ -817,8 +817,8 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 <h4 id="animation-prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
 
 The following are the <a>event handlers</a> (and their corresponding <a>event
-handler types</a> that must be supported by all <a>HTML elements</a>, as both
-<a>event handler content attributes</a> and <a>event handler IDL
+handler event types</a>) that must be supported by all <a>HTML elements</a>, as
+both <a>event handler content attributes</a> and <a>event handler IDL
 attributes</a>; and that must be supported by all {{Document}} and {{Window}}
 objects, as event handler IDL attributes:
 
@@ -852,8 +852,8 @@ partial interface mixin GlobalEventHandlers {
 </pre>
 
 If a listener is registered both via the unprefixed and prefixed versions of an
-Animation {{EventHandler}} (e.g. {{onwebkitanimationstart}} and
-{{animationstart}}), and the underlying event triggers, only the unprefixed
+Animation {{EventHandler}} (e.g. {{GlobalEventHandlers/onwebkitanimationstart}}
+and {{animationstart}}), and the underlying event triggers, only the unprefixed
 handler should be called.
 
 <h3 id="transition-event-handlers">Transition Events</h3>
@@ -861,8 +861,8 @@ handler should be called.
 <h4 id="transition-prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
 
 The following are the <a>event handlers</a> (and their corresponding <a>event
-handler types</a> that must be supported by all <a>HTML elements</a>, as both
-<a>event handler content attributes</a> and <a>event handler IDL
+handler event types</a>) that must be supported by all <a>HTML elements</a>, as
+both <a>event handler content attributes</a> and <a>event handler IDL
 attributes</a>; and that must be supported by all {{Document}} and {{Window}}
 objects, as event handler IDL attributes:
 
@@ -886,8 +886,8 @@ partial interface mixin GlobalEventHandlers {
 </pre>
 
 If a listener is registered both via the unprefixed and prefixed versions of a
-Transition {{EventHandler}} (e.g. {{onwebkittransitionend}} and
-{{transitionend}}), and the underlying event triggers, only the unprefixed
+Transition {{EventHandler}} (e.g. {{GlobalEventHandlers/onwebkittransitionend}}
+and {{transitionend}}), and the underlying event triggers, only the unprefixed
 handler should be called.
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
