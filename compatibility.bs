@@ -814,7 +814,7 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 
 <h3 id="animation-event-handlers">Animation Events</h3>
 
-<h4 id="prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
+<h4 id="animation-prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
 
 The following are the <a>event handlers</a> (and their corresponding <a>event
 handler types</a> that must be supported by all <a>HTML elements</a>, as both
@@ -858,7 +858,7 @@ handler should be called.
 
 <h3 id="transition-event-handlers">Transition Events</h3>
 
-<h4 id="prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
+<h4 id="transition-prefixed-event-handlers-on-elements-document-objects-and-window-objects">Prefixed event handlers on elements, Document objects, and Window objects</h4>
 
 The following are the <a>event handlers</a> (and their corresponding <a>event
 handler types</a> that must be supported by all <a>HTML elements</a>, as both
