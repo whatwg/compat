@@ -1,7 +1,6 @@
-/.DS_Store
 /compat.spec.whatwg.org/
-/compatibility.html
 /deploy.sh
 /deploy_key
 /deploy_key.pub
+/compatibility.html
 /review.sh
