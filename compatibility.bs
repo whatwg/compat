@@ -47,11 +47,10 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 </pre>
 
 <pre class=link-defaults>
-spec:css-sizing-3; type:property; text:box-sizing
-spec:css-color-4; type:value; text:currentcolor
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:filter-effects-1; type:property; text:filter
+spec:css-conditional-3; type:at-rule; text:@media
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
