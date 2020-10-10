@@ -525,7 +525,7 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supp
       <td><code>''flex''</code></td>
     </tr>
     <tr>
-      <td><code><dfn value lt="-webkit-flex-valdef">-webkit-flex</dfn></code></td>
+      <td><code><dfn value id="valdef-flex--webkit-flex-valdef">-webkit-flex</dfn></code></td>
       <td><code>''flex''</code></td>
     </tr>
     <tr>
