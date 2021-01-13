@@ -1,7 +1,5 @@
 # Compatibility Standard
 
-[![Travis Build Status](https://travis-ci.org/whatwg/compat.svg?branch=master)](https://travis-ci.org/whatwg/compat)
-
 ## Abstract
 
 The [Compatibility Standard](https://compat.spec.whatwg.org/) standardizes a number of (often
@@ -16,7 +14,7 @@ respect the [WHATWG Code of Conduct](https://whatwg.org/code-of-conduct).
 ## Pull requests
 
 In short, change `compatibility.bs` and submit your patch, with a
-[good commit message](https://github.com/whatwg/meta/blob/master/COMMITTING.md). Consider
+[good commit message](https://github.com/whatwg/meta/blob/main/COMMITTING.md). Consider
 reading through the [WHATWG FAQ](https://whatwg.org/faq) if you are new here.
 
 Please add your name to the Acknowledgments section in your first pull request, even for trivial
@@ -26,12 +24,12 @@ fixes. The names are sorted lexicographically.
 
 For quick local iteration, run `make`. To verify your changes locally, run `make deploy`. See more
 in the
-[WHATWG Contributor Guidelines](https://github.com/whatwg/meta/blob/master/CONTRIBUTING.md#building).
+[WHATWG Contributor Guidelines](https://github.com/whatwg/meta/blob/main/CONTRIBUTING.md#building).
 
 ## Merge policy
 
 If you can commit to this repository, see the
-[WHATWG Maintainer Guidelines](https://github.com/whatwg/meta/blob/master/MAINTAINERS.md).
+[WHATWG Maintainer Guidelines](https://github.com/whatwg/meta/blob/main/MAINTAINERS.md).
 
 ## Tests
 
