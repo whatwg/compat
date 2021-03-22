@@ -822,5 +822,5 @@ Special thanks to Apple and the WebKit.org blog authors for providing initial de
 
 This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
-(Google, LLC,
+(<a href=https://google.com/>Google</a>,
 <a href=mailto:miketaylr@google.com>miketaylr@google.com</a>).
