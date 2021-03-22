@@ -821,5 +821,5 @@ Special thanks to Apple and the WebKit.org blog authors for providing initial de
 
 This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
-(<a href="https://www.mozilla.org/">Mozilla</a>,
-<a href=mailto:miket@mozilla.com>miket@mozilla.com</a>).
+(Google, LLC,
+<a href=mailto:miketaylr@google.com>miketaylr@google.com</a>).
