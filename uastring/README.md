@@ -6,7 +6,7 @@ We keep [minutes of our meetings](./uastring/index.md).
 
 ## To Participate
 
-* First Wednesday (USA time) of every month.
+* First Wednesday, 5PM-5:50PM (USA Pacific time) of every month.
 * Join Zoom Meeting: [98358016469](https://mozilla.zoom.us/j/98358016469)
 * Join by phone:
     * (US) +1 301-715-8592
