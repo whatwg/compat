@@ -4,7 +4,7 @@ H1: Compatibility
 Shortname: compat
 Text Macro: TWITTER compatstandard
 Text Macro: LATESTRD 2021-12
-Abstract: This standard describes a collection of (often vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility with the de facto web.
+Abstract: This standard describes a collection of web platform features that web browsers need to support for compatibility with the de facto web.
 Translation: ja https://triple-underscore.github.io/compat-ja.html
 Indent: 2
 Markup Shorthands: dfn yes
@@ -60,9 +60,15 @@ spec:css-conditional-3; type:at-rule; text:@media
 <h2 id='introduction'>Introduction</h2>
 <em>This section is non-normative.</em>
 
-There exists an increasingly large corpus of web content that depends on web browsers supporting a number of <code>webkit</code>-prefixed CSS properties and DOM APIs for functionality or layout. This holds especially true for mobile-optimized web content.
+There exists an increasingly large corpus of web content that depends on web browsers supporting a
+number of <code>webkit</code>-prefixed CSS properties and DOM APIs for functionality or layout.
+This holds especially true for mobile-optimized web content.
 
-This specification aims to describe the minimal set of <code>webkit</code>-prefixed CSS properties and DOM APIs that user agents are required to support for web compatibility.
+This specification aims to describe the minimal set of <code>webkit</code>-prefixed CSS properties
+and DOM APIs that user agents are required to support for web compatibility, which aren't
+specified elsewhere.
+
+The HTTP <code>User-Agent</code> header field as found in major browsers today is also described.
 
 <h2 id='conformance'>Conformance</h2>
 All diagrams, examples, and notes in this specification are
