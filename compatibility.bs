@@ -817,11 +817,16 @@ WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9
 </div>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert, David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
+Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
+David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
+Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for
+feedback and contributions to this standard.
 
-Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface. [[!screen-orientation]]
+Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface.
+[[!screen-orientation]]
 
-Special thanks to Apple and the WebKit.org blog authors for providing initial descriptions of much of the content defined in this specification.
+Special thanks to Apple and the WebKit.org blog authors for providing initial descriptions of much
+of the content defined in this specification.
 
 This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
