@@ -128,19 +128,22 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
 <h3 id="css-media-queries">CSS Media Queries</h3>
 
 <h4 id="css-media-queries-webkit-device-pixel-ratio">
-  <code>'-webkit-device-pixel-ratio'</code>
+  <code>'@media/-webkit-device-pixel-ratio'</code>
 </h4>
 
 <pre class='descdef mq'>
-Name: -webkit-device-pixel-ratio
+Name: '@media/-webkit-device-pixel-ratio'
 Value: <<number>>
 For: @media
 Type: range
 </pre>
 
-<code>'-webkit-device-pixel-ratio'</code> must be treated as an alias of the <code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a <a>dppx</a> unit.
+<code>'@media/-webkit-device-pixel-ratio'</code> must be treated as an alias of the
+<code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a
+<a>dppx</a> unit.
 
-The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> must not apply to <code>'-webkit-device-pixel-ratio'</code>, instead the following aliases must be used:
+The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> must not apply to
+<code>'@media/-webkit-device-pixel-ratio'</code>, instead the following aliases must be used:
 
 <table>
   <thead>
@@ -162,17 +165,18 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
 </table>
 
 <h4 id="css-media-queries-webkit-transform-3d">
-  <code>'-webkit-transform-3d'</code>
+  <code>'@media/-webkit-transform-3d'</code>
 </h4>
 
 <pre class='descdef mq'>
-Name: -webkit-transform-3d
+Name: '@media/-webkit-transform-3d'
 Value: <<mq-boolean>>
 For: @media
 Accepts min/max prefixes: no
 </pre>
 
-The <code>'-webkit-transform-3d'</code> media feature is used to query whether the user agent supports CSS 3D transforms. [[css-transforms-1]]
+The <code>'@media/-webkit-transform-3d'</code> <a>media feature</a> is used to query whether the
+user agent supports CSS 3D transforms. [[css-transforms-1]]
 
 If the user agent supports 3D transforms, the value will be 1. Otherwise the value is 0.
 
