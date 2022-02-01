@@ -72,8 +72,8 @@ spec:infra; type:dfn; text:user agent
 <em>This section is non-normative.</em>
 
 There exists an increasingly large corpus of web content that depends on web browsers supporting a
-number of <code>webkit</code>-prefixed CSS properties and DOM APIs for functionality or layout.
-This holds especially true for mobile-optimized web content.
+number of specific vendor CSS properties and DOM APIs for functionality or layout.
+This holds especially true for mobile-optimized web content, which is highly dependent on <code>webkit</code>-prefixed properties.
 
 This specification aims to describe the minimal set of <code>webkit</code>-prefixed CSS properties
 and DOM APIs that user agents are required to support for web compatibility, which aren't
@@ -887,7 +887,7 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
     </tr>
     <tr>
       <td><code>&lt;<dfn>legacyMozillaVersion</dfn>&gt;</code></td>
-      <td><code>Mozilla/5.0</code></td>
+      <td><code>Mozilla/5.0</code> was added by Konqueror in their user agent string to make sure they were served the right content. It then became part of the normal string parser would expect when processing a user agent string.</td>
     </tr>
     <tr>
       <td><code>&lt;<dfn>majorVersion</dfn>&gt;</code></td>
