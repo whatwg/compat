@@ -863,10 +863,10 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
     </tr> -->
     <tr>
       <td><code>&lt;<dfn>deviceCompat</dfn>&gt;</code></td>
-      <td>Represents the form-factor of the device. Primarily this is <code>Mobile </code>, or just
-      the empty string, for Desktop or non-mobile devices. Some browsers have also sent token values
-      such as <code>Tablet</code>, <code>TV</code>, <code>Mobile VR</code>, etc., or included
-      build information as well.</td>
+      <td>Represents the form-factor of the device. Primarily this is "<code>Mobile </code>", or
+      just the empty string, for Desktop or non-mobile devices. Some browsers have also sent token
+      values such as "<code>Tablet</code>", "<code>TV</code>", "<code>Mobile VR</code>", etc., or
+      included build information as well.</td>
     </tr>
     <!-- TODO(miketaylr): fit Android into existing model
     <tr>
@@ -876,18 +876,19 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
     -->
     <tr>
       <td><code>&lt;<dfn>frozenWebKitVersion</dfn>&gt;</code></td>
-      <td><code>AppleWebKit/</code> followed by a WebKit revision number, (<code>537.36</code> in
-      the case of Chrome, and <code>605.1.15</code> in the case of Safari), followed by
-      <code> (KHTML, like Gecko)</code>.</td>
+      <td>"<code>AppleWebKit/</code>" followed by a WebKit revision number, ("<code>537.36</code>"
+      in the case of Chrome, and "<code>605.1.15</code>" in the case of Safari), followed by
+      "<code> (KHTML, like Gecko)</code>".</td>
     </tr>
     <tr>
       <td><code>&lt;<dfn>frozenSafariVersion</dfn>&gt;</code></td>
-      <td><code>Safari/</code> followed by a WebKit revision number, (<code>537.36</code> in
-      the case of Chrome, and <code>605.1.15</code> in the case of Safari).</td>
+      <td>"<code>Safari/</code>" followed by a WebKit revision number, ("<code>537.36</code>" in
+      the case of Chrome, and "<code>605.1.15</code>" in the case of Safari).</td>
     </tr>
     <tr>
       <td><code>&lt;<dfn>legacyMozillaVersion</dfn>&gt;</code></td>
-      <td><code>Mozilla/5.0</code> was added by Konqueror in their user agent string to make sure they were served the right content. It then became part of the normal string parser would expect when processing a user agent string.</td>
+      <td>"<code>Mozilla/5.0</code>" was added by Konqueror for site compatibility, following the
+      pattern established by Internet Explorer 2.0 which first used "<code>Mozilla/1.22<code>".</td>
     </tr>
     <tr>
       <td><code>&lt;<dfn>majorVersion</dfn>&gt;</code></td>
@@ -926,11 +927,11 @@ of tokens representing browser information.
 &lt;<a>frozenSafariVersion</a>&gt;</code>
 
 <div class="example" id="chrome-ua-examples">
-  <strong>Desktop</strong>: <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-  (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36</code>
+  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+  (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36</code>"
 
-  <strong>Mobile</strong>: <code>Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML,
-  like Gecko) Chrome/96.0.4664.93 Mobile Safari/537.36</code>
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML,
+  like Gecko) Chrome/96.0.4664.93 Mobile Safari/537.36</code>"
 </div>
 
 <h4 id="ua-string-tokens-chrome">Chrome-specific tokens</h4>
@@ -949,11 +950,11 @@ of tokens representing browser information.
 <a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt; Firefox/&lt;<a>firefoxVersion</a>&gt;</code>
 
 <div class="example" id="firefox-ua-examples">
-  <strong>Desktop</strong>: <code>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101
-  Firefox/100.0</code>
+  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101
+  Firefox/100.0</code>"
 
-  <strong>Mobile</strong>: <code>Mozilla/5.0 (Android 10; Mobile; rv:100.0) Gecko/100.0
-  Firefox/100.0</code>
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (Android 10; Mobile; rv:100.0) Gecko/100.0
+  Firefox/100.0</code>"
 </div>
 
 <h4 id="ua-string-tokens-firefox">Firefox-specific tokens</h4>
@@ -977,12 +978,12 @@ same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
 &lt;<a>frozenSafariVersion</a>&gt;</code>
 
 <div class="example" id="safari-ua-examples">
-  <strong>Desktop</strong>: <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-  (KHTML, like Gecko) Version/15.2 Safari/605.1.15</code>
+  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+  (KHTML, like Gecko) Version/15.2 Safari/605.1.15</code>"
 
-  <strong>Mobile</strong>: <code>Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X)
-  AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Mobile/15E148 Safari/604.1
-  <!-- TODO(miketaylr): figure out if 604.1 on iOS is actually frozen or not -->
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X)
+  AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Mobile/15E148 Safari/604.1"
+  <!-- TODO(miketaylr): figure out if 604.1 on the latest iOS is frozen to this value or not -->
 </code>
 </div>
 
