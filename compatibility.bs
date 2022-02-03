@@ -73,9 +73,9 @@ spec:infra; type:dfn; text:user agent
 
 There exists an increasingly large corpus of web content that depends on web browsers supporting a
 number of specific vendor CSS properties and DOM APIs for functionality or layout.
-This holds especially true for mobile-optimized web content, which is highly dependent on <code>webkit</code>-prefixed properties.
+This holds especially true for mobile-optimized web content, which is highly dependent on <code>-webkit-</code>-prefixed properties.
 
-This specification aims to describe the minimal set of <code>webkit</code>-prefixed CSS properties
+This specification aims to describe the minimal set of <code>-webkit-</code>-prefixed CSS properties
 and DOM APIs that user agents are required to support for web compatibility, which aren't
 specified elsewhere.
 
