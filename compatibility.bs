@@ -875,22 +875,6 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
     </tr>
     -->
     <tr>
-      <td><code>&lt;<dfn>frozenWebKitVersion</dfn>&gt;</code></td>
-      <td>"<code>AppleWebKit/</code>" followed by a WebKit revision number, ("<code>537.36</code>"
-      in the case of Chrome, and "<code>605.1.15</code>" in the case of Safari), followed by
-      "<code> (KHTML, like Gecko)</code>".</td>
-    </tr>
-    <tr>
-      <td><code>&lt;<dfn>frozenSafariVersion</dfn>&gt;</code></td>
-      <td>"<code>Safari/</code>" followed by a WebKit revision number, ("<code>537.36</code>" in
-      the case of Chrome, and "<code>605.1.15</code>" in the case of Safari).</td>
-    </tr>
-    <tr>
-      <td><code>&lt;<dfn>legacyMozillaVersion</dfn>&gt;</code></td>
-      <td>"<code>Mozilla/5.0</code>" was added by Konqueror for site compatibility, following the
-      pattern established by Internet Explorer 2.0 which first used "<code>Mozilla/1.22<code>".</td>
-    </tr>
-    <tr>
       <td><code>&lt;<dfn>majorVersion</dfn>&gt;</code></td>
       <td>Represents the browser's major version number.</td>
     </tr>
@@ -909,22 +893,23 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
   </tbody>
 </table>
 
+<!-- maybe add a table with the interesting frozen constants -->
+
 <h3 id="ua-string-meta-structure">Meta Structure</h3>
 
 The User-Agent strings that follow share the common meta structure:
 
-<code>&lt;<a>legacyMozillaVersion</a>&gt;</code> (<code>a</code>) <code>b</code>
+"<code>Mozilla/5.0</code> (<code>a</code>) <code>b</code>"
 
-Where <code>a</code> is a set of tokens representing device information and <code>b</code> is a set
-of tokens representing browser information.
+Where <code>a</code> is one or more [=tokens=] representing device information and <code>b</code> is
+one or more [=tokens=] representing browser information.
 
 <h3 id="ua-string-chrome">Chrome</h3>
 
 <h4 id="ua-string-pattern-chrome">Chrome User-Agent pattern</h4>
 
-<code>&lt;<a>legacyMozillaVersion</a>&gt; (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
-&lt;<a>frozenWebKitVersion</a>&gt; Chrome/&lt;<a>chromeVersion</a>&gt; &lt;<a>deviceCompat</a>&gt;
-&lt;<a>frozenSafariVersion</a>&gt;</code>
+"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
+AppleWebKit/537.36 Chrome/&lt;<a>chromeVersion</a>&gt; &lt;<a>deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
@@ -946,8 +931,8 @@ of tokens representing browser information.
 
 <h4 id="ua-string-pattern-firefox">Firefox User-Agent pattern</h4>
 
-<code>&lt;<a>legacyMozillaVersion</a>&gt; (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:&lt;
-<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt; Firefox/&lt;<a>firefoxVersion</a>&gt;</code>
+"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:&lt;
+<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt; Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <div class="example" id="firefox-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101
@@ -972,17 +957,18 @@ same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
 <h3 id="ua-string-safari">Safari</h3>
 
 <h4 id="ua-string-pattern-safari">Safari User-Agent pattern</h4>
+<!-- TODO(miketaylr): Safari Desktop and Mobile need to be treated differently, this pattern
+only really captures desktop -->
 
-<code>&lt;<a>legacyMozillaVersion</a>&gt; (Macintosh; Intel Mac OS X 10_15_7)
-&lt;<a>frozenWebKitVersion</a>&gt; Version/&lt;<a>safariVersion</a>&gt; &lt;<a>deviceCompat</a>&gt;
-&lt;<a>frozenSafariVersion</a>&gt;</code>
+"<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</code>"
 
 <div class="example" id="safari-ua-examples">
-  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
   (KHTML, like Gecko) Version/15.2 Safari/605.1.15</code>"
 
   <strong>Mobile</strong>: "<code>Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X)
-  AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Mobile/15E148 Safari/604.1"
+  AppleWebKit/604.1 (KHTML, like Gecko) Version/15.2 Mobile/15E148 Safari/604.1"
   <!-- TODO(miketaylr): figure out if 604.1 on the latest iOS is frozen to this value or not -->
 </code>
 </div>
