@@ -912,11 +912,13 @@ one or more [=tokens=] representing browser information.
 AppleWebKit/537.36 Chrome/&lt;<a>chromeVersion</a>&gt; &lt;<a>deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
-  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-  (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36</code>"
+  <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh</mark>;
+  <mark>Intel Mac OS X 10_15_7</mark>) AppleWebKit/537.36 (KHTML, like Gecko)
+  Chrome/<mark>96.0.4664.93</mark> Safari/537.36</code>"
 
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML,
-  like Gecko) Chrome/96.0.4664.93 Mobile Safari/537.36</code>"
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux</mark>; <mark>Android 10</mark>)
+  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>96.0.4664.93</mark> <mark>Mobile</mark>
+  Safari/537.36</code>"
 </div>
 
 <h4 id="ua-string-tokens-chrome">Chrome-specific tokens</h4>
@@ -935,11 +937,11 @@ AppleWebKit/537.36 Chrome/&lt;<a>chromeVersion</a>&gt; &lt;<a>deviceCompat</a>&g
 <a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt; Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <div class="example" id="firefox-ua-examples">
-  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101
-  Firefox/100.0</code>"
+  <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Windows NT 10.0</mark>;
+  <mark>Win64; x64;</mark> rv:<mark>100</mark>.0) Gecko/20100101 Firefox/<mark>100</mark>.0</code>"
 
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (Android 10; Mobile; rv:100.0) Gecko/100.0
-  Firefox/100.0</code>"
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Android 10</mark>; <mark>Mobile</mark>;
+  rv:<mark>100</mark>.0) Gecko/<mark>100</mark>.0 Firefox/<mark>100</mark>.0</code>"
 </div>
 
 <h4 id="ua-string-tokens-firefox">Firefox-specific tokens</h4>
@@ -965,10 +967,10 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</
 
 <div class="example" id="safari-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
-  (KHTML, like Gecko) Version/15.2 Safari/605.1.15</code>"
+  (KHTML, like Gecko) Version/<mark>15.2</mark> Safari/605.1.15</code>"
 
   <strong>Mobile</strong>: "<code>Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X)
-  AppleWebKit/604.1 (KHTML, like Gecko) Version/15.2 Mobile/15E148 Safari/604.1"
+  AppleWebKit/604.1 (KHTML, like Gecko) Version/<mark>15.2</mark> <mark>Mobile/15E148</mark> Safari/604.1"
   <!-- TODO(miketaylr): figure out if 604.1 on the latest iOS is frozen to this value or not -->
 </code>
 </div>
