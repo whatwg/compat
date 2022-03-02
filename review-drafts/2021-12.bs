@@ -1,10 +1,11 @@
 <pre class="metadata">
 Group: WHATWG
+Date: 2021-12-20
 H1: Compatibility
 Shortname: compat
 Text Macro: TWITTER compatstandard
 Text Macro: LATESTRD 2021-12
-Abstract: This standard describes a collection of web platform features that web browsers need to support for compatibility with the de facto web.
+Abstract: This standard describes a collection of non-standard (and often vendor-prefixed) CSS properties and DOM APIs that web browsers need to support for compatibility with the de facto web.
 Translation: ja https://triple-underscore.github.io/compat-ja.html
 Indent: 2
 Markup Shorthands: dfn yes
@@ -47,22 +48,11 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
     text: dppx; url: #dppx
 </pre>
 
-<pre class="biblio">
-{
-  "HTTP-SEMANTICS": {
-    "href": "https://httpwg.org/http-core/draft-ietf-httpbis-semantics-latest.html",
-    "title": "HTTP Semantics",
-    "authors": [ "R. Fielding", "M. Nottingham", "J. Reschke" ]
-  }
-}
-</pre>
-
 <pre class=link-defaults>
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:filter-effects-1; type:property; text:filter
 spec:css-conditional-3; type:at-rule; text:@media
-spec:infra; type:dfn; text:user agent
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -71,15 +61,13 @@ spec:infra; type:dfn; text:user agent
 <h2 id='introduction'>Introduction</h2>
 <em>This section is non-normative.</em>
 
-There exists an increasingly large corpus of web content that depends on web browsers supporting a
-number of specific vendor CSS properties and DOM APIs for functionality or layout.
-This holds especially true for mobile-optimized web content, which is highly dependent on <code>-webkit-</code>-prefixed properties.
+There exists an increasingly large corpus of web content that depends on web browsers supporting a number of <code>webkit</code>-prefixed CSS properties and DOM APIs for functionality or layout. This holds especially true for mobile-optimized web content.
 
-This specification aims to describe the minimal set of <code>-webkit-</code>-prefixed CSS properties
-and DOM APIs that user agents are required to support for web compatibility, which aren't
-specified elsewhere.
+This specification aims to describe the minimal set of <code>webkit</code>-prefixed CSS properties and DOM APIs that user agents are required to support for web compatibility.
 
-The HTTP <code>User-Agent</code> header field as found in major browsers today is also described.
+<div class="XXX">
+The <a href="https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility">Non-Standard Compatibility</a> wiki page will serve as a rough guide for what this specification intends to cover.
+</div>
 
 <h2 id='conformance'>Conformance</h2>
 All diagrams, examples, and notes in this specification are
@@ -128,22 +116,19 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supp
 <h3 id="css-media-queries">CSS Media Queries</h3>
 
 <h4 id="css-media-queries-webkit-device-pixel-ratio">
-  <code>'@media/-webkit-device-pixel-ratio'</code>
+  <code>'-webkit-device-pixel-ratio'</code>
 </h4>
 
 <pre class='descdef mq'>
-Name: '@media/-webkit-device-pixel-ratio'
+Name: -webkit-device-pixel-ratio
 Value: <<number>>
 For: @media
 Type: range
 </pre>
 
-<code>'@media/-webkit-device-pixel-ratio'</code> must be treated as an alias of the
-<code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a
-<a>dppx</a> unit.
+<code>'-webkit-device-pixel-ratio'</code> must be treated as an alias of the <code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a <a>dppx</a> unit.
 
-The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> must not apply to
-<code>'@media/-webkit-device-pixel-ratio'</code>, instead the following aliases must be used:
+The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> must not apply to <code>'-webkit-device-pixel-ratio'</code>, instead the following aliases must be used:
 
 <table>
   <thead>
@@ -165,18 +150,17 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
 </table>
 
 <h4 id="css-media-queries-webkit-transform-3d">
-  <code>'@media/-webkit-transform-3d'</code>
+  <code>'-webkit-transform-3d'</code>
 </h4>
 
 <pre class='descdef mq'>
-Name: '@media/-webkit-transform-3d'
+Name: -webkit-transform-3d
 Value: <<mq-boolean>>
 For: @media
 Accepts min/max prefixes: no
 </pre>
 
-The <code>'@media/-webkit-transform-3d'</code> <a>media feature</a> is used to query whether the
-user agent supports CSS 3D transforms. [[css-transforms-1]]
+The <code>'-webkit-transform-3d'</code> media feature is used to query whether the user agent supports CSS 3D transforms. [[css-transforms-1]]
 
 If the user agent supports 3D transforms, the value will be 1. Otherwise the value is 0.
 
@@ -831,168 +815,12 @@ The following are the event handlers and their corresponding event handler event
 WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>. It's unclear if this is needed for compatibility.
 </div>
 
-<h2 id="ua-string-section">The User-Agent String</h2>
-
-The <code>User-Agent</code> header field syntax is formally defined by [[!HTTP-SEMANTICS]] and
-provides SHOULD-level guidance on its value. This section serves as a descriptive record of the
-<code>User-Agent</code> patterns found in the so-called major web browsers, but much of it will
-apply to other browsers with a shared heritage (i.e., forks and embedders) as well as any
-<a>user agent</a> in the more general sense that send a <code>User-Agent</code> <a>header</a>.
-
-<h3 id="ua-string-patterns">User-Agent Tokens</h3>
-
-A User-Agent <dfn>token</dfn> is a string that represents an abstraction over a semantic unit in the
-<code>User-Agent</code> string. This document formalizes <a>tokens</a> as a <a>string</a> that
-begins with an opening bracket "<" and ends with a closing ">" bracket, e.g.,
-<code>&lt;version&gt;</code>.
-
-<h4 id="ua-string-token-reference">User-Agent Token Reference</h4>
-
-This is a non-exhaustive list of common User-Agent <a>tokens</a>.
-
-<table>
-  <thead>
-    <th>Tokens</th>
-    <th>Description</th>
-  </thead>
-  <tbody>
-    <!-- TODO(miketaylr): fit Android into existing model
-    <tr>
-      <td><code>&lt;<dfn>androidVersion</dfn>&gt;</code></td>
-      <td>Represents Android major version.</td>
-    </tr> -->
-    <tr>
-      <td><code>&lt;<dfn>deviceCompat</dfn>&gt;</code></td>
-      <td>Represents the form-factor of the device. Primarily this is "<code>Mobile </code>", or
-      just the empty string, for Desktop or non-mobile devices. Some browsers have also sent token
-      values such as "<code>Tablet</code>", "<code>TV</code>", "<code>Mobile VR</code>", etc., or
-      included build information as well.</td>
-    </tr>
-    <!-- TODO(miketaylr): fit Android into existing model
-    <tr>
-      <td><code>&lt;<dfn>deviceModel</dfn>&gt;</code></td>
-      <td>Represents Android device model.</td>
-    </tr>
-    -->
-    <tr>
-      <td><code>&lt;<dfn>majorVersion</dfn>&gt;</code></td>
-      <td>Represents the browser's major version number.</td>
-    </tr>
-    <tr>
-      <td><code>&lt;<dfn>minorVersion</dfn>&gt;</code></td>
-      <td>Represents the browser's non-major version numbers.</td>
-    </tr>
-    <tr>
-      <td><code>&lt;<dfn>oscpu</dfn>&gt;</code></td>
-      <td>Represents the device operating system and (optionally) CPU architecture.</td>
-    </tr>
-    <tr>
-      <td><code>&lt;<dfn>platform</dfn>&gt;</code></td>
-      <td>Represents the underlying device platform.
-    </tr>
-  </tbody>
-</table>
-
-<!-- maybe add a table with the interesting frozen constants -->
-
-<h3 id="ua-string-meta-structure">Meta Structure</h3>
-
-The User-Agent strings that follow share the common meta structure:
-
-"<code>Mozilla/5.0</code> (<code>a</code>) <code>b</code>"
-
-Where <code>a</code> is one or more [=tokens=] representing device information and <code>b</code> is
-one or more [=tokens=] representing browser information.
-
-<h3 id="ua-string-chrome">Chrome</h3>
-
-<h4 id="ua-string-pattern-chrome">Chrome User-Agent pattern</h4>
-
-"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
-AppleWebKit/537.36 Chrome/&lt;<a>chromeVersion</a>&gt; &lt;<a>deviceCompat</a>&gt;Safari/537.36</code>"
-
-<div class="example" id="chrome-ua-examples">
-  <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh</mark>;
-  <mark>Intel Mac OS X 10_15_7</mark>) AppleWebKit/537.36 (KHTML, like Gecko)
-  Chrome/<mark>96.0.4664.93</mark> Safari/537.36</code>"
-
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux</mark>; <mark>Android 10</mark>)
-  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>96.0.4664.93</mark> <mark>Mobile</mark>
-  Safari/537.36</code>"
-</div>
-
-<h4 id="ua-string-tokens-chrome">Chrome-specific tokens</h4>
-
-<code>&lt;<dfn>chromeVersion</dfn>&gt;</code> decomposes to the following:
-<!-- TODO(miketaylr): add dfn for "decompose -->
-
-<code>&lt;<a>majorVersion</a>&gt;.&lt;<a>minorVersion</a>&gt;</code>, where
-<code>&lt;<a>minorVersion</a>&gt;</code> represents MINOR.BUILD.PATCH version numbers.
-
-<h3 id="ua-string-firefox">Firefox</h3>
-
-<h4 id="ua-string-pattern-firefox">Firefox User-Agent pattern</h4>
-
-"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:&lt;
-<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt; Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
-
-<div class="example" id="firefox-ua-examples">
-  <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Windows NT 10.0</mark>;
-  <mark>Win64; x64;</mark> rv:<mark>100</mark>.0) Gecko/20100101 Firefox/<mark>100</mark>.0</code>"
-
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Android 10</mark>; <mark>Mobile</mark>;
-  rv:<mark>100</mark>.0) Gecko/<mark>100</mark>.0 Firefox/<mark>100</mark>.0</code>"
-</div>
-
-<h4 id="ua-string-tokens-firefox">Firefox-specific tokens</h4>
-
-<code>&lt;<dfn>firefoxVersion</dfn>&gt;</code> decomposes to the following:
-
-<code>&lt;<a>majorVersion</a>&gt;.0</code>
-
-In Firefox on desktop platforms (Windows, macOS, Linux, etc.),
-<code>&lt;<dfn>geckoVersion</dfn>&gt;</code> is the frozen build
-date "<code>20100101</code>". In Firefox on Android, <code>&lt;<a>geckoVersion</a>&gt;</code> is the
-same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
-
-
-<h3 id="ua-string-safari">Safari</h3>
-
-<h4 id="ua-string-pattern-safari">Safari User-Agent pattern</h4>
-<!-- TODO(miketaylr): Safari Desktop and Mobile need to be treated differently, this pattern
-only really captures desktop -->
-
-"<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
-Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</code>"
-
-<div class="example" id="safari-ua-examples">
-  <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
-  (KHTML, like Gecko) Version/<mark>15.2</mark> Safari/605.1.15</code>"
-
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X)
-  AppleWebKit/604.1 (KHTML, like Gecko) Version/<mark>15.2</mark> <mark>Mobile/15E148</mark> Safari/604.1"
-  <!-- TODO(miketaylr): figure out if 604.1 on the latest iOS is frozen to this value or not -->
-</code>
-</div>
-
-<h4 id="ua-string-tokens-safari">Safari-specific tokens</h4>
-
-<code>&lt;<dfn>safariVersion</dfn>&gt;</code> decomposes to the following:
-
-<code>&lt;<a>majorVersion</a>&gt;.&lt;<a>minorVersion</a>&gt;</code>, where
-<code>&lt;<a>minorVersion</a>&gt;</code> is a single digit.
-
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
-David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
-Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for
-feedback and contributions to this standard.
+Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert, David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for feedback and contributions to this standard.
 
-Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface.
-[[!screen-orientation]]
+Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface. [[!screen-orientation]]
 
-Special thanks to Apple and the WebKit.org blog authors for providing initial descriptions of much
-of the content defined in this specification.
+Special thanks to Apple and the WebKit.org blog authors for providing initial descriptions of much of the content defined in this specification.
 
 This standard is written by
 <a href="https://miketaylr.com/">Mike Taylor</a>
