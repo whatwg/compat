@@ -988,7 +988,7 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
-David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
+David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
 Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for
 feedback and contributions to this standard.
 
