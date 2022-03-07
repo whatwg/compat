@@ -935,13 +935,14 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>chromeVersion</a>&gt;
 <h4 id="ua-string-pattern-firefox">Firefox User-Agent pattern</h4>
 
 "<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:&lt;
-<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt; Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
+<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
+Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <div class="example" id="firefox-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Windows NT 10.0</mark>;
   <mark>Win64; x64;</mark> rv:<mark>100</mark>.0) Gecko/20100101 Firefox/<mark>100</mark>.0</code>"
 
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Android 10</mark>; <mark>Mobile</mark>;
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Android 10</mark>; <mark>Mobile;</mark>
   rv:<mark>100</mark>.0) Gecko/<mark>100</mark>.0 Firefox/<mark>100</mark>.0</code>"
 </div>
 
