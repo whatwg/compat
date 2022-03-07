@@ -909,7 +909,8 @@ one or more [=tokens=] representing browser information.
 <h4 id="ua-string-pattern-chrome">Chrome User-Agent pattern</h4>
 
 "<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
-AppleWebKit/537.36 Chrome/&lt;<a>chromeVersion</a>&gt; &lt;<a>deviceCompat</a>&gt;Safari/537.36</code>"
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>chromeVersion</a>&gt;
+&lt;<a>deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh</mark>;
@@ -934,13 +935,14 @@ AppleWebKit/537.36 Chrome/&lt;<a>chromeVersion</a>&gt; &lt;<a>deviceCompat</a>&g
 <h4 id="ua-string-pattern-firefox">Firefox User-Agent pattern</h4>
 
 "<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:&lt;
-<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt; Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
+<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
+Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <div class="example" id="firefox-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Windows NT 10.0</mark>;
   <mark>Win64; x64;</mark> rv:<mark>100</mark>.0) Gecko/20100101 Firefox/<mark>100</mark>.0</code>"
 
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Android 10</mark>; <mark>Mobile</mark>;
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Android 10</mark>; <mark>Mobile;</mark>
   rv:<mark>100</mark>.0) Gecko/<mark>100</mark>.0 Firefox/<mark>100</mark>.0</code>"
 </div>
 
@@ -962,16 +964,18 @@ same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
 <!-- TODO(miketaylr): Safari Desktop and Mobile need to be treated differently, this pattern
 only really captures desktop -->
 
-"<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
+"<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)
 Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</code>"
 
 <div class="example" id="safari-ua-examples">
+  <!-- https://github.com/WebKit/WebKit/blob/8427f75c2c505bbeac2898839e57c027f0bfccd8/Source/WebCore/platform/mac/UserAgentMac.mm -->
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
   (KHTML, like Gecko) Version/<mark>15.2</mark> Safari/605.1.15</code>"
 
+  <!-- https://github.com/WebKit/WebKit/blob/0935c1bc383b253a9b54232939d6e68eb60f38fe/Source/WebCore/platform/ios/UserAgentIOS.mm -->
   <strong>Mobile</strong>: "<code>Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X)
-  AppleWebKit/604.1 (KHTML, like Gecko) Version/<mark>15.2</mark> <mark>Mobile/15E148</mark> Safari/604.1"
-  <!-- TODO(miketaylr): figure out if 604.1 on the latest iOS is frozen to this value or not -->
+  AppleWebKit/605.1.15 (KHTML, like Gecko) Version/<mark>15.2</mark> <mark>Mobile/15E148</mark>
+  Safari/605.1.15"
 </code>
 </div>
 
@@ -984,7 +988,7 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
-David Håsäther, Domenic Denicola, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
+David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
 Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for
 feedback and contributions to this standard.
 
