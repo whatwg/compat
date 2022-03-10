@@ -774,7 +774,8 @@ partial interface HTMLBodyElement {
 
 When getting the <dfn attribute for="Window">orientation</dfn> attribute, the user agent must run the following steps:
 
-1. Return the <a>responsible document</a>'s current <a href="#dfn-window-orientation-angle"><code>window.orientation</code> angle</a>.
+1. Let <var>document</var> be [=this=]'s [=relevant global object=]'s [=associated Document=].
+1. Return <var>document</var>'s current <a href="#dfn-window-orientation-angle"><code>window.orientation</code> angle</a>.
 
 Whenever the viewport is drawn at a different angle compared to the device's natural orientation, the user agent must run the following steps:
 
