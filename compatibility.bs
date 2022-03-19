@@ -63,6 +63,7 @@ spec:css-flexbox-1; type:value; text:inline-flex
 spec:filter-effects-1; type:property; text:filter
 spec:css-conditional-3; type:at-rule; text:@media
 spec:infra; type:dfn; text:user agent
+spec:svg2; type:dfn; text:fill
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -73,7 +74,8 @@ spec:infra; type:dfn; text:user agent
 
 There exists an increasingly large corpus of web content that depends on web browsers supporting a
 number of specific vendor CSS properties and DOM APIs for functionality or layout.
-This holds especially true for mobile-optimized web content, which is highly dependent on <code>-webkit-</code>-prefixed properties.
+This holds especially true for mobile-optimized web content, which is highly dependent on
+<code>-webkit-</code>-prefixed properties.
 
 This specification aims to describe the minimal set of <code>-webkit-</code>-prefixed CSS properties
 and DOM APIs that user agents are required to support for web compatibility, which aren't
@@ -108,7 +110,8 @@ be performant.)
 
 <h3 id="css-at-rules">CSS At-rules</h3>
 
-The following <code>-webkit-</code> <a>vendor prefixed</a> at-rules must be supported as aliases of the corresponding unprefixed at-rules:
+The following <code>-webkit-</code> <a>vendor prefixed</a> [=at-rules=] must be supported as aliases
+of the corresponding unprefixed [=at-rules=]:
 
 <table>
   <thead>
@@ -180,36 +183,40 @@ user agent supports CSS 3D transforms. [[css-transforms-1]]
 
 If the user agent supports 3D transforms, the value will be 1. Otherwise the value is 0.
 
-<h3 id="css-image-type">CSS Gradients</h3>
+<h3 id="css-gradient-fns">CSS Gradient Functions</h3>
 
-<!-- Uncomment when I add -webkit-gradient()
-Both the [[css3-images-20110217]] draft <code>-webkit-</code> prefixed <<image>> gradient functions and the 2008 <code>-webkit-gradient()</code> (<a href="https://webkit.org/blog/175/introducing-css-gradients/">blog post</a>, <a href="https://developer.apple.com/library/safari/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html#//apple_ref/doc/uid/TP40008032-CH10-SW34">Safari developer documentation</a>) must be supported for compatibility.
+<!-- Uncomment if we ever add -webkit-gradient()
+Both the [[css3-images-20110217]] draft <code>-webkit-</code> prefixed <<image>> gradient functions
+and the 2008 <code>-webkit-gradient()</code> (<a href="https://webkit.org/blog/175/introducing-css-gradients/">blog post</a>, <a href="https://developer.apple.com/library/safari/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html#//apple_ref/doc/uid/TP40008032-CH10-SW34">Safari developer documentation</a>) must be supported for compatibility.
 -->
 
 <h4 id="css-gradients-webkit-linear-gradient">
   <code>''-webkit-linear-gradient()''</code>
 </h4>
 
-<code><dfn export>-webkit-linear-gradient()</dfn></code> must be treated as an alias of <a>linear-gradient</a> as defined in [[css3-images-20110217]].
-<!-- The stupid parens outside of the ref link are a hack because bikeshed hates me and my attempts to link to http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient. Pull requests welcome? -->
+The <code><dfn export>-webkit-linear-gradient()</dfn></code> [=gradient function=] must be treated
+as an alias of <a>linear-gradient</a> as defined in [[css3-images-20110217]].
 
 <h4 id="css-gradients-webkit-radial-gradient">
   <code>''-webkit-radial-gradient()''</code>
 </h4>
 
-<code><dfn export>-webkit-radial-gradient()</dfn></code> must be treated as an alias of <a>radial-gradient</a> as defined in [[css3-images-20110217]].
+The <code><dfn export>-webkit-radial-gradient()</dfn></code> [=gradient function=] must be treated
+as an alias of <a>radial-gradient</a> as defined in [[css3-images-20110217]].
 
 <h4 id="css-gradients-repeating-webkit-linear-gradient">
   <code>''-webkit-repeating-linear-gradient()''</code>
 </h4>
 
-<code><dfn export>-webkit-repeating-linear-gradient()</dfn></code> must be treated as an alias of <a>repeating-linear-gradient</a> as defined in [[css3-images-20110217]].
+The <code><dfn export>-webkit-repeating-linear-gradient()</dfn></code> [=gradient function=] must be
+treated as an alias of <a>repeating-linear-gradient</a> as defined in [[css3-images-20110217]].
 
 <h4 id="css-gradients-repeating-webkit-radial-gradient">
   <code>''-webkit-repeating-radial-gradient()''</code>
 </h4>
 
-<code><dfn export>-webkit-repeating-radial-gradient()</dfn></code> must be treated as an alias of <a>repeating-radial-gradient</a> as defined in [[css3-images-20110217]].
+The <code><dfn export>-webkit-repeating-radial-gradient()</dfn></code> [=gradient function=] must be
+treated as an alias of <a>repeating-radial-gradient</a> as defined in [[css3-images-20110217]].
 
 <!--
 <h4 id="css-gradients-webkit-gradient">
@@ -222,7 +229,8 @@ Both the [[css3-images-20110217]] draft <code>-webkit-</code> prefixed <<image>>
 
 <h4 id="css-simple-aliases">Legacy name aliases</h4>
 
-The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as <a lt="legacy name alias">legacy name aliases</a> of the corresponding unprefixed property:
+The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as
+<a lt="legacy name alias">legacy name aliases</a> of the corresponding unprefixed property:
 
 <table>
   <thead>
@@ -292,7 +300,8 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
       <td>
         <code><dfn property>-webkit-background-size</dfn></code>
         <p class="XXX">
-          Not really a [=legacy name alias=]. See <a href="https://github.com/whatwg/compat/issues/28">issue #28</a>.
+          Not really a [=legacy name alias=]. See
+          <a href="https://github.com/whatwg/compat/issues/28">issue #28</a>.
         </p>
       </td>
       <td><code>'background-size'</code></td>
@@ -466,7 +475,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
 
 <h4 id="css-prefixed-aliases">Prefixed legacy name aliases</h4>
 
-The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as <a lt="legacy name alias">legacy name aliases</a> of the corresponding unprefixed properties. If the user agent does not ship the unprefixed equivalent, the <code>-webkit-</code> prefixed property must be treated as an alias of the user agent's own vendor prefixed property.
+The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as
+<a lt="legacy name alias">legacy name aliases</a> of the corresponding unprefixed properties. If the
+user agent does not ship the unprefixed equivalent, the <code>-webkit-</code> prefixed property must
+be treated as an alias of the user agent's own vendor prefixed property.
 
 <table>
   <thead>
@@ -483,17 +495,24 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
   </tbody>
 </table>
 
-<br>
-<div class="note">As soon as each property is unprefixable it can be defined as a [=legacy name alias=].</div>
+<div class="example" id="-moz-text-size-adjust-example">
+  For example, <code>-webkit-text-size-adjust</code> is
+  <a href="https://searchfox.org/mozilla-central/rev/7d379061bd56251df911728686c378c5820513d8/devtools/shared/css/generated/properties-db.js#2450-2453">
+  treated as an alias</a> of <code>-moz-text-size-adjust</code> in Firefox.
+</div>
+
+Note:  As soon as each property is unprefixable it can be defined as a [=legacy name alias=].
 
 <h4 id="css-non-aliased">Non-aliased vendor prefixed properties</h4>
 
-Note: This section used to have a specification for the '-webkit-appearance' property.
-This is now defined in <a href="https://drafts.csswg.org/css-ui/#appearance-switching">CSS Basic User Interface Module</a>.
+Note: This section used to specify the '-webkit-appearance' property.
+This is now defined in
+<a href="https://drafts.csswg.org/css-ui/#appearance-switching">CSS Basic User Interface Module</a>.
 
 <h4 id="css-property-mappings">Property mappings</h4>
 
-The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as mappings to the corresponding unprefixed property:
+The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be supported as mappings
+to the corresponding unprefixed property:
 
 <table>
   <thead>
@@ -528,7 +547,8 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
 
 <h4 id="css-keyword-mappings">Keyword mappings</h4>
 
-The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supported as mappings to the corresponding unprefixed keyword:
+The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supported as mappings to
+the corresponding unprefixed keyword:
 
 <table>
   <thead>
@@ -572,12 +592,17 @@ Media: visual
 Animation type: discrete
 </pre>
 
-The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;creates a background <a>clipping region</a> from the outer text stroke of the foreground text (including alpha transparency).
+The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;creates a
+background <a>clipping region</a> from the outer text [=stroke=] of the foreground text (including alpha
+transparency).
 
-The <code>'-webkit-background-clip'</code> property is a [=legacy name alias=] of the 'background-clip' property for all other <<box>> values.
+The <code>'-webkit-background-clip'</code> property is a [=legacy name alias=] of the
+'background-clip' property for all other <<box>> values.
 
 <div class="note">
-Note that the root element has a different background painting area, and thus the '-webkit-background-clip' property has no effect when specified on it. See <a>the backgrounds of special elements</a>.
+Note that the root element has a different background painting area, and thus the
+'-webkit-background-clip' property has no effect when specified on it. See
+<a>the backgrounds of special elements</a>.
 </div>
 
 <dl>
@@ -605,7 +630,9 @@ p {
   -webkit-text-fill-color: transparent;
 }
 </pre>
-Browsers that don't support <code>'-webkit-background-clip'</code> or <code>'-webkit-text-fill-color'</code> will use the <code>color</code> declaration as a fallback color.
+Browsers that don't support <code>'-webkit-background-clip'</code> or
+<code>'-webkit-text-fill-color'</code> will use the <code>color</code> declaration as a fallback
+color.
 </div>
 
 <h4 id="text-fill-and-stroking">Text Fill and Stroking</h4>
@@ -625,7 +652,7 @@ Media: visual
 Animation type: as <a>color</a>
 </pre>
 
-The '-webkit-text-fill-color' property defines the foreground fill color of an element's text
+The '-webkit-text-fill-color' property defines the foreground [=fill=] color of an element's text
 content.
 
 <div class="example" id="example-webkit-text-fill-color">
@@ -662,7 +689,7 @@ Media: visual
 Animation type: as <a>color</a>
 </pre>
 
-The '-webkit-text-stroke-color' property specifies a stroke color for an element's text.
+The '-webkit-text-stroke-color' property specifies a [=stroke=] color for an element's text.
 
 <h5 id="the-webkit-text-stroke-width">Text Stroke Thickness: the <code>
 '-webkit-text-stroke-width'</code> property</h5>
@@ -679,9 +706,9 @@ Media: visual
 Animation type: discrete
 </pre>
 
-The '-webkit-text-stroke-width' property specifies the width of the stroke drawn at the edge of each
-glyph of an element's text. A zero value results in no stroke being painted. A negative value is
-invalid.
+The '-webkit-text-stroke-width' property specifies the width of the [=stroke=] drawn at the edge of
+each glyph of an element's text. A zero value results in no [=stroke=] being painted. A negative
+value is [=invalid=].
 
 <h5 id="the-webkit-text-stroke">Text Stroke Shorthand: the <code>
 '-webkit-text-stroke'</code> property</h5>
@@ -698,12 +725,13 @@ Media: visual
 Animation type: See individual properties
 </pre>
 
-The '-webkit-text-stroke' property is a shorthand property for setting the stroke width and stroke
-color of an element's text.
+The '-webkit-text-stroke' property is a shorthand property for setting the [=stroke=] width and
+[=stroke=] color of an element's text.
 
 <div class="example" id="example-webkit-text-stroke">
-Here are two examples showing how to use the longhand and shorthand <code>'-webkit-text-stroke'</code>
-properties to achieve white text with a black stroked text effect.
+Here are two examples showing how to use the longhand and shorthand
+<code>'-webkit-text-stroke'</code> properties to achieve white text with a black stroked text
+effect.
 <pre class="lang-css">
 .stroked-text-longhand {
   color: #fff;
@@ -743,12 +771,13 @@ Media: visual
 Animation type: not animatable
 </pre>
 
-When specified, the <code>pinch-zoom</code> token enables multi-finger panning and zooming of the page.
-For zooming to occur, all fingers must start on an element that has the pinch-zoom behavior enabled
-(via one of the <code>pinch-zoom</code>, <code>manipulation</code>, or <code>auto</code> values on itself
-or an ancestor).
+When specified, the <code>pinch-zoom</code> token enables multi-finger panning and zooming of the
+page. For zooming to occur, all fingers must start on an element that has the pinch-zoom behavior
+enabled (via one of the <code>pinch-zoom</code>, <code>manipulation</code>, or <code>auto</code>
+values on itself or an ancestor).
 
-<div class="note">Scenarios like image carousels which wish to disable only horizontal panning can use "<code>touch-action: pan-y pinch-zoom</code>"
+<div class="note">Scenarios like image carousels which wish to disable only horizontal panning can
+use "<code>touch-action: pan-y pinch-zoom</code>"
 to avoid disabling zooming unnecessarily.</div>
 
 <code>manipulation</code> is an alias for "<code>pan-x pan-y pinch-zoom</code>".
@@ -757,9 +786,11 @@ to avoid disabling zooming unnecessarily.</div>
 
 <h3 id="webkitcssmatrix-interface">The WebKitCSSMatrix interface</h3>
 
-<div class="note">{{WebKitCSSMatrix}} is now defined by the DOM Geometry specification. [[!geometry-1]].</div>
+Note: {{WebKitCSSMatrix}} is now defined by the DOM Geometry specification. [[!geometry-1]].
 
-<h3 id="windoworientation-interface"><a attribute lt="orientation"><code>window.orientation</code></a> API</h3>
+<h3 id="windoworientation-interface">
+  <a attribute lt="orientation"><code>window.orientation</code></a> API
+</h3>
 
 <pre class="idl">
 partial interface Window {
@@ -772,42 +803,64 @@ partial interface HTMLBodyElement {
 };
 </pre>
 
-When getting the <dfn attribute for="Window">orientation</dfn> attribute, the user agent must run the following steps:
+When getting the <dfn attribute for="Window">orientation</dfn> attribute, the user agent must run
+the following steps:
 
 1. Let <var>document</var> be [=this=]'s [=relevant global object=]'s [=associated Document=].
 1. Return <var>document</var>'s current <a href="#dfn-window-orientation-angle"><code>window.orientation</code> angle</a>.
 
-Whenever the viewport is drawn at a different angle compared to the device's natural orientation, the user agent must run the following steps:
+Whenever the viewport is drawn at a different angle compared to the device's natural orientation,
+the user agent must run the following steps:
 
-1. <a lt="fire an event">Fire an event</a> named <code><dfn id="event-orientationchange" lt="orientationchange">orientationchange</dfn></code> at the {{Window}} object of the <a>active document</a>.
+1. <a lt="fire an event">Fire an event</a> named
+   <code><dfn id="event-orientationchange" lt="orientationchange">orientationchange</dfn></code> at the
+   {{Window}} object of the <a>active document</a>.
 
-User agents implementing the <a attribute lt="orientation"><code>window.orientation</code></a> attribute and its associated <a>orientationchange</a> event must not expose them on Desktop platforms.
+User agents implementing the <a attribute lt="orientation"><code>window.orientation</code></a>
+attribute and its associated <a>orientationchange</a> event must not expose them on non-Mobile
+platforms.
 
-<div class="note">iOS Safari also fires an <code>orientationchange</code> event on the <code><{body}></code> element, but other implementations do not, suggesting it's not necessary for compatibility with the web.</div>
+<div class="note">iOS Safari also fires an <code>orientationchange</code> event on the
+<code><{body}></code> element, but other implementations do not, suggesting it's not necessary for
+compatibility with the web.</div>
 
-<h4 id="dfn-window-orientation-angle"><a attribute lt="orientation"><code>window.orientation</code></a> angle</h4>
+<h4 id="dfn-window-orientation-angle">
+  <a attribute lt="orientation"><code>window.orientation</code></a> angle
+</h4>
 
-The possible values for the <a attribute lt="orientation"><code>window.orientation</code></a> angle are: <code>-90</code>, <code>0</code>, <code>90</code>, <code>180</code>. User agents must support the <code>-90</code>, <code>0</code> and <code>90</code> values and may optionally support <code>180</code>.
+The possible values for the <a attribute lt="orientation"><code>window.orientation</code></a> angle
+are: <code>-90</code>, <code>0</code>, <code>90</code>, <code>180</code>. User agents must support
+the <code>-90</code>, <code>0</code> and <code>90</code> values and may optionally support
+<code>180</code>.
 
-<p class="note"><code>0</code> represents the natural orientation. <code>-90</code> represents a rotation 90 degrees clockwise from the natural orientation. <code>90</code> represents a rotation 90 degrees counterclockwise from the natural orientation. <code>180</code> represents a rotation 180 degrees from the natural orientation.
+<p class="note">
+  <code>0</code> represents the natural orientation. <code>-90</code> represents a
+  rotation 90 degrees clockwise from the natural orientation. <code>90</code> represents a rotation
+  90 degrees counterclockwise from the natural orientation. <code>180</code> represents a rotation
+  180 degrees from the natural orientation.
 </p>
 
-In order to determine the current <a attribute lt="orientation"><code>window.orientation</code></a> angle, the user agent must run the following steps:
+In order to determine the current <a attribute lt="orientation"><code>window.orientation</code></a>
+angle, the user agent must run the following steps:
 
 <ol>
-  <li>Return the result of step 3 of the {{ScreenOrientation}}'s <a>update the orientation information</a> algorithm with the following changes:
+  <li>Return the result of step 3 of the {{ScreenOrientation}}'s
+  <a>update the orientation information</a> algorithm with the following changes:
     <ol>
       <li>If the orientation angle is less than or equal to 180, return the orientation angle
       <li>If the orientation angle is greater than 180, return the orientation angle - 360.
-      <li>If the resulting orientation angle is 180 and the user agent does not support that value, return 0.
-      <!-- This is what Windows phone, some iPhones running various iOSes, and Chrome Mobile do on some of my test Androids. It's possible something else happens! -->
+      <li>If the resulting orientation angle is 180 and the user agent does not support that value,
+      return 0.
+      <!-- This is what Windows phone, some iPhones running various iOSes, and Chrome Mobile do on
+      some of my test Androids. It's possible something else happens! -->
     </ol>
   </li>
 </ol>
 
 <h4 id="event-handlers">Event Handlers on {{Window}} objects and <code><{body}></code> elements</h4>
 
-The following are the event handlers and their corresponding event handler event types that must be supported on all {{Window}} objects and <code><{body}></code> elements as attributes:
+The following are the event handlers and their corresponding event handler event types that must be
+supported on all {{Window}} objects and <code><{body}></code> elements as attributes:
 
 <table>
   <thead>
@@ -829,7 +882,9 @@ The following are the event handlers and their corresponding event handler event
 </table>
 
 <div class="XXX">
-WebKit also has this on <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>. It's unclear if this is needed for compatibility.
+  WebKit also has this on
+  <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>.
+  It's unclear if this is needed for compatibility.
 </div>
 
 <h2 id="ua-string-section">The User-Agent String</h2>
