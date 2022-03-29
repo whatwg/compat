@@ -990,8 +990,8 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>chromeVersion</a>&gt;
 
 <h4 id="ua-string-pattern-firefox">Firefox User-Agent pattern</h4>
 
-"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:&lt;
-<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
+"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:
+&lt;<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
 Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <div class="example" id="firefox-ua-examples">
@@ -1017,10 +1017,8 @@ same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
 <h3 id="ua-string-safari">Safari</h3>
 
 <h4 id="ua-string-pattern-safari">Safari User-Agent pattern</h4>
-<!-- TODO(miketaylr): Safari Desktop and Mobile need to be treated differently, this pattern
-only really captures desktop -->
 
-"<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)
+"<code>Mozilla/5.0 (&lt;<a>safariPlatform</a>&gt;) AppleWebKit/605.1.15 (KHTML, like Gecko)
 Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</code>"
 
 <div class="example" id="safari-ua-examples">
@@ -1029,9 +1027,9 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</
   (KHTML, like Gecko) Version/<mark>15.2</mark> Safari/605.1.15</code>"
 
   <!-- https://github.com/WebKit/WebKit/blob/0935c1bc383b253a9b54232939d6e68eb60f38fe/Source/WebCore/platform/ios/UserAgentIOS.mm -->
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X)
-  AppleWebKit/605.1.15 (KHTML, like Gecko) Version/<mark>15.2</mark> <mark>Mobile/15E148</mark>
-  Safari/605.1.15"
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>iPhone</mark>; CPU <mark>iPhone OS</mark>
+  <mark>15_3</mark> like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)
+  Version/<mark>15.2</mark> <mark>Mobile/15E148</mark> Safari/605.1.15"
 </code>
 </div>
 
@@ -1041,6 +1039,38 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</
 
 <code>&lt;<a>majorVersion</a>&gt;.&lt;<a>minorVersion</a>&gt;</code>, where
 <code>&lt;<a>minorVersion</a>&gt;</code> is a single digit.
+
+<code>&lt;<dfn>safariPlatform</dfn>&gt;</code> decomposes to the following:
+
+On desktop, the string "<code>Macintosh; Intel Mac OS X 10_15_7</code>".
+
+On mobile platforms "<code>&lt;<a>appleProduct</a>&gt;; CPU &lt;<a>mobileOSName</a>&gt; &lt;<a>iOSVersion</a>&gt; like Mac OS X</code>".
+
+<table>
+  <thead>
+    <th>Tokens</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;<dfn>appleProduct</dfn>&gt;</code></td>
+      <td>Represents the marketing product name of the mobile device, which is one of
+      "<code>iPad</code>", "<code>iPhone</code>", and "<code>iPod</code>".</td>
+    </tr>
+    <tr>
+      <td><code>&lt;<dfn>mobileOSName</dfn>&gt;</code></td>
+      <td>Represents iOS name, which is one of "<code>OS</code>" (for iPad-like devices) or
+      "<code>iPhone OS</code>" (non-iPad-like devices).</td>
+    </tr>
+    <tr>
+      <td><code>&lt;<dfn>iOSVersion</dfn>&gt;</code></td>
+      <td>Represents the iOS version number, delimited by an underscore (<a
+        href="https://github.com/WebKit/WebKit/blob/8afe31a018b11741abdf9b4d5bb973d7c1d9ff05/Source/WebCore/platform/cocoa/UserAgentCocoa.mm#L35-L37">
+        for historical compatibility reasons</a>).
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
