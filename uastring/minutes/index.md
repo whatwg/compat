@@ -4,6 +4,8 @@ This is the space for recording publicly the work we are doing [around UA string
 
 
 ## 2022
+* [April 6, 2022 Minutes](./2022-04-06-minutes.md)
+* [March 2, 2022 Minutes](./2022-03-02-minutes.md)
 * [February 2, 2022 Minutes](./2022-02-02-minutes.md)
 * [January 5, 2022 Minutes](./2022-01-05-minutes.md)
 
