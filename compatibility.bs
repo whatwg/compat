@@ -990,8 +990,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>chromeVersion</a>&gt;
 
 <h4 id="ua-string-pattern-firefox">Firefox User-Agent pattern</h4>
 
-"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:
-&lt;<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
+"<code>Mozilla/5.0 (&lt;<a>firefoxPlatform</a>&gt;; rv: &lt;<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
 Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <div class="example" id="firefox-ua-examples">
@@ -1012,6 +1011,25 @@ In Firefox on desktop platforms (Windows, macOS, Linux, etc.),
 <code>&lt;<dfn>geckoVersion</dfn>&gt;</code> is the frozen build
 date "<code>20100101</code>". In Firefox on Android, <code>&lt;<a>geckoVersion</a>&gt;</code> is the
 same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
+
+<code>&lt;<dfn>firefoxPlatform</dfn>&gt;</code> decomposes to the following:
+
+On desktop platforms, "<code>&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;</code>".
+
+On Firefox on Android, "<code>&lt;<a>platform</a>&gt;; &lt;<a>deviceCompat</a>&gt;</code>".
+
+<table>
+  <thead>
+    <th>Tokens</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr><!-- TODO: consider documenting VR patterns -->
+      <td><code>&lt;<dfn for=firefox>deviceCompat</dfn>&gt;</code></td>
+      <td>The string "<code>Mobile</code>", without any leading or trailing spaces.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 <h3 id="ua-string-safari">Safari</h3>
