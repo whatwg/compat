@@ -966,7 +966,7 @@ one or more [=tokens=] representing browser information.
 
 "<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>chromeVersion</a>&gt;
-&lt;<a>deviceCompat</a>&gt;Safari/537.36</code>"
+&lt;<a for="/">deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh</mark>;
@@ -990,8 +990,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>chromeVersion</a>&gt;
 
 <h4 id="ua-string-pattern-firefox">Firefox User-Agent pattern</h4>
 
-"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt; rv:
-&lt;<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
+"<code>Mozilla/5.0 (&lt;<a>firefoxPlatform</a>&gt;; rv: &lt;<a>firefoxVersion</a>&gt;) Gecko/&lt;<a>geckoVersion</a>&gt;
 Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <div class="example" id="firefox-ua-examples">
@@ -1013,13 +1012,32 @@ In Firefox on desktop platforms (Windows, macOS, Linux, etc.),
 date "<code>20100101</code>". In Firefox on Android, <code>&lt;<a>geckoVersion</a>&gt;</code> is the
 same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
 
+<code>&lt;<dfn>firefoxPlatform</dfn>&gt;</code> decomposes to the following:
+
+On desktop platforms, "<code>&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;</code>".
+
+On Firefox on Android, "<code>&lt;<a>platform</a>&gt;; &lt;<a for=firefox>deviceCompat</a>&gt;</code>".
+
+<table>
+  <thead>
+    <th>Tokens</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr><!-- TODO: consider documenting VR patterns -->
+      <td><code>&lt;<dfn for=firefox>deviceCompat</dfn>&gt;</code></td>
+      <td>The string "<code>Mobile</code>", without any leading or trailing spaces.</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <h3 id="ua-string-safari">Safari</h3>
 
 <h4 id="ua-string-pattern-safari">Safari User-Agent pattern</h4>
 
 "<code>Mozilla/5.0 (&lt;<a>safariPlatform</a>&gt;) AppleWebKit/605.1.15 (KHTML, like Gecko)
-Version/&lt;<a>safariVersion</a>&gt;&lt;<a>deviceCompat</a>&gt;Safari/605.1.15</code>"
+Version/&lt;<a>safariVersion</a>&gt;&lt;<a for="/">deviceCompat</a>&gt;Safari/605.1.15</code>"
 
 <div class="example" id="safari-ua-examples">
   <!-- https://github.com/WebKit/WebKit/blob/8427f75c2c505bbeac2898839e57c027f0bfccd8/Source/WebCore/platform/mac/UserAgentMac.mm -->
