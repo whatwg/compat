@@ -2,7 +2,7 @@
 
 We are meeting once a month to document and determine the issues on reducing/freezing the browser User Agent strings. We are mostly focusing on `navigator.UserAgent` JavaScript property and the `User-Agent` HTTP header. If you would like to participate, please join us.
 
-We keep [minutes of our meetings](./uastring/index.md).
+We keep [minutes of our meetings](./minutes/index.md).
 
 ## To Participate
 
