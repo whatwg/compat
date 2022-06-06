@@ -545,6 +545,8 @@ to the corresponding unprefixed property:
   </tbody>
 </table>
 
+Issue(87): These definitions of <code>-webkit-box-*</code> are known to not be web compatible.
+
 <h4 id="css-keyword-mappings">Keyword mappings</h4>
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> keywords must be supported as mappings to
@@ -576,6 +578,8 @@ the corresponding unprefixed keyword:
     </tr>
   </tbody>
 </table>
+
+Issue(87): These definitions of <code>-webkit-box-*</code> are known to not be web compatible.
 
 <h4 id="the-webkit-background-clip-property">Foreground Text Clipping: the <code>
 '-webkit-background-clip'</code> property</h4>
