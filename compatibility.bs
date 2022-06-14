@@ -33,9 +33,9 @@ urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-image
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
-urlPrefix: https://drafts.csswg.org/css-backgrounds-3/
+urlPrefix: https://drafts.csswg.org/css-backgrounds-4/
   type: dfn
-    text: the backgrounds of special elements;url: #special-backgrounds
+    text: background-clip; url: #propdef-background-clip
 urlPrefix: https://drafts.csswg.org/css-transitions/
   type: dfn
     text: color; url: #animtype-color
@@ -291,6 +291,10 @@ The following <code>-webkit-</code> <a>vendor prefixed</a> properties must be su
     <tr>
       <td><code><dfn property>-webkit-backface-visibility</dfn></code></td>
       <td><code>'backface-visibility'</code></td>
+    </tr>
+    <tr>
+      <td><code><dfn property>-webkit-background-clip</dfn></code></td>
+      <td><code>'background-clip'</code></td>
     </tr>
     <tr>
       <td><code><dfn property>-webkit-background-origin</dfn></code></td>
@@ -580,64 +584,6 @@ the corresponding unprefixed keyword:
 </table>
 
 Issue(87): These definitions of <code>-webkit-box-*</code> are known to not be web compatible.
-
-<h4 id="the-webkit-background-clip-property">Foreground Text Clipping: the <code>
-'-webkit-background-clip'</code> property</h4>
-
-<pre class='propdef'>
-Name: -webkit-background-clip
-Value:  border-box | padding-box | content-box | text
-Initial: none
-Applies to: all elements
-Inherited: no
-Computed value: "text"
-Percentages: N/A
-Media: visual
-Animation type: discrete
-</pre>
-
-The <code>'-webkit-background-clip'</code> property&mdash;when its value is ''text''&mdash;creates a
-background <a>clipping region</a> from the outer text [=stroke=] of the foreground text (including alpha
-transparency).
-
-The <code>'-webkit-background-clip'</code> property is a [=legacy name alias=] of the
-'background-clip' property for all other <<box>> values.
-
-<div class="note">
-Note that the root element has a different background painting area, and thus the
-'-webkit-background-clip' property has no effect when specified on it. See
-<a>the backgrounds of special elements</a>.
-</div>
-
-<dl>
-  <dt><dfn value for='-webkit-background-clip'>border-box</dfn>
-  <dd>The background is painted within (clipped to) the border box.
-
-  <dt><dfn value for='-webkit-background-clip'>padding-box</dfn>
-  <dd>The background is painted within (clipped to) the padding box.
-
-  <dt><dfn value for='-webkit-background-clip'>content-box</dfn>
-  <dd>The background is painted within (clipped to) the content box.
-
-  <dt><dfn value for='-webkit-background-clip'>text</dfn>
-  <dd>Indicates that the background image should clip to the foreground text
-</dl><br>
-
-<div class="example" id="example-webkit-background-clip">
-Here's an example showing how to use <code>'-webkit-background-clip': text</code> together with
-<code>-webkit-text-fill-color: transparent</code> to achieve text with a gradient color effect.
-<pre class="lang-css">
-p {
-  background: linear-gradient(90deg, red, blue);
-  color: #fff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</pre>
-Browsers that don't support <code>'-webkit-background-clip'</code> or
-<code>'-webkit-text-fill-color'</code> will use the <code>color</code> declaration as a fallback
-color.
-</div>
 
 <h4 id="text-fill-and-stroking">Text Fill and Stroking</h4>
 
