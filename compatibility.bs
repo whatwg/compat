@@ -915,26 +915,18 @@ one or more [=tokens=] representing browser information.
 <h4 id="ua-string-pattern-chrome">Chrome User-Agent pattern</h4>
 
 "<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
-AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>chromeVersion</a>&gt;
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;
 &lt;<a for="/">deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh</mark>;
   <mark>Intel Mac OS X 10_15_7</mark>) AppleWebKit/537.36 (KHTML, like Gecko)
-  Chrome/<mark>96.0.4664.93</mark> Safari/537.36</code>"
+  Chrome/<mark>102</mark>.0.0.0 Safari/537.36</code>"
 
   <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux</mark>; <mark>Android 10</mark>)
-  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>96.0.4664.93</mark> <mark>Mobile</mark>
+  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>102</mark>.0.0.0 <mark>Mobile</mark>
   Safari/537.36</code>"
 </div>
-
-<h4 id="ua-string-tokens-chrome">Chrome-specific tokens</h4>
-
-<code>&lt;<dfn>chromeVersion</dfn>&gt;</code> decomposes to the following:
-<!-- TODO(miketaylr): add dfn for "decompose -->
-
-<code>&lt;<a>majorVersion</a>&gt;.&lt;<a>minorVersion</a>&gt;</code>, where
-<code>&lt;<a>minorVersion</a>&gt;</code> represents MINOR.BUILD.PATCH version numbers.
 
 <h3 id="ua-string-firefox">Firefox</h3>
 
