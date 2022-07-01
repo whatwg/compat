@@ -915,7 +915,7 @@ one or more [=tokens=] representing browser information.
 <h4 id="ua-string-pattern-chrome">Chrome User-Agent pattern</h4>
 
 "<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
-AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 &lt;<a for="/">deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
