@@ -862,11 +862,6 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
     <th>Description</th>
   </thead>
   <tbody>
-    <!-- TODO(miketaylr): fit Android into existing model
-    <tr>
-      <td><code>&lt;<dfn>androidVersion</dfn>&gt;</code></td>
-      <td>Represents Android major version.</td>
-    </tr> -->
     <tr>
       <td><code>&lt;<dfn>deviceCompat</dfn>&gt;</code></td>
       <td>Represents the form-factor of the device. Primarily this is "<code>Mobile </code>", or
@@ -874,12 +869,6 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
       values such as "<code>Tablet</code>", "<code>TV</code>", "<code>Mobile VR</code>", etc., or
       included build information as well.</td>
     </tr>
-    <!-- TODO(miketaylr): fit Android into existing model
-    <tr>
-      <td><code>&lt;<dfn>deviceModel</dfn>&gt;</code></td>
-      <td>Represents Android device model.</td>
-    </tr>
-    -->
     <tr>
       <td><code>&lt;<dfn>majorVersion</dfn>&gt;</code></td>
       <td>Represents the browser's major version number.</td>
@@ -914,7 +903,7 @@ one or more [=tokens=] representing browser information.
 
 <h4 id="ua-string-pattern-chrome">Chrome User-Agent pattern</h4>
 
-"<code>Mozilla/5.0 (&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;)
+"<code>Mozilla/5.0 (&lt;<a>chromePlatform</a>&gt;)
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 &lt;<a for="/">deviceCompat</a>&gt;Safari/537.36</code>"
 
@@ -923,10 +912,37 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
   <mark>Intel Mac OS X 10_15_7</mark>) AppleWebKit/537.36 (KHTML, like Gecko)
   Chrome/<mark>102</mark>.0.0.0 Safari/537.36</code>"
 
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux</mark>; <mark>Android 10</mark>)
-  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>102</mark>.0.0.0 <mark>Mobile</mark>
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux</mark>; Android <mark>11</mark>;
+  <mark>Pixel 4a (5G)</mark>) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>102</mark>.0.0.0
+  <mark>Mobile</mark>
   Safari/537.36</code>"
 </div>
+
+<h4 id="ua-string-tokens-chrome">Chrome-specific tokens</h4>
+
+<code>&lt;<dfn>chromePlatform</dfn>&gt;</code> decomposes to the following:
+
+On desktop platforms, "<code>&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;</code>".
+
+On Chrome for Android, "<code>&lt;<a>platform</a>&gt;; Android &lt;<a for=chrome>androidVersion</a>&gt;;
+&lt;<a>deviceModel</a>&gt;</code>".
+
+<table>
+  <thead>
+    <th>Tokens</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;<dfn for=chrome>androidVersion</dfn>&gt;</code></td>
+      <td>Represents the Android version, e.g., <code>"11"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>&lt;<dfn for=chrome>deviceModel</dfn>&gt;</code></td>
+      <td>Represents an Android device model, e.g., "<code>SM-A205U</code>".</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="ua-string-firefox">Firefox</h3>
 
@@ -951,14 +967,14 @@ Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 In Firefox on desktop platforms (Windows, macOS, Linux, etc.),
 <code>&lt;<dfn>geckoVersion</dfn>&gt;</code> is the frozen build
-date "<code>20100101</code>". In Firefox on Android, <code>&lt;<a>geckoVersion</a>&gt;</code> is the
+date "<code>20100101</code>". In Firefox for Android, <code>&lt;<a>geckoVersion</a>&gt;</code> is the
 same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
 
 <code>&lt;<dfn>firefoxPlatform</dfn>&gt;</code> decomposes to the following:
 
 On desktop platforms, "<code>&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;</code>".
 
-On Firefox on Android, "<code>&lt;<a>platform</a>&gt;; &lt;<a for=firefox>deviceCompat</a>&gt;</code>".
+On Firefox for Android, "<code>&lt;<a>platform</a>&gt;; &lt;<a for=firefox>deviceCompat</a>&gt;</code>".
 
 <table>
   <thead>
