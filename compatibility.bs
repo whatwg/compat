@@ -893,8 +893,6 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
   </tbody>
 </table>
 
-<!-- maybe add a table with the interesting frozen constants -->
-
 <h3 id="ua-string-meta-structure">Meta Structure</h3>
 
 The User-Agent strings that follow share the common meta structure:
@@ -1000,17 +998,17 @@ On Firefox for Android, "<code>&lt;<a>platform</a>&gt;; &lt;<a for=firefox>devic
 <h4 id="ua-string-pattern-safari">Safari User-Agent pattern</h4>
 
 "<code>Mozilla/5.0 (&lt;<a>safariPlatform</a>&gt;) AppleWebKit/605.1.15 (KHTML, like Gecko)
-Version/&lt;<a>safariVersion</a>&gt;&lt;<a for="/">deviceCompat</a>&gt;Safari/605.1.15</code>"
+Version/&lt;<a>safariVersion</a>&gt;&lt;<a for="/">deviceCompat</a>&gt;Safari/&lt;<a>webkitVersion</a>&gt;</code>"
 
 <div class="example" id="safari-ua-examples">
   <!-- https://github.com/WebKit/WebKit/blob/8427f75c2c505bbeac2898839e57c027f0bfccd8/Source/WebCore/platform/mac/UserAgentMac.mm -->
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
-  (KHTML, like Gecko) Version/<mark>15.2</mark> Safari/605.1.15</code>"
+  (KHTML, like Gecko) Version/<mark>15.6</mark> Safari/<mark>605.1.15</mark></code>"
 
   <!-- https://github.com/WebKit/WebKit/blob/0935c1bc383b253a9b54232939d6e68eb60f38fe/Source/WebCore/platform/ios/UserAgentIOS.mm -->
   <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>iPhone</mark>; CPU <mark>iPhone OS</mark>
-  <mark>15_3</mark> like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)
-  Version/<mark>15.2</mark> <mark>Mobile/15E148</mark> Safari/605.1.15"
+  <mark>15_6</mark> like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)
+  Version/<mark>15.6</mark> <mark>Mobile/15E148</mark> Safari/<mark>604.1</mark>"
 </code>
 </div>
 
@@ -1025,7 +1023,9 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a for="/">deviceCompat</a>&gt;Safari/60
 
 On desktop, the <a>constant</a> "<code>Macintosh; Intel Mac OS X 10_15_7</code>".
 
-On mobile platforms "<code>&lt;<a>appleProduct</a>&gt;; CPU &lt;<a>mobileOSName</a>&gt; &lt;<a>iOSVersion</a>&gt; like Mac OS X</code>".
+On larger iPad form factors, the <a>constant</a> "<code>Macintosh; Intel Mac OS X 10_15_6</code>".
+
+On mobile platforms, including smaller iPad form factors "<code>&lt;<a>appleProduct</a>&gt;; CPU &lt;<a>mobileOSName</a>&gt; &lt;<a>iOSVersion</a>&gt; like Mac OS X</code>".
 
 <table>
   <thead>
@@ -1039,15 +1039,22 @@ On mobile platforms "<code>&lt;<a>appleProduct</a>&gt;; CPU &lt;<a>mobileOSName<
       "<code>iPad</code>", "<code>iPhone</code>", and "<code>iPod</code>".</td>
     </tr>
     <tr>
-      <td><code>&lt;<dfn>mobileOSName</dfn>&gt;</code></td>
-      <td>Represents iOS name, which is one of "<code>OS</code>" (for iPad-like devices) or
-      "<code>iPhone OS</code>" (non-iPad-like devices).</td>
-    </tr>
-    <tr>
       <td><code>&lt;<dfn>iOSVersion</dfn>&gt;</code></td>
       <td>Represents the iOS version number, delimited by an underscore (<a
         href="https://github.com/WebKit/WebKit/blob/8afe31a018b11741abdf9b4d5bb973d7c1d9ff05/Source/WebCore/platform/cocoa/UserAgentCocoa.mm#L35-L37">
         for historical compatibility reasons</a>).
+      </td>
+    </tr>
+    <tr>
+      <td><code>&lt;<dfn>mobileOSName</dfn>&gt;</code></td>
+      <td>A <a>constant</a> that is one of two values: "<code>OS</code>" (for iPad-like devices) or
+      "<code>iPhone OS</code>" (non-iPad-like devices).</td>
+    </tr>
+    <tr>
+      <td><code>&lt;<dfn>webkitVersion</dfn>&gt;</code></td>
+      <td>A <a>constant</a> that is one of two values: "<code>605.1.15</code>" (for larger devices,
+      including non-mini iPad) or "<code>604.1</code>" (for smaller mobile devices, including iPad
+      mini).
       </td>
     </tr>
   </tbody>
