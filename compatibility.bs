@@ -848,9 +848,14 @@ apply to other browsers with a shared heritage (i.e., forks and embedders) as we
 <h3 id="ua-string-patterns">User-Agent Tokens</h3>
 
 A User-Agent <dfn>token</dfn> is a string that represents an abstraction over a semantic unit in the
-<code>User-Agent</code> string. This document formalizes <a>tokens</a> as a <a>string</a> that
+<code>User-Agent</code> string. This document formalizes a <a>token</a> as a <a>string</a> that
 begins with an opening bracket "<" and ends with a closing ">" bracket, e.g.,
-<code>&lt;version&gt;</code>.
+<code>&lt;version&gt;</code>. A <a>token</a> may also contain other <a>tokens</a>.
+
+A User-Agent <dfn>constant</dfn> is a <a>string</a> whose value does not change.
+
+When a <a>token</a>'s value is made up from other <a>tokens</a>, and optionally <a>constants</a>, it
+is said to <dfn>decompose</dfn> to those <a>tokens</a> and <a>constants</a>.
 
 <h4 id="ua-string-token-reference">User-Agent Token Reference</h4>
 
@@ -920,7 +925,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
 <h4 id="ua-string-tokens-chrome">Chrome-specific tokens</h4>
 
-<code>&lt;<dfn>chromePlatform</dfn>&gt;</code> decomposes to the following:
+<code>&lt;<dfn>chromePlatform</dfn>&gt;</code> <a>decomposes</a> to the following:
 
 On desktop platforms, "<code>&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;</code>".
 
@@ -961,16 +966,16 @@ Firefox/&lt;<a>firefoxVersion</a>&gt;</code>"
 
 <h4 id="ua-string-tokens-firefox">Firefox-specific tokens</h4>
 
-<code>&lt;<dfn>firefoxVersion</dfn>&gt;</code> decomposes to the following:
+<code>&lt;<dfn>firefoxVersion</dfn>&gt;</code> <a>decomposes</a> to the following:
 
-<code>&lt;<a>majorVersion</a>&gt;.0</code>
+"<code>&lt;<a>majorVersion</a>&gt;.0</code>"
 
 In Firefox on desktop platforms (Windows, macOS, Linux, etc.),
 <code>&lt;<dfn>geckoVersion</dfn>&gt;</code> is the frozen build
 date "<code>20100101</code>". In Firefox for Android, <code>&lt;<a>geckoVersion</a>&gt;</code> is the
 same value as <code>&lt;<a>firefoxVersion</a>&gt;</code>.
 
-<code>&lt;<dfn>firefoxPlatform</dfn>&gt;</code> decomposes to the following:
+<code>&lt;<dfn>firefoxPlatform</dfn>&gt;</code> <a>decomposes</a> to the following:
 
 On desktop platforms, "<code>&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;</code>".
 
@@ -1011,14 +1016,14 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a for="/">deviceCompat</a>&gt;Safari/60
 
 <h4 id="ua-string-tokens-safari">Safari-specific tokens</h4>
 
-<code>&lt;<dfn>safariVersion</dfn>&gt;</code> decomposes to the following:
+<code>&lt;<dfn>safariVersion</dfn>&gt;</code> <a>decomposes</a> to the following:
 
-<code>&lt;<a>majorVersion</a>&gt;.&lt;<a>minorVersion</a>&gt;</code>, where
+"<code>&lt;<a>majorVersion</a>&gt;.&lt;<a>minorVersion</a>&gt;</code>", where
 <code>&lt;<a>minorVersion</a>&gt;</code> is a single digit.
 
-<code>&lt;<dfn>safariPlatform</dfn>&gt;</code> decomposes to the following:
+<code>&lt;<dfn>safariPlatform</dfn>&gt;</code> <a>decomposes</a> to the following:
 
-On desktop, the string "<code>Macintosh; Intel Mac OS X 10_15_7</code>".
+On desktop, the <a>constant</a> "<code>Macintosh; Intel Mac OS X 10_15_7</code>".
 
 On mobile platforms "<code>&lt;<a>appleProduct</a>&gt;; CPU &lt;<a>mobileOSName</a>&gt; &lt;<a>iOSVersion</a>&gt; like Mac OS X</code>".
 
