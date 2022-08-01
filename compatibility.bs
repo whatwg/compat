@@ -1021,11 +1021,11 @@ Version/&lt;<a>safariVersion</a>&gt;&lt;<a for="/">deviceCompat</a>&gt;Safari/&l
 
 <code>&lt;<dfn>safariPlatform</dfn>&gt;</code> <a>decomposes</a> to the following:
 
-On desktop, the <a>constant</a> "<code>Macintosh; Intel Mac OS X 10_15_7</code>".
+On desktop and larger iPad form factors, the <a>constant</a>
+"<code>Macintosh; Intel Mac OS X 10_15_7</code>".
 
-On larger iPad form factors, the <a>constant</a> "<code>Macintosh; Intel Mac OS X 10_15_6</code>".
-
-On mobile platforms, including smaller iPad form factors "<code>&lt;<a>appleProduct</a>&gt;; CPU &lt;<a>mobileOSName</a>&gt; &lt;<a>iOSVersion</a>&gt; like Mac OS X</code>".
+On mobile platforms, including smaller iPad form factors
+"<code>&lt;<a>appleProduct</a>&gt;; CPU &lt;<a>mobileOSName</a>&gt; &lt;<a>iOSVersion</a>&gt; like Mac OS X</code>".
 
 <table>
   <thead>
