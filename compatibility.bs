@@ -49,6 +49,16 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 
 <pre class="biblio">
 {
+  "CSS-VIEWPORT": {
+    "href": "https://drafts.csswg.org/css-viewport",
+    "title": "CSS Viewport Module Level 1",
+    "authors": [ "E. C. Álvarez", "M. Rakow", "F. Rioval" ]
+  }
+}
+</pre>
+
+<pre class="biblio">
+{
   "HTTP-SEMANTICS": {
     "href": "https://httpwg.org/http-core/draft-ietf-httpbis-semantics-latest.html",
     "title": "HTTP Semantics",
@@ -58,6 +68,7 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 </pre>
 
 <pre class=link-defaults>
+spec:css-animations-1; type:property; text:animation-delay
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:filter-effects-1; type:property; text:filter
@@ -1060,11 +1071,110 @@ On mobile platforms, including smaller iPad form factors
   </tbody>
 </table>
 
+<h2 id="viewport-meta-tag-section">The Viewport Meta Tag</h2>
+
+The <code>viewport</code> <code><{meta}></code> tag and its processing model is currently not
+formally defined. It is hoped that it will eventually be standardized in [[!CSS-VIEWPORT]] at which
+point this section would be transferred into that standard.
+
+The <code>viewport</code> <code><{meta}></code> tag is a <code><{meta}></code> element whose
+<{meta/name}> attribute is "<code>viewport</code>". Viewport properties are specified in the
+<{meta/content}> attribute as a comma ("<code>,</code>") separated list of "<code>key=value</code>"
+pairs.
+
+<div class="example" id="meta-viewport-example">
+  For example, a commonly used viewport meta tag to adapt a page to mobile viewports is:
+  <p>
+    <code>&ltmeta name="viewport" content="width=device-width,minimum-scale=1"&gt</code>
+  </p>
+</div>
+
+The <code>viewport</code> <code><{meta}></code> tag is processed only in a [=Document=] whose
+[=Document/browsing context=] is a [=top-level browsing context=].
+
+<div class="note">
+  i.e. <code>viewport</code> <code><{meta}></code> is ignored in subframes.
+</div>
+
+Additionally, the <code>viewport</code> <code><{meta}></code> tag is processed only by user agents
+on Mobile platforms.
+
+<h3 id="viewport-meta-tag-interactive-widgets">interactive-widgets</h3>
+
+This section defines the operation of the <code>interactive-widgets</code> key of the
+<code>viewport</code> <code><{meta}></code> tag.
+
+The "<code>interactive-widgets</code>" key specifies the effect that interactive UI widgets have on
+the page's viewports. Interactive UI widgets are transient browser or operating system UI through
+which a user can provide input.
+
+<div class="note">The most common such UI widget is a virtual keyboard.</div>
+
+The following is a list of valid values for <code>interactive-widgets</code> and the associated
+viewport-resizing behavior:
+
+<table>
+  <thead>
+    <th>Value</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>overlays-content</code></td>
+      <td>
+        Interactive UI widgets MUST NOT resize the <a spec="CSS-VIEWPORT">initial viewport</a> nor
+        the the <a spec="CSSOM-VIEW">visual viewport</a>. The user agent must follow the same steps
+        <!--TODO I can't seem to autolink to overlaysContent, help?-->
+        as when <a href="https://www.w3.org/TR/virtual-keyboard/#dom-virtualkeyboard-overlayscontent">
+        VirtualKeyboard.overlaysContent</a> is set to <code>true</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>resize-layout</code></td>
+      <td>Interactive UI widgets MUST resize the <a spec="CSS-VIEWPORT">initial viewport</a>.</td>
+    </tr>
+    <tr>
+      <td><code>resize-visual</code></td>
+      <td>
+        Interactive UI widgets MUST resize the <a spec="CSSOM-VIEW">visual viewport</a> but MUST
+        NOT resize the <a spec="CSS-VIEWPORT">initial viewport</a>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note">
+  Since the <a spec="CSSOM-VIEW">visual viewport</a>'s size is derived from the
+  <a spec="CSS-VIEWPORT">initial viewport</a>, <code>resize-layout</code> will cause a resize of
+  both the initial and visual viewports.
+</div>
+
+If no value, or an invalid value, is set for <code>interactive-widgets</code>, the behavior or
+<code>resize-visual</code> is used as the default.
+
+A viewport is resized by the interactive widget by insetting the viewport by the intersection of the
+widget's OS reported bounding rect and the <a spec="CSS-VIEWPORT">initial viewport</a>.
+
+<h4 id="interaction-with-virtualkeyboard-overlayscontent">
+  Interaction with virtualKeyboard.overlaysContent
+</h4>
+
+The virtual-keyboard API provides an imperitive API to control this behavior in the form of the
+<a href="https://www.w3.org/TR/virtual-keyboard/#dom-virtualkeyboard-overlayscontent">
+virtualKeyboard.overlaysContent</a> attribute.
+
+When <code>overlaysContent</code> is set to <code>true</code>, the UA MUST ignore any value set by
+<code>interactive-widgets</code> in the <code>viewport</code> <code><{meta}></code> tag.
+
+When <code>overlaysContent</code> is set to <code>false</code>, the UA MUST use the value set by
+<code>interactive-widgets</code> in the <code>viewport</code> <code><{meta}></code> tag or the
+default behavior if a value is not set.
+
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
-David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
-Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for
-feedback and contributions to this standard.
+David Bokan, David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi,
+Karl Dubost, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your
+Name Here for feedback and contributions to this standard.
 
 Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface.
 [[!screen-orientation]]
