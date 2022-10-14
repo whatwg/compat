@@ -36,9 +36,6 @@ urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-image
 urlPrefix: https://drafts.csswg.org/css-backgrounds-4/
   type: dfn
     text: background-clip; url: #propdef-background-clip
-urlPrefix: https://drafts.csswg.org/css-transitions/
-  type: dfn
-    text: color; url: #animtype-color
 urlPrefix: https://drafts.fxtf.org/css-masking-1/
   type: dfn
     text: clipping path; url: #clipping-path
@@ -600,7 +597,7 @@ Inherited: yes
 Computed value: an RGBA color
 Percentages: N/A
 Media: visual
-Animation type: as <a>color</a>
+Animation type: by computed value type
 </pre>
 
 The '-webkit-text-fill-color' property defines the foreground [=fill=] color of an element's text
@@ -637,7 +634,7 @@ Inherited: yes
 Computed value: an RGBA color
 Percentages: N/A
 Media: visual
-Animation type: as <a>color</a>
+Animation type: by computed value type
 </pre>
 
 The '-webkit-text-stroke-color' property specifies a [=stroke=] color for an element's text.
