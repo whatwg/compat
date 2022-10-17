@@ -1,5 +1,5 @@
 SHELL=/bin/bash -o pipefail
-.PHONY: local remote deploy review
+.PHONY: local remote deploy
 
 remote: compatibility.bs
 	@ (HTTP_STATUS=$$(curl https://api.csswg.org/bikeshed/ \
@@ -22,7 +22,3 @@ deploy: compatibility.bs
 	curl --remote-name --fail https://resources.whatwg.org/build/deploy.sh
 	EXTRA_FILES="*.png" \
 	bash ./deploy.sh
-
-review: compatibility.bs
-	curl --remote-name --fail https://resources.whatwg.org/build/review.sh
-	bash ./review.sh
