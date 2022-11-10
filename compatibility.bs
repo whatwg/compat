@@ -173,7 +173,7 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
 Name: '@media/-webkit-transform-3d'
 Value: <<mq-boolean>>
 For: @media
-Accepts min/max prefixes: no
+Type: discrete
 </pre>
 
 The <code>'@media/-webkit-transform-3d'</code> <a>media feature</a> is used to query whether the
