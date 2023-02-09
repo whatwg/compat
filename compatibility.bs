@@ -673,7 +673,9 @@ Media: visual
 Animation type: See individual properties
 </pre>
 
-The '-webkit-text-stroke' property is a shorthand property for setting the [=stroke=] width and
+The '-webkit-text-stroke' property is a shorthand property
+for the '-webkit-text-stroke-width' and '-webkit-text-stroke-color' properties,
+for setting the [=stroke=] width and
 [=stroke=] color of an element's text.
 
 <div class="example" id="example-webkit-text-stroke">
