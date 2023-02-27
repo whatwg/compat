@@ -62,6 +62,7 @@ spec:css-flexbox-1; type:value; text:inline-flex
 spec:filter-effects-1; type:property; text:filter
 spec:infra; type:dfn; text:user agent
 spec:svg2; type:dfn; text:fill
+spec:svg2; type:dfn; text:stroke
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
