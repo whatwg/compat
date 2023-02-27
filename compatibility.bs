@@ -59,9 +59,11 @@ spec:css-animations-1; type:property; text:animation-delay
 spec:css-conditional-3; type:at-rule; text:@media
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
+spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
 spec:infra; type:dfn; text:user agent
 spec:svg2; type:dfn; text:fill
+spec:svg2; type:dfn; text:stroke
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -673,7 +675,9 @@ Media: visual
 Animation type: See individual properties
 </pre>
 
-The '-webkit-text-stroke' property is a shorthand property for setting the [=stroke=] width and
+The '-webkit-text-stroke' property is a shorthand property
+for the '-webkit-text-stroke-width' and '-webkit-text-stroke-color' properties,
+for setting the [=stroke=] width and
 [=stroke=] color of an element's text.
 
 <div class="example" id="example-webkit-text-stroke">
