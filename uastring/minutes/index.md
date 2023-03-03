@@ -2,6 +2,8 @@
 
 This is the space for recording publicly the work we are doing [around UA string reductions](../README.md)
 
+## 2023
+* [February 24, 2023 Minutes](./2023-02-24-minutes.md)
 
 ## 2022
 * [December 16, 2022 Minutes](./2022-12-16-minutes.md)
