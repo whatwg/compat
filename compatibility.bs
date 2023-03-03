@@ -856,8 +856,8 @@ begins with an opening bracket "<" and ends with a closing ">" bracket, e.g.,
 
 A User-Agent <dfn>constant</dfn> is a <a>string</a> whose value does not change.
 
-When a <a>token</a>'s value is made up from other <a>tokens</a>, and optionally <a>constants</a>, it
-is said to <dfn>decompose</dfn> to those <a>tokens</a> and <a>constants</a>.
+When a <a>token</a>'s value is made up from one or more <a>tokens</a>, and optionally
+<a>constants</a>, it is said to <dfn>decompose</dfn> to those <a>tokens</a> and <a>constants</a>.
 
 <h4 id="ua-string-token-reference">User-Agent Token Reference</h4>
 
@@ -913,12 +913,12 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 &lt;<a for="/">deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
-  <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh</mark>;
-  <mark>Intel Mac OS X 10_15_7</mark>) AppleWebKit/537.36 (KHTML, like Gecko)
-  Chrome/<mark>102</mark>.0.0.0 Safari/537.36</code>"
+  <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh;
+  Intel Mac OS X 10_15_7</mark>) AppleWebKit/537.36 (KHTML, like Gecko)
+  Chrome/<mark>107</mark>.0.0.0 Safari/537.36</code>"
 
   <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux</mark>; Android <mark>11</mark>;
-  <mark>Pixel 4a (5G)</mark>) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>102</mark>.0.0.0
+  <mark>Pixel 4a (5G)</mark>) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>107</mark>.0.0.0
   <mark>Mobile</mark>
   Safari/537.36</code>"
 </div>
@@ -927,8 +927,9 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
 <code>&lt;<dfn>chromePlatform</dfn>&gt;</code> <a>decomposes</a> to the following:
 
-On desktop platforms, "<code>&lt;<a>platform</a>&gt;; &lt;<a>oscpu</a>&gt;</code>".
+On desktop platforms, "<code>&lt;<a>unifiedPlatform</a>&gt;</code>".
 
+<!--TODO: Once Phase 6 is landed, both Chrome desktop and mobile can be collapsed into a single pattern -->
 On Chrome for Android, "<code>&lt;<a>platform</a>&gt;; Android &lt;<a for=chrome>androidVersion</a>&gt;;
 &lt;<a>deviceModel</a>&gt;</code>".
 
@@ -945,6 +946,19 @@ On Chrome for Android, "<code>&lt;<a>platform</a>&gt;; Android &lt;<a for=chrome
     <tr>
       <td><code>&lt;<dfn for=chrome>deviceModel</dfn>&gt;</code></td>
       <td>Represents an Android device model, e.g., "<code>SM-A205U</code>".</td>
+    </tr>
+    <tr>
+      <td><code>&lt;<dfn for=chrome>unifiedPlatform</dfn>&gt;</code></td>
+      <td>Per-platform [=constant=] that is one of the following values:
+
+      <!-- TODO: uncomment when Phase 6 is landed -->
+      <!-- "<code>Linux; Android 10; K</code>"<br> -->
+      "<code>Windows NT 10.0; Win64; x64</code>"<br>
+      "<code>Macintosh; Intel Mac OS X 10_15_7"<br>
+      "<code>X11; Linux x86_64</code>"<br>
+      "<code>X11; CrOS x86_64 14541.0.0</code>"<br>
+      "<code>Fuchsia</code>"<br>
+      </td>
     </tr>
   </tbody>
 </table>
