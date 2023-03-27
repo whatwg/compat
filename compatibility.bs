@@ -870,7 +870,7 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
   </thead>
   <tbody>
     <tr>
-      <td><code>&lt;<dfn>deviceCompat</dfn>&gt;</code></td>
+      <td><code>&lt;<dfn export>deviceCompat</dfn>&gt;</code></td>
       <td>Represents the form-factor of the device. Primarily this is "<code>Mobile </code>", or
       just the empty string, for Desktop or non-mobile devices. Some browsers have also sent token
       values such as "<code>Tablet</code>", "<code>TV</code>", "<code>Mobile VR</code>", etc., or
