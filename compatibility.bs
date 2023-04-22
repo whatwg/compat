@@ -15,7 +15,7 @@ urlPrefix: https://w3c.github.io/screen-orientation/;
   type: interface
     text: ScreenOrientation; url: #screenorientation-interface
   type: dfn
-    text: update the orientation information; url: #dfn-update-the-orientation-information
+    text: current orientation angle; url: #dfn-current-orientation-angle
 urlPrefix: https://www.w3.org/TR/CSS/; spec: CSS2
   type: dfn
     text: vendor prefix; url: #vendor-prefix
@@ -780,9 +780,9 @@ compatibility with the web.</div>
   <a attribute lt="orientation"><code>window.orientation</code></a> angle
 </h4>
 
-The possible values for the <a attribute lt="orientation"><code>window.orientation</code></a> angle
-are: <code>-90</code>, <code>0</code>, <code>90</code>, <code>180</code>. User agents must support
-the <code>-90</code>, <code>0</code> and <code>90</code> values and may optionally support
+The possible integer values for the <a attribute lt="orientation"><code>window.orientation</code></a>
+angle are: <code>-90</code>, <code>0</code>, <code>90</code>, <code>180</code>. User agents must
+support the <code>-90</code>, <code>0</code> and <code>90</code> values and may optionally support
 <code>180</code>.
 
 <p class="note">
@@ -796,15 +796,12 @@ In order to determine the current <a attribute lt="orientation"><code>window.ori
 angle, the user agent must run the following steps:
 
 <ol>
-  <li>Return the result of step 3 of the {{ScreenOrientation}}'s
-  <a>update the orientation information</a> algorithm with the following changes:
+  <li>Let |orientationAngle| be the <a>current orientation angle</a>.
     <ol>
-      <li>If the orientation angle is less than or equal to 180, return the orientation angle
-      <li>If the orientation angle is greater than 180, return the orientation angle - 360.
-      <li>If the resulting orientation angle is 180 and the user agent does not support that value,
-      return 0.
-      <!-- This is what Windows phone, some iPhones running various iOSes, and Chrome Mobile do on
-      some of my test Androids. It's possible something else happens! -->
+      <li>If |orientationAngle| is less than 180, return |orientationAngle|.
+      <li>If |orientationAngle| is 180, and the [=user agent=] supports that value, return
+          |orientationAngle|, else return 0.
+      <li>If |orientationAngle| is greater than 180, return |orientationAngle| - 360.
     </ol>
   </li>
 </ol>
@@ -832,12 +829,6 @@ supported on all {{Window}} objects and <code><{body}></code> elements as attrib
     </tr>
   </tbody>
 </table>
-
-<div class="XXX">
-  WebKit also has this on
-  <a href="https://github.com/WebKit/webkit/blob/e455672f9e6861ced85d8be01cb7bc03a30a0555/LayoutTests/fast/dom/event-handler-attributes.html#L335">HTMLFrameSetElement</a>.
-  It's unclear if this is needed for compatibility.
-</div>
 
 <h2 id="ua-string-section">The User-Agent String</h2>
 
