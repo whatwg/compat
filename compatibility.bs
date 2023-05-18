@@ -899,30 +899,21 @@ one or more [=tokens=] representing browser information.
 
 <h4 id="ua-string-pattern-chrome">Chrome User-Agent pattern</h4>
 
-"<code>Mozilla/5.0 (&lt;<a>chromePlatform</a>&gt;)
+"<code>Mozilla/5.0 (&lt;<a>unifiedPlatform</a>&gt;)
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 &lt;<a for="/">deviceCompat</a>&gt;Safari/537.36</code>"
 
 <div class="example" id="chrome-ua-examples">
   <strong>Desktop</strong>: "<code>Mozilla/5.0 (<mark>Macintosh;
   Intel Mac OS X 10_15_7</mark>) AppleWebKit/537.36 (KHTML, like Gecko)
-  Chrome/<mark>107</mark>.0.0.0 Safari/537.36</code>"
+  Chrome/<mark>110</mark>.0.0.0 Safari/537.36</code>"
 
-  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux</mark>; Android <mark>11</mark>;
-  <mark>Pixel 4a (5G)</mark>) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<mark>107</mark>.0.0.0
-  <mark>Mobile</mark>
+  <strong>Mobile</strong>: "<code>Mozilla/5.0 (<mark>Linux; Android 10; K</mark>) AppleWebKit/537.36
+  (KHTML, like Gecko) Chrome/<mark>110</mark>.0.0.0 <mark>Mobile</mark>
   Safari/537.36</code>"
 </div>
 
 <h4 id="ua-string-tokens-chrome">Chrome-specific tokens</h4>
-
-<code>&lt;<dfn>chromePlatform</dfn>&gt;</code> <a>decomposes</a> to the following:
-
-On desktop platforms, "<code>&lt;<a>unifiedPlatform</a>&gt;</code>".
-
-<!--TODO: Once Phase 6 is landed, both Chrome desktop and mobile can be collapsed into a single pattern -->
-On Chrome for Android, "<code>&lt;<a>platform</a>&gt;; Android &lt;<a for=chrome>androidVersion</a>&gt;;
-&lt;<a>deviceModel</a>&gt;</code>".
 
 <table>
   <thead>
@@ -931,19 +922,10 @@ On Chrome for Android, "<code>&lt;<a>platform</a>&gt;; Android &lt;<a for=chrome
   </thead>
   <tbody>
     <tr>
-      <td><code>&lt;<dfn for=chrome>androidVersion</dfn>&gt;</code></td>
-      <td>Represents the Android version, e.g., <code>"11"</code>.</td>
-    </tr>
-    <tr>
-      <td><code>&lt;<dfn for=chrome>deviceModel</dfn>&gt;</code></td>
-      <td>Represents an Android device model, e.g., "<code>SM-A205U</code>".</td>
-    </tr>
-    <tr>
       <td><code>&lt;<dfn for=chrome>unifiedPlatform</dfn>&gt;</code></td>
       <td>Per-platform [=constant=] that is one of the following values:
 
-      <!-- TODO: uncomment when Phase 6 is landed -->
-      <!-- "<code>Linux; Android 10; K</code>"<br> -->
+      "<code>Linux; Android 10; K</code>"<br>
       "<code>Windows NT 10.0; Win64; x64</code>"<br>
       "<code>Macintosh; Intel Mac OS X 10_15_7"<br>
       "<code>X11; Linux x86_64</code>"<br>
