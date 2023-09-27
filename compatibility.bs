@@ -56,6 +56,8 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 
 <pre class=link-defaults>
 spec:css-animations-1; type:property; text:animation-delay
+spec:css-borders-4; type:property; text:box-shadow
+spec:css-borders-4; type:property; text:border-radius
 spec:css-conditional-3; type:at-rule; text:@media
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
