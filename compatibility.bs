@@ -67,9 +67,11 @@ spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
+spec:html; type:dfn; for:/; text:top-level traversable
 spec:infra; type:dfn; text:user agent
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
+spec:url; type:dfn; for:url; text:host
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -835,6 +837,53 @@ supported on all {{Window}} objects and <code><{body}></code> elements as attrib
     </tr>
   </tbody>
 </table>
+
+<h2 id="sa-heuristics-section">Storage Access Heuristics</h2>
+
+TODO: Storage access grant algo
+
+TODO: Constants
+
+TODO: This is what Chrome's doing
+
+<h3 id="sa-heuristics-popup">Popup Heuristic</h3>
+
+TODO: popup heuristic initiator host
+
+Append the following steps to the <a spec="html">activation notification</a>
+steps in the [[HTML#user-activation-processing-model|user activation processing
+model]]:
+
+1. Run [=detect a popup heuristic=] given <var ignore>document</var>.
+
+<div algorithm>
+
+To <dfn>detect a popup heuristic</dfn> given a [=Document=] |document|,
+perform the following steps:
+
+1. Let |navigable| be |document|'s [=node navigable=].
+1. If |navigable| is null, then abort these steps.
+1. If |navigable|'s [=popup heuristic initiator host=] is null,
+    then abort these steps.
+1. Let |topDocument| be |navigable|'s [=top-level traversable=]'s
+    [=navigable/active document=].
+1. Let |origin| be |topDocument|'s [=Document/origin=].
+1. If |origin| is an [=opaque origin=] then abort these steps.
+1. Let |site| be the result of running [=obtain a site=] given |origin|.
+1. Let |host| be |site|'s [=host=].
+1. [=Grant access for heuristics=] given:
+    <dl>
+        <dt><var ignore>host</var></dt>
+        <dd>|host|</dd>
+        <dt><var ignore>firstPartyHost</var></dt>
+        <dd>|navigable|'s [=popup heuristic initiator host=]</dd>
+        <dt><var ignore>duration</var></dt>
+        <dd>[=popup heuristic grant duration=]</dd>
+    </dl>
+
+</div>
+
+<h3 id="sa-heuristics-redirect">Redirect Heuristic</h3>
 
 <h2 id="ua-string-section">The User-Agent String</h2>
 
