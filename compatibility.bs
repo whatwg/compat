@@ -840,15 +840,58 @@ supported on all {{Window}} objects and <code><{body}></code> elements as attrib
 
 <h2 id="sa-heuristics-section">Storage Access Heuristics</h2>
 
-TODO: Storage access grant algo
+Browsers are working to deprecate third-party cookies while avoiding user-facing
+breakage by removing support for common web patterns, particularly login flows via
+third-party identity providers. Browsers can observe <code>Storage access heuristics</code>
+from the user in order to provide short-term storage access to unbreak these flows.
 
-TODO: Constants
+The following spec represents the Chromium implementation of this feature.
 
-TODO: This is what Chrome's doing
+<h3 id="sa-heuristics-constants">Constants</h3>
+
+The <dfn>popup heuristic grant duration</dfn> is an [=implementation-defined=]
+[=duration=] that represents the length of time after the popup heuristic is
+detected that the popup [=host=] will have access to the opener [=host=].
+
+Note: 30 days is a reasonable [=popup heuristic grant duration=] value.
+
+The <dfn>redirect heuristic grant duration</dfn> is an [=implementation-defined=]
+[=duration=] that represents the length of time after the redirect heuristic is
+detected that the bounced [=host=] will have access to the final [=host=].
+
+Note: 15 minutes is a reasonable [=redirect heuristic grant duration=] value.
+
+<h3 id="sa-heuristics-grant">Storage Access Grant</h3>
+
+<div algorithm>
+
+To <dfn>grant access for heuristics</dfn> given a [=host=] |host|, [=host=]
+|firstPartyHost|, and [=duration=] |duration|, perform the following steps:
+
+1. TODO
+1. |host|, |firstPartyHost|, |duration|
+
+</div>
 
 <h3 id="sa-heuristics-popup">Popup Heuristic</h3>
 
-TODO: popup heuristic initiator host
+Each [=top-level traversable=] has an associated
+<dfn for="top-level traversable">popup heuristic initiator host</dfn> which
+is a [=host=] or null. This stores the [=host=] of the <var ignore>opener</var> if
+[=top-level traversable=] is considered an eligible popup for the heuristic.
+
+Append the following steps to the <a spec="html">create a new top-level traversable</a>
+algorithm:
+1. TODO: Check opener access
+1. TODO: Check initiator iframe
+1. Let |popup heuristic initiator origin| be the <var ignore>opener</var>'s
+    [=browsing context/top-level traversable=]'s [=navigable/active document=]'s
+    [=Document/origin=].
+1. If |popup heuristic initiator origin| is an [=opaque origin=] then abort these steps.
+1. Let |popup heuristic initiator site| be the result of running [=obtain a site=] given
+    |popup heuristic initiator origin|.
+1. Set the [=top-level traversable=]'s [=popup heuristic initiator host=] to 
+    |popup heuristic initiator site|'s [=host=].
 
 Append the following steps to the <a spec="html">activation notification</a>
 steps in the [[HTML#user-activation-processing-model|user activation processing
@@ -884,6 +927,8 @@ perform the following steps:
 </div>
 
 <h3 id="sa-heuristics-redirect">Redirect Heuristic</h3>
+
+TODO
 
 <h2 id="ua-string-section">The User-Agent String</h2>
 
