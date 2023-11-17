@@ -68,6 +68,7 @@ spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
 spec:html; type:dfn; for:/; text:top-level traversable
+spec:infra; type:dfn; text:list
 spec:infra; type:dfn; text:user agent
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
@@ -863,22 +864,19 @@ Note: 15 minutes is a reasonable [=redirect heuristic grant duration=] value.
 
 <h3 id="sa-heuristics-grant">Storage Access Grant</h3>
 
-The 
-
-<div algorithm>
-
 Define a [=powerful feature=] identified by the [=powerful feature/name=]
-"storage-access-heuristics", with the following [=powerful feature/aspects=]:
+"storage-access-heuristics", with the following <dfn>permission key type</dfn>:
 
-<dfn>permission key type</dfn>
 A [=permission key=] of the "storage-access-heuristics" feature is a [=tuple=] consisting
 of a [=host=] <dfn property>top-level</dfn> and a [=host=] <dfn property>requester</dfn>.
+
+<div algorithm>
 
 To <dfn>grant access for heuristics</dfn> given a [=host=] |host|, [=host=]
 |firstPartyHost|, and [=duration=] |duration|, perform the following steps:
 
-1. Let |key| be a [=permission key=] with |top-level| set to |firstPartyHost|
-    and |host| set to |requester.
+1. Let |key| be a [=permission key=] with <var ignore>top-level</var> set to |firstPartyHost|
+    and <var ignore>requester</var> set to |host|.
 1. Queue a task on the [=current settings object=]'s [=responsible event loop=] to:
     1. [=Set a permission store entry=] with:
       <dl>
@@ -889,33 +887,16 @@ To <dfn>grant access for heuristics</dfn> given a [=host=] |host|, [=host=]
           <dt><var ignore>current state</var></dt>
           <dd>"granted"</dd>
       </dl>
-    2. Set the new permission's [=permission/lifetime=] to |lifetime|.
+    2. Set the new permission's [=permission/lifetime=] to |duration|.
 
-Note: This algorithm is based on [=request permission to use=], except for the following key differences:
+<div class=note>
+This algorithm is based on [=request permission to use=], except for the following key differences:
 - It sets a dynamic permission [=permission/lifetime=].
-- It generates a [=permission key=] independently of the [=current settings object=].
+- It generates a [=permission key=] independently of the [=current settings object=].</div>
 
 </div>
 
 <h3 id="sa-heuristics-popup">Popup Heuristic</h3>
-
-Each [=top-level traversable=] has an associated
-<dfn for="top-level traversable">popup heuristic initiator host</dfn> which
-is a [=host=] or null. This stores the [=host=] of the <var ignore>opener</var> if
-[=top-level traversable=] is considered an eligible popup for the heuristic.
-
-Append the following steps to the <a spec="html">create a new top-level traversable</a>
-algorithm:
-1. TODO: Check opener access
-1. TODO: Check initiator iframe
-1. Let |popup heuristic initiator origin| be the <var ignore>opener</var>'s
-    [=browsing context/top-level traversable=]'s [=navigable/active document=]'s
-    [=Document/origin=].
-1. If |popup heuristic initiator origin| is an [=opaque origin=] then abort these steps.
-1. Let |popup heuristic initiator site| be the result of running [=obtain a site=] given
-    |popup heuristic initiator origin|.
-1. Set the [=top-level traversable=]'s [=popup heuristic initiator host=] to 
-    |popup heuristic initiator site|'s [=host=].
 
 Append the following steps to the <a spec="html">activation notification</a>
 steps in the [[HTML#user-activation-processing-model|user activation processing
@@ -928,10 +909,11 @@ model]]:
 To <dfn>detect a popup heuristic</dfn> given a [=Document=] |document|,
 perform the following steps:
 
+1. Let |browsingContext| be |document|'s [=Document/browsing context=].
+1. If |browsingContext|'s <var ignore>is popup</var> is false, then abort these steps.
+1. If |browsingContext|'s <var ignore>opener origin at creation</var> is null, then abort these steps.
 1. Let |navigable| be |document|'s [=node navigable=].
 1. If |navigable| is null, then abort these steps.
-1. If |navigable|'s [=popup heuristic initiator host=] is null,
-    then abort these steps.
 1. Let |topDocument| be |navigable|'s [=top-level traversable=]'s
     [=navigable/active document=].
 1. Let |origin| be |topDocument|'s [=Document/origin=].
@@ -943,7 +925,7 @@ perform the following steps:
         <dt><var ignore>host</var></dt>
         <dd>|host|</dd>
         <dt><var ignore>firstPartyHost</var></dt>
-        <dd>|navigable|'s [=popup heuristic initiator host=]</dd>
+        <dd>|browsingContext|'s <var ignore>opener origin at creation=</var></dd>
         <dt><var ignore>duration</var></dt>
         <dd>[=popup heuristic grant duration=]</dd>
     </dl>
@@ -955,24 +937,26 @@ perform the following steps:
 Insert the following steps in the <a spec="html">load a document</a> algorithm,
 before Step 5, "Return null", which is the point that the [=document=] is loaded.
 
-1. Run [=detect a popup heuristic=] given
-    <var ignore>navigable</var> and <var ignore>response</var>'s <var ignore>URL list</var>.
+1. Run [=detect a redirect heuristic=] given <var ignore>navigable</var>.
 
 <div algorithm>
 
-To <dfn>detect a popup heuristic</dfn> given a [=navigable=] |navigable|
-and a [=list=] of [=URLs=] |URLs|, perform the following steps:
+To <dfn>detect a redirect heuristic</dfn> given a navigable |navigable|,
+perform the following steps:
 
+1. Let |topDocument| be |navigable|'s [=top-level traversable=]'s
+    [=navigable/active document=].
 1. Let |firstPartyOrigin| be |topDocument|'s [=Document/origin=].
 1. If |firstPartyOrigin| is an [=opaque origin=] then abort these steps.
 1. Let |firstPartySite| be the result of running [=obtain a site=] given |firstPartyOrigin|.
 1. Let |firstPartyHost| be |firstPartySite|'s [=host=].
-1. [=list/For each=] |bounceUrl| in |URLs|:
-  1. Let |bounceSite| be the result of running [=obtain a site=] given |origin|.
+1. Let |bounceTrackingRecord| be |navigable|'s [=top-level traversable=]'s <var ignore>bounce tracking record</var>.
+1. [=list/For each=] |bounceUrl| in |bounceTrackingRecord|'s <var ignore>bounce set</var>:
+  1. Let |bounceSite| be the result of running [=obtain a site=] given |bounceUrl|.
   1. Let |bounceHost| be |bounceSite|'s [=host=].
-  1. If |bounceHost| [=host/equals=] |host|, [=iteration/continue=].
-  1. TODO: Check current interaction
-  1. TODO: Check ABA flow
+  1. If |bounceHost| [=host/equals=] |firstPartyHost|, [=iteration/continue=].
+  <!-- TODO: check if |bounceUrl| has a transient activation. This will require patching bounce tracking record. -->
+  <!-- TODO: check A-B-A user flow. This will require traversing the navigable's history. -->
   1. [=Grant access for heuristics=] given:
     <dl>
         <dt><var ignore>host</var></dt>
