@@ -863,13 +863,37 @@ Note: 15 minutes is a reasonable [=redirect heuristic grant duration=] value.
 
 <h3 id="sa-heuristics-grant">Storage Access Grant</h3>
 
+The 
+
 <div algorithm>
+
+Define a [=powerful feature=] identified by the [=powerful feature/name=]
+"storage-access-heuristics", with the following [=powerful feature/aspects=]:
+
+<dfn>permission key type</dfn>
+A [=permission key=] of the "storage-access-heuristics" feature is a [=tuple=] consisting
+of a [=host=] <dfn property>top-level</dfn> and a [=host=] <dfn property>requester</dfn>.
 
 To <dfn>grant access for heuristics</dfn> given a [=host=] |host|, [=host=]
 |firstPartyHost|, and [=duration=] |duration|, perform the following steps:
 
-1. TODO
-1. |host|, |firstPartyHost|, |duration|
+1. Let |key| be a [=permission key=] with |top-level| set to |firstPartyHost|
+    and |host| set to |requester.
+1. Queue a task on the [=current settings object=]'s [=responsible event loop=] to:
+    1. [=Set a permission store entry=] with:
+      <dl>
+          <dt><var ignore>descriptor</var></dt>
+          <dd>"storage-access-heuristics"</dd>
+          <dt><var ignore>key</var></dt>
+          <dd>|key|</dd>
+          <dt><var ignore>current state</var></dt>
+          <dd>"granted"</dd>
+      </dl>
+    2. Set the new permission's [=permission/lifetime=] to |lifetime|.
+
+Note: This algorithm is based on [=request permission to use=], except for the following key differences:
+- It sets a dynamic permission [=permission/lifetime=].
+- It generates a [=permission key=] independently of the [=current settings object=].
 
 </div>
 
@@ -928,7 +952,38 @@ perform the following steps:
 
 <h3 id="sa-heuristics-redirect">Redirect Heuristic</h3>
 
-TODO
+Insert the following steps in the <a spec="html">load a document</a> algorithm,
+before Step 5, "Return null", which is the point that the [=document=] is loaded.
+
+1. Run [=detect a popup heuristic=] given
+    <var ignore>navigable</var> and <var ignore>response</var>'s <var ignore>URL list</var>.
+
+<div algorithm>
+
+To <dfn>detect a popup heuristic</dfn> given a [=navigable=] |navigable|
+and a [=list=] of [=URLs=] |URLs|, perform the following steps:
+
+1. Let |firstPartyOrigin| be |topDocument|'s [=Document/origin=].
+1. If |firstPartyOrigin| is an [=opaque origin=] then abort these steps.
+1. Let |firstPartySite| be the result of running [=obtain a site=] given |firstPartyOrigin|.
+1. Let |firstPartyHost| be |firstPartySite|'s [=host=].
+1. [=list/For each=] |bounceUrl| in |URLs|:
+  1. Let |bounceSite| be the result of running [=obtain a site=] given |origin|.
+  1. Let |bounceHost| be |bounceSite|'s [=host=].
+  1. If |bounceHost| [=host/equals=] |host|, [=iteration/continue=].
+  1. TODO: Check current interaction
+  1. TODO: Check ABA flow
+  1. [=Grant access for heuristics=] given:
+    <dl>
+        <dt><var ignore>host</var></dt>
+        <dd>|bounceHost|</dd>
+        <dt><var ignore>firstPartyHost</var></dt>
+        <dd>|firstPartyHost|<dd>
+        <dt><var ignore>duration</var></dt>
+        <dd>[=redirect heuristic grant duration=]</dd>
+    </dl>
+
+</div>
 
 <h2 id="ua-string-section">The User-Agent String</h2>
 
