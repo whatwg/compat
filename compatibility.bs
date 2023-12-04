@@ -42,6 +42,12 @@ urlPrefix: https://drafts.fxtf.org/css-masking-1/
 urlPrefix: https://drafts.csswg.org/css-values-3/
   type: dfn
     text: dppx; url: #dppx
+urlPrefix: https://html.spec.whatwg.org/multipage/
+  urlPrefix: document-sequences.html
+    type: dfn
+      for: browsing context
+        text: is popup
+        text: opener origin at creation
 </pre>
 
 <pre class="biblio">
@@ -911,14 +917,14 @@ To <dfn>detect a popup heuristic</dfn> given a [=Document=] |document|,
 perform the following steps:
 
 1. Let |browsingContext| be |document|'s [=Document/browsing context=].
-1. If |browsingContext|'s <var ignore>is popup</var> is false, then abort these steps.
-1. If |browsingContext|'s <var ignore>opener origin at creation</var> is null, then abort these steps.
+1. If |browsingContext|'s [=browsing context/is popup=] is false, then return.
+1. If |browsingContext|'s [=browsing context/opener origin at creation=] is null, then return.
 1. Let |navigable| be |document|'s [=node navigable=].
-1. If |navigable| is null, then abort these steps.
+1. If |navigable| is null, then return.
 1. Let |topDocument| be |navigable|'s [=navigable/top-level traversable=]'s
     [=navigable/active document=].
 1. Let |origin| be |topDocument|'s [=Document/origin=].
-1. If |origin| is an [=opaque origin=] then abort these steps.
+1. If |origin| is an [=opaque origin=] then return.
 1. Let |site| be the result of running [=obtain a site=] given |origin|.
 1. Let |host| be |site|'s [=host=].
 1. [=Grant access for heuristics=] given:
