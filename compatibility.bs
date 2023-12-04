@@ -897,11 +897,13 @@ This algorithm is based on [=request permission to use=], except for the followi
 
 <h3 id="sa-heuristics-popup">Popup Heuristic</h3>
 
-Append the following steps to the <a spec="html">activation notification</a>
-steps in the [[HTML#user-activation-processing-model|user activation processing
-model]]:
+Append the following steps to the [[!HTML]]'s <a spec="html">activation notification</a> algorithm:
+
+<div algorithm="user-activation-patch">
 
 1. Run [=detect a popup heuristic=] given <var ignore>document</var>.
+
+</div>
 
 <div algorithm>
 
