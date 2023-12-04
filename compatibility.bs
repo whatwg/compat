@@ -67,7 +67,6 @@ spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
-spec:html; type:dfn; for:/; text:top-level traversable
 spec:infra; type:dfn; text:list
 spec:infra; type:dfn; text:user agent
 spec:svg2; type:dfn; text:fill
@@ -914,7 +913,7 @@ perform the following steps:
 1. If |browsingContext|'s <var ignore>opener origin at creation</var> is null, then abort these steps.
 1. Let |navigable| be |document|'s [=node navigable=].
 1. If |navigable| is null, then abort these steps.
-1. Let |topDocument| be |navigable|'s [=top-level traversable=]'s
+1. Let |topDocument| be |navigable|'s [=navigable/top-level traversable=]'s
     [=navigable/active document=].
 1. Let |origin| be |topDocument|'s [=Document/origin=].
 1. If |origin| is an [=opaque origin=] then abort these steps.
@@ -944,13 +943,13 @@ before Step 5, "Return null", which is the point that the [=document=] is loaded
 To <dfn>detect a redirect heuristic</dfn> given a navigable |navigable|,
 perform the following steps:
 
-1. Let |topDocument| be |navigable|'s [=top-level traversable=]'s
+1. Let |topDocument| be |navigable|'s [=navigable/top-level traversable=]'s
     [=navigable/active document=].
 1. Let |firstPartyOrigin| be |topDocument|'s [=Document/origin=].
 1. If |firstPartyOrigin| is an [=opaque origin=] then abort these steps.
 1. Let |firstPartySite| be the result of running [=obtain a site=] given |firstPartyOrigin|.
 1. Let |firstPartyHost| be |firstPartySite|'s [=host=].
-1. Let |bounceTrackingRecord| be |navigable|'s [=top-level traversable=]'s <var ignore>bounce tracking record</var>.
+1. Let |bounceTrackingRecord| be |navigable|'s [=navigable/top-level traversable=]'s <var ignore>bounce tracking record</var>.
 1. [=list/For each=] |bounceUrl| in |bounceTrackingRecord|'s <var ignore>bounce set</var>:
   1. Let |bounceSite| be the result of running [=obtain a site=] given |bounceUrl|.
   1. Let |bounceHost| be |bounceSite|'s [=host=].
