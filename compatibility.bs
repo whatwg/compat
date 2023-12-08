@@ -42,6 +42,18 @@ urlPrefix: https://drafts.fxtf.org/css-masking-1/
 urlPrefix: https://drafts.csswg.org/css-values-3/
   type: dfn
     text: dppx; url: #dppx
+urlPrefix: https://html.spec.whatwg.org/multipage/
+  urlPrefix: document-sequences.html
+    type: dfn
+      for: browsing context
+        text: is popup
+        text: opener origin at creation
+urlPrefix: https://privacycg.github.io/nav-tracking-mitigations/
+  type: dfn
+    for: top-level traversable
+      text: bounce tracking record; url: top-level-traversable-bounce-tracking-record
+    for: bounce tracking record
+      text: bounce set; url: #bounce-tracking-record-bounce-set
 </pre>
 
 <pre class="biblio">
@@ -63,7 +75,6 @@ spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
-spec:html; type:dfn; for:/; text:top-level traversable
 spec:infra; type:dfn; text:list
 spec:infra; type:dfn; text:user agent
 spec:svg2; type:dfn; text:fill
@@ -894,11 +905,13 @@ This algorithm is based on [=request permission to use=], except for the followi
 
 <h3 id="sa-heuristics-popup">Popup Heuristic</h3>
 
-Append the following steps to the <a spec="html">activation notification</a>
-steps in the [[HTML#user-activation-processing-model|user activation processing
-model]]:
+Append the following steps to the [[!HTML]]'s <a spec="html">activation notification</a> algorithm:
+
+<div algorithm="user-activation-patch">
 
 1. Run [=detect a popup heuristic=] given <var ignore>document</var>.
+
+</div>
 
 <div algorithm>
 
@@ -906,14 +919,14 @@ To <dfn>detect a popup heuristic</dfn> given a [=Document=] |document|,
 perform the following steps:
 
 1. Let |browsingContext| be |document|'s [=Document/browsing context=].
-1. If |browsingContext|'s <var ignore>is popup</var> is false, then abort these steps.
-1. If |browsingContext|'s <var ignore>opener origin at creation</var> is null, then abort these steps.
+1. If |browsingContext|'s [=browsing context/is popup=] is false, then return.
+1. If |browsingContext|'s [=browsing context/opener origin at creation=] is null, then return.
 1. Let |navigable| be |document|'s [=node navigable=].
-1. If |navigable| is null, then abort these steps.
-1. Let |topDocument| be |navigable|'s [=top-level traversable=]'s
+1. If |navigable| is null, then return.
+1. Let |topDocument| be |navigable|'s [=navigable/top-level traversable=]'s
     [=navigable/active document=].
 1. Let |origin| be |topDocument|'s [=Document/origin=].
-1. If |origin| is an [=opaque origin=] then abort these steps.
+1. If |origin| is an [=opaque origin=] then return.
 1. Let |site| be the result of running [=obtain a site=] given |origin|.
 1. Let |host| be |site|'s [=host=].
 1. [=Grant access for heuristics=] given:
@@ -930,24 +943,28 @@ perform the following steps:
 
 <h3 id="sa-heuristics-redirect">Redirect Heuristic</h3>
 
-Insert the following steps in the <a spec="html">load a document</a> algorithm,
-before Step 5, "Return null", which is the point that the [=document=] is loaded.
+Insert the following steps in [[!HTML]]'s <a spec="html">load a document</a> algorithm, before the
+final step which returns null.
+
+<div algorithm="loading-a-document-patch">
 
 1. Run [=detect a redirect heuristic=] given <var ignore>navigable</var>.
 
+</div>
+
 <div algorithm>
 
-To <dfn>detect a redirect heuristic</dfn> given a navigable |navigable|,
-perform the following steps:
+To <dfn>detect a redirect heuristic</dfn> given a [=/navigable=] |navigable|, perform the following
+steps:
 
-1. Let |topDocument| be |navigable|'s [=top-level traversable=]'s
+1. Let |topDocument| be |navigable|'s [=navigable/top-level traversable=]'s
     [=navigable/active document=].
 1. Let |firstPartyOrigin| be |topDocument|'s [=Document/origin=].
-1. If |firstPartyOrigin| is an [=opaque origin=] then abort these steps.
+1. If |firstPartyOrigin| is an [=opaque origin=] then return.
 1. Let |firstPartySite| be the result of running [=obtain a site=] given |firstPartyOrigin|.
 1. Let |firstPartyHost| be |firstPartySite|'s [=host=].
-1. Let |bounceTrackingRecord| be |navigable|'s [=top-level traversable=]'s <var ignore>bounce tracking record</var>.
-1. [=list/For each=] |bounceUrl| in |bounceTrackingRecord|'s <var ignore>bounce set</var>:
+1. Let |bounceTrackingRecord| be |navigable|'s [=navigable/top-level traversable=]'s [=top-level traversable/bounce tracking record=].
+1. [=list/For each=] |bounceUrl| in |bounceTrackingRecord|'s [=bounce tracking record/bounce set=]:
   1. Let |bounceSite| be the result of running [=obtain a site=] given |bounceUrl|.
   1. Let |bounceHost| be |bounceSite|'s [=host=].
   1. If |bounceHost| [=host/equals=] |firstPartyHost|, [=iteration/continue=].
