@@ -47,6 +47,7 @@ urlPrefix: https://html.spec.whatwg.org/multipage/
     type: dfn
       for: browsing context
         text: is popup
+        text: opener browsing context
         text: opener origin at creation
 urlPrefix: https://privacycg.github.io/nav-tracking-mitigations/
   type: dfn
@@ -850,62 +851,56 @@ supported on all {{Window}} objects and <code><{body}></code> elements as attrib
   </tbody>
 </table>
 
-<h2 id="sa-heuristics-section">Storage Access Heuristics</h2>
+<h2 id="sa-heuristics-section">Cookie Access Heuristics</h2>
 
 User agents are blocking third-party cookies by default while avoiding user-facing
 breakage by removing support for common web patterns, particularly login flows via
 third-party identity providers. Browsers should follow the established patterns in
-this specification in order to provide short-term storage access to unbreak these flows.
+this specification in order to provide short-term cookie access to unbreak these flows.
+
+<h3 id="sa-heuristics-global-data">Global Data</h3>
+
+A <dfn>site pair</dfn> is a [=tuple=] consisting of a [=site=] <dfn for=site pair>third party site</dfn>
+and a [=site=] <dfn for=site pair>first party site</dfn>
+
+The user agent holds a <dfn>heuristic grants map</dfn> which is a [=map=] of [=site pairs=] to
+[=moments=]. The [=moment=] represents the expiration timestamp of a cookie access grant
+for [=third party site=] on [=first party site=].
 
 <h3 id="sa-heuristics-constants">Constants</h3>
 
 The <dfn>popup heuristic grant duration</dfn> is an [=implementation-defined=]
 [=duration=] that represents the length of time after the popup heuristic is
-triggered that a user agent will store the corresponding [=popup heuristic grant=]
+triggered that a user agent will store the corresponding popup heuristic grant
 in its [=heuristic grants map=].
 
 Note: Most implementations use 30 days as the [=popup heuristic grant duration=].
 
 The <dfn>redirect heuristic grant duration</dfn> is an [=implementation-defined=]
 [=duration=] that represents the length of time after the redirect heuristic is
-triggered that a user agent will store the corresponding [=redirect heuristic grant=]
+triggered that a user agent will store the corresponding redirect heuristic grant
 in its [=heuristic grants map=].
 
 Note: Most implementations use 15 minutes as the [=redirect heuristic grant duration=].
 
-<h3 id="sa-heuristics-grant">Storage Access Grant</h3>
-
-Define a [=powerful feature=] identified by the [=powerful feature/name=]
-"storage-access-heuristics", with the following <dfn>permission key type</dfn>:
-
-A [=permission key=] of the "storage-access-heuristics" feature is a [=tuple=] consisting
-of a [=host=] <dfn property>top-level</dfn> and a [=host=] <dfn property>requester</dfn>.
+<h3 id="sa-heuristics-access-grant">Cookie Access Grant</h3>
 
 <div algorithm>
 
-To <dfn>grant access for heuristics</dfn> given a [=host=] |host|, [=host=]
-|firstPartyHost|, and [=duration=] |duration|, perform the following steps:
+To <dfn>grant access for heuristics</dfn> given a [=site=] |site|, [=site=]
+|firstPartySite|, [=moment=] |currentWallTime|, and [=duration=] |duration|,
+perform the following steps:
 
-1. Let |key| be a [=permission key=] with <var ignore>top-level</var> set to |firstPartyHost|
-    and <var ignore>requester</var> set to |host|.
-1. Queue a task on the [=current settings object=]'s [=responsible event loop=] to:
-    1. [=Set a permission store entry=] with:
-      <dl>
-          <dt><var ignore>descriptor</var></dt>
-          <dd>"storage-access-heuristics"</dd>
-          <dt><var ignore>key</var></dt>
-          <dd>|key|</dd>
-          <dt><var ignore>current state</var></dt>
-          <dd>"granted"</dd>
-      </dl>
-    2. Set the new permission's [=permission/lifetime=] to |duration|.
-
-<div class=note>
-This algorithm is based on [=request permission to use=], except for the following key differences:
-- It sets a dynamic permission [=permission/lifetime=].
-- It generates a [=permission key=] independently of the [=current settings object=].</div>
+1. Let |key| be a [=site pair=] with [=third party site=] set to |site| and
+    [=first party site=] set to |firstPartySite|.
+1. Let |expirationTime| be |duration| after |currentWallTime|.
+1. Set [=heuristic grants map=][|key|] to |expirationTime|.
 
 </div>
+
+<h3 id="sa-heuristics-access">Cookie Access Monkey Patch</h3>
+
+Issue: TODO: add monkey patch to network fetch cookie access that reads from [=heuristic grants map=].
 
 <h3 id="sa-heuristics-popup">Popup Heuristic</h3>
 
@@ -924,7 +919,10 @@ perform the following steps:
 
 1. Let |browsingContext| be |document|'s [=Document/browsing context=].
 1. If |browsingContext|'s [=browsing context/is popup=] is false, then return.
+1. If |browsingContext|'s [=browsing context/opener browsing context=] is null, then return.
 1. If |browsingContext|'s [=browsing context/opener origin at creation=] is null, then return.
+1. Let |firstPartySite| be the result of running [=obtain a site=] given the |browsingContext|'s
+    [=browsing context/opener origin at creation=].
 1. Let |navigable| be |document|'s [=node navigable=].
 1. If |navigable| is null, then return.
 1. Let |topDocument| be |navigable|'s [=navigable/top-level traversable=]'s
@@ -932,16 +930,12 @@ perform the following steps:
 1. Let |origin| be |topDocument|'s [=Document/origin=].
 1. If |origin| is an [=opaque origin=] then return.
 1. Let |site| be the result of running [=obtain a site=] given |origin|.
-1. Let |host| be |site|'s [=host=].
-1. [=Grant access for heuristics=] given:
-    <dl>
-        <dt><var ignore>host</var></dt>
-        <dd>|host|</dd>
-        <dt><var ignore>firstPartyHost</var></dt>
-        <dd>|browsingContext|'s <var ignore>opener origin at creation=</var></dd>
-        <dt><var ignore>duration</var></dt>
-        <dd>[=popup heuristic grant duration=]</dd>
-    </dl>
+1. Let |currentWallTime| be |topDocument|'s [=relevant settings object=]'s
+    [=environment settings object/current wall time=].
+1. [=Grant access for heuristics=] given |site|, |firstPartySite|, |currentWallTime|, and
+    [=popup heuristic grant duration=].
+
+Issue(amaliev/3pcd-exemption-heuristics#3): TODO: Consider whether to check for third-party iframe initiators.
 
 </div>
 
@@ -966,23 +960,17 @@ steps:
 1. Let |firstPartyOrigin| be |topDocument|'s [=Document/origin=].
 1. If |firstPartyOrigin| is an [=opaque origin=] then return.
 1. Let |firstPartySite| be the result of running [=obtain a site=] given |firstPartyOrigin|.
-1. Let |firstPartyHost| be |firstPartySite|'s [=host=].
-1. Let |bounceTrackingRecord| be |navigable|'s [=navigable/top-level traversable=]'s [=top-level traversable/bounce tracking record=].
+1. Let |bounceTrackingRecord| be |navigable|'s [=navigable/top-level traversable=]'s
+    [=top-level traversable/bounce tracking record=].
 1. [=list/For each=] |bounceUrl| in |bounceTrackingRecord|'s [=bounce tracking record/bounce set=]:
-  1. Let |bounceSite| be the result of running [=obtain a site=] given |bounceUrl|.
-  1. Let |bounceHost| be |bounceSite|'s [=host=].
-  1. If |bounceHost| [=host/equals=] |firstPartyHost|, [=iteration/continue=].
-  <!-- TODO: check if |bounceUrl| has a transient activation. This will require patching bounce tracking record. -->
-  <!-- TODO: check A-B-A user flow. This will require traversing the navigable's history. -->
-  1. [=Grant access for heuristics=] given:
-    <dl>
-        <dt><var ignore>host</var></dt>
-        <dd>|bounceHost|</dd>
-        <dt><var ignore>firstPartyHost</var></dt>
-        <dd>|firstPartyHost|<dd>
-        <dt><var ignore>duration</var></dt>
-        <dd>[=redirect heuristic grant duration=]</dd>
-    </dl>
+    1. Let |site| be the result of running [=obtain a site=] given |bounceUrl|.
+    1. If |site| is [=site/same site=] to |firstPartySite|, [=iteration/continue=].
+    <!-- TODO: check if |bounceUrl| has a transient activation. This will require patching bounce tracking record. -->
+    <!-- TODO: check A-B-A user flow. This will require traversing the navigable's history. -->
+1. Let |currentWallTime| be |topDocument|'s [=relevant settings object=]'s
+    [=environment settings object/current wall time=].
+1. [=Grant access for heuristics=] given |site|, |firstPartySite|, |currentWallTime|, and
+    [=redirect heuristic grant duration=].
 
 </div>
 
