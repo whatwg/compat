@@ -841,26 +841,26 @@ supported on all {{Window}} objects and <code><{body}></code> elements as attrib
 
 <h2 id="sa-heuristics-section">Storage Access Heuristics</h2>
 
-Browsers are working to deprecate third-party cookies while avoiding user-facing
+User agents are blocking third-party cookies by default while avoiding user-facing
 breakage by removing support for common web patterns, particularly login flows via
-third-party identity providers. Browsers can observe <code>Storage access heuristics</code>
-from the user in order to provide short-term storage access to unbreak these flows.
-
-The following spec represents the Chromium implementation of this feature.
+third-party identity providers. Browsers should follow the established patterns in
+this specification in order to provide short-term storage access to unbreak these flows.
 
 <h3 id="sa-heuristics-constants">Constants</h3>
 
 The <dfn>popup heuristic grant duration</dfn> is an [=implementation-defined=]
 [=duration=] that represents the length of time after the popup heuristic is
-detected that the popup [=host=] will have access to the opener [=host=].
+triggered that a user agent will store the corresponding [=popup heuristic grant=]
+in its [=heuristic grants map=].
 
-Note: 30 days is a reasonable [=popup heuristic grant duration=] value.
+Note: Most implementations use 30 days as the [=popup heuristic grant duration=].
 
 The <dfn>redirect heuristic grant duration</dfn> is an [=implementation-defined=]
 [=duration=] that represents the length of time after the redirect heuristic is
-detected that the bounced [=host=] will have access to the final [=host=].
+triggered that a user agent will store the corresponding [=redirect heuristic grant=]
+in its [=heuristic grants map=].
 
-Note: 15 minutes is a reasonable [=redirect heuristic grant duration=] value.
+Note: Most implementations use 15 minutes as the [=redirect heuristic grant duration=].
 
 <h3 id="sa-heuristics-grant">Storage Access Grant</h3>
 
