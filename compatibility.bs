@@ -699,7 +699,7 @@ effect.
 }
 </pre>
 
-The element <pre>&ltp class="stroked-text-longhand"&gt;Serious typography&lt;/p&gt;</pre> would be
+The element <pre>&lt;p class="stroked-text-longhand"&gt;Serious typography&lt;/p&gt;</pre> would be
 rendered as follows:
 
 <img width="381" height="116" src="stroked-text.png" alt="image of stroked text">
