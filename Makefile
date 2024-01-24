@@ -16,7 +16,7 @@ remote: compatibility.bs
 	);
 
 local: compatibility.bs
-	bikeshed spec compatibility.bs compatibility.html --md-Text-Macro="COMMIT-SHA LOCAL COPY"
+	bikeshed spec compatibility.bs compatibility.html --md-Text-Macro="COMMIT-SHA LOCAL-COPY"
 
 deploy: compatibility.bs
 	curl --remote-name --fail https://resources.whatwg.org/build/deploy.sh
