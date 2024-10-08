@@ -89,6 +89,8 @@ specified elsewhere.
 
 The HTTP <code>User-Agent</code> header field as found in major browsers today is also described.
 
+The removals of some features from the web platform are also described.
+
 <h2 id='conformance'>Conformance</h2>
 All diagrams, examples, and notes in this specification are
 non-normative, as are all sections explicitly marked non-normative.
@@ -1055,11 +1057,61 @@ On mobile platforms, including smaller iPad form factors
   </tbody>
 </table>
 
+
+<h2 id="removal">Deprecation and Removal</h2>
+
+<em>This section is non-normative.</em>
+
+While the web platform stives for backwards-compatibility, there are occasions which require the
+outright removal or discouraged use of some features. To support making these changes
+in the least disruptive and most consistent way for developers, we document them here. This is most
+beneficial as a decalration of intent by browser engines to act together in a well reasoned way.
+
+<h3 id="removal-features">Feature List</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><dfn for="deprecated feature list">Feature</dfn></th>
+      <th><dfn for="deprecated feature list">Deprecated from</dfn></th>
+      <th><dfn for="deprecated feature list">Removal</dfn></th>
+      <th><dfn for="deprecated feature list">Replacement</dfn></th>
+      <th><dfn for="deprecated feature list">Justification</dfn></th>
+      <th><dfn for="deprecated feature list">Automated Tools</dfn></th>
+    <tr>
+  </thead>
+  <tbody>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="removal-features-process">Process</h4>
+
+Anyone can make an addition to the list by editing this specification.
+However, because some content describes the future plans of browser engines, the author can use
+their discretion in what reviewers are appropriate for a given change to the list.
+[[#removal-support]] is provided to give a place to link to long-form content within this
+document for list entries.
+
+Each entry can include:
+
+<ul>
+  <li>the [=deprecated feature list/Feature | feature or behavior=] that is being removed or deprecated.
+  <li>what browser engines have [=deprecated feature list/Deprecated from | deprecated =] the feature or behavior, discouraging its further use.
+  <li>when the feature will be, or has been, [=deprecated feature list/Removal | removed =] from various browser engines, preventing its use by default.
+  <li>what developers should use to achieve the same functional goals, as a [=deprecated feature list/Replacement | replacement =] for the old feature.
+  <li>[=deprecated feature list/ | justification =] for the removal or deprecation, including any tradeoffs considered and steps taken to minimize disruption to developers.
+  <li>links to any [=deprecated feature list/Automated Tools | automated tools =] to assist developers, such as detection or migration scripts.
+</ul>
+
+<h3 id="removal-support">Supporting Information</h3>
+
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
-David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
-Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for
-feedback and contributions to this standard.
+Thanks to Alan Cutter, Benjamin VanderSloot, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen,
+Daniel Holbert,David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi,
+Karl Dubost, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and
+Your Name Here for feedback and contributions to this standard.
 
 Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface.
 [[!screen-orientation]]
