@@ -1091,8 +1091,9 @@ beneficial as a decalration of intent by browser engines to act together in a we
 Anyone can make an addition to the list by editing this specification.
 However, because some content describes the future plans of browser engines, the author can use
 their discretion in what reviewers are appropriate for a given change to the list.
-[[#removal-support]] is provided to give a place to link to long-form content within this
-document for list entries.
+[[#removal-criteria]] provides suggested criteria to consider when deciding if it is appropriate
+to remove the feature to the web. [[#removal-support]] provides to give a place to link to
+long-form content within this document for list entries.
 
 Each entry can include:
 
@@ -1105,11 +1106,54 @@ Each entry can include:
   <li>links to any [=deprecated feature list/Automated Tools | automated tools =] to assist developers, such as detection or migration scripts.
 </ul>
 
-<h3 id="removal-support">Supporting Information</h3>
+<h3 id="removal-criteria">Criteria for removal or deprecation</h3>
+
+The bar to make a breaking change in the web platform across multiple browser engines can be high.
+This is a good thing, as the web should strive for backward compatibility as much as is possible.
+The <a href="https://whatwg.org/working-mode#removals">WHATWG Working Mode</a> even establishes
+further requirements for changes to specifications that remove behavior. This section provides an
+incomplete enumeration of criteria that should be considered before including a feature in the
+[[Feature List]]. This is not an algorithm to decide what can be removed; each feature removal is
+unique and requires the careful decision making of the implementers to weigh the costs and benefits
+of proceeding with removal.
+
+Harms of removing the feature are good reasons to not proceed:
+
+<ul>
+  <li>User-visible breakage of any site is a harm worth considering
+  <li>The full set of use-cases for a feature can not be known, so unexpected things may break
+  <li>Removal of features has an outsized influence on smaller development operations that have fewer resources for maintanance and can not track the changes to the web platform closely
+  <li>Removal of features can disrupt ecosystems built on the web, changing their economics and incentives, and this is not always for the better
+</ul>
+
+Benefits of removing the feature are good reasons to proceed:
+
+<ul>
+  <li>Security improvement
+  <li>Privacy and user protections improvement
+  <li>Accessibility improvement
+  <li>Platform architectural improvement
+</ul>
+
+Harms of removing the feature may be mitigated by some choices:
+
+<ul>
+  <li>Lead time from deprecation to removal
+  <li>On-by-default, but easily disabled for a site by developers during the deprecation
+  <li>Coherence of action by browsers
+  <li>Mechanisms for site-specific workarounds controlled by the browser
+  <li>Strong, interoperable alternatives to the feature
+  <li>Younger and less-stable APIs are less ossified and are likely used by developers more apt to fix their website
+</ul>
+
+It is important to note that any alternatives to the feature will face the same scrutiny when they are to be removed,
+deferring the issue of breakage rather than resolving it.
+
+<h3 id="removal-support">Supporting information</h3>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Alan Cutter, Benjamin VanderSloot, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen,
-Daniel Holbert,David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi,
+Daniel Holbert, David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi,
 Karl Dubost, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and
 Your Name Here for feedback and contributions to this standard.
 
