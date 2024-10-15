@@ -1060,8 +1060,6 @@ On mobile platforms, including smaller iPad form factors
 
 <h2 id="removal">Deprecation and Removal</h2>
 
-<em>This section is non-normative.</em>
-
 While the web platform stives for backwards-compatibility, there are occasions which require the
 outright removal or discouraged use of some features. To support making these changes
 in the least disruptive and most consistent way for developers, we document them here. This is most
@@ -1073,11 +1071,9 @@ beneficial as a decalration of intent by browser engines to act together in a we
   <thead>
     <tr>
       <th><dfn for="deprecated feature list">Feature</dfn></th>
-      <th><dfn for="deprecated feature list">Deprecated from</dfn></th>
+      <th><dfn for="deprecated feature list">Deprecation</dfn></th>
       <th><dfn for="deprecated feature list">Removal</dfn></th>
-      <th><dfn for="deprecated feature list">Replacement</dfn></th>
-      <th><dfn for="deprecated feature list">Justification</dfn></th>
-      <th><dfn for="deprecated feature list">Automated Tools</dfn></th>
+      <th><dfn for="deprecated feature list">More Information</dfn></th>
     <tr>
   </thead>
   <tbody>
@@ -1088,25 +1084,28 @@ beneficial as a decalration of intent by browser engines to act together in a we
 
 <h4 id="removal-features-process">Process</h4>
 
-Anyone can make an addition to the list by editing this specification.
-However, because some content describes the future plans of browser engines, the author can use
-their discretion in what reviewers are appropriate for a given change to the list.
-[[#removal-criteria]] provides suggested criteria to consider when deciding if it is appropriate
-to remove the feature to the web. [[#removal-support]] provides to give a place to link to
-long-form content within this document for list entries.
+Anyone may suggest an addition to the list by filing an issue on this specification. Each added row
+that includes [=deprecated feature list/Removal|removal information=] should correspond to a normative
+change in the specification that defined this behavior before its removal.
 
-Each entry can include:
+Note: For sake of the <a href="https://whatwg.org/working-mode">WHATWG Working Mode</a>, adding
+a row to this table is a <a href="https://whatwg.org/working-mode#removals">removal</a>.
+
+Note: [[#removal-criteria]] provides suggested criteria to consider when deciding if it is appropriate
+to remove the feature to the web.
+
+Each entry should include:
 
 <ul>
-  <li>the [=deprecated feature list/Feature | feature or behavior=] that is being removed or deprecated.
-  <li>what browser engines have [=deprecated feature list/Deprecated from | deprecated =] the feature or behavior, discouraging its further use.
-  <li>when the feature will be, or has been, [=deprecated feature list/Removal | removed =] from various browser engines, preventing its use by default.
-  <li>what developers should use to achieve the same functional goals, as a [=deprecated feature list/Replacement | replacement =] for the old feature.
-  <li>[=deprecated feature list/ | justification =] for the removal or deprecation, including any tradeoffs considered and steps taken to minimize disruption to developers.
-  <li>links to any [=deprecated feature list/Automated Tools | automated tools =] to assist developers, such as detection or migration scripts.
+  <li>the [=deprecated feature list/Feature|feature or behavior=] that is being removed or deprecated.
+  <li>what browser engines have [=deprecated feature list/Deprecation|deprecated=] the feature or behavior, discouraging its further use.
+  <li>when the feature will be, or has been, [=deprecated feature list/Removal|removed=] from browser engines, preventing its use by default. This may be empty if there is no such plan.
+  <li>a link to non-normative [=deprecated feature list/More Information|more information=] about the removal, such as justification for the removal, alternatives to use, or automated tools to improve developer experience.
 </ul>
 
 <h3 id="removal-criteria">Criteria for removal or deprecation</h3>
+
+<em>This section is non-normative.</em>
 
 The bar to make a breaking change in the web platform across multiple browser engines can be high.
 This is a good thing, as the web should strive for backward compatibility as much as is possible.
@@ -1148,8 +1147,6 @@ Harms of removing the feature may be mitigated by some choices:
 
 It is important to note that any alternatives to the feature will face the same scrutiny when they are to be removed,
 deferring the issue of breakage rather than resolving it.
-
-<h3 id="removal-support">Supporting information</h3>
 
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
 Thanks to Alan Cutter, Benjamin VanderSloot, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen,
