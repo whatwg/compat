@@ -943,12 +943,11 @@ Issue(amaliev/3pcd-exemption-heuristics#3): TODO: Consider whether to check for 
 
 <h3 id="sa-heuristics-redirect">Redirect Heuristic</h3>
 
-Insert the following steps in [[!HTML]]'s <a spec="html">load a document</a> algorithm, before the
-final step which returns null.
+Insert the following steps at the start of [[!HTML]]'s <a spec="html">load a document</a> algorithm.
 
 <div algorithm="loading-a-document-patch">
 
-1. Run [=detect a redirect heuristic=] given <var ignore>navigable</var>.
+1. Run [=detect a redirect heuristic=] given <var ignore>navigationParams</var>'s <var ignore>navigable</var>.
 
 </div>
 
