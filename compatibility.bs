@@ -54,7 +54,9 @@ urlPrefix: https://privacycg.github.io/nav-tracking-mitigations/
     for: top-level traversable
       text: bounce tracking record; url: top-level-traversable-bounce-tracking-record
     for: bounce tracking record
+      text: initial host; url: #bounce-tracking-record-initial-host
       text: bounce set; url: #bounce-tracking-record-bounce-set
+      text: user activation set; url: #bounce-tracking-record-user-activation-set
 </pre>
 
 <pre class="biblio">
@@ -962,15 +964,20 @@ steps:
 1. Let |firstPartySite| be the result of running [=obtain a site=] given |firstPartyOrigin|.
 1. Let |bounceTrackingRecord| be |navigable|'s [=navigable/top-level traversable=]'s
     [=top-level traversable/bounce tracking record=].
-1. [=list/For each=] |bounceUrl| in |bounceTrackingRecord|'s [=bounce tracking record/bounce set=]:
-    1. Let |site| be the result of running [=obtain a site=] given |bounceUrl|.
-    1. If |site| is [=site/same site=] to |firstPartySite|, [=iteration/continue=].
-    <!-- TODO: check if |bounceUrl| has a transient activation. This will require patching bounce tracking record. -->
-    <!-- TODO: check A-B-A user flow. This will require traversing the navigable's history. -->
 1. Let |currentWallTime| be |topDocument|'s [=relevant settings object=]'s
     [=environment settings object/current wall time=].
-1. [=Grant access for heuristics=] given |site|, |firstPartySite|, |currentWallTime|, and
-    [=redirect heuristic grant duration=].
+1. Let |navigatedUrlsSet| be |bounceTrackingRecord|'s [=bounce tracking record/bounce set=].
+1. Append |bounceTrackingRecord|'s [=bounce tracking record/initial host=] to |navigatedUrlsSet|.
+1. [=list/For each=] |bounceUrl| in |navigatedUrlsSet|:
+    1. Let |site| be the result of running [=obtain a site=] given |bounceUrl|.
+    1. If |site| is [=site/same site=] to |firstPartySite|, [=iteration/continue=].
+    1. If |bounceTrackingRecord|'s [=bounce tracking record/user activation set=] does not contain |site|,
+        [=iteration/continue=].
+    <!-- TODO: Check that the user visited |firstPartySite| before |site|, to verify the
+        [A-B-A flow](https://github.com/amaliev/3pcd-exemption-heuristics/blob/main/explainer.md#scenario-c2).
+        This will require traversing the navigable's history. -->
+    1. [=Grant access for heuristics=] given |site|, |firstPartySite|, |currentWallTime|, and
+        [=redirect heuristic grant duration=].
 
 </div>
 
