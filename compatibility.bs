@@ -8,6 +8,7 @@ Abstract: This standard describes a collection of web platform features that web
 Translation: ja https://triple-underscore.github.io/compat-ja.html
 Indent: 2
 Markup Shorthands: dfn yes
+Issue Class: issue XXX
 </pre>
 
 <pre class="anchors">
@@ -67,6 +68,7 @@ spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
+spec:html; type:element; text:body
 spec:infra; type:dfn; text:user agent
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
