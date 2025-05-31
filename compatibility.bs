@@ -11,6 +11,7 @@ Indent: 2
 Markup Shorthands: dfn yes
 Issue Class: issue XXX
 Repository: whatwg/compat
+Issue Class: issue XXX
 </pre>
 
 <pre class="anchors">
@@ -46,7 +47,6 @@ spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
 spec:html; type:element; text:body
-spec:infra; type:dfn; text:string
 spec:infra; type:dfn; text:user agent
 spec:screen-orientation; type:dfn; text:current orientation angle
 spec:svg2; type:dfn; text:fill
