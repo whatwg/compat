@@ -591,7 +591,7 @@ the corresponding unprefixed keyword:
   </tbody>
 </table>
 
-Issue(87): These definitions of <code>-webkit-box-*</code> are known to not be web compatible.
+Issue(87): This definition of <code>-webkit-box</code> is known to not be web compatible.
 
 <h4 id="text-fill-and-stroking">Text Fill and Stroking</h4>
 
