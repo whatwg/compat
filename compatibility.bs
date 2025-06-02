@@ -143,9 +143,9 @@ of the corresponding unprefixed [=at-rules=]:
 </h4>
 
 <pre class='descdef mq'>
-Name: '@media/-webkit-device-pixel-ratio'
-Value: <<number>>
+Name: '-webkit-device-pixel-ratio'
 For: @media
+Value: <<number>>
 Type: range
 </pre>
 
@@ -180,9 +180,9 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
 </h4>
 
 <pre class='descdef mq'>
-Name: '@media/-webkit-transform-3d'
-Value: <<mq-boolean>>
+Name: '-webkit-transform-3d'
 For: @media
+Value: <<mq-boolean>>
 Type: discrete
 </pre>
 
