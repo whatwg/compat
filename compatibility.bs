@@ -12,37 +12,12 @@ Repository: whatwg/compat
 </pre>
 
 <pre class="anchors">
-urlPrefix: https://w3c.github.io/screen-orientation/;
-  type: interface
-    text: ScreenOrientation; url: #screenorientation-interface
-  type: dfn
-    text: current orientation angle; url: #dfn-current-orientation-angle
-urlPrefix: https://www.w3.org/TR/CSS/; spec: CSS2
-  type: dfn
-    text: vendor prefix; url: #vendor-prefix
-urlPrefix: https://drafts.csswg.org/mediaqueries-4/; spec: mediaqueries-4
-  type: dfn
-    text: media query; url: #media-query
-    text: media feature; url: #media-feature
-    text: resolution; url: #descdef-media-resolution
-    text: min-resolution; url: #descdef-media-resolution
-    text: max-resolution; url: #descdef-media-resolution
-    text: prefixes on range features; url: #mq-min-max
 urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images-20110217
   type: dfn
     text: linear-gradient; url: #ltlinear-gradient
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
-urlPrefix: https://drafts.csswg.org/css-backgrounds-4/
-  type: dfn
-    text: background-clip; url: #propdef-background-clip
-urlPrefix: https://drafts.fxtf.org/css-masking-1/
-  type: dfn
-    text: clipping path; url: #clipping-path
-urlPrefix: https://drafts.csswg.org/css-values-3/
-  type: dfn
-    text: dppx; url: #dppx
 </pre>
 
 <pre class="biblio">
@@ -57,23 +32,23 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 
 <pre class=link-defaults>
 spec:css-animations-1; type:property; text:animation-delay
-spec:css-borders-4; type:property; text:box-shadow
-spec:css-borders-4; type:property; text:border-radius
 spec:css-borders-4; type:property; text:border-bottom-left-radius
 spec:css-borders-4; type:property; text:border-bottom-right-radius
+spec:css-borders-4; type:property; text:border-radius
 spec:css-borders-4; type:property; text:border-top-left-radius
 spec:css-borders-4; type:property; text:border-top-right-radius
+spec:css-borders-4; type:property; text:box-shadow
 spec:css-conditional-3; type:at-rule; text:@media
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
-spec:infra; type:dfn;
-  text:user agent
-  text:string
+spec:html; type:element; text:body
+spec:infra; type:dfn; text:string
+spec:infra; type:dfn; text:user agent
+spec:screen-orientation; type:dfn; text:current orientation angle
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
-spec:html; type:element; text:body
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -152,10 +127,10 @@ Type: range
 </pre>
 
 <code>'@media/-webkit-device-pixel-ratio'</code> must be treated as an alias of the
-<code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a
-<a>dppx</a> unit.
+<code>'@media/resolution'</code> range type <a>media feature</a>, with its value interpreted as a
+''dppx'' unit.
 
-The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> must not apply to
+The <code>min-</code> or <code>max-</code> [[mediaqueries-4#mq-min-max|prefixes on range features]] must not apply to
 <code>'@media/-webkit-device-pixel-ratio'</code>, instead the following aliases must be used:
 
 <table>
@@ -168,11 +143,11 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
   <tbody>
     <tr>
       <td><code><dfn descriptor for="@media">-webkit-min-device-pixel-ratio</dfn></code></td>
-      <td><code><a>min-resolution</a></code></td>
+      <td><code><a descriptor for=@media lt=resolution>min-resolution</a></code></td>
     </tr>
     <tr>
       <td><code><dfn descriptor for="@media">-webkit-max-device-pixel-ratio</dfn></code></td>
-      <td><code><a>max-resolution</a></code></td>
+      <td><code><a descriptor for=@media lt=resolution>max-resolution</a></code></td>
     </tr>
   </tbody>
 </table>
