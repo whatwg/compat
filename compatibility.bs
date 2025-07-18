@@ -50,6 +50,7 @@ spec:infra; type:dfn; text:user agent
 spec:screen-orientation; type:dfn; text:current orientation angle
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
+spec:html; type:element; text:body
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -913,7 +914,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
       "<code>Linux; Android 10; K</code>"<br>
       "<code>Windows NT 10.0; Win64; x64</code>"<br>
-      "<code>Macintosh; Intel Mac OS X 10_15_7"</code><br>
+      "<code>Macintosh; Intel Mac OS X 10_15_7</code>"<br>
       "<code>X11; Linux x86_64</code>"<br>
       "<code>X11; CrOS x86_64 14541.0.0</code>"<br>
       "<code>Fuchsia</code>"<br>
