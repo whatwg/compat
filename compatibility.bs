@@ -8,6 +8,7 @@ Abstract: This standard describes a collection of web platform features that web
 Translation: ja https://triple-underscore.github.io/compat-ja.html
 Indent: 2
 Markup Shorthands: dfn yes
+Repository: whatwg/compat
 </pre>
 
 <pre class="anchors">
@@ -67,9 +68,12 @@ spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
-spec:infra; type:dfn; text:user agent
+spec:infra; type:dfn;
+  text:user agent
+  text:string
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
+spec:html; type:element; text:body
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
@@ -141,7 +145,7 @@ of the corresponding unprefixed [=at-rules=]:
 </h4>
 
 <pre class='descdef mq'>
-Name: '@media/-webkit-device-pixel-ratio'
+Name: -webkit-device-pixel-ratio
 Value: <<number>>
 For: @media
 Type: range
@@ -178,7 +182,7 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
 </h4>
 
 <pre class='descdef mq'>
-Name: '@media/-webkit-transform-3d'
+Name: -webkit-transform-3d
 Value: <<mq-boolean>>
 For: @media
 Type: discrete
@@ -933,7 +937,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
       "<code>Linux; Android 10; K</code>"<br>
       "<code>Windows NT 10.0; Win64; x64</code>"<br>
-      "<code>Macintosh; Intel Mac OS X 10_15_7"<br>
+      "<code>Macintosh; Intel Mac OS X 10_15_7"</code><br>
       "<code>X11; Linux x86_64</code>"<br>
       "<code>X11; CrOS x86_64 14541.0.0</code>"<br>
       "<code>Fuchsia</code>"<br>
