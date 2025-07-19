@@ -6,6 +6,7 @@ Text Macro: TWITTER compatstandard
 Text Macro: LATESTRD 2023-06
 Abstract: This standard describes a collection of web platform features that web browsers need to support for compatibility with the de facto web.
 Translation: ja https://triple-underscore.github.io/compat-ja.html
+Translation: zh-Hans https://htmlspecs.com/compat/
 Indent: 2
 Markup Shorthands: dfn yes
 Repository: whatwg/compat
@@ -912,7 +913,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
       "<code>Linux; Android 10; K</code>"<br>
       "<code>Windows NT 10.0; Win64; x64</code>"<br>
-      "<code>Macintosh; Intel Mac OS X 10_15_7"</code><br>
+      "<code>Macintosh; Intel Mac OS X 10_15_7</code>"<br>
       "<code>X11; Linux x86_64</code>"<br>
       "<code>X11; CrOS x86_64 14541.0.0</code>"<br>
       "<code>Fuchsia</code>"<br>
