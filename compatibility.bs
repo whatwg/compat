@@ -50,7 +50,6 @@ spec:infra; type:dfn; text:user agent
 spec:screen-orientation; type:dfn; text:current orientation angle
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
-spec:html; type:element; text:body
 </pre>
 
 <!-- Commented out until we know what the heck to put here:
