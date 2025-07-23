@@ -6,43 +6,20 @@ Text Macro: TWITTER compatstandard
 Text Macro: LATESTRD 2023-06
 Abstract: This standard describes a collection of web platform features that web browsers need to support for compatibility with the de facto web.
 Translation: ja https://triple-underscore.github.io/compat-ja.html
+Translation: zh-Hans https://htmlspecs.com/compat/
 Indent: 2
 Markup Shorthands: dfn yes
 Issue Class: issue XXX
+Repository: whatwg/compat
 </pre>
 
 <pre class="anchors">
-urlPrefix: https://w3c.github.io/screen-orientation/;
-  type: interface
-    text: ScreenOrientation; url: #screenorientation-interface
-  type: dfn
-    text: current orientation angle; url: #dfn-current-orientation-angle
-urlPrefix: https://www.w3.org/TR/CSS/; spec: CSS2
-  type: dfn
-    text: vendor prefix; url: #vendor-prefix
-urlPrefix: https://drafts.csswg.org/mediaqueries-4/; spec: mediaqueries-4
-  type: dfn
-    text: media query; url: #media-query
-    text: media feature; url: #media-feature
-    text: resolution; url: #descdef-media-resolution
-    text: min-resolution; url: #descdef-media-resolution
-    text: max-resolution; url: #descdef-media-resolution
-    text: prefixes on range features; url: #mq-min-max
 urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-images-20110217
   type: dfn
     text: linear-gradient; url: #ltlinear-gradient
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
-urlPrefix: https://drafts.csswg.org/css-backgrounds-4/
-  type: dfn
-    text: background-clip; url: #propdef-background-clip
-urlPrefix: https://drafts.fxtf.org/css-masking-1/
-  type: dfn
-    text: clipping path; url: #clipping-path
-urlPrefix: https://drafts.csswg.org/css-values-3/
-  type: dfn
-    text: dppx; url: #dppx
 </pre>
 
 <pre class="biblio">
@@ -57,19 +34,21 @@ urlPrefix: https://drafts.csswg.org/css-values-3/
 
 <pre class=link-defaults>
 spec:css-animations-1; type:property; text:animation-delay
-spec:css-borders-4; type:property; text:box-shadow
-spec:css-borders-4; type:property; text:border-radius
 spec:css-borders-4; type:property; text:border-bottom-left-radius
 spec:css-borders-4; type:property; text:border-bottom-right-radius
+spec:css-borders-4; type:property; text:border-radius
 spec:css-borders-4; type:property; text:border-top-left-radius
 spec:css-borders-4; type:property; text:border-top-right-radius
+spec:css-borders-4; type:property; text:box-shadow
 spec:css-conditional-3; type:at-rule; text:@media
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
 spec:html; type:element; text:body
+spec:infra; type:dfn; text:string
 spec:infra; type:dfn; text:user agent
+spec:screen-orientation; type:dfn; text:current orientation angle
 spec:svg2; type:dfn; text:fill
 spec:svg2; type:dfn; text:stroke
 </pre>
@@ -144,16 +123,16 @@ of the corresponding unprefixed [=at-rules=]:
 
 <pre class='descdef mq'>
 Name: '-webkit-device-pixel-ratio'
-For: @media
 Value: <<number>>
+For: @media
 Type: range
 </pre>
 
 <code>'@media/-webkit-device-pixel-ratio'</code> must be treated as an alias of the
-<code><a>resolution</a></code> range type <a>media feature</a>, with its value interpreted as a
-<a>dppx</a> unit.
+<code>'@media/resolution'</code> range type <a>media feature</a>, with its value interpreted as a
+''dppx'' unit.
 
-The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> must not apply to
+The <code>min-</code> or <code>max-</code> [[mediaqueries-4#mq-min-max|prefixes on range features]] must not apply to
 <code>'@media/-webkit-device-pixel-ratio'</code>, instead the following aliases must be used:
 
 <table>
@@ -166,11 +145,11 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
   <tbody>
     <tr>
       <td><code><dfn descriptor for="@media">-webkit-min-device-pixel-ratio</dfn></code></td>
-      <td><code><a>min-resolution</a></code></td>
+      <td><code><a descriptor for=@media lt=resolution>min-resolution</a></code></td>
     </tr>
     <tr>
       <td><code><dfn descriptor for="@media">-webkit-max-device-pixel-ratio</dfn></code></td>
-      <td><code><a>max-resolution</a></code></td>
+      <td><code><a descriptor for=@media lt=resolution>max-resolution</a></code></td>
     </tr>
   </tbody>
 </table>
@@ -181,8 +160,8 @@ The <code>min-</code> or <code>max-</code> <a>prefixes on range features</a> mus
 
 <pre class='descdef mq'>
 Name: '-webkit-transform-3d'
-For: @media
 Value: <<mq-boolean>>
+For: @media
 Type: discrete
 </pre>
 
@@ -935,7 +914,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
       "<code>Linux; Android 10; K</code>"<br>
       "<code>Windows NT 10.0; Win64; x64</code>"<br>
-      "<code>Macintosh; Intel Mac OS X 10_15_7"</code><br>
+      "<code>Macintosh; Intel Mac OS X 10_15_7</code>"<br>
       "<code>X11; Linux x86_64</code>"<br>
       "<code>X11; CrOS x86_64 14541.0.0</code>"<br>
       "<code>Fuchsia</code>"<br>
