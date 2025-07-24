@@ -9,6 +9,7 @@ Translation: ja https://triple-underscore.github.io/compat-ja.html
 Translation: zh-Hans https://htmlspecs.com/compat/
 Indent: 2
 Markup Shorthands: dfn yes
+Issue Class: issue XXX
 Repository: whatwg/compat
 </pre>
 
@@ -45,7 +46,6 @@ spec:css-flexbox-1; type:value; text:inline-flex
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
 spec:html; type:element; text:body
-spec:infra; type:dfn; text:string
 spec:infra; type:dfn; text:user agent
 spec:screen-orientation; type:dfn; text:current orientation angle
 spec:svg2; type:dfn; text:fill
@@ -122,8 +122,8 @@ of the corresponding unprefixed [=at-rules=]:
 
 <pre class='descdef mq'>
 Name: -webkit-device-pixel-ratio
-Value: <<number>>
 For: @media
+Value: <<number>>
 Type: range
 </pre>
 
@@ -159,8 +159,8 @@ The <code>min-</code> or <code>max-</code> [[mediaqueries-4#mq-min-max|prefixes 
 
 <pre class='descdef mq'>
 Name: -webkit-transform-3d
-Value: <<mq-boolean>>
 For: @media
+Value: <<mq-boolean>>
 Type: discrete
 </pre>
 
@@ -569,7 +569,7 @@ the corresponding unprefixed keyword:
   </tbody>
 </table>
 
-Issue(87): These definitions of <code>-webkit-box-*</code> are known to not be web compatible.
+Issue(87): This definition of <code>-webkit-box</code> is known to not be web compatible.
 
 <h4 id="text-fill-and-stroking">Text Fill and Stroking</h4>
 
