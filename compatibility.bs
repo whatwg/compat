@@ -123,8 +123,8 @@ of the corresponding unprefixed [=at-rules=]:
 
 <pre class='descdef mq'>
 Name: '-webkit-device-pixel-ratio'
-Value: <<number>>
 For: @media
+Value: <<number>>
 Type: range
 </pre>
 
@@ -160,8 +160,8 @@ The <code>min-</code> or <code>max-</code> [[mediaqueries-4#mq-min-max|prefixes 
 
 <pre class='descdef mq'>
 Name: '-webkit-transform-3d'
-Value: <<mq-boolean>>
 For: @media
+Value: <<mq-boolean>>
 Type: discrete
 </pre>
 
@@ -914,11 +914,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
       "<code>Linux; Android 10; K</code>"<br>
       "<code>Windows NT 10.0; Win64; x64</code>"<br>
-<<<<<<< HEAD
       "<code>Macintosh; Intel Mac OS X 10_15_7</code>"<br>
-=======
-      "<code>Macintosh; Intel Mac OS X 10_15_7"</code><br>
->>>>>>> 959ecb2 (Close an unclosed `code` tag.)
       "<code>X11; Linux x86_64</code>"<br>
       "<code>X11; CrOS x86_64 14541.0.0</code>"<br>
       "<code>Fuchsia</code>"<br>
