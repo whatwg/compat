@@ -818,9 +818,10 @@ supported on all {{Window}} objects and <code><{body}></code> elements as attrib
 </table>
 
 <h2 id="ua-string-section">The User-Agent String</h2>
+<em>This section is non-normative.</em>
 
 The <code>User-Agent</code> header field syntax is formally defined by [[!HTTP-SEMANTICS]] and
-provides SHOULD-level guidance on its value. This section serves as a descriptive record of the
+provides SHOULD-level guidance on its value. This section describes the
 <code>User-Agent</code> patterns found in the so-called major web browsers, but much of it will
 apply to other browsers with a shared heritage (i.e., forks and embedders) as well as any
 <a>user agent</a> in the more general sense that send a <code>User-Agent</code> <a>header</a>.
