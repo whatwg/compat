@@ -35,6 +35,7 @@ urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-image
 
 <pre class=link-defaults>
 spec:css-animations-1; type:property; text:animation-delay
+spec:css-backgrounds-3; type:type; text:<line-width>
 spec:css-borders-4; type:property; text:border-bottom-left-radius
 spec:css-borders-4; type:property; text:border-bottom-right-radius
 spec:css-borders-4; type:property; text:border-radius
