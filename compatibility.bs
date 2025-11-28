@@ -71,6 +71,8 @@ specified elsewhere.
 
 The HTTP <code>User-Agent</code> header field as found in major browsers today is also described.
 
+The removals of some features from the web platform are also described.
+
 <h2 id='conformance'>Conformance</h2>
 All diagrams, examples, and notes in this specification are
 non-normative, as are all sections explicitly marked non-normative.
@@ -1038,11 +1040,102 @@ On mobile platforms, including smaller iPad form factors
   </tbody>
 </table>
 
+
+<h2 id="removal">Deprecation and Removal</h2>
+
+While the web platform stives for backwards-compatibility, there are occasions which require the
+outright removal or discouraged use of some features. To support making these changes
+in the least disruptive and most consistent way for developers, we document them here. This is most
+beneficial as a decalration of intent by browser engines to act together in a well reasoned way.
+
+<h3 id="removal-features">Feature List</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><dfn for="deprecated feature list">Feature</dfn></th>
+      <th><dfn for="deprecated feature list">Deprecation</dfn></th>
+      <th><dfn for="deprecated feature list">Removal</dfn></th>
+      <th><dfn for="deprecated feature list">More Information</dfn></th>
+    <tr>
+  </thead>
+  <tbody>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="removal-features-process">Process</h4>
+
+Anyone may suggest an addition to the list by filing an issue on this specification. Each added row
+that includes [=deprecated feature list/Removal|removal information=] should correspond to a normative
+change in the specification that defined this behavior before its removal.
+
+Note: For sake of the <a href="https://whatwg.org/working-mode">WHATWG Working Mode</a>, adding
+a row to this table is a <a href="https://whatwg.org/working-mode#removals">removal</a>.
+
+Note: [[#removal-criteria]] provides suggested criteria to consider when deciding if it is appropriate
+to remove the feature to the web.
+
+Each entry should include:
+
+<ul>
+  <li>the [=deprecated feature list/Feature|feature or behavior=] that is being removed or deprecated.
+  <li>what browser engines have [=deprecated feature list/Deprecation|deprecated=] the feature or behavior, discouraging its further use.
+  <li>when the feature will be, or has been, [=deprecated feature list/Removal|removed=] from browser engines, preventing its use by default. This may be empty if there is no such plan.
+  <li>a link to non-normative [=deprecated feature list/More Information|more information=] about the removal, such as justification for the removal, alternatives to use, or automated tools to improve developer experience.
+</ul>
+
+<h3 id="removal-criteria">Criteria for removal or deprecation</h3>
+
+<em>This section is non-normative.</em>
+
+The bar to make a breaking change in the web platform across multiple browser engines can be high.
+This is a good thing, as the web should strive for backward compatibility as much as is possible.
+The <a href="https://whatwg.org/working-mode#removals">WHATWG Working Mode</a> even establishes
+further requirements for changes to specifications that remove behavior. This section provides an
+incomplete enumeration of criteria that should be considered before including a feature in the
+[[Feature List]]. This is not an algorithm to decide what can be removed; each feature removal is
+unique and requires the careful decision making of the implementers to weigh the costs and benefits
+of proceeding with removal.
+
+Harms of removing the feature are good reasons to not proceed:
+
+<ul>
+  <li>User-visible breakage of any site is a harm worth considering
+  <li>The full set of use-cases for a feature can not be known, so unexpected things may break
+  <li>Removal of features has an outsized influence on smaller development operations that have fewer resources for maintanance and can not track the changes to the web platform closely
+  <li>Removal of features can disrupt ecosystems built on the web, changing their economics and incentives, and this is not always for the better
+</ul>
+
+Benefits of removing the feature are good reasons to proceed:
+
+<ul>
+  <li>Security improvement
+  <li>Privacy and user protections improvement
+  <li>Accessibility improvement
+  <li>Platform architectural improvement
+</ul>
+
+Harms of removing the feature may be mitigated by some choices:
+
+<ul>
+  <li>Lead time from deprecation to removal
+  <li>On-by-default, but easily disabled for a site by developers during the deprecation
+  <li>Coherence of action by browsers
+  <li>Mechanisms for site-specific workarounds controlled by the browser
+  <li>Strong, interoperable alternatives to the feature
+  <li>Younger and less-stable APIs are less ossified and are likely used by developers more apt to fix their website
+</ul>
+
+It is important to note that any alternatives to the feature will face the same scrutiny when they are to be removed,
+deferring the issue of breakage rather than resolving it.
+
 <h2 id="acknowledgements" class="no-num">Acknowledgements</h2>
-Thanks to Alan Cutter, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen, Daniel Holbert,
-David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi, Karl Dubost,
-Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and Your Name Here for
-feedback and contributions to this standard.
+Thanks to Alan Cutter, Benjamin VanderSloot, Cameron McCormack, Chris Rebert, Chun-Min (Jeremy) Chen,
+Daniel Holbert, David Håsäther, Domenic Denicola, Eric Portis, hexalys, Jean-Yves Perrier, Jacob Rossi,
+Karl Dubost, Philip Jägenstedt, Rick Byers, Simon Pieters, Stanley Stuart, William Chen and
+Your Name Here for feedback and contributions to this standard.
 
 Thanks to Mounir Lamouri and Marcos Cáceres for defining the {{ScreenOrientation}} interface.
 [[!screen-orientation]]
