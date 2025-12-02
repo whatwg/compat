@@ -845,8 +845,9 @@ This is a non-exhaustive list of common User-Agent <a>tokens</a>.
 
 <table>
   <thead>
-    <th>Tokens</th>
-    <th>Description</th>
+    <tr>
+      <th>Tokens</th>
+      <th>Description</th>
   </thead>
   <tbody>
     <tr>
@@ -906,8 +907,9 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/&lt;<a>majorVersion</a>&gt;.0.0.0
 
 <table>
   <thead>
-    <th>Tokens</th>
-    <th>Description</th>
+    <tr>
+      <th>Tokens</th>
+      <th>Description</th>
   </thead>
   <tbody>
     <tr>
@@ -959,8 +961,9 @@ On Firefox for Android, "<code>&lt;<a>platform</a>&gt;; &lt;<a for=firefox>devic
 
 <table>
   <thead>
-    <th>Tokens</th>
-    <th>Description</th>
+    <tr>
+      <th>Tokens</th>
+      <th>Description</th>
   </thead>
   <tbody>
     <tr><!-- TODO: consider documenting VR patterns -->
@@ -1007,8 +1010,9 @@ On mobile platforms, including smaller iPad form factors
 
 <table>
   <thead>
-    <th>Tokens</th>
-    <th>Description</th>
+    <tr>
+      <th>Tokens</th>
+      <th>Description</th>
   </thead>
   <tbody>
     <tr>
