@@ -584,7 +584,7 @@ Value: <<color>>
 Initial: ''currentcolor''
 Applies to: all elements
 Inherited: yes
-Computed value: an RGBA color
+Computed value: <a>computed color</a>
 Percentages: N/A
 Media: visual
 Animation type: by computed value type
@@ -621,7 +621,7 @@ Value: <<color>>
 Initial: ''currentcolor''
 Applies to: all elements
 Inherited: yes
-Computed value: an RGBA color
+Computed value: <a>computed color</a>
 Percentages: N/A
 Media: visual
 Animation type: by computed value type
