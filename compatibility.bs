@@ -45,6 +45,7 @@ spec:css-borders-4; type:property; text:box-shadow
 spec:css-conditional-3; type:at-rule; text:@media
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
+spec:css-pseudo-4; type:selector; text:::placeholder
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
 spec:html; type:element; text:body
@@ -726,8 +727,8 @@ to avoid disabling zooming unnecessarily.</div>
 
 <h4 id="css-pseudo-element-aliases">Pseudo-element aliases</h4>
 
-The following <code>-webkit-</code> <a>vendor prefixed</a> pseudo-elements must be supported as aliases
-of the corresponding unprefixed pseudo-elements:
+The following <code>-webkit-</code> <a>vendor prefixed</a> [=pseudo-elements=] must be supported as
+[=legacy selector aliases=] of the corresponding unprefixed [=pseudo-elements=]:
 
 <table>
   <thead>
@@ -739,24 +740,15 @@ of the corresponding unprefixed pseudo-elements:
   <tbody>
     <tr>
       <td><code><dfn selector>::-webkit-input-placeholder</dfn></code></td>
-      <td><code><a href="https://drafts.csswg.org/css-pseudo-4/#placeholder-pseudo">::placeholder</a></code></td>
+      <td><code><a selector>::placeholder</a></code></td>
     </tr>
   </tbody>
 </table>
 
-A selector that contains an alias from the table above must match exactly the same elements, and
-apply to the same part of those elements, as the same selector with the alias replaced by the
-unprefixed pseudo-element. The alias is accepted anywhere the unprefixed pseudo-element is accepted,
-including inside a [=selector list=]. User agents must not treat the alias as an unknown
-<code>-webkit-</code> pseudo-element.
-
-When a selector containing an alias is serialized, the alias must be serialized as the unprefixed
-pseudo-element.
-
-Note: <code>getComputedStyle()</code> parses its second argument as a pseudo-element selector (see
-<a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">CSSOM</a>). Since the alias is
-not an unknown pseudo-element, it resolves to the same pseudo-element as <code>::placeholder</code>.
-See <a href="https://github.com/w3c/csswg-drafts/issues/2149">csswg-drafts#2149</a>.
+Note: {{Window/getComputedStyle()}} parses its second argument as a pseudo-element selector. Since
+the alias is not an unknown pseudo-element, it resolves to the same pseudo-element as
+<code>::placeholder</code>. See
+<a href="https://github.com/w3c/csswg-drafts/issues/717">csswg-drafts#717</a>.
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 
