@@ -728,7 +728,8 @@ to avoid disabling zooming unnecessarily.</div>
 <h4 id="css-pseudo-element-aliases">Pseudo-element aliases</h4>
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> [=pseudo-elements=] must be supported as
-[=legacy selector aliases=] of the corresponding unprefixed [=pseudo-elements=]:
+<a href="https://drafts.csswg.org/selectors-4/#legacy-selector-alias">legacy selector aliases</a> of
+the corresponding unprefixed [=pseudo-elements=]:
 
 <table>
   <thead>
