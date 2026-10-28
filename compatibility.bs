@@ -21,6 +21,9 @@ urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-image
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
+urlPrefix: https://drafts.csswg.org/selectors-4/; spec: selectors-4
+  type: dfn
+    text: legacy selector alias; url: #legacy-selector-alias
 </pre>
 
 <pre class="biblio">
@@ -728,8 +731,8 @@ to avoid disabling zooming unnecessarily.</div>
 <h4 id="css-pseudo-element-aliases">Pseudo-element aliases</h4>
 
 The following <code>-webkit-</code> <a>vendor prefixed</a> [=pseudo-elements=] must be supported as
-<a href="https://drafts.csswg.org/selectors-4/#legacy-selector-alias">legacy selector aliases</a> of
-the corresponding unprefixed [=pseudo-elements=]:
+[=legacy selector aliases=] of the
+corresponding unprefixed [=pseudo-elements=]:
 
 <table>
   <thead>
