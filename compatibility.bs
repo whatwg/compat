@@ -21,6 +21,9 @@ urlPrefix: https://www.w3.org/TR/2011/WD-css3-images-20110217/; spec: css3-image
     text: radial-gradient; url: #ltradial-gradient
     text: repeating-linear-gradient; url: #ltrepeating-linear-gradient
     text: repeating-radial-gradient; url: #ltrepeating-radial-gradient
+urlPrefix: https://drafts.csswg.org/selectors-4/; spec: selectors-4
+  type: dfn
+    text: legacy selector alias; url: #legacy-selector-alias
 </pre>
 
 <pre class="biblio">
@@ -45,6 +48,7 @@ spec:css-borders-4; type:property; text:box-shadow
 spec:css-conditional-3; type:at-rule; text:@media
 spec:css-display-3; type:value; for:display; text:flex
 spec:css-flexbox-1; type:value; text:inline-flex
+spec:css-pseudo-4; type:selector; text:::placeholder
 spec:css-syntax-3; type:dfn; text:invalid
 spec:filter-effects-1; type:property; text:filter
 spec:html; type:element; text:body
@@ -721,6 +725,34 @@ use "<code>touch-action: pan-y pinch-zoom</code>"
 to avoid disabling zooming unnecessarily.</div>
 
 <code>manipulation</code> is an alias for "<code>pan-x pan-y pinch-zoom</code>".
+
+<h3 id="css-pseudo-elements">CSS Pseudo-elements</h3>
+
+<h4 id="css-pseudo-element-aliases">Pseudo-element aliases</h4>
+
+The following <code>-webkit-</code> <a>vendor prefixed</a> [=pseudo-elements=] must be supported as
+[=legacy selector aliases=] of the
+corresponding unprefixed [=pseudo-elements=]:
+
+<table>
+  <thead>
+    <tr>
+     <th><code>-webkit-</code> prefixed pseudo-element alias</th>
+     <th>unprefixed pseudo-element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code><dfn selector>::-webkit-input-placeholder</dfn></code></td>
+      <td><code><a selector>::placeholder</a></code></td>
+    </tr>
+  </tbody>
+</table>
+
+Note: {{Window/getComputedStyle()}} parses its second argument as a pseudo-element selector. Since
+the alias is not an unknown pseudo-element, it resolves to the same pseudo-element as
+<code>::placeholder</code>. See
+<a href="https://github.com/w3c/csswg-drafts/issues/717">csswg-drafts#717</a>.
 
 <h2 id="dom-compat-section">DOM Compatibility</h2>
 
